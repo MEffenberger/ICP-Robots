@@ -6,16 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h
-QGraphicsRectItem
--
+/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp
+enemy.h
+/mnt/c/Users/marek/CLionProjects/ICP/enemy.h
 
-/mnt/c/Users/marek/CLionProjects/ICP/user.cpp
-user.h
-/mnt/c/Users/marek/CLionProjects/ICP/user.h
-
-/mnt/c/Users/marek/CLionProjects/ICP/user.h
+/mnt/c/Users/marek/CLionProjects/ICP/enemy.h
 QGraphicsEllipseItem
+-
+QGraphicsRectItem
 -
 QObject
 -
@@ -36,6 +34,18 @@ QGraphicsItem
 QtMath
 -
 QTimer
+-
+QPixmap
+-
+QPainterPath
+-
+
+/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h
+QGraphicsRectItem
+-
+QGraphicsItem
+-
+QBrush
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
@@ -764,6 +774,10 @@ QtCore/qpoint.h
 QtCore/qglobal.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush
+qbrush.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/QKeyEvent
 qevent.h
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
@@ -771,6 +785,14 @@ qevent.h
 /usr/include/x86_64-linux-gnu/qt5/QtGui/QList
 qevent.h
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath
+qpainterpath.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap
+qpixmap.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
 QtGui/qtguiglobal.h

@@ -12,6 +12,7 @@
 #include <QGraphicsItem>
 #include <QtMath>
 #include <QTimer>
+#include <QPixmap>
 
 class User : public QObject, public QGraphicsEllipseItem
 {

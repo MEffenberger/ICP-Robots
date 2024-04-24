@@ -21,6 +21,8 @@ set(PROJECT_SOURCES
         user.h
         obstacle.cpp
         obstacle.h
+        enemy.cpp
+        enemy.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -29,6 +31,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         user.h user.cpp
         obstacle.h obstacle.cpp
+        enemy.h enemy.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ICP APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

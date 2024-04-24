@@ -8,6 +8,11 @@
 	"HEADERS" : 
 	[
 		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/enemy.h",
+			"MU",
+			"EWIEGA46WW/moc_enemy.cpp"
+		],
+		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp"
@@ -72,6 +77,7 @@
 	"SETTINGS_FILE" : "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/main.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp", "MU" ],

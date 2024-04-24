@@ -9,3 +9,6 @@
 /mnt/c/Users/marek/CLionProjects/ICP/main.cpp
 /mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp
  uic:./ui_mainwindow.h
+/mnt/c/Users/marek/CLionProjects/ICP/enemy.h
+ mmc:Q_OBJECT
+/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp

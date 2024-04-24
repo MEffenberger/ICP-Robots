@@ -1,7 +1,13 @@
 
-£	cpp:S3230"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(ğä‹ü8é‹ñ„ñ1J$1c02db19-06ba-46a7-b7e5-0dc4625b2cb6
-«	cpp:S3230"iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åš8ê‹ñ„ñ1J$2d4aecd2-06f7-4493-aa11-b8d572c8d561
-¥	cpp:S3230"cDo not assign data members in a constructor. Initialize member "Stunned" in an initialization list.(êúÎÍ8Ø½††ñ1J$d1ee5751-549f-43f7-8c35-e5f30d03b3af
-˜	cpp:S5025	"QReplace the use of "new" with an operation that automatically manages the memory.(†ÍÎŸûÿÿÿÿ8 ûà„ñ1J$2c1aa94f-6b62-4424-ac6e-78d75fcc4b5c
-“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Áæùà8¨ÕÚ…ñ1J$125c905b-3842-42af-80f8-e9c990ff6910
-b	cpp:S60044"AUse the init-statement to declare "newY" inside the if statement.(ÿ·ŞÔüÿÿÿÿ8°µš‡ñ1
+¤	cpp:S5276	"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8õŠµñ1J$d108b1ba-e222-4fc4-9c0e-01cf1a202637
+¤	cpp:S5276	"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8÷Šµñ1J$846439a3-0708-4933-ab74-41c05347a47f
+¤	cpp:S5276Q"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8’ØÜñ1J$28581dce-842f-44d0-a1c1-a283b3086969
+¤	cpp:S5276Q"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8’ØÜñ1J$6efce352-f41f-4148-9e8c-f6393dfd248b
+~	cpp:S5276]"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8í÷İñ1
+~	cpp:S5276]"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8í÷İñ1
+£	cpp:S3230"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(ğä‹ü8Úû±Œñ1J$c896d3a7-1e52-4817-bdba-065aa62807e8
+«	cpp:S3230"iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åš8Úû±Œñ1J$b7a9295f-fd3e-4bed-b750-e3f4e2b3d6b2
+¥	cpp:S3230"cDo not assign data members in a constructor. Initialize member "Stunned" in an initialization list.(êúÎÍ8Úû±Œñ1J$841b2115-4974-4378-bc62-86758a22ebb6
+“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(‹ªÃÏ8Üû±Œñ1J$64b1470d-cbce-45fc-95a9-4cb4d92c48bd
+“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Áæùà8šŞïŒñ1J$c0ec0147-a81e-49d8-ac13-d225bd100ec1
+ˆ	cpp:S60048"AUse the init-statement to declare "newY" inside the if statement.(ÿ·ŞÔüÿÿÿÿ8İû±Œñ1J$7c76f29a-0e83-43f8-9e2b-8bb72c97ad23

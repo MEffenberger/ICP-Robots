@@ -5,11 +5,15 @@ User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
 {
     setRect(0, 0, 100, 100); // Set the size of the ellipse
 
+    QPixmap pixmap("../djkhaled.png");
+    pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    QBrush brush(pixmap);
+    setBrush(pixmap);
+
     // Create the vision point
-    visionPoint = new QGraphicsEllipseItem(20, 50, 10, 10, this); // Positioned above the center of the User
+    visionPoint = new QGraphicsEllipseItem(36, 20, 10, 10, this); // Positioned above the center of the User
     visionPoint->setBrush(Qt::red); // Set the color to red
 
-    // Initialize movement parameters
     speed = 10.0;
     rotationSpeed = 10.0;
     setTransformOriginPoint(50, 50);
@@ -72,7 +76,11 @@ void User::CheckCollisions() {
 
             // Stun the user
             Stunned = true;
-            StunnedTimer->start(10000); // Stun for 2 seconds
+            StunnedTimer->start(5000); // Stun for 2 seconds
+            QPixmap pixmap("../dj-khaled-tired.png");
+            pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            QBrush brush(pixmap);
+            setBrush(brush);
             return;
         }
     }
@@ -81,4 +89,8 @@ void User::CheckCollisions() {
 void User::StunTimerExpired() {
     Stunned = false;
     StunnedTimer->stop();
+    QPixmap pixmap("../djkhaled.png");
+    pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    QBrush brush(pixmap);
+    setBrush(brush);
 }

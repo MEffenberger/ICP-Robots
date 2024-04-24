@@ -153,6 +153,12 @@
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/ICP_autogen/mocs_compilation.cpp">
 			<Option target="ICP"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemy.h">
+			<Option target="ICP"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/main.cpp">
 			<Option target="ICP"/>
 		</Unit>

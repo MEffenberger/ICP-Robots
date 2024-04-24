@@ -6,6 +6,8 @@
 #define ICP_OBSTACLE_H
 
 #include <QGraphicsRectItem>
+#include <QGraphicsItem>
+#include <QBrush>
 
 
 class Obstacle : public QGraphicsRectItem

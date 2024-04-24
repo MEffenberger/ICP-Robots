@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ICP_autogen.dir/ParseCache.txt"
   "ICP_autogen"
   "CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/ICP.dir/enemy.cpp.o"
   "CMakeFiles/ICP.dir/main.cpp.o"
   "CMakeFiles/ICP.dir/mainwindow.cpp.o"
   "CMakeFiles/ICP.dir/obstacle.cpp.o"

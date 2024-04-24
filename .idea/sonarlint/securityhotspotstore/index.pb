@@ -15,3 +15,12 @@ C
 user.h,1\8\18197d0eca55d405c390015d89858dfeb2bcfd69
 8
 user.cpp,2\9\29a5d5cdaf72e1b00488a07a784a5f718baba8bd
+:
+
+obstacle.h,e\c\ec3ddb9219a2a87caa01ae41cab5c31afa48b197
+<
+obstacle.cpp,7\1\71a777aed5b48fdec0a0dff582973b0ea27dfb14
+9
+	enemy.cpp,a\1\a103fbff1787b1cb976a6e05bbc98835bd8444ca
+7
+enemy.h,a\4\a4e1b5248cbd8b23aa86839f8497c17b9c30e98d
