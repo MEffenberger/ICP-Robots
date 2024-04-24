@@ -1,0 +1,7 @@
+
+£	cpp:S3230"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(ðä‹ü8é‹ñ„ñ1J$1c02db19-06ba-46a7-b7e5-0dc4625b2cb6
+«	cpp:S3230"iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åžš8ê‹ñ„ñ1J$2d4aecd2-06f7-4493-aa11-b8d572c8d561
+¥	cpp:S3230"cDo not assign data members in a constructor. Initialize member "Stunned" in an initialization list.(êúÎÍ8Ø½††ñ1J$d1ee5751-549f-43f7-8c35-e5f30d03b3af
+˜	cpp:S5025	"QReplace the use of "new" with an operation that automatically manages the memory.(†ÍÎŸûÿÿÿÿ8 ûà„ñ1J$2c1aa94f-6b62-4424-ac6e-78d75fcc4b5c
+“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Áæùà8¨ÕÚ…ñ1J$125c905b-3842-42af-80f8-e9c990ff6910
+b	cpp:S60044"AUse the init-statement to declare "newY" inside the if statement.(ÿ·ÞÔüÿÿÿÿ8°µš‡ñ1

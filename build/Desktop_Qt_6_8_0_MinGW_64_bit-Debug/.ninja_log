@@ -1,0 +1,9 @@
+# ninja log v5
+2	1079	7356697550810490	ICP_autogen/timestamp	1f3659a6cfd0ddb5
+1082	4675	7356697588231028	CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.obj	9ca66f6f8249ccfc
+1095	4809	7356697589561178	CMakeFiles/ICP.dir/main.cpp.obj	355629307ee356b9
+2	1079	7356697550810490	ICP_autogen/mocs_compilation.cpp	1f3659a6cfd0ddb5
+2	1079	7356697550810490	C:/Users/marek/CLionProjects/ICP/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/ICP_autogen/timestamp	1f3659a6cfd0ddb5
+1088	4799	7356697589447512	CMakeFiles/ICP.dir/mainwindow.cpp.obj	30ae7c8ca84e9bca
+2	1079	7356697550810490	C:/Users/marek/CLionProjects/ICP/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/ICP_autogen/mocs_compilation.cpp	1f3659a6cfd0ddb5
+4810	5962	7356697601035596	ICP.exe	445cb31a0cf90439
