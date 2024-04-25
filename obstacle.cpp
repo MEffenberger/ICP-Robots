@@ -7,5 +7,7 @@
 Obstacle::Obstacle(QGraphicsItem *parent) : QGraphicsRectItem(parent)
 {
     setRect(0, 0, 100, 100); // Set the size of the rectangle
-    setBrush(Qt::black); // Set the color to black
+    QPixmap pixmap("../obstacle.png");
+    pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    setBrush(pixmap);
 }

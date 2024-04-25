@@ -19,6 +19,8 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QPainterPath>
+#include "user.h"
+#include <QGraphicsPolygonItem>
 
 
 class Enemy : public QObject, public QGraphicsEllipseItem
@@ -31,17 +33,25 @@ private:
     QGraphicsRectItem *visionRect;
     QGraphicsPolygonItem *visionField;
     QGraphicsEllipseItem *armor;
+    QTimer *movementTimer;
     qreal speed;
     qreal rotationSpeed;
     qreal turningAngle;
     bool clockwise;
+    bool userCollisionFlag;
 
 protected:
-    // Override the paint method
-    //void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
+
+public slots:
+    void startAutonomousMovement();
 
 private slots:
+    void autonomousMovement();
+    void checkCollisions();
+    void userCollision(User *user);
+    void obstacleCollision(Obstacle *obstacle);
+    void enemyCollision(Enemy *enemy);
     //void StunTimerExpired();
     //void CheckCollisions();
 };

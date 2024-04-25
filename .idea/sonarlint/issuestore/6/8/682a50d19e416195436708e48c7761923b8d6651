@@ -1,16 +1,18 @@
 
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(Ë†Àˆÿÿÿÿÿ8Û§¢ñ1J$cee5e703-c18d-4e62-83ae-cceb7d3a2adb
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(Ë†Àˆÿÿÿÿÿ8Û§¢ñ1J$3b075982-e1b2-4148-81e0-8bf8ddafe1d1
-i	cpp:S5827"'Replace the redundant type with "auto".(ÂÆ³™8º¸¨„ñ1J$cd218942-bfe2-443e-b3a5-e3cd3dde66b2
-i	cpp:S5827"'Replace the redundant type with "auto".(ññöº8º¸¨„ñ1J$28cf5f70-dd50-45c8-affd-083b32f25cdd
-h	cpp:S5827"'Replace the redundant type with "auto".(Õğ³]8º¸¨„ñ1J$46f7affd-0e76-4fa2-a97a-de2d52819f02
-i	cpp:S5827 "'Replace the redundant type with "auto".(‚ğ¯ä8×ƒäñ1J$647a9402-31b9-4f99-b11f-d9415420d321
-n	cpp:S5827!"'Replace the redundant type with "auto".(ù¤§ùúÿÿÿÿ8Øƒäñ1J$70270d96-20d5-46ab-b166-fb77f17dfbed
-i	cpp:S5827$"'Replace the redundant type with "auto".(È¿Òı8ÏÔôŒñ1J$7c0484ff-42cf-4198-a63b-e6dd30f9e660
-“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÂÆ³™8»¸¨„ñ1J$b30a48a5-cd5d-4bd2-9f77-193e41556404
-“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ññöº8¼¸¨„ñ1J$5dc6c05b-33dd-4ce8-997d-ab8c267e88d2
-’	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Õğ³]8¼¸¨„ñ1J$f067d721-434b-489d-8746-e29c3b658fba
-“	cpp:S5025 "QReplace the use of "new" with an operation that automatically manages the memory.(‚ğ¯ä8ÒÔôŒñ1J$7f7e2ccd-40d6-4b41-8d54-878df1df0b21
-˜	cpp:S5025!"QReplace the use of "new" with an operation that automatically manages the memory.(ù¤§ùúÿÿÿÿ8àƒäñ1J$f1526d60-2c5b-402d-adbf-a3d12c91bb6c
-“	cpp:S5025$"QReplace the use of "new" with an operation that automatically manages the memory.(È¿Òı8àƒäñ1J$01aebffb-f56d-421d-8f4e-edf1555dbb4b
-€	cpp:S2209?"9Replace "." with "::" for access to "QApplication::exec".( äƒÙúÿÿÿÿ8½¸¨„ñ1J$730fbc55-5813-493b-8e2d-2b7dc88cb0ed
+¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(Ë†Àˆÿÿÿÿÿ8Û§¢ñ1J$c4d38a4e-151f-49c7-a9bf-fa426d6e3278
+¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(Ë†Àˆÿÿÿÿÿ8Û§¢ñ1J$935c023e-a75d-4a48-8c64-cf114f7cc2af
+i	cpp:S5827"'Replace the redundant type with "auto".(ÂÆ³™8º¸¨„ñ1J$0801431a-b5b6-4fe0-8613-877915ccdd4d
+C	cpp:S5827"'Replace the redundant type with "auto".(È¿Òı8“·¤ñ1
+C	cpp:S5827#"'Replace the redundant type with "auto".(·œœá8Ÿ“·¤ñ1
+C	cpp:S5827)"'Replace the redundant type with "auto".(ññöº8 “·¤ñ1
+B	cpp:S5827*"'Replace the redundant type with "auto".(Õğ³]8 “·¤ñ1
+C	cpp:S5827+"'Replace the redundant type with "auto".(‚ğ¯ä8¡“·¤ñ1
+H	cpp:S5827,"'Replace the redundant type with "auto".(ù¤§ùúÿÿÿÿ8¢“·¤ñ1
+“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÂÆ³™8»¸¨„ñ1J$9ff63193-bda1-494b-a97b-cbe734aeab97
+m	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(È¿Òı8§“·¤ñ1
+m	cpp:S5025#"QReplace the use of "new" with an operation that automatically manages the memory.(·œœá8¨“·¤ñ1
+m	cpp:S5025)"QReplace the use of "new" with an operation that automatically manages the memory.(ññöº8¨“·¤ñ1
+l	cpp:S5025*"QReplace the use of "new" with an operation that automatically manages the memory.(Õğ³]8ª“·¤ñ1
+m	cpp:S5025+"QReplace the use of "new" with an operation that automatically manages the memory.(‚ğ¯ä8«“·¤ñ1
+r	cpp:S5025,"QReplace the use of "new" with an operation that automatically manages the memory.(ù¤§ùúÿÿÿÿ8«“·¤ñ1
+Z	cpp:S2209A"9Replace "." with "::" for access to "QApplication::exec".( äƒÙúÿÿÿÿ8­“·¤ñ1

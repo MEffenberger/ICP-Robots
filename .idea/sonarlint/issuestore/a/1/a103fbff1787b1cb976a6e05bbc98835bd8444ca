@@ -1,11 +1,23 @@
 
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8í£Äñ1J$5fe96f8c-8611-43f0-979f-71faf3180e4e
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8í£Äñ1J$a8127d43-69d1-46e4-9a4b-7b390f4ae796
-¨	cpp:S3230+"hDo not assign data members in a constructor. Initialize member "turningAngle" in an initialization list.(¨ÉıÿÿÿÿJ$440061b6-67a9-4caf-a3b5-bcf7510d1e65
-¥	cpp:S3230,"eDo not assign data members in a constructor. Initialize member "clockwise" in an initialization list.(‘ƒšüúÿÿÿÿJ$2bda4e8b-22a1-4a54-a2e3-e1e4c471fc5a
-œ	cpp:S3230-"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(ğä‹üJ$a9092bdb-b412-4f57-8b79-52545bb210a7
-«	cpp:S3230."iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åš8Ã£õñ1J$0fc345e5-45af-482c-98f0-7042e87e6edf
-˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÂñÕ‹şÿÿÿÿ8ß£õñ1J$8091d8cc-7f2d-4b58-9468-13ad7f69958b
-˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(†ÍÎŸûÿÿÿÿ8à£õñ1J$9f926695-c505-4c8d-a132-51d62d066e7a
-’	cpp:S5025$"QReplace the use of "new" with an operation that automatically manages the memory.(ğÜ¢H8ä£õñ1J$02870c3c-a2aa-4552-90c1-cd99bfc65a80
-_cpp:S1253"Remove the commented out code.(Ú•¡‡8£¤õñ1J$56b15368-faec-4caa-8f3a-dac704b4ad69
+¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8í£Äñ1J$5bda5cda-ff75-4a19-8f71-aa84cd72b40f
+¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8í£Äñ1J$eb526c62-7cbd-464a-a165-a2d6fad69bff
+m	cpp:S11170"&declaration shadows a field of 'Enemy'(°ÓÁûüÿÿÿÿ8»áè£ñ1J$7b86ccdc-1ac4-4500-9593-ae8150a669fc
+¨	cpp:S3230+"hDo not assign data members in a constructor. Initialize member "turningAngle" in an initialization list.(¨ÉıÿÿÿÿJ$fe3a365f-5344-4c7a-b7fc-2956c4a03856
+¥	cpp:S3230,"eDo not assign data members in a constructor. Initialize member "clockwise" in an initialization list.(‘ƒšüúÿÿÿÿJ$fd5695e4-7088-4786-b469-43da758dbdf3
+œ	cpp:S3230-"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(£Õ†ÑJ$5a50966c-5e0b-4d00-a14b-b799434463cc
+«	cpp:S3230."iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åš8Ã£õñ1J$30f5f6e4-9a7d-4496-b20e-2b19e632709d
+¯	cpp:S3230/"mDo not assign data members in a constructor. Initialize member "userCollisionFlag" in an initialization list.(ĞÛùğ8ÂĞ¢ñ1J$a083bae6-1646-4a39-89e0-d93e9921a400
+n	cpp:S58270"'Replace the redundant type with "auto".(°ÓÁûüÿÿÿÿ8Üúé¢ñ1J$60bb5748-c1fe-4741-92db-8be470a95d97
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÂñÕ‹şÿÿÿÿ8ß£õñ1J$0b9dd8af-d523-40f1-a3da-72833c5def06
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(†ÍÎŸûÿÿÿÿ8à£õñ1J$71791087-a0da-4b75-b8ed-0af35fef55d0
+’	cpp:S5025$"QReplace the use of "new" with an operation that automatically manages the memory.(ğÜ¢H8ä£õñ1J$a87a9248-80f0-48ac-bb30-7897ed5b7002
+˜	cpp:S50250"QReplace the use of "new" with an operation that automatically manages the memory.(°ÓÁûüÿÿÿÿ8Üúé¢ñ1J$4f7b0b52-8fe9-41fe-b8fb-5684d4b0c60f
+p	cpp:S58176")This function should be declared "const".(‰­ì•úÿÿÿÿ8†ÂË¤ñ1J$30e86244-2245-42cd-927c-5a2263bed096
+n	cpp:S58278"'Replace the redundant type with "auto".(¯ìê¾üÿÿÿÿ8õãÛ£ñ1J$687639ac-a06c-4587-9215-d042e6608cc4
+˜	cpp:S50258"QReplace the use of "new" with an operation that automatically manages the memory.(¯ìê¾üÿÿÿÿ8öãÛ£ñ1J$65fd4993-4f60-4704-91ce-cfb35e0658d7
+n	cpp:S5827m"'Replace the redundant type with "auto".(³Á¦Äøÿÿÿÿ8ˆµŠ¤ñ1J$ff470861-96eb-4c24-b0fb-35bcb7f6191a
+i	cpp:S5827p"'Replace the redundant type with "auto".(ôÆæ8‰µŠ¤ñ1J$f21f2dab-912d-4355-95f7-74b0c60f9a1f
+n	cpp:S5827s"'Replace the redundant type with "auto".(Ó—¬şÿÿÿÿ8ÃÀÂ¤ñ1J$b854532e-bd2b-4d82-87cb-e5b1e3d9c676
+‰cpp:S995z"iMake the type of this parameter a pointer-to-const. The current type of "obstacle" is "class Obstacle *".(¥Óí»şÿÿÿÿ8Ê…Ì¤ñ1
+cpp:S995Œ"cMake the type of this parameter a pointer-to-const. The current type of "enemy" is "class Enemy *".(ÊÎ·¨8Î…Ì¤ñ1
+|cpp:S995"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(¦ÇŠ.8Ñ…Ì¤ñ1
