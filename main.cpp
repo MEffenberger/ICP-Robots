@@ -2,6 +2,7 @@
 #include "user.h"
 #include "obstacle.h"
 #include "enemy.h"
+#include "horizontalbar.h"
 
 #include <QGraphicsScene>
 #include <QGraphicsView>
@@ -13,13 +14,23 @@ int main(int argc, char *argv[])
 
     // Create a scene
     QGraphicsScene scene;
+    User *user = new User();
+    HorizontalLowerBar *lowerBar = new HorizontalLowerBar(user);
+    HorizontalUpperBar *upperBar = new HorizontalUpperBar();
+
     scene.setSceneRect(0, 0, 1200, 800);
-    QPixmap bg("../background.png");
+
+    QPixmap bg("../images/bg.png");
     bg = bg.scaled(scene.width(), scene.height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     scene.setBackgroundBrush(bg);
 
+    scene.addItem(lowerBar);
+    lowerBar->setPos(0, 700);
+    scene.addItem(upperBar);
+    upperBar->setPos(0, 0);
+
     // Create an instance of User
-    User *user = new User();
+
 
     // Add the user to the scene
     scene.addItem(user);
@@ -34,7 +45,7 @@ int main(int argc, char *argv[])
 
     Enemy *enemy2 = new Enemy();
     scene.addItem(enemy2);
-    enemy2->setPos(700, 700);
+    enemy2->setPos(1000, 250);
     QTimer::singleShot(3000, enemy2, &Enemy::startAutonomousMovement);
 
 
@@ -49,7 +60,7 @@ int main(int argc, char *argv[])
     scene.addItem(brick3);
     brick3->setPos(400, 400);
     scene.addItem(brick4);
-    brick4->setPos(1000, 1000);
+    brick4->setPos(1000, 300);
 
 
     // Create a view to visualize the scene

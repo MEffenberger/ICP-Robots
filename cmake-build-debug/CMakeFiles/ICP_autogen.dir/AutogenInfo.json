@@ -8,9 +8,19 @@
 	"HEADERS" : 
 	[
 		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/button.h",
+			"MU",
+			"EWIEGA46WW/moc_button.cpp"
+		],
+		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/enemy.h",
 			"MU",
 			"EWIEGA46WW/moc_enemy.cpp"
+		],
+		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.h",
+			"MU",
+			"EWIEGA46WW/moc_horizontalbar.cpp"
 		],
 		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.h",
@@ -21,6 +31,11 @@
 			"/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h",
 			"MU",
 			"EWIEGA46WW/moc_obstacle.cpp"
+		],
+		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/star.h",
+			"MU",
+			"EWIEGA46WW/moc_star.cpp"
 		],
 		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/user.h",
@@ -77,10 +92,13 @@
 	"SETTINGS_FILE" : "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/button.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/main.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/star.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/user.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],

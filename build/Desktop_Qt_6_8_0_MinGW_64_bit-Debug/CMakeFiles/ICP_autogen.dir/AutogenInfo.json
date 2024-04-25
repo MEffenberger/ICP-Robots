@@ -295,9 +295,21 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/marek/CLionProjects/ICP/enemy.h",
+			"MU",
+			"EWIEGA46WW/moc_enemy.cpp",
+			null
+		],
+		[
 			"C:/Users/marek/CLionProjects/ICP/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/marek/CLionProjects/ICP/obstacle.h",
+			"MU",
+			"EWIEGA46WW/moc_obstacle.cpp",
 			null
 		],
 		[
@@ -378,8 +390,10 @@
 	"SETTINGS_FILE" : "C:/Users/marek/CLionProjects/ICP/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/ICP_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "C:/Users/marek/CLionProjects/ICP/enemy.cpp", "MU", null ],
 		[ "C:/Users/marek/CLionProjects/ICP/main.cpp", "MU", null ],
 		[ "C:/Users/marek/CLionProjects/ICP/mainwindow.cpp", "MU", null ],
+		[ "C:/Users/marek/CLionProjects/ICP/obstacle.cpp", "MU", null ],
 		[ "C:/Users/marek/CLionProjects/ICP/user.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

@@ -1,0 +1,12 @@
+
+¨	cpp:S3230	"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8¤ÄÃ®ñ1J$57a2ad3b-87c5-4dfb-bf78-cd1e67369a42
+¤	cpp:S3230
+"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8¥ÄÃ®ñ1J$4fc78764-a8c3-42c3-8ed3-ad51bb019cd5
+cpp:S995"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(°Ë†Áùÿÿÿÿ8ì†È»ñ1
+n	cpp:S5827$"'Replace the redundant type with "auto".(ÛÒ½Éşÿÿÿÿ8ù©Ñºñ1J$faa0dcec-04ce-4335-b2c0-98c01bd1c638
+’	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(å°ú8¥ÄÉ¹ñ1J$04135d01-4477-4f16-b255-ac4883c63e66
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(™ºÃŠùÿÿÿÿ8€ªÑºñ1J$c8debe9c-70fd-408b-b70b-c364aa894038
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(°¤¶úÿÿÿÿ8ÏèÆ»ñ1J$75708b54-2802-4406-8d9b-5595bff79e8c
+r	cpp:S5025$"QReplace the use of "new" with an operation that automatically manages the memory.(ÛÒ½Éşÿÿÿÿ8ı†È»ñ1
+¨	cpp:S3230/"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8Ò“Õºñ1J$c1efe3e8-8ba5-41cf-97d3-ddc2fcdfc156
+¤	cpp:S32300"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8Ò“Õºñ1J$3e406108-8c4a-43af-b555-a3130cca96ca

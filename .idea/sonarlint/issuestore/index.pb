@@ -24,3 +24,16 @@ obstacle.h,e\c\ec3ddb9219a2a87caa01ae41cab5c31afa48b197
 	enemy.cpp,a\1\a103fbff1787b1cb976a6e05bbc98835bd8444ca
 7
 enemy.h,a\4\a4e1b5248cbd8b23aa86839f8497c17b9c30e98d
+A
+horizontalbar.cpp,4\f\4f0323337c3b73e85c5398f265fe082dd0a1505c
+?
+horizontalbar.h,a\8\a87d92d2bb7fadf406cd89d94ac1fdce4433e7a7
+8
+button.h,e\a\ea1d33bf10b8cdd300f04eddafdfb123a6d6bf64
+:
+
+button.cpp,8\5\85f5806109a3661cf7504e77fb8271e0672f9bae
+6
+star.h,6\8\68b0bd0c7c26c4bbd16dbbf62a83750403422bd7
+8
+star.cpp,e\1\e12f78f82b1790964e32f200055e4c2d11a615e3

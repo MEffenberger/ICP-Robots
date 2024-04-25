@@ -150,6 +150,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/button.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/button.h">
+			<Option target="ICP"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/ICP_autogen/mocs_compilation.cpp">
 			<Option target="ICP"/>
 		</Unit>
@@ -157,6 +163,12 @@
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemy.h">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.h">
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/main.cpp">
@@ -175,6 +187,12 @@
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/star.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/star.h">
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/user.cpp">

@@ -37,6 +37,7 @@ private:
     qreal speed;
     qreal rotationSpeed;
     qreal turningAngle;
+    int visionLength;
     bool clockwise;
     bool userCollisionFlag;
 

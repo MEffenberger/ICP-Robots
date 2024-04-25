@@ -7,30 +7,33 @@
 
 Enemy::Enemy(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
 {
-    setRect(0, 0, 100, 100); // Set the size of the ellipse
-    QColor lightYellow(0, 0, 0); // RGB color for light yellow
-    setBrush(lightYellow);
-
+    setRect(0, 0, 75, 75); // Set the size of the ellipse
     setFlag(QGraphicsItem::ItemClipsToShape);
 
     // The armor is needed so the vision field is not visible where it intersects with the Enemy
-    armor = new QGraphicsEllipseItem(0, 0, 100, 100, this); // Set the size of the ellipse
-    QPixmap pixmap("../enemy.png");
+    armor = new QGraphicsEllipseItem(0, 0, 75, 75, this); // Set the size of the ellipse
+    QPixmap pixmap("../images/enemy2.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     armor->setBrush(pixmap);
     armor->setZValue(1); // Set the z value to 1 so it's drawn on top of the vision field
 
+    QPen pen;
+    pen.setWidth(3); // Set the width of the pen to 3 pixels
+    pen.setColor(Qt::black); // Set the color of the pen to black
+    setPen(pen);
+
     // Create the vision point
-    visionPoint = new QGraphicsEllipseItem(20, 50, 10, 10, this); // Positioned above the center of the User
+    visionPoint = new QGraphicsEllipseItem(37.5, 56.25, 10, 10, this); // Positioned above the center of the User
     visionPoint->setBrush(Qt::red); // Set the color to red
-    visionPoint->setZValue(2); // Set the z value to 1 so it's drawn on top of the vision field
+    visionPoint->setZValue(-12); // Set the z value to 1 so it's drawn on top of the vision field
 
     // Create the vision rectangle
+    visionLength = 3;
     QVector<QPointF> points;
-    points << QPointF(-50, 90)  // Bottom-right point (further right and down)
-           << QPointF(20, 70)  // Top-left point
-           << QPointF(20, 30)   // Top-right point
-           << QPointF(-50, 10); // Bottom-left point (further left and down)
+    points << QPointF(25, 56.25)
+           << QPointF(0, 50*visionLength)
+           << QPointF(75, 50*visionLength)
+           << QPointF(50, 56.25);
 
     // Create the vision trapezoid
     visionField = new QGraphicsPolygonItem(QPolygonF(points), this);
@@ -48,7 +51,7 @@ Enemy::Enemy(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
     QTimer *movementTimer = new QTimer(this);
     QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
     movementTimer->start(50);
-    setTransformOriginPoint(50, 50);
+    setTransformOriginPoint(37.5, 37.5);
 }
 
 void Enemy::startAutonomousMovement() {
@@ -65,8 +68,8 @@ void Enemy::startAutonomousMovement() {
 void Enemy::autonomousMovement(){
 
     // set the color of the vision field back to yellow
-    QColor semiTransparentBlue(Qt::yellow); // RGBA color: semi-transparent
-    visionField->setBrush(semiTransparentBlue);
+    QColor yellow(255,250,205,205); // RGBA color: semi-transparent
+    visionField->setBrush(yellow);
 
     // Move the Enemy
     QPointF centerPos = mapToScene(rect().center()); // Get the center point in scene coordinates
@@ -86,8 +89,7 @@ void Enemy::autonomousMovement(){
 
     this->checkCollisions();
     // Check if the new position is within boundaries
-    if (!(newX >= 0 && newX <= scene()->width() - rect().width() && newY >= 0 &&
-        newY <= scene()->height() - rect().height())) {
+    if (!(newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 + 10 && newY <= 700 - rect().height() - 10)){
         // Apply the movement if within the scene
         if (clockwise){
             setRotation(rotation() - turningAngle);
@@ -123,7 +125,6 @@ void Enemy::obstacleCollision(Obstacle *obstacle){
     // Handle collision with obstacle
     userCollisionFlag = false;
     if (visionField->collidesWithItem(obstacle)){
-        // set the color of the vision field to blue semi transparent
         QColor semiTransparentBlue(0,0,255,125); // RGBA color: semi-transparent blue
         visionField->setBrush(semiTransparentBlue);
 
@@ -140,8 +141,7 @@ void Enemy::obstacleCollision(Obstacle *obstacle){
 void Enemy::enemyCollision(Enemy *enemy) {
     // Handle collision with enemy
     if (visionField->collidesWithItem(enemy)){
-        // set the color of the vision field to blue semi transparent
-        QColor semiTransparentBlue(0,0,255,125); // RGBA color: semi-transparent blue
+        QColor semiTransparentBlue(0,0,255,125);
         visionField->setBrush(semiTransparentBlue);
 
         // Turn around

@@ -135,6 +135,45 @@ CMakeFiles/ICP.dir/enemy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/enemy.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp -o CMakeFiles/ICP.dir/enemy.cpp.s
 
+CMakeFiles/ICP.dir/button.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/button.cpp.o: ../button.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ICP.dir/button.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/button.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/button.cpp
+
+CMakeFiles/ICP.dir/button.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/button.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/button.cpp > CMakeFiles/ICP.dir/button.cpp.i
+
+CMakeFiles/ICP.dir/button.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/button.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/button.cpp -o CMakeFiles/ICP.dir/button.cpp.s
+
+CMakeFiles/ICP.dir/horizontalbar.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/horizontalbar.cpp.o: ../horizontalbar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ICP.dir/horizontalbar.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/horizontalbar.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp
+
+CMakeFiles/ICP.dir/horizontalbar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/horizontalbar.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp > CMakeFiles/ICP.dir/horizontalbar.cpp.i
+
+CMakeFiles/ICP.dir/horizontalbar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/horizontalbar.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp -o CMakeFiles/ICP.dir/horizontalbar.cpp.s
+
+CMakeFiles/ICP.dir/star.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/star.cpp.o: ../star.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ICP.dir/star.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/star.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/star.cpp
+
+CMakeFiles/ICP.dir/star.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/star.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/star.cpp > CMakeFiles/ICP.dir/star.cpp.i
+
+CMakeFiles/ICP.dir/star.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/star.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/star.cpp -o CMakeFiles/ICP.dir/star.cpp.s
+
 # Object files for target ICP
 ICP_OBJECTS = \
 "CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o" \
@@ -142,7 +181,10 @@ ICP_OBJECTS = \
 "CMakeFiles/ICP.dir/mainwindow.cpp.o" \
 "CMakeFiles/ICP.dir/user.cpp.o" \
 "CMakeFiles/ICP.dir/obstacle.cpp.o" \
-"CMakeFiles/ICP.dir/enemy.cpp.o"
+"CMakeFiles/ICP.dir/enemy.cpp.o" \
+"CMakeFiles/ICP.dir/button.cpp.o" \
+"CMakeFiles/ICP.dir/horizontalbar.cpp.o" \
+"CMakeFiles/ICP.dir/star.cpp.o"
 
 # External object files for target ICP
 ICP_EXTERNAL_OBJECTS =
@@ -153,12 +195,15 @@ ICP: CMakeFiles/ICP.dir/mainwindow.cpp.o
 ICP: CMakeFiles/ICP.dir/user.cpp.o
 ICP: CMakeFiles/ICP.dir/obstacle.cpp.o
 ICP: CMakeFiles/ICP.dir/enemy.cpp.o
+ICP: CMakeFiles/ICP.dir/button.cpp.o
+ICP: CMakeFiles/ICP.dir/horizontalbar.cpp.o
+ICP: CMakeFiles/ICP.dir/star.cpp.o
 ICP: CMakeFiles/ICP.dir/build.make
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 ICP: CMakeFiles/ICP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ICP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ICP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ICP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

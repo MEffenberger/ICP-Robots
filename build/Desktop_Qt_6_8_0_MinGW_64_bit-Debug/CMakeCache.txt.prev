@@ -314,7 +314,7 @@ QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP:BOOL=OFF
 
 //The directory containing a CMake configuration file for QT.
-QT_DIR:PATH=D:/Qt/6.8.0/mingw_64/lib/cmake/Qt6
+QT_DIR:PATH=QT_DIR-NOTFOUND
 
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:FILEPATH=D:/Qt/6.8.0/mingw_64/bin/qmake.exe

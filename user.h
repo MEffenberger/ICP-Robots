@@ -13,6 +13,8 @@
 #include <QtMath>
 #include <QTimer>
 #include <QPixmap>
+//#include <QSound>
+#include "star.h"
 
 class User : public QObject, public QGraphicsEllipseItem
 {
@@ -20,6 +22,7 @@ Q_OBJECT
 public:
     User(QGraphicsItem *parent = 0);
     void keyPressEvent(QKeyEvent *event);
+    void aaa();
 
 private:
     QGraphicsEllipseItem *visionPoint;
@@ -27,10 +30,17 @@ private:
     qreal rotationSpeed;
     bool Stunned;
     QTimer *StunnedTimer;
+    QList<Star *> stars;
+
+public slots:
+    void moveForward();
+    void rotateClockwise();
+    void rotateCounterClockwise();
 
 private slots:
     void StunTimerExpired();
     void CheckCollisions();
+    void spawnStars(int number);
 };
 
 #endif // USER_H

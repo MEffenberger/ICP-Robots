@@ -5,10 +5,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/ICP_autogen/mocs_compilation.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o"
+  "/mnt/c/Users/marek/CLionProjects/ICP/button.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/button.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/enemy.cpp.o"
+  "/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/horizontalbar.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/main.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/main.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/mainwindow.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/obstacle.cpp.o"
+  "/mnt/c/Users/marek/CLionProjects/ICP/star.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/star.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/user.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/user.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
