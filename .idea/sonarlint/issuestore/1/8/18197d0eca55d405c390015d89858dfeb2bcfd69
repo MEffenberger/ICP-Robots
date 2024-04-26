@@ -1,5 +1,6 @@
 
-K	cpp:S1709"/Add the "explicit" keyword to this constructor.(γή‚8½υμ»ρ1
-6	cpp:S4962"Use the "nullptr" literal.(γή‚8Ύυμ»ρ1
-N	cpp:S3471"2Annotate this function with "override" or "final".(ΘΏ’8Ώυμ»ρ1
-dcpp:S125"Remove the commented out code.(ΊώδΌύÿÿÿÿ8‚Ό®°ρ1J$eeda630a-b5c8-4d75-b838-7bcaecae6d57
+©	cpp:S12420"Rename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(±¶‘±8 ›ΔΦρ1
+q	cpp:S1709"/Add the "explicit" keyword to this constructor.(γή‚8½υμ»ρ1J$03b06374-c3ae-4edf-9890-c07b90d4aee8
+\	cpp:S4962"Use the "nullptr" literal.(γή‚8Ύυμ»ρ1J$6d6917ae-4fd6-4233-8b4e-dcd203a64e4f
+t	cpp:S3471"2Annotate this function with "override" or "final".(ΘΏ’8Ώυμ»ρ1J$47e4e5dc-5380-480f-a70d-f8221a18a8ac
+dcpp:S125"Remove the commented out code.(ΊώδΌύÿÿÿÿ8‚Ό®°ρ1J$d5e3cfe3-26c5-4913-bf5c-ba7db0d7d74b

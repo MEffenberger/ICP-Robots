@@ -8,6 +8,7 @@
 #include <QGraphicsView>
 #include <QApplication>
 
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -16,7 +17,7 @@ int main(int argc, char *argv[])
     QGraphicsScene scene;
     User *user = new User();
     HorizontalLowerBar *lowerBar = new HorizontalLowerBar(user);
-    HorizontalUpperBar *upperBar = new HorizontalUpperBar();
+    HorizontalUpperBar *upperBar = new HorizontalUpperBar(user);
 
     scene.setSceneRect(0, 0, 1200, 800);
 
@@ -31,22 +32,21 @@ int main(int argc, char *argv[])
 
     // Create an instance of User
 
-
     // Add the user to the scene
     scene.addItem(user);
     user->setFlag(QGraphicsItem::ItemIsFocusable);
     user->setFocus();
     user->setPos(scene.sceneRect().center());
 
-    Enemy *enemy = new Enemy();
+    Enemy *enemy = new Enemy(nullptr, user);
     scene.addItem(enemy);
     enemy->setPos(500, 500);
-    QTimer::singleShot(3000, enemy, &Enemy::startAutonomousMovement);
+    //QTimer::singleShot(3000, enemy, &Enemy::startAutonomousMovement);
 
-    Enemy *enemy2 = new Enemy();
+    Enemy *enemy2 = new Enemy(nullptr, user);
     scene.addItem(enemy2);
     enemy2->setPos(1000, 250);
-    QTimer::singleShot(3000, enemy2, &Enemy::startAutonomousMovement);
+    //QTimer::singleShot(3000, enemy2, &Enemy::startAutonomousMovement);
 
 
     Obstacle *brick = new Obstacle();
@@ -69,7 +69,9 @@ int main(int argc, char *argv[])
     view.setFixedSize(1200, 800); //
     view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view.setFocusPolicy(Qt::StrongFocus);
 
+    QSound::play("../missionimpossible.wav");
     // Show the view
     view.show();
 

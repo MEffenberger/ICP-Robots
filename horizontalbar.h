@@ -19,20 +19,27 @@
 #include <QPen>
 #include <QGraphicsTextItem>
 #include <QFontDatabase>
+#include "heart.h"
+#include "gameinfo.h"
+#include "timer.h"
 
 
 class HorizontalUpperBar : public QObject, public QGraphicsRectItem {
 Q_OBJECT
 public:
-    HorizontalUpperBar();
+    HorizontalUpperBar(User *user);
 
 private:
-    int width;
-    int height;
-    int x;
-    int y;
-    QGraphicsRectItem *Timer;
-    QGraphicsRectItem *Pause;
+    int width{};
+    int height{};
+    //QGraphicsRectItem *Timer;
+    //QGraphicsRectItem *Pause;
+    Heart *Heart1;
+    Button *pauseButton;
+    Heart *Heart2;
+    Heart *Heart3;
+    GameInfo *gameInfo;
+    Timer *timer;
 };
 
 class HorizontalLowerBar : public QObject, public QGraphicsRectItem {
@@ -43,10 +50,10 @@ public:
 private:
     int width{};
     int height{};
-//    QGraphicsRectItem *Name{};
     Button *ForwardButton;
     Button *ClockwiseButton;
     Button *CounterClockwiseButton;
+    Heart *Heart1;
 };
 
 

@@ -1,5 +1,4 @@
 
-ˆ	cpp:S3539,"ARemove this access specifier; it does not affect any declaration.(±ãÕËşÿÿÿÿ8·ùàñ1J$b884fb91-ade1-46b7-b2c5-1f32d33d16b1
-i	cpp:S1709"/Add the "explicit" keyword to this constructor.(·ğÈwJ$76ca3c3e-65b2-4475-b250-9e0959b673f9
-T	cpp:S4962"Use the "nullptr" literal.(·ğÈwJ$cf21437f-bfbb-4df6-88f7-e083217ca8a0
-]cpp:S1258"Remove the commented out code.(ÎÁîÓùÿÿÿÿJ$5998a7ed-c407-48b5-b880-699b45f90c1f
+ˆ	cpp:S3539."ARemove this access specifier; it does not affect any declaration.(±ãÕËşÿÿÿÿ8š¸Ğñ1J$69455369-e478-448d-8220-102edb11ef01
+U	cpp:S4962"Use the "nullptr" literal.(“øŒ±J$13c17607-0202-4aa5-a04a-b59eda1c9a10
+dcpp:S125="Remove the commented out code.(ÎÁîÓùÿÿÿÿ8±›¸Ğñ1J$f955eccc-0cfb-437c-a559-95ca70de709e

@@ -20,24 +20,24 @@
 
 
 class Button : public QObject, public QGraphicsRectItem {
+
     Q_OBJECT
+
 public:
     explicit Button(const QPixmap& pixmap, std::string name, QGraphicsItem *parent = 0);
+
 signals:
     void pressed();
     void released();
-    void rotateClockwise();
-    void rotateCounterClockwise();
-    void moveForward();
+
 protected:
+
     void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
-private slots:
-    void onTimerTimeout();
+
 private:
     std::string name;
     QTimer *timer;
-    bool pressedFlag = false;
 };
 
 

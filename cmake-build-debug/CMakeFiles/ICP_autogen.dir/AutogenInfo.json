@@ -18,6 +18,16 @@
 			"EWIEGA46WW/moc_enemy.cpp"
 		],
 		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h",
+			"MU",
+			"EWIEGA46WW/moc_gameinfo.cpp"
+		],
+		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/heart.h",
+			"MU",
+			"EWIEGA46WW/moc_heart.cpp"
+		],
+		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.h",
 			"MU",
 			"EWIEGA46WW/moc_horizontalbar.cpp"
@@ -38,6 +48,11 @@
 			"EWIEGA46WW/moc_star.cpp"
 		],
 		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/timer.h",
+			"MU",
+			"EWIEGA46WW/moc_timer.cpp"
+		],
+		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/user.h",
 			"MU",
 			"EWIEGA46WW/moc_user.cpp"
@@ -46,7 +61,14 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/ICP_autogen/include",
 	"MOC_COMPILATION_FILE" : "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/ICP_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_MULTIMEDIA_LIB",
+		"QT_NETWORK_LIB",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -61,6 +83,8 @@
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
 		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
 		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtMultimedia",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
 		"/usr/include/c++/11",
 		"/usr/include/x86_64-linux-gnu/c++/11",
 		"/usr/include/c++/11/backward",
@@ -94,11 +118,14 @@
 	[
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/button.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/heart.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/main.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/star.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/timer.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/user.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],

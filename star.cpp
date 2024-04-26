@@ -24,7 +24,7 @@ Star::Star(QGraphicsItem *parent) : QGraphicsEllipseItem(parent)
 void Star::move() {
     // Calculate new position based on current rotation
     qreal angle = rotation(); // Use current rotation as base angle
-    qreal radius = 50; // should be the same as used in initialization
+    qreal radius = 30; // should be the same as used in initialization
 
     // Calculate new position
     qreal newX = parentItem()->boundingRect().center().x() + radius * qCos(qDegreesToRadians(angle));

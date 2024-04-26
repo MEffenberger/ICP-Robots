@@ -5,7 +5,7 @@
 #include "enemy.h"
 
 
-Enemy::Enemy(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
+Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseItem(parent)
 {
     setRect(0, 0, 75, 75); // Set the size of the ellipse
     setFlag(QGraphicsItem::ItemClipsToShape);
@@ -52,6 +52,9 @@ Enemy::Enemy(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
     QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
     movementTimer->start(50);
     setTransformOriginPoint(37.5, 37.5);
+
+    this->user = user;
+    connect(this, &Enemy::hit, user, &User::decreaseLives);
 }
 
 void Enemy::startAutonomousMovement() {
@@ -166,6 +169,13 @@ void Enemy::userCollision(User *user){
         // the user is dead, game over
         // debug as of now
         qDebug() << "User is dead";
+        QSound::play("../omg.wav");
+        emitHit();
         return;
     }
+}
+
+void Enemy::emitHit() {
+    // Emit the hit signal
+    emit hit();
 }

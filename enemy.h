@@ -21,13 +21,14 @@
 #include <QPainterPath>
 #include "user.h"
 #include <QGraphicsPolygonItem>
+#include <QSound>
 
 
 class Enemy : public QObject, public QGraphicsEllipseItem
 {
 Q_OBJECT
 public:
-    Enemy(QGraphicsItem *parent = 0);
+    Enemy(QGraphicsItem *parent = 0, User *user = nullptr);
 private:
     QGraphicsEllipseItem *visionPoint;
     QGraphicsRectItem *visionRect;
@@ -40,12 +41,16 @@ private:
     int visionLength;
     bool clockwise;
     bool userCollisionFlag;
+    User *user;
 
 protected:
 
+signals:
+    void hit();
 
 public slots:
     void startAutonomousMovement();
+    void emitHit();
 
 private slots:
     void autonomousMovement();

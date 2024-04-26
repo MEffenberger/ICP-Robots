@@ -1,12 +1,19 @@
 
-¨	cpp:S3230	"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8¤ÄÃ®ñ1J$57a2ad3b-87c5-4dfb-bf78-cd1e67369a42
+¨	cpp:S3230	"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8¤ÄÃ®ñ1J$81fa04aa-8959-4478-bba9-cb033c05925d
 ¤	cpp:S3230
-"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8¥ÄÃ®ñ1J$4fc78764-a8c3-42c3-8ed3-ad51bb019cd5
-cpp:S995"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(°Ë†Áùÿÿÿÿ8ì†È»ñ1
-n	cpp:S5827$"'Replace the redundant type with "auto".(ÛÒ½Éşÿÿÿÿ8ù©Ñºñ1J$faa0dcec-04ce-4335-b2c0-98c01bd1c638
-’	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(å°ú8¥ÄÉ¹ñ1J$04135d01-4477-4f16-b255-ac4883c63e66
-˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(™ºÃŠùÿÿÿÿ8€ªÑºñ1J$c8debe9c-70fd-408b-b70b-c364aa894038
-˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(°¤¶úÿÿÿÿ8ÏèÆ»ñ1J$75708b54-2802-4406-8d9b-5595bff79e8c
-r	cpp:S5025$"QReplace the use of "new" with an operation that automatically manages the memory.(ÛÒ½Éşÿÿÿÿ8ı†È»ñ1
-¨	cpp:S3230/"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8Ò“Õºñ1J$c1efe3e8-8ba5-41cf-97d3-ddc2fcdfc156
-¤	cpp:S32300"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8Ò“Õºñ1J$3e406108-8c4a-43af-b555-a3130cca96ca
+"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8¥ÄÃ®ñ1J$1573ff13-7126-43c5-a023-57dc69db5b52
+§cpp:S995"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(°Ë†Áùÿÿÿÿ8´ËÍñ1J$a2a66dd0-0637-4d88-9c50-cf5e33d4d4db
+n	cpp:S5827'"'Replace the redundant type with "auto".(ÛÒ½Éşÿÿÿÿ8ù©Ñºñ1J$e1a3c022-97a9-4518-b391-1f6bdfca0cfa
+’	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(å°ú8¥ÄÉ¹ñ1J$8bf7d994-ec47-4b52-b4ba-d2e2aa188550
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(™ºÃŠùÿÿÿÿ8€ªÑºñ1J$0b1df87b-79d6-4f32-a75a-2b5cefd797e9
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(°¤¶úÿÿÿÿ8ÏèÆ»ñ1J$71221676-6e18-4356-b05e-08dc97a86dfc
+˜	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(ÛÒ½Éşÿÿÿÿ8ı†È»ñ1J$13240e1e-fd82-476d-807c-8f12413d6e94
+¨	cpp:S32303"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8Ò“Õºñ1J$e310251f-12c2-47e9-b6ef-ef8c7586b5a6
+¤	cpp:S32304"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8Ò“Õºñ1J$8fd62177-90de-4052-aa16-a35704b296ed
+¢cpp:S9952"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(øÓ–»8é÷²Öñ1J$c13b51ec-2d28-4c98-82c9-881007e000a8
+“	cpp:S5025<"QReplace the use of "new" with an operation that automatically manages the memory.(Òó¬8µ÷ŞÏñ1J$3fa75c36-37dc-4dec-89dc-a194151c3bd0
+˜	cpp:S5025="QReplace the use of "new" with an operation that automatically manages the memory.(æóóŞûÿÿÿÿ8Ë¶õÏñ1J$20f09acf-1030-4b49-ae02-d7e74dd61ca7
+˜	cpp:S5025>"QReplace the use of "new" with an operation that automatically manages the memory.(î®¼Ëùÿÿÿÿ8Ë¶õÏñ1J$b6eab7e7-e2bc-418a-8f12-b04430c636c5
+“	cpp:S5025H"QReplace the use of "new" with an operation that automatically manages the memory.(ÔÑøà8®„¢Ôñ1J$21e629b0-032f-42f5-b23f-12e154b445bb
+“	cpp:S5025P"QReplace the use of "new" with an operation that automatically manages the memory.(—°½8¿‹ÌÕñ1J$91fffff5-fdc4-4bf2-87d1-4c76ed3e2a20
+“	cpp:S5025U"QReplace the use of "new" with an operation that automatically manages the memory.(œ³Ú®8¨ò¯Öñ1J$c7b5300e-f937-44a7-a814-bb8cf86db167

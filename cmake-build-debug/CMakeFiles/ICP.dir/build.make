@@ -174,6 +174,45 @@ CMakeFiles/ICP.dir/star.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/star.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/star.cpp -o CMakeFiles/ICP.dir/star.cpp.s
 
+CMakeFiles/ICP.dir/heart.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/heart.cpp.o: ../heart.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ICP.dir/heart.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/heart.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/heart.cpp
+
+CMakeFiles/ICP.dir/heart.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/heart.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/heart.cpp > CMakeFiles/ICP.dir/heart.cpp.i
+
+CMakeFiles/ICP.dir/heart.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/heart.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/heart.cpp -o CMakeFiles/ICP.dir/heart.cpp.s
+
+CMakeFiles/ICP.dir/gameinfo.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/gameinfo.cpp.o: ../gameinfo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ICP.dir/gameinfo.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/gameinfo.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp
+
+CMakeFiles/ICP.dir/gameinfo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/gameinfo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp > CMakeFiles/ICP.dir/gameinfo.cpp.i
+
+CMakeFiles/ICP.dir/gameinfo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/gameinfo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp -o CMakeFiles/ICP.dir/gameinfo.cpp.s
+
+CMakeFiles/ICP.dir/timer.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/timer.cpp.o: ../timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ICP.dir/timer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/timer.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/timer.cpp
+
+CMakeFiles/ICP.dir/timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/timer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/timer.cpp > CMakeFiles/ICP.dir/timer.cpp.i
+
+CMakeFiles/ICP.dir/timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/timer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/timer.cpp -o CMakeFiles/ICP.dir/timer.cpp.s
+
 # Object files for target ICP
 ICP_OBJECTS = \
 "CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o" \
@@ -184,7 +223,10 @@ ICP_OBJECTS = \
 "CMakeFiles/ICP.dir/enemy.cpp.o" \
 "CMakeFiles/ICP.dir/button.cpp.o" \
 "CMakeFiles/ICP.dir/horizontalbar.cpp.o" \
-"CMakeFiles/ICP.dir/star.cpp.o"
+"CMakeFiles/ICP.dir/star.cpp.o" \
+"CMakeFiles/ICP.dir/heart.cpp.o" \
+"CMakeFiles/ICP.dir/gameinfo.cpp.o" \
+"CMakeFiles/ICP.dir/timer.cpp.o"
 
 # External object files for target ICP
 ICP_EXTERNAL_OBJECTS =
@@ -198,12 +240,17 @@ ICP: CMakeFiles/ICP.dir/enemy.cpp.o
 ICP: CMakeFiles/ICP.dir/button.cpp.o
 ICP: CMakeFiles/ICP.dir/horizontalbar.cpp.o
 ICP: CMakeFiles/ICP.dir/star.cpp.o
+ICP: CMakeFiles/ICP.dir/heart.cpp.o
+ICP: CMakeFiles/ICP.dir/gameinfo.cpp.o
+ICP: CMakeFiles/ICP.dir/timer.cpp.o
 ICP: CMakeFiles/ICP.dir/build.make
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
+ICP: /usr/lib/x86_64-linux-gnu/libQt5Multimedia.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
+ICP: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 ICP: CMakeFiles/ICP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ICP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ICP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ICP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

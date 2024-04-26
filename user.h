@@ -13,7 +13,7 @@
 #include <QtMath>
 #include <QTimer>
 #include <QPixmap>
-//#include <QSound>
+#include <QSound>
 #include "star.h"
 
 class User : public QObject, public QGraphicsEllipseItem
@@ -22,7 +22,6 @@ Q_OBJECT
 public:
     User(QGraphicsItem *parent = 0);
     void keyPressEvent(QKeyEvent *event);
-    void aaa();
 
 private:
     QGraphicsEllipseItem *visionPoint;
@@ -30,17 +29,38 @@ private:
     qreal rotationSpeed;
     bool Stunned;
     QTimer *StunnedTimer;
+    QTimer *ForwardTimer;
+    QTimer *ClockwiseTimer;
+    QTimer *CounterClockwiseTimer;
     QList<Star *> stars;
+    int numberOfLives;
+    QTimer *coolDown;
+    bool isCoolingDown;
 
 public slots:
-    void moveForward();
-    void rotateClockwise();
-    void rotateCounterClockwise();
+    void startRotatingClockwise();
+    void startRotatingCounterClockwise();
+    void stopRotating();
+    void stopMoving();
+    void startMovingForward();
+    void decreaseLives();
+    void die();
+    //void setFocus();
 
 private slots:
     void StunTimerExpired();
     void CheckCollisions();
     void spawnStars(int number);
+    void moveForward();
+    void rotateClockwise();
+    void rotateCounterClockwise();
+    void endCoolDown();
+
+signals:
+    void stunned();
+    void deleteLife3();
+    void deleteLife2();
+    void deleteLife1();
 };
 
 #endif // USER_H

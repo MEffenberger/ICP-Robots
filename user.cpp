@@ -15,19 +15,46 @@ User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
     setPen(pen);
 
     // Create the vision point
-    visionPoint = new QGraphicsEllipseItem(37.5, 56.25, 10, 10, this); // Positioned above the center of the User
-    visionPoint->setBrush(Qt::red);
+    visionPoint = new QGraphicsEllipseItem(37.5, 56.25, 15, 15, this); // Positioned above the center of the User
+    QPixmap eye("../images/eye4.png");
+    eye = eye.scaled(visionPoint->rect().width(), visionPoint->rect().height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    QBrush eyeBrush(eye);
+    visionPoint->setBrush(eyeBrush);
+    visionPoint->setPen(Qt::NoPen); // No border
+    visionPoint->setZValue(3); // Set the z value to 1 so it's drawn on top of the vision field
+    QPen eyePen;
+
+
 
     speed = 10.0;
     rotationSpeed = 10.0;
     setTransformOriginPoint(37.5, 37.5);
+
     StunnedTimer = new QTimer(this);
+
+    ForwardTimer = new QTimer(this);
+    ForwardTimer->setInterval(50); // Adjust this value as needed
+    connect(ForwardTimer, &QTimer::timeout, this, &User::moveForward);
+
+    ClockwiseTimer = new QTimer(this);
+    ClockwiseTimer->setInterval(50); // Adjust this value as needed
+    connect(ClockwiseTimer, &QTimer::timeout, this, &User::rotateClockwise);
+
+    CounterClockwiseTimer = new QTimer(this);
+    CounterClockwiseTimer->setInterval(50); // Adjust this value as needed
+    connect(CounterClockwiseTimer, &QTimer::timeout, this, &User::rotateCounterClockwise);
+
     connect(StunnedTimer, SIGNAL(timeout()), this, SLOT(StunTimerExpired()));
     Stunned = false;
+    numberOfLives = 3;
 
+    coolDown = new QTimer(this);
+    connect(coolDown, &QTimer::timeout, this, &User::endCoolDown); // Connect the timer's timeout signal to the endCooldown slot
+    isCoolingDown = false;
 }
 
 void User::moveForward() {
+    if(Stunned) return;
     QPointF centerPos = mapToScene(rect().center()); // Get the center point in scene coordinates
     QPointF visionPos = mapToScene(visionPoint->rect().center()); // Get the vision point in scene coordinates
 
@@ -58,6 +85,30 @@ void User::rotateClockwise() {
 
 void User::rotateCounterClockwise() {
     setRotation(rotation() - rotationSpeed);
+}
+
+void User::startMovingForward() {
+    if(Stunned) return;
+    ForwardTimer->start();
+}
+
+void User::stopMoving() {
+    setFocus();
+    ForwardTimer->stop();
+}
+
+void User::startRotatingClockwise() {
+    ClockwiseTimer->start();
+}
+
+void User::startRotatingCounterClockwise() {
+    CounterClockwiseTimer->start();
+}
+
+void User::stopRotating() {
+    setFocus();
+    ClockwiseTimer->stop();
+    CounterClockwiseTimer->stop();
 }
 
 void User::keyPressEvent(QKeyEvent *event) {
@@ -115,11 +166,13 @@ void User::CheckCollisions() {
             // Stun the user
             Stunned = true;
             StunnedTimer->start(5000); // Stun for 2 seconds
+            QSound::play("../anotherone.wav");
            // QSound::play("../anotherone.wav");
             QPixmap pixmap("../images/user3broken.png");
             pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
             QBrush brush(pixmap);
             setBrush(brush);
+            emit stunned();
             return;
         }
     }
@@ -129,7 +182,7 @@ void User::spawnStars(int starCount) {
     if (starCount < 5) {
         QTimer::singleShot(723, this, [this, starCount]() {
             qreal angleStep = 360.0 / 5;  // Divide a full circle into 5 steps (for 5 stars)
-            qreal radius = 50;  // Adjust this radius if needed to spread out the stars
+            qreal radius = 30;  // Adjust this radius if needed to spread out the stars
 
             Star *star = new Star(this);  // New instance creation
             qreal angle = qDegreesToRadians(angleStep * starCount);
@@ -159,6 +212,35 @@ void User::StunTimerExpired() {
     stars.clear();  // Clear the list
 }
 
-void User::aaa() {
-    qDebug() << "aaa";
+void User::decreaseLives() {
+    if (isCoolingDown) {
+        // If the cooldown is active, ignore the signal
+        qDebug() << "User is cooling down!";
+        return;
+    }
+    qDebug() << "User hit!";
+
+
+    if (numberOfLives == 3){
+        emit deleteLife3();
+    } else if (numberOfLives == 2){
+        emit deleteLife2();
+    } else if (numberOfLives == 1){
+        emit deleteLife1();
+        die();
+    }
+    numberOfLives--;
+    isCoolingDown = true;
+    coolDown->start(1000);
+}
+
+void User::die() {
+    // Handle user death
+    qDebug() << "User died!";
+    // Implement game over logic here
+}
+
+void User::endCoolDown() {
+    isCoolingDown = false;
+    coolDown->stop();
 }
