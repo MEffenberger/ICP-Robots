@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QApplication>
+#include <QWidget>
+#include <QGridLayout>
+#include <QLabel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,10 +20,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void customButtonSlot();
+    void quitApp();
 
-// private slots:
-//     void on_pushButton_3_clicked();
+private slots:
+    //void on_pushButton_3_clicked();
+    //void createNewMap();
+    void createNewWindow();
 
 private:
     Ui::MainWindow *ui;

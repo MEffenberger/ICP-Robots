@@ -1,15 +1,15 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "mapwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //connect(ui->pushButton_3, &QPushButton::clicked, this, &MainWindow::customButtonSlot);
-    ui->tableWidget->verticalHeader()->setVisible(false); // Hides the row numbers
-    ui->tableWidget->horizontalHeader()->setVisible(false); // Hides the column letters/numbers
-    this->setFixedSize(QSize(1200, 720));
+    connect(ui->pushButton_3, &QPushButton::clicked, this, &MainWindow::quitApp);
+    this->setFixedSize(QSize(350, 430));
+    connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::createNewWindow);
 
 }
 
@@ -18,35 +18,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-// void MainWindow::on_pushButton_3_clicked()
-// {
-//     QApplication::quit();
-// }
-
-// Constructor
-
-void MainWindow::customButtonSlot()
+void MainWindow::quitApp()
 {
     QApplication::quit();
 }
 
-// void CustomGraphicsView::drawGrid() {
-//     const int gridSize = 10; // Size of the grid
-//     QGraphicsScene *scene = new QGraphicsScene(this);
-//     setScene(scene);
-
-//     // Calculate the number of lines needed based on the view size and grid size
-//     int numLinesX = width() / gridSize;
-//     int numLinesY = height() / gridSize;
-
-//     // Draw the horizontal lines
-//     for(int i = 0; i < numLinesY; ++i) {
-//         scene->addLine(0, i * gridSize, width(), i * gridSize, QPen(Qt::gray));
-//     }
-
-//     // Draw the vertical lines
-//     for(int i = 0; i < numLinesX; ++i) {
-//         scene->addLine(i * gridSize, 0, i * gridSize, height(), QPen(Qt::gray));
-//     }
-// }
+void MainWindow::createNewWindow()
+{
+    MapWindow *testik = new MapWindow(nullptr);
+    connect(testik, &MapWindow::windowShown, this, &MainWindow::close);
+    testik->disableEditing();
+    testik->updateObstacleCounter();
+    testik->updateControlledRobotCounter();
+    testik->updateEnemyCounter();
+    testik->show();
+}
 

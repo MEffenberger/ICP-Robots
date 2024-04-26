@@ -6,103 +6,52 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>350</width>
+    <height>430</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
-      <width>1220</width>
-      <height>555</height>
+      <y>0</y>
+      <width>351</width>
+      <height>131</height>
      </rect>
     </property>
-    <property name="minimumSize">
-     <size>
-      <width>1001</width>
-      <height>0</height>
-     </size>
+    <property name="text">
+     <string>CREATE NEW MAP</string>
     </property>
-    <property name="maximumSize">
-     <size>
-      <width>1280</width>
-      <height>16777215</height>
-     </size>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>351</width>
+      <height>131</height>
+     </rect>
     </property>
-    <property name="tabKeyNavigation">
-     <bool>true</bool>
+    <property name="text">
+     <string>LOAD MAP</string>
     </property>
-    <property name="showGrid">
-     <bool>true</bool>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>351</width>
+      <height>131</height>
+     </rect>
     </property>
-    <property name="wordWrap">
-     <bool>true</bool>
+    <property name="text">
+     <string>EXIT PROGRAM</string>
     </property>
-    <property name="cornerButtonEnabled">
-     <bool>true</bool>
-    </property>
-    <property name="rowCount">
-     <number>11</number>
-    </property>
-    <property name="columnCount">
-     <number>24</number>
-    </property>
-    <attribute name="horizontalHeaderMinimumSectionSize">
-     <number>50</number>
-    </attribute>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>30</number>
-    </attribute>
-    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-     <bool>false</bool>
-    </attribute>
-    <attribute name="verticalHeaderMinimumSectionSize">
-     <number>50</number>
-    </attribute>
-    <attribute name="verticalHeaderDefaultSectionSize">
-     <number>30</number>
-    </attribute>
-    <row/>
-    <row/>
-    <row/>
-    <row/>
-    <row/>
-    <row/>
-    <row/>
-    <row/>
-    <row/>
-    <row/>
-    <row/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -110,16 +59,10 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1280</width>
+     <width>350</width>
      <height>17</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuRobotci">
-    <property name="title">
-     <string>Robotci</string>
-    </property>
-   </widget>
-   <addaction name="menuRobotci"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "mapwindow.h"
 
 #include <QApplication>
 
