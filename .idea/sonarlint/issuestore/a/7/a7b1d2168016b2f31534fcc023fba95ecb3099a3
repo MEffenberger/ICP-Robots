@@ -1,3 +1,3 @@
 
-¢	cpp:S3230"gDo not assign data members in a constructor. Initialize member "defaultText" in an initialization list.(úÍÖ÷J$5a81cc19-e8e8-476a-b953-690368fe30f3
-Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Û†ÁïJ$9f7226a4-06a7-40d8-9cca-d32765f64ff2
+¢	cpp:S3230"gDo not assign data members in a constructor. Initialize member "defaultText" in an initialization list.(úÍÖ÷J$079c0972-56ac-4fd2-9e8a-9a84b576f987
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Û†ÁïJ$dbc6a99c-2f6c-44f9-8b00-c6fd82999c57

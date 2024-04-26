@@ -209,6 +209,12 @@
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h">
 			<Option target="ICP"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/popup.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/popup.h">
+			<Option target="ICP"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/star.cpp">
 			<Option target="ICP"/>
 		</Unit>

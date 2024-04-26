@@ -43,6 +43,11 @@
 			"EWIEGA46WW/moc_obstacle.cpp"
 		],
 		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/popup.h",
+			"MU",
+			"EWIEGA46WW/moc_popup.cpp"
+		],
+		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/star.h",
 			"MU",
 			"EWIEGA46WW/moc_star.cpp"
@@ -124,6 +129,7 @@
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/main.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/popup.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/star.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/timer.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/user.cpp", "MU" ]

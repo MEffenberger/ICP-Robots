@@ -53,6 +53,7 @@ private:
     Button *ForwardButton;
     Button *ClockwiseButton;
     Button *CounterClockwiseButton;
+    Button *KeyboardButton;
     Heart *Heart1;
 };
 

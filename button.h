@@ -24,7 +24,7 @@ class Button : public QObject, public QGraphicsRectItem {
     Q_OBJECT
 
 public:
-    explicit Button(const QPixmap& pixmap, std::string name, QGraphicsItem *parent = 0);
+    explicit Button(const QPixmap& pixmap, std::string name, QGraphicsItem *parent = 0, qreal x = 0, qreal y = 0);
 
 signals:
     void pressed();

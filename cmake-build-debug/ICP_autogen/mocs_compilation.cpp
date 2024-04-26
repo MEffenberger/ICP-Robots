@@ -5,6 +5,7 @@
 #include "EWIEGA46WW/moc_heart.cpp"
 #include "EWIEGA46WW/moc_horizontalbar.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "EWIEGA46WW/moc_popup.cpp"
 #include "EWIEGA46WW/moc_star.cpp"
 #include "EWIEGA46WW/moc_timer.cpp"
 #include "EWIEGA46WW/moc_user.cpp"

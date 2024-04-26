@@ -35,6 +35,8 @@ set(PROJECT_SOURCES
         gameinfo.h
         timer.cpp
         timer.h
+        popup.cpp
+        popup.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -50,6 +52,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         heart.h heart.cpp
         gameinfo.h gameinfo.cpp
         timer.cpp timer.h
+        popup.cpp popup.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ICP APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

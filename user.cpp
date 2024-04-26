@@ -70,7 +70,9 @@ void User::moveForward() {
     qreal newX = x() + speed * dx;
     qreal newY = y() + speed * dy;
 
-
+    if (! (newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 && newY <= 700 - rect().height())){
+        QSound::play("../sounds/block.wav");
+    }
     // Check if the new position is within boundaries
     if (newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 && newY <= 700 - rect().height()) {
         // Apply the movement if within the scene
@@ -166,7 +168,7 @@ void User::CheckCollisions() {
             // Stun the user
             Stunned = true;
             StunnedTimer->start(5000); // Stun for 2 seconds
-            QSound::play("../anotherone.wav");
+            QSound::play("../sounds/anotherone.wav");
            // QSound::play("../anotherone.wav");
             QPixmap pixmap("../images/user3broken.png");
             pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -222,10 +224,13 @@ void User::decreaseLives() {
 
 
     if (numberOfLives == 3){
+        QSound::play("../sounds/omg.wav");
         emit deleteLife3();
     } else if (numberOfLives == 2){
+        QSound::play("../sounds/omg.wav");
         emit deleteLife2();
     } else if (numberOfLives == 1){
+        QSound::play("../sounds/gameover.wav");
         emit deleteLife1();
         die();
     }
@@ -243,4 +248,8 @@ void User::die() {
 void User::endCoolDown() {
     isCoolingDown = false;
     coolDown->stop();
+}
+
+void User::switchControl() {
+    setFocus();
 }

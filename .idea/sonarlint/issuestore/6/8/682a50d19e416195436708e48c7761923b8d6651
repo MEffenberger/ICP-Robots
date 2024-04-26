@@ -1,24 +1,26 @@
 
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(Ë†Àˆÿÿÿÿÿ8©ÈĞñ1J$c7638913-49dd-4edc-bcf7-9fbd80863097
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(Ë†Àˆÿÿÿÿÿ8©ÈĞñ1J$4bce62c2-968f-4382-a7de-fdd470755dd3
-i	cpp:S5827"'Replace the redundant type with "auto".(ÂÆ³™8™£óµñ1J$bb26924c-aa71-4db6-9d19-29762ffec21f
-n	cpp:S5827"'Replace the redundant type with "auto".(ÃŒ²öúÿÿÿÿ8õÕêÊñ1J$4a63ca76-4ad8-4493-9f48-b16d1fad34a4
-h	cpp:S5827"'Replace the redundant type with "auto".(¢ç’:8Ì©ÈĞñ1J$22b3d533-f084-4b3a-8bf7-d5272a20dc76
-h	cpp:S5827)"'Replace the redundant type with "auto".(ÅÎ'8Í©ÈĞñ1J$dc40f7fc-357f-4d07-9e8f-ab8445553cb8
-n	cpp:S5827."'Replace the redundant type with "auto".(¤ôÌØüÿÿÿÿ8Î©ÈĞñ1J$2901b2f6-95cf-4222-945a-3b697b99c5e3
-i	cpp:S58274"'Replace the redundant type with "auto".(ññöº8 “·¤ñ1J$4ca65af2-1f30-40e3-bc28-21cdfd9b6b4c
-h	cpp:S58275"'Replace the redundant type with "auto".(Õğ³]8 “·¤ñ1J$ca0b0a0f-405e-4770-957c-fba7310dd576
-i	cpp:S58276"'Replace the redundant type with "auto".(‚ğ¯ä8¡“·¤ñ1J$8c115644-1926-4fca-8003-ef44b78d1e4f
-n	cpp:S58277"'Replace the redundant type with "auto".(ù¤§ùúÿÿÿÿ8Î©ÈĞñ1J$2a5b4233-f12c-4117-a52c-6c4deeae165c
-“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÂÆ³™8ŠÖêÊñ1J$16564574-c525-45f3-82c7-fc1c721c216b
-˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÃŒ²öúÿÿÿÿ8«“·¤ñ1J$79677bda-54c1-47c9-8de5-43aec4fa866a
-’	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(¢ç’:8šö”®ñ1J$c31d4e93-12b4-45dd-a73f-f622fd6922b9
-’	cpp:S5025)"QReplace the use of "new" with an operation that automatically manages the memory.(ÅÎ'8Ó©ÈĞñ1J$4901f310-f0c2-4ce5-ac29-f3d7ec95f2f5
-˜	cpp:S5025."QReplace the use of "new" with an operation that automatically manages the memory.(¤ôÌØüÿÿÿÿ8Ô©ÈĞñ1J$8b478298-2d8e-4ba6-86c1-5ccc19551639
-“	cpp:S50254"QReplace the use of "new" with an operation that automatically manages the memory.(ññöº8«“·¤ñ1J$b2cd8878-0212-455b-86e0-b041ae478f19
-’	cpp:S50255"QReplace the use of "new" with an operation that automatically manages the memory.(Õğ³]8Õ©ÈĞñ1J$53e9dcc9-67e4-4a8a-ac51-d5816ea968c6
-“	cpp:S50256"QReplace the use of "new" with an operation that automatically manages the memory.(‚ğ¯ä8Õ©ÈĞñ1J$c7c1f25e-6e32-424d-8fa8-8b2861023b5a
-˜	cpp:S50257"QReplace the use of "new" with an operation that automatically manages the memory.(ù¤§ùúÿÿÿÿ8Õ©ÈĞñ1J$9b4762fc-2366-40f7-a8e0-49d125f25350
-€	cpp:S2209N"9Replace "." with "::" for access to "QApplication::exec".( äƒÙúÿÿÿÿ8×©ÈĞñ1J$a80fa9b5-6741-4130-a7f4-25b859aa37bb
-_cpp:S125,"Remove the commented out code.(Èô”8‰ªÈĞñ1J$849b00ac-f90b-48ba-a167-e8957e171a2d
-dcpp:S1251"Remove the commented out code.(í¡û¬ùÿÿÿÿ8‰ªÈĞñ1J$c9b62174-aead-48b8-ac53-2f54c6b2f165
+¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(Ë†Àˆÿÿÿÿÿ8„êÃãñ1J$ff870adb-f98d-4ece-9043-f1e0cf2590aa
+¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(Ë†Àˆÿÿÿÿÿ8„êÃãñ1J$b6a0d6bf-534f-4b72-8863-69205ec0b024
+i	cpp:S5827"'Replace the redundant type with "auto".(ÂÆ³™8™£óµñ1J$8b400c94-ea54-4d15-a575-9ac846a25005
+n	cpp:S5827"'Replace the redundant type with "auto".(ÃŒ²öúÿÿÿÿ8õÕêÊñ1J$b1434181-686d-48f1-bc62-e3dde5e794ee
+h	cpp:S5827"'Replace the redundant type with "auto".(¢ç’:8ÎêÃãñ1J$eb15924a-f075-49eb-9ca0-12d02995875a
+C	cpp:S5827""'Replace the redundant type with "auto".(‹ÂÙÜ8Ì›Éãñ1
+h	cpp:S5827."'Replace the redundant type with "auto".(ÅÎ'8ÏêÃãñ1J$04aa7004-b69f-41c5-b35e-c690eafc6083
+n	cpp:S58273"'Replace the redundant type with "auto".(¤ôÌØüÿÿÿÿ8ĞêÃãñ1J$1c84e055-b12b-4d35-8306-e0c055f3a991
+i	cpp:S58279"'Replace the redundant type with "auto".(ññöº8 “·¤ñ1J$b0ce7f71-1eb8-4334-b87d-4414c66a26a7
+h	cpp:S5827:"'Replace the redundant type with "auto".(Õğ³]8 “·¤ñ1J$31380c03-a6a9-4ee5-ad5c-7c8d80fef899
+i	cpp:S5827;"'Replace the redundant type with "auto".(‚ğ¯ä8¡“·¤ñ1J$037cd990-3f67-4dfe-b0d6-0dfd4a5a03dc
+n	cpp:S5827<"'Replace the redundant type with "auto".(ù¤§ùúÿÿÿÿ8ĞêÃãñ1J$a115ff66-34f6-4fd1-a197-0b44c91762b8
+“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÂÆ³™8«“·¤ñ1J$01088645-2750-4174-adce-999ea08d606c
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÃŒ²öúÿÿÿÿ8Õ©ÈĞñ1J$af91cebf-ba45-42a7-94de-a2b9b7a79703
+’	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(¢ç’:8Õ©ÈĞñ1J$e727a2a7-1bb4-41ba-97ee-2fbf5bd90110
+“	cpp:S5025""QReplace the use of "new" with an operation that automatically manages the memory.(‹ÂÙÜ8ÖêÃãñ1J$ed79a00c-bf62-45c0-9971-4f496bb66a23
+’	cpp:S5025."QReplace the use of "new" with an operation that automatically manages the memory.(ÅÎ'8×êÃãñ1J$91125d04-a2b4-4ad8-b182-fa1f30450188
+˜	cpp:S50253"QReplace the use of "new" with an operation that automatically manages the memory.(¤ôÌØüÿÿÿÿ8«“·¤ñ1J$f64238f8-527a-4567-b7d9-5878b7318939
+“	cpp:S50259"QReplace the use of "new" with an operation that automatically manages the memory.(ññöº8×êÃãñ1J$308092e2-0196-4a7f-a415-7d5ff343c48f
+’	cpp:S5025:"QReplace the use of "new" with an operation that automatically manages the memory.(Õğ³]8×êÃãñ1J$07b04be7-0e26-450f-aac9-62179ece6835
+“	cpp:S5025;"QReplace the use of "new" with an operation that automatically manages the memory.(‚ğ¯ä8ØêÃãñ1J$987537d6-9913-4ee2-a912-ea06f619b99e
+r	cpp:S5025<"QReplace the use of "new" with an operation that automatically manages the memory.(ù¤§ùúÿÿÿÿ8Ü›Éãñ1
+€	cpp:S2209S"9Replace "." with "::" for access to "QApplication::exec".( äƒÙúÿÿÿÿ8ÚêÃãñ1J$34565bb5-716e-4384-b64f-ae7e7f952013
+_cpp:S1251"Remove the commented out code.(Èô”8ëÃãñ1J$285a4305-3a12-4617-a138-d5259cfbf18e
+dcpp:S1256"Remove the commented out code.(í¡û¬ùÿÿÿÿ8ëÃãñ1J$53bfe88a-6d00-4d80-92b8-9f93aaf7c840

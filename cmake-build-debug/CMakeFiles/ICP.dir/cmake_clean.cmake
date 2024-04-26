@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ICP.dir/main.cpp.o"
   "CMakeFiles/ICP.dir/mainwindow.cpp.o"
   "CMakeFiles/ICP.dir/obstacle.cpp.o"
+  "CMakeFiles/ICP.dir/popup.cpp.o"
   "CMakeFiles/ICP.dir/star.cpp.o"
   "CMakeFiles/ICP.dir/timer.cpp.o"
   "CMakeFiles/ICP.dir/user.cpp.o"

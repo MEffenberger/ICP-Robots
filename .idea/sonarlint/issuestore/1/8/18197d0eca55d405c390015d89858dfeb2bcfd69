@@ -1,6 +1,13 @@
 
-©	cpp:S12420"Rename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(±¶‘±8 ›ΔΦρ1
-q	cpp:S1709"/Add the "explicit" keyword to this constructor.(γή‚8½υμ»ρ1J$03b06374-c3ae-4edf-9890-c07b90d4aee8
 \	cpp:S4962"Use the "nullptr" literal.(γή‚8Ύυμ»ρ1J$6d6917ae-4fd6-4233-8b4e-dcd203a64e4f
+>cpp:S1250"Remove the commented out code.(ω£ιψϋÿÿÿÿ8ΖΗίρ1
+>cpp:S1250"Remove the commented out code.(ω£ιψϋÿÿÿÿ8·φ‘ίρ1
+>cpp:S1250"Remove the commented out code.(ω£ιψϋÿÿÿÿ8Χ’ίρ1
+>cpp:S1250"Remove the commented out code.(ω£ιψϋÿÿÿÿ8ΎΈ“ίρ1
+>cpp:S1250"Remove the commented out code.(ω£ιψϋÿÿÿÿ8Ήη”ίρ1
+q	cpp:S1709"/Add the "explicit" keyword to this constructor.(γή‚8½υμ»ρ1J$03b06374-c3ae-4edf-9890-c07b90d4aee8
+6	cpp:S4962"Use the "nullptr" literal.(γή‚8Γ•ίρ1
 t	cpp:S3471"2Annotate this function with "override" or "final".(ΘΏ’8Ώυμ»ρ1J$47e4e5dc-5380-480f-a70d-f8221a18a8ac
-dcpp:S125"Remove the commented out code.(ΊώδΌύÿÿÿÿ8‚Ό®°ρ1J$d5e3cfe3-26c5-4913-bf5c-ba7db0d7d74b
+>cpp:S1250"Remove the commented out code.(ω£ιψϋÿÿÿÿ8γΓ•ίρ1
+6	cpp:S4962"Use the "nullptr" literal.(γή‚8—–ίρ1
+>cpp:S1250"Remove the commented out code.(ω£ιψϋÿÿÿÿ8–ίρ1

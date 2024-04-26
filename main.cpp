@@ -3,6 +3,7 @@
 #include "obstacle.h"
 #include "enemy.h"
 #include "horizontalbar.h"
+#include "popup.h"
 
 #include <QGraphicsScene>
 #include <QGraphicsView>
@@ -29,6 +30,10 @@ int main(int argc, char *argv[])
     lowerBar->setPos(0, 700);
     scene.addItem(upperBar);
     upperBar->setPos(0, 0);
+
+    PopUp *popup = new PopUp();
+    scene.addItem(popup);
+    popup->setPos(350, 200);
 
     // Create an instance of User
 
@@ -71,7 +76,7 @@ int main(int argc, char *argv[])
     view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view.setFocusPolicy(Qt::StrongFocus);
 
-    QSound::play("../missionimpossible.wav");
+    QSound::play("../sounds/missionimpossible.wav");
     // Show the view
     view.show();
 

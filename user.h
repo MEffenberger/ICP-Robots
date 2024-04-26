@@ -45,7 +45,7 @@ public slots:
     void startMovingForward();
     void decreaseLives();
     void die();
-    //void setFocus();
+    void switchControl();
 
 private slots:
     void StunTimerExpired();

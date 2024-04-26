@@ -6,8 +6,8 @@
 
 #include <utility>
 
-Button::Button(const QPixmap &pixmap, std::string name, QGraphicsItem *parent) : QGraphicsRectItem(parent) {
-    setRect(0, 0, 75, 75);
+Button::Button(const QPixmap &pixmap, std::string name, QGraphicsItem *parent, qreal x, qreal y) : QGraphicsRectItem(parent) {
+    setRect(0, 0, x, y);
     QPixmap scaledPixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     QBrush brush(scaledPixmap);
     setBrush(brush);
@@ -20,7 +20,6 @@ Button::Button(const QPixmap &pixmap, std::string name, QGraphicsItem *parent) :
 void Button::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     emit pressed();
     qDebug() << "Button " << QString::fromStdString(name) << " is pressed";
-
 }
 
 void Button::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {

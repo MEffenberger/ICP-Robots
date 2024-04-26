@@ -45,3 +45,11 @@ button.cpp,8\5\85f5806109a3661cf7504e77fb8271e0672f9bae
 gameinfo.cpp,a\7\a7b1d2168016b2f31534fcc023fba95ecb3099a3
 9
 	timer.cpp,d\1\d122e5217730f0193bdb70d7308661579248e311
+Å
+Q.idea/sonarlint/securityhotspotstore/a/7/a7b1d2168016b2f31534fcc023fba95ecb3099a3,8\5\85dcb412e8623888ba68788fbda2eaa2aed4e753
+Å
+Q.idea/sonarlint/securityhotspotstore/d/1/d122e5217730f0193bdb70d7308661579248e311,8\e\8ed0b7d22fe65c9ec3d404115ffd3c7e19d7f9cd
+7
+timer.h,3\3\335ea3ab33b62b9f2922cf01857fbb2de9a5a875
+7
+popup.h,c\f\cfdcd67df4935778407cfdad35534649cdd69a68

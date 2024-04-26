@@ -28,11 +28,11 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     visionPoint->setZValue(-12); // Set the z value to 1 so it's drawn on top of the vision field
 
     // Create the vision rectangle
-    visionLength = 3;
+    visionLength = 5;
     QVector<QPointF> points;
     points << QPointF(25, 56.25)
-           << QPointF(0, 50*visionLength)
-           << QPointF(75, 50*visionLength)
+           << QPointF(0, 75 + visionLength*15)
+           << QPointF(75, 75 + visionLength*15)
            << QPointF(50, 56.25);
 
     // Create the vision trapezoid
@@ -46,11 +46,11 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     turningAngle = 30;
     clockwise = true;// Initialize movement parameters
     speed = 5.0;
-    rotationSpeed = 10.0;
+    rotationSpeed = 3.0;
     userCollisionFlag = false;
     QTimer *movementTimer = new QTimer(this);
     QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
-    movementTimer->start(50);
+    movementTimer->start(30);
     setTransformOriginPoint(37.5, 37.5);
 
     this->user = user;
@@ -169,7 +169,6 @@ void Enemy::userCollision(User *user){
         // the user is dead, game over
         // debug as of now
         qDebug() << "User is dead";
-        QSound::play("../omg.wav");
         emitHit();
         return;
     }

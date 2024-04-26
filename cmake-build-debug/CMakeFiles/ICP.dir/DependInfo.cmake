@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/c/Users/marek/CLionProjects/ICP/main.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/main.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/mainwindow.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/obstacle.cpp.o"
+  "/mnt/c/Users/marek/CLionProjects/ICP/popup.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/popup.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/star.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/star.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/timer.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/timer.cpp.o"
   "/mnt/c/Users/marek/CLionProjects/ICP/user.cpp" "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir/user.cpp.o"
