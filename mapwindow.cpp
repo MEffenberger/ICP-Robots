@@ -52,6 +52,7 @@ MapWindow::MapWindow(QWidget *parent) :
     ui->pushButton_enemy->setStyleSheet("QPushButton { border-radius: 20px; }");
     connect(ui->pushButton_enemy, &QPushButton::clicked, this, &MapWindow::toggleEnemyPlacement);
     //
+    connect(ui->pushButtonSave, &QPushButton::clicked, this, &MapWindow::saveFile);
 }
 
 void MapWindow::updateObstacleCount() {
@@ -68,6 +69,74 @@ void MapWindow::updateObstacleCount() {
 MapWindow::~MapWindow() {
     delete ui;
 }
+
+void MapWindow::saveFile() {
+    QString filename = QFileDialog::getSaveFileName(this, "Save Map", "", "JSON Files (*.json)");
+    if (filename.isEmpty()) {
+        return;
+    }
+
+    QFile file(filename);
+    if (!file.open(QIODevice::WriteOnly)) {
+        // Handle error, e.g., display a message box
+        return;
+    }
+
+    QJsonArray mapData; // Array to hold all cell objects
+
+    for (int row = 0; row < ui->tableWidget->rowCount(); ++row) {
+        for (int col = 0; col < ui->tableWidget->columnCount(); ++col) {
+            QTableWidgetItem *item = ui->tableWidget->item(row, col);
+            if (!item) continue; // Skip empty cells
+
+            QJsonObject cellObject; // Object to represent a single cell
+
+            // Get coordinates relative to the QTableWidget
+            QPoint cellPosition = ui->tableWidget->visualItemRect(item).topLeft();
+
+            if (RobotItem *robot = dynamic_cast<RobotItem*>(item)) {
+                cellObject["type"] = "Robot";
+                cellObject["position"] = QJsonObject({
+                    {"x", cellPosition.x()},
+                    {"y", cellPosition.y()}
+                });
+                cellObject["attributes"] = QJsonObject({
+                    {"orientation", robot->getOrientation()},
+                    {"distance", robot->getDistance()},
+                    {"rotationAngle", robot->getRotationAngle()}
+                });
+
+            } else if (ObstacleItem *obstacle = dynamic_cast<ObstacleItem*>(item)) {
+                cellObject["type"] = "Obstacle";
+                cellObject["position"] = QJsonObject({
+                    {"x", cellPosition.x()},
+                    {"y", cellPosition.y()}
+                });
+
+            } else if (EnemyItem *enemy = dynamic_cast<EnemyItem*>(item)) {
+                cellObject["type"] = "Enemy";
+                cellObject["position"] = QJsonObject({
+                    {"x", cellPosition.x()},
+                    {"y", cellPosition.y()}
+                });
+                cellObject["attributes"] = QJsonObject({
+                    {"orientation", enemy->getOrientation()},
+                    {"distance", enemy->getDistance()},
+                    {"rotationAngle", enemy->getRotationAngle()}
+                });
+            } else {
+                continue;
+            }
+            mapData.append(cellObject);
+        }
+    }
+
+    QJsonDocument saveDoc(mapData);
+    file.write(saveDoc.toJson());
+    file.close();
+
+}
+
 
 void MapWindow::showEvent(QShowEvent *event)
 {
@@ -163,24 +232,35 @@ void MapWindow::handleCellClicked(int row, int column) {
     if(placingObstacle){
         QVariant currentData = ui->levelComboBox->currentData();
         int obstacles = currentData.value<QPair<int, int>>().first;
-        // Check if the cell already has an obstacle (by checking the icon)
-        if (!item->background().texture().isNull()) {
-            // If the cell has an obstacle, remove it
-            item->setBackground(QBrush()); // Unset the background
-            obstacleCount--; // Decrement the obstacle count
-        } else if (obstacleCount < obstacles && item->background().texture().isNull()) {
-            QPixmap pixmap(":/images/obstacle.png");
-            item->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
-                                                        ui->tableWidget->rowHeight(row),
-                                                        Qt::IgnoreAspectRatio,
-                                                        Qt::SmoothTransformation)));
+
+        ObstacleItem *obstacleItem = dynamic_cast<ObstacleItem*>(item);
+        if (obstacleItem) {
+            obstacleItem->setBackground(QBrush()); // Unset the background
+            obstacleCount--; // Decrement the robot count
+            QTableWidgetItem *defaultItem = new QTableWidgetItem();
+            defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
+            ui->tableWidget->setItem(row, column, defaultItem);
+
+            updateObstacleCounter();
+        } else {
+            if (dynamic_cast<EnemyItem*>(item) || dynamic_cast<RobotItem*>(item)) {
+                return;
+            }
+
+            if (obstacleCount < obstacles) {
+                ObstacleItem *obstacleItem = new ObstacleItem();
+                QPixmap pixmap(":/images/obstacle.png");
+                obstacleItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
+                                                            ui->tableWidget->rowHeight(row),
+                                                            Qt::IgnoreAspectRatio,
+                                                            Qt::SmoothTransformation)));
 
 
-            obstacleCount++; // Increment the obstacle count
-        }
-
+                obstacleCount++; // Increment the obstacle count
+                ui->tableWidget->setItem(row, column, obstacleItem);
+            }
         updateObstacleCounter(); // Update the display to show how many obstacles are left
-
+        }
     } else if (placingRobot) {
         RobotItem *robotItem = dynamic_cast<RobotItem*>(item);
             if (robotItem) {

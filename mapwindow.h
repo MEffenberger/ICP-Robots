@@ -7,6 +7,10 @@
 #include <QShowEvent>
 #include <QComboBox>
 #include <QInputDialog>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QFileDialog>
 
 namespace Ui {
 class MapWindow;
@@ -27,6 +31,7 @@ public:
     void updateControlledRobotCounter();
     void updateEnemyCounter();
     void disableEditing();
+    void saveFile();
 
     ~MapWindow();
 signals:
