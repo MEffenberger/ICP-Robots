@@ -1,0 +1,1 @@
+/usr/bin/cc     -v CMakeFiles/cmTC_57626.dir/CMakeCCompilerABI.c.o  -o cmTC_57626 
