@@ -40,13 +40,14 @@ private:
     Heart *Heart3;
     GameInfo *gameInfo;
     Timer *timer;
+    //User *userPtr;
 };
 
 class HorizontalLowerBar : public QObject, public QGraphicsRectItem {
 Q_OBJECT
 public:
     HorizontalLowerBar(User *user);
-
+    QGraphicsRectItem *Autopilot;
 private:
     int width{};
     int height{};
@@ -54,7 +55,13 @@ private:
     Button *ClockwiseButton;
     Button *CounterClockwiseButton;
     Button *KeyboardButton;
+
+    User *userPtr;
     Heart *Heart1;
+
+protected:
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
+
 };
 
 

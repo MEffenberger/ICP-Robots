@@ -5,6 +5,7 @@
 #include "horizontalbar.h"
 
 
+
 HorizontalLowerBar::HorizontalLowerBar(User *user) {
     width = 1200;
     height = 100;
@@ -13,6 +14,7 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
     pixmap = pixmap.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     setBrush(pixmap);
     setPos(0, 700);
+    userPtr = user;
 
     // Initialize the buttons with their respective images
     ForwardButton = new Button(QPixmap("../images/forward.png"), "Forward",this, 75, 75);
@@ -27,6 +29,8 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
 
     // Connect the buttons to the User actions
     connect(ForwardButton, &Button::pressed, user, &User::startMovingForward);
+    connect(ForwardButton, &Button::autoPilot, user, &User::switchControl);
+
     connect(ClockwiseButton, &Button::pressed, user, &User::startRotatingClockwise);
     connect(CounterClockwiseButton, &Button::pressed, user, &User::startRotatingCounterClockwise);
     connect(ForwardButton, &Button::released, user, &User::stopMoving);
@@ -49,6 +53,23 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
     QColor color(0,255,0);
     text->setDefaultTextColor(color);
     text->setPos(20, 12.5);
+
+    Autopilot = new QGraphicsRectItem(0, 0, 75, 40, this);
+    Autopilot->setPos(width - ForwardButton->boundingRect().width() - offset - 10, -40);
+    QPixmap pixmap2 = pixmap.scaled(Autopilot->rect().width(), Autopilot->rect().height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    Autopilot->setBrush(pixmap);
+    Autopilot->setOpacity(0.7);
+    Autopilot->setPen(QPen(Qt::NoPen));
+    QGraphicsTextItem *text1 = new QGraphicsTextItem("Release For", Autopilot);
+    font.setPointSize(7);
+    text1->setFont(font);
+    text1->setDefaultTextColor(QColor(0, 255, 0));
+    text1->setPos(5, 0);
+
+    QGraphicsTextItem *text2 = new QGraphicsTextItem("Autopilot", Autopilot);
+    text2->setFont(font);
+    text2->setDefaultTextColor(QColor(0, 0, 255));
+    text2->setPos(10, text1->boundingRect().height() - 5);
 
 }
 
@@ -90,4 +111,11 @@ HorizontalUpperBar::HorizontalUpperBar(User *user) {
     pauseButton = new Button(pixmap2, "Pause", this, 75, 75);
     pauseButton->setPos(562.5, 12.5);
 
+}
+
+void HorizontalLowerBar::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
+    if (Autopilot->contains(event->pos())) {
+        qDebug() << "Autopilot button is released";
+        emit userPtr->switchControl();
+    }
 }

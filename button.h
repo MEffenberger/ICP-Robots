@@ -19,6 +19,7 @@
 
 
 
+
 class Button : public QObject, public QGraphicsRectItem {
 
     Q_OBJECT
@@ -29,6 +30,7 @@ public:
 signals:
     void pressed();
     void released();
+    void autoPilot();
 
 protected:
 
@@ -38,6 +40,10 @@ protected:
 private:
     std::string name;
     QTimer *timer;
+    QRectF autoPilotPosition;
+
+public slots:
+    void setBorderWidth(int width);
 };
 
 

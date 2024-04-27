@@ -70,9 +70,6 @@ void User::moveForward() {
     qreal newX = x() + speed * dx;
     qreal newY = y() + speed * dy;
 
-    if (! (newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 && newY <= 700 - rect().height())){
-        QSound::play("../sounds/block.wav");
-    }
     // Check if the new position is within boundaries
     if (newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 && newY <= 700 - rect().height()) {
         // Apply the movement if within the scene

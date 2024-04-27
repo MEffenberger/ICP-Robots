@@ -4,6 +4,7 @@
 
 #include "button.h"
 
+
 #include <utility>
 
 Button::Button(const QPixmap &pixmap, std::string name, QGraphicsItem *parent, qreal x, qreal y) : QGraphicsRectItem(parent) {
@@ -11,10 +12,15 @@ Button::Button(const QPixmap &pixmap, std::string name, QGraphicsItem *parent, q
     QPixmap scaledPixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     QBrush brush(scaledPixmap);
     setBrush(brush);
-    setPen(QPen(Qt::NoPen));
+    setBorderWidth(0);
     this->name = std::move(name);
     setFlag(QGraphicsItem::ItemIsFocusable, true);
     setAcceptHoverEvents(true);
+
+    if (this->name == "Forward") {
+        autoPilotPosition = QRectF(0, -40, rect().width(), rect().height()); // Set the autopilot rectangle relative to this button
+    }
+
 }
 
 void Button::mousePressEvent(QGraphicsSceneMouseEvent *event) {
@@ -23,6 +29,22 @@ void Button::mousePressEvent(QGraphicsSceneMouseEvent *event) {
 }
 
 void Button::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
-    emit released();
-    qDebug() << "Button " << QString::fromStdString(name) << " is released";
+    if (this->contains(event->pos())) {
+        emit released();
+        qDebug() << "Button " << QString::fromStdString(name) << " is released";
+    }
+    if (name == "Forward" && autoPilotPosition.contains(event->pos())) {
+        emit autoPilot();
+        qDebug() << "Button " << QString::fromStdString(name) << " is released";
+    }
+}
+
+void Button::setBorderWidth(int width) {
+    QPen pen;
+    if (width == 0) {
+        pen = QPen(Qt::NoPen);
+    } else {
+        pen.setWidth(width);
+    }
+    this->setPen(pen);
 }

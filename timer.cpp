@@ -43,3 +43,11 @@ void Timer::pauseTimer() {
         emit timeIsUp();
     }
 }
+
+void Timer::stopTimer() {
+    timer->stop();
+}
+
+void Timer::continueTimer() {
+
+}

@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
     scene.addItem(upperBar);
     upperBar->setPos(0, 0);
 
-    PopUp *popup = new PopUp();
+    PopUp *popup = new PopUp(nullptr, "gameover");
     scene.addItem(popup);
-    popup->setPos(350, 200);
+    popup->setPos(scene.width()/2 - popup->rect().width()/2, scene.height()/2 - popup->rect().height()/2);
 
     // Create an instance of User
 

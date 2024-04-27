@@ -32,6 +32,8 @@ signals:
 public slots:
     void resetTimer();
     void pauseTimer();
+    void stopTimer();
+    void continueTimer();
 
 };
 

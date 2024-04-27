@@ -53,3 +53,8 @@ Q.idea/sonarlint/securityhotspotstore/d/1/d122e5217730f0193bdb70d7308661579248e3
 timer.h,3\3\335ea3ab33b62b9f2922cf01857fbb2de9a5a875
 7
 popup.h,c\f\cfdcd67df4935778407cfdad35534649cdd69a68
+9
+	popup.cpp,e\a\ea8b3131173a8b2d40b11be569cc62f8699c05df
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

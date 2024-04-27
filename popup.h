@@ -33,7 +33,7 @@ private:
     Button *resumeButton;
     Button *mainMenuButton;
     std::string name;
-    QGraphicsTextItem *createTextItem(const QString& text, const QString& fontFamily, int fontSize, const QColor& color, int posX, int posY);
+    QGraphicsTextItem *createTextItem(const QString& text, const QString& fontFamily, int fontSize, const QColor& color);
 public slots:
 //    void exit();
 //    void restart();
