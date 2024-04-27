@@ -21,10 +21,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void quitApp();
+    void loadFile();
 
 private slots:
-    //void on_pushButton_3_clicked();
-    //void createNewMap();
     void createNewWindow();
 
 private:

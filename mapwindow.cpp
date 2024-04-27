@@ -10,20 +10,32 @@ MapWindow::MapWindow(QWidget *parent) :
     ui(new Ui::MapWindow)
 {
     ui->setupUi(this);
+
+    int fontId = QFontDatabase::addApplicationFont(":/Orbitron//static/Orbitron-ExtraBold.ttf");
+    if (fontId == -1) {
+        exit(1);
+    }
+    QStringList familyNames = QFontDatabase::applicationFontFamilies(fontId);
+    QString fontFamily = familyNames.at(0);
+    QFont customFont(fontFamily);
+    
+
     connect(ui->tableWidget, &QTableWidget::cellClicked, this, &MapWindow::handleCellClicked);
     ui->tableWidget->verticalHeader()->setVisible(false); // Hides the row numbers
     ui->tableWidget->horizontalHeader()->setVisible(false); // Hides the column letters/numbers
     QString styleSheet = "QTableWidget { background-image: url(:/images/background.png); }";
     ui->tableWidget->setStyleSheet(styleSheet);
-    // ui->tableWidget->setRowHeight(0, 50); // example row height
-    // ui->tableWidget->setColumnWidth(0, 50); // example column width
-    // ui->tableWidget->setIconSize(QSize(50, 50)); // Set the size as needed
     setFixedSize(QSize(1200, 720));
-    //setStyleSheet("background-color: #B00B69;"); // Replace #f0f0f0 with the desired background color
+    // QString styleSheetB = "QWidget { background-image: url(:/images/background.jpg); }";
+    // this->setStyleSheet(styleSheetB);
+
+
+    //setStyleSheet("background-color: #000000;"); // Replace #f0f0f0 with the desired background color
 
     QIcon myIcon(":/images/obstacle.png");
     ui->pushButton->setIcon(myIcon);
     ui->pushButton->setIconSize(QSize(40, 40));
+    
     //ui->pushButton->setCheckable(true);
     connect(ui->pushButton, &QPushButton::clicked, this, &MapWindow::toggleObstaclePlacement);
     this->obstacleCount = 0;
@@ -32,12 +44,13 @@ MapWindow::MapWindow(QWidget *parent) :
     this->placingEnemy = false;
     this->controlledRobotsCount = 0;
     this->enemyCount = 0;
-
+    this->timeLimit = 60;
+    this->printTime = true;
     //
     ui->levelComboBox->addItem("Level 1", QVariant::fromValue(QPair<int, int>(10, 3)));
     ui->levelComboBox->addItem("Level 2", QVariant::fromValue(QPair<int, int>(15, 4)));
     ui->levelComboBox->addItem("Level 3", QVariant::fromValue(QPair<int, int>(20, 5)));
-    connect(ui->levelComboBox, &QComboBox::currentTextChanged, this, &MapWindow::updateObstacleCount);
+    connect(ui->levelComboBox, &QComboBox::currentTextChanged, this, &MapWindow::updateCounts);
     //
     //
     QIcon robotIcon(":/images/robot.png");
@@ -53,9 +66,30 @@ MapWindow::MapWindow(QWidget *parent) :
     connect(ui->pushButton_enemy, &QPushButton::clicked, this, &MapWindow::toggleEnemyPlacement);
     //
     connect(ui->pushButtonSave, &QPushButton::clicked, this, &MapWindow::saveFile);
+    ui->pushButtonSave->setFont(customFont);
+    connect(ui->pushButtonTimer, &QPushButton::clicked, this, &MapWindow::setTimer);
+    ui->pushButtonTimer->setFont(customFont);
+    connect(ui->pushButtonStart, &QPushButton::clicked, this, &MapWindow::startGame);
+    ui->pushButtonStart->setFont(customFont);
+
+    //
+
+    ui->ObstacleLabel->setFont(customFont);
+    ui->DurationLabel->setFont(customFont);
+    ui->EnemyLabel->setFont(customFont);
+    ui->RobotLabel->setFont(customFont);
+    ui->levelComboBox->setFont(customFont);
+    ui->MapLabel->setFont(customFont);
+    // ui->MapLabel->setText(QString("ROBOT MAP CREATOR"));
+    // ui->ObstacleLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    // ui->DurationLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    // ui->EnemyLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    // ui->RobotLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    // ui->levelComboBox->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+
 }
 
-void MapWindow::updateObstacleCount() {
+void MapWindow::updateCounts(){
     ui->tableWidget->clear();
     obstacleCount = 0;
     controlledRobotsCount = 0;
@@ -70,6 +104,10 @@ MapWindow::~MapWindow() {
     delete ui;
 }
 
+void MapWindow::startGame(){
+
+}
+
 void MapWindow::saveFile() {
     QString filename = QFileDialog::getSaveFileName(this, "Save Map", "", "JSON Files (*.json)");
     if (filename.isEmpty()) {
@@ -78,23 +116,30 @@ void MapWindow::saveFile() {
 
     QFile file(filename);
     if (!file.open(QIODevice::WriteOnly)) {
-        // Handle error, e.g., display a message box
         return;
     }
+    QJsonArray mapData;
 
-    QJsonArray mapData; // Array to hold all cell objects
+    QJsonObject timeLimitObject;
+    timeLimitObject["type"] = "TimeLimit";
+    timeLimitObject["time"] = QJsonObject({
+        {"seconds", this->timeLimit}
+    });
+    mapData.append(timeLimitObject);
 
+    bool playerRobotFound = false;
     for (int row = 0; row < ui->tableWidget->rowCount(); ++row) {
         for (int col = 0; col < ui->tableWidget->columnCount(); ++col) {
             QTableWidgetItem *item = ui->tableWidget->item(row, col);
             if (!item) continue; // Skip empty cells
 
-            QJsonObject cellObject; // Object to represent a single cell
+            QJsonObject cellObject;
 
             // Get coordinates relative to the QTableWidget
             QPoint cellPosition = ui->tableWidget->visualItemRect(item).topLeft();
 
             if (RobotItem *robot = dynamic_cast<RobotItem*>(item)) {
+                playerRobotFound = true;
                 cellObject["type"] = "Robot";
                 cellObject["position"] = QJsonObject({
                     {"x", cellPosition.x()},
@@ -102,8 +147,8 @@ void MapWindow::saveFile() {
                 });
                 cellObject["attributes"] = QJsonObject({
                     {"orientation", robot->getOrientation()},
-                    {"distance", robot->getDistance()},
-                    {"rotationAngle", robot->getRotationAngle()}
+                    {"rotationAngle", robot->getRotationAngle()},
+                    {"velocity", robot->getVelocity()}
                 });
 
             } else if (ObstacleItem *obstacle = dynamic_cast<ObstacleItem*>(item)) {
@@ -122,7 +167,8 @@ void MapWindow::saveFile() {
                 cellObject["attributes"] = QJsonObject({
                     {"orientation", enemy->getOrientation()},
                     {"distance", enemy->getDistance()},
-                    {"rotationAngle", enemy->getRotationAngle()}
+                    {"rotationAngle", enemy->getRotationAngle()},
+                    {"velocity", enemy->getVelocity()}
                 });
             } else {
                 continue;
@@ -130,13 +176,31 @@ void MapWindow::saveFile() {
             mapData.append(cellObject);
         }
     }
-
+    if(playerRobotFound){
     QJsonDocument saveDoc(mapData);
     file.write(saveDoc.toJson());
     file.close();
+    } else {
+        QMessageBox::critical(this, "Error", "Map must contain at least one playable robot.");
+    }
 
 }
 
+void MapWindow::setTimer(){
+        bool pass;
+        int time = QInputDialog::getInt(this, "Set time limit for level",
+                                        "Enter time limit (seconds):", 0, 1, 99, 1, &pass);
+        if (pass && time > 0) {
+            this->timeLimit = time;
+        } else {
+            return;
+        }
+        ui->DurationLabel->setText(QString("Duration: %1 (s)").arg(time));
+}
+
+void MapWindow::updateTimer(){
+    ui->DurationLabel->setText(QString("Duration: %1 (s)").arg(this->timeLimit));
+}
 
 void MapWindow::showEvent(QShowEvent *event)
 {
@@ -155,7 +219,7 @@ void MapWindow::updateObstacleCounter() {
 void MapWindow::updateControlledRobotCounter() {
     int robotsLeft = 1 - controlledRobotsCount;
     //qDebug() << "Obstacles left: " << ui->levelComboBox->currentData().toInt();
-    ui->RobotLabel->setText(QString("Controlled robots left: %1").arg(robotsLeft));
+    ui->RobotLabel->setText(QString("Robots left: %1").arg(robotsLeft));
 }
 
 void MapWindow::updateEnemyCounter() {
@@ -278,15 +342,17 @@ void MapWindow::handleCellClicked(int row, int column) {
 
                 if (controlledRobotsCount < 1) {
                     RobotItem *robotItem = new RobotItem();
-                    CustomDialog dialog(this);
+                    CustomDialog dialog(this, true);
                     if (dialog.exec() == QDialog::Accepted) {
                         int orientation = dialog.getOrientation();
                         int distance = dialog.getDistance();
                         int rotationAngle = dialog.getRotationAngle();
+                        int velocity = dialog.getVelocity();
 
                         robotItem->setOrientation(orientation);
                         robotItem->setDistance(distance);
                         robotItem->setRotationAngle(rotationAngle);
+                        robotItem->setVelocity(velocity);
 
                         QPixmap pixmap(":/images/robot.png");
                         QTransform transform;
@@ -327,10 +393,12 @@ void MapWindow::handleCellClicked(int row, int column) {
                     int orientation = dialog.getOrientation();
                     int distance = dialog.getDistance();
                     int rotationAngle = dialog.getRotationAngle();
+                    int velocity = dialog.getVelocity();
 
                     enemyItem->setOrientation(orientation);
                     enemyItem->setDistance(distance);
                     enemyItem->setRotationAngle(rotationAngle);
+                    enemyItem->setVelocity(velocity);
 
                     QPixmap pixmap(":/images/enemy.png");
                     QTransform transform;

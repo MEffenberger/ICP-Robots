@@ -14,6 +14,10 @@ int EnemyItem::getRotationAngle(){
     return rotationAngle;
 }
 
+int EnemyItem::getVelocity(){
+    return velocity;
+}
+
 void EnemyItem::setOrientation(int orientation){
     this->orientation = orientation;
 }
@@ -24,4 +28,8 @@ void EnemyItem::setDistance(int distance){
 
 void EnemyItem::setRotationAngle(int rotationAngle){
     this->rotationAngle = rotationAngle;
+}
+
+void EnemyItem::setVelocity(int velocity){
+    this->velocity = velocity;
 }

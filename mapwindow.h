@@ -11,6 +11,10 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QFileDialog>
+#include <QMessageBox>
+#include <QFontDatabase>
+#include <QFont>
+
 
 namespace Ui {
 class MapWindow;
@@ -27,11 +31,14 @@ public:
     void toggleRobotPlacement();
     void toggleEnemyPlacement();
     void handleCellClicked(int row, int column);
-    void updateObstacleCount();
+    void updateCounts();
     void updateControlledRobotCounter();
     void updateEnemyCounter();
+    void updateTimer();
     void disableEditing();
     void saveFile();
+    void setTimer();
+    void startGame();
 
     ~MapWindow();
 signals:
@@ -50,6 +57,8 @@ private:
     bool placingObstacle;
     bool placingRobot;
     bool placingEnemy;
+    int timeLimit;
+    bool printTime;
 };
 
 #endif // MAPWINDOW_H

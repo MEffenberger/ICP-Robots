@@ -11,18 +11,18 @@ class CustomDialog : public QDialog {
     Q_OBJECT
 
 public:
-    explicit CustomDialog(QWidget *parent = nullptr);
+    explicit CustomDialog(QWidget *parent = nullptr, bool robotExists = false);
 
     int getOrientation() const;
     int getDistance() const;
     int getRotationAngle() const;
-    //int getDirection() const;
+    int getVelocity() const;
 
 private:
     QSpinBox *orientationSpinBox;
     QSpinBox *distanceSpinBox;
     QSpinBox *rotationAngleSpinBox;
-    //QSpinBox *directionSpinBox;
+    QSpinBox *velocitySpinBox;
 };
 
 #endif // ROBOTDIALOG_H
