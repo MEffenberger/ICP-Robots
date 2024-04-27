@@ -1,0 +1,8 @@
+
+m	cpp:S1117="+declaration shadows a field of 'GameMaster'(úŸøÚ8¾­…ò1J$b3cb9c29-b56a-42cd-b005-5385e13d8e11
+k	cpp:S1117F"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8¾­…ò1J$5eeb214f-8c46-466e-a4a9-a66febdb1b23
+k	cpp:S1117Q"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8¾­…ò1J$cdad6b4a-96e1-416a-8db7-fe6af3a2d419
+e	cpp:S1117Z"$declaration shadows a local variable(Ï„“H8¾­…ò1J$1046c926-3760-4755-a3b1-5341dc0b57cb
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÅîíûÿÿÿÿJ$cadd4596-f4b5-4124-aedd-ecf969104c6f
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ª†Ã¡J$073796b7-53d5-4589-866b-f831025a3f2f
+“	cpp:S5025#"QReplace the use of "new" with an operation that automatically manages the memory.(»ÓĞÖ8®…ò1J$597fa5ba-b588-4bce-acc7-0616aed5c02f
