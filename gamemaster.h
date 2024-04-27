@@ -9,6 +9,14 @@
 #include <map>
 #include <vector>
 #include <string>
+#include "mainwindow.h"
+#include "mapwindow.h"
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QFile>
+
+
 
 
 class GameMaster : public QObject {
@@ -19,6 +27,23 @@ private:
     std::vector<int> User;
     std::pair<int, int> Obstacle;
     int timeLimit;
+    //void parseJson();
+    MainWindow *mainWindow;
+    MapWindow *mapWindow;
+    QJsonArray *mapData;
+    QFile file;
+
+
+
+
+public:
+    void run();
+
+private slots:
+    void startGame();
+    void createNewMapWindow();
+    void loadFile();
+    void showJSONpopup();
 
 
 };

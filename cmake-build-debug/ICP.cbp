@@ -158,6 +158,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/ObstacleItem.h">
+			<Option target="ICP"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/button.cpp">
 			<Option target="ICP"/>
 		</Unit>
@@ -173,10 +176,22 @@
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemy.h">
 			<Option target="ICP"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemyitem.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemyitem.h">
+			<Option target="ICP"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp">
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/gamemaster.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/gamemaster.h">
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/heart.cpp">
@@ -203,6 +218,15 @@
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.ui">
 			<Option target="ICP"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.h">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.ui">
+			<Option target="ICP"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp">
 			<Option target="ICP"/>
 		</Unit>
@@ -213,6 +237,18 @@
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/popup.h">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/robotdialog.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/robotdialog.h">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/robotitem.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/robotitem.h">
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/star.cpp">

@@ -226,6 +226,71 @@ CMakeFiles/ICP.dir/popup.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/popup.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/popup.cpp -o CMakeFiles/ICP.dir/popup.cpp.s
 
+CMakeFiles/ICP.dir/enemyitem.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/enemyitem.cpp.o: ../enemyitem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ICP.dir/enemyitem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/enemyitem.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/enemyitem.cpp
+
+CMakeFiles/ICP.dir/enemyitem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/enemyitem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/enemyitem.cpp > CMakeFiles/ICP.dir/enemyitem.cpp.i
+
+CMakeFiles/ICP.dir/enemyitem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/enemyitem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/enemyitem.cpp -o CMakeFiles/ICP.dir/enemyitem.cpp.s
+
+CMakeFiles/ICP.dir/mapwindow.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/mapwindow.cpp.o: ../mapwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ICP.dir/mapwindow.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/mapwindow.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/mapwindow.cpp
+
+CMakeFiles/ICP.dir/mapwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/mapwindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/mapwindow.cpp > CMakeFiles/ICP.dir/mapwindow.cpp.i
+
+CMakeFiles/ICP.dir/mapwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/mapwindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/mapwindow.cpp -o CMakeFiles/ICP.dir/mapwindow.cpp.s
+
+CMakeFiles/ICP.dir/robotdialog.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/robotdialog.cpp.o: ../robotdialog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ICP.dir/robotdialog.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/robotdialog.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/robotdialog.cpp
+
+CMakeFiles/ICP.dir/robotdialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/robotdialog.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/robotdialog.cpp > CMakeFiles/ICP.dir/robotdialog.cpp.i
+
+CMakeFiles/ICP.dir/robotdialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/robotdialog.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/robotdialog.cpp -o CMakeFiles/ICP.dir/robotdialog.cpp.s
+
+CMakeFiles/ICP.dir/robotitem.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/robotitem.cpp.o: ../robotitem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ICP.dir/robotitem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/robotitem.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/robotitem.cpp
+
+CMakeFiles/ICP.dir/robotitem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/robotitem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/robotitem.cpp > CMakeFiles/ICP.dir/robotitem.cpp.i
+
+CMakeFiles/ICP.dir/robotitem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/robotitem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/robotitem.cpp -o CMakeFiles/ICP.dir/robotitem.cpp.s
+
+CMakeFiles/ICP.dir/gamemaster.cpp.o: CMakeFiles/ICP.dir/flags.make
+CMakeFiles/ICP.dir/gamemaster.cpp.o: ../gamemaster.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ICP.dir/gamemaster.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ICP.dir/gamemaster.cpp.o -c /mnt/c/Users/marek/CLionProjects/ICP/gamemaster.cpp
+
+CMakeFiles/ICP.dir/gamemaster.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ICP.dir/gamemaster.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marek/CLionProjects/ICP/gamemaster.cpp > CMakeFiles/ICP.dir/gamemaster.cpp.i
+
+CMakeFiles/ICP.dir/gamemaster.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ICP.dir/gamemaster.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marek/CLionProjects/ICP/gamemaster.cpp -o CMakeFiles/ICP.dir/gamemaster.cpp.s
+
 # Object files for target ICP
 ICP_OBJECTS = \
 "CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o" \
@@ -240,7 +305,12 @@ ICP_OBJECTS = \
 "CMakeFiles/ICP.dir/heart.cpp.o" \
 "CMakeFiles/ICP.dir/gameinfo.cpp.o" \
 "CMakeFiles/ICP.dir/timer.cpp.o" \
-"CMakeFiles/ICP.dir/popup.cpp.o"
+"CMakeFiles/ICP.dir/popup.cpp.o" \
+"CMakeFiles/ICP.dir/enemyitem.cpp.o" \
+"CMakeFiles/ICP.dir/mapwindow.cpp.o" \
+"CMakeFiles/ICP.dir/robotdialog.cpp.o" \
+"CMakeFiles/ICP.dir/robotitem.cpp.o" \
+"CMakeFiles/ICP.dir/gamemaster.cpp.o"
 
 # External object files for target ICP
 ICP_EXTERNAL_OBJECTS =
@@ -258,6 +328,11 @@ ICP: CMakeFiles/ICP.dir/heart.cpp.o
 ICP: CMakeFiles/ICP.dir/gameinfo.cpp.o
 ICP: CMakeFiles/ICP.dir/timer.cpp.o
 ICP: CMakeFiles/ICP.dir/popup.cpp.o
+ICP: CMakeFiles/ICP.dir/enemyitem.cpp.o
+ICP: CMakeFiles/ICP.dir/mapwindow.cpp.o
+ICP: CMakeFiles/ICP.dir/robotdialog.cpp.o
+ICP: CMakeFiles/ICP.dir/robotitem.cpp.o
+ICP: CMakeFiles/ICP.dir/gamemaster.cpp.o
 ICP: CMakeFiles/ICP.dir/build.make
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Multimedia.so.5.12.8
@@ -265,7 +340,7 @@ ICP: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 ICP: CMakeFiles/ICP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ICP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable ICP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ICP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

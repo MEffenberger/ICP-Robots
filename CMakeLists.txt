@@ -37,6 +37,18 @@ set(PROJECT_SOURCES
         timer.h
         popup.cpp
         popup.h
+        enemyitem.cpp
+        enemyitem.h
+        mapwindow.cpp
+        mapwindow.h
+        mapwindow.ui
+        ObstacleItem.h
+        robotdialog.cpp
+        robotdialog.cpp
+        robotitem.cpp
+        robotitem.h
+        gamemaster.cpp
+        gamemaster.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -53,6 +65,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         gameinfo.h gameinfo.cpp
         timer.cpp timer.h
         popup.cpp popup.h
+        enemyitem.cpp enemyitem.h
+        mapwindow.cpp mapwindow.h
+        robotdialog.cpp robotdialog.h
+        robotitem.cpp robotitem.h
+        gamemaster.cpp gamemaster.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ICP APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

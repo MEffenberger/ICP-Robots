@@ -8,6 +8,11 @@
 	"HEADERS" : 
 	[
 		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/ObstacleItem.h",
+			"MU",
+			"EWIEGA46WW/moc_ObstacleItem.cpp"
+		],
+		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/button.h",
 			"MU",
 			"EWIEGA46WW/moc_button.cpp"
@@ -18,9 +23,19 @@
 			"EWIEGA46WW/moc_enemy.cpp"
 		],
 		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/enemyitem.h",
+			"MU",
+			"EWIEGA46WW/moc_enemyitem.cpp"
+		],
+		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h",
 			"MU",
 			"EWIEGA46WW/moc_gameinfo.cpp"
+		],
+		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/gamemaster.h",
+			"MU",
+			"EWIEGA46WW/moc_gamemaster.cpp"
 		],
 		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/heart.h",
@@ -38,6 +53,11 @@
 			"EWIEGA46WW/moc_mainwindow.cpp"
 		],
 		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_mapwindow.cpp"
+		],
+		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h",
 			"MU",
 			"EWIEGA46WW/moc_obstacle.cpp"
@@ -46,6 +66,16 @@
 			"/mnt/c/Users/marek/CLionProjects/ICP/popup.h",
 			"MU",
 			"EWIEGA46WW/moc_popup.cpp"
+		],
+		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/robotdialog.h",
+			"MU",
+			"EWIEGA46WW/moc_robotdialog.cpp"
+		],
+		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/robotitem.h",
+			"MU",
+			"EWIEGA46WW/moc_robotitem.cpp"
 		],
 		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/star.h",
@@ -123,13 +153,18 @@
 	[
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/button.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/enemyitem.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/gamemaster.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/heart.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/main.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/popup.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/robotdialog.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/robotitem.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/star.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/timer.cpp", "MU" ],
 		[ "/mnt/c/Users/marek/CLionProjects/ICP/user.cpp", "MU" ]

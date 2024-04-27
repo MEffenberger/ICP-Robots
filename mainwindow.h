@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QApplication>
+#include <QWidget>
+#include <QGridLayout>
+#include <QLabel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,8 +20,17 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void quitApp();
+    void loadGame();
+
+private slots:
+    void createNewWindow();
 
 private:
     Ui::MainWindow *ui;
+
+signals:
+    void createNewMapWindow();
+    void loadFile();
 };
 #endif // MAINWINDOW_H

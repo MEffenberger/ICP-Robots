@@ -1,4 +1,5 @@
 
-‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÛÕçÆÿÿÿÿÿJ$9eeeb2a0-df31-431c-a50c-f11d57ee72c5
-u	cpp:S5025":Rewrite the code so that you no longer need this "delete".(Áğ¯J$b5d61dcc-555e-46c9-86aa-9b129e12d769
-©	cpp:S3230"iDo not use the constructor's initializer list for data member "ui". Use the in-class initializer instead.(ÛÕçÆÿÿÿÿÿJ$ae7a0371-9fe9-49f5-8b47-d4ef8a757fdb
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÛÕçÆÿÿÿÿÿ8àóŠ‚ò1J$4f33695a-4ef0-46cf-ad26-73358bb14b1b
+|	cpp:S5025":Rewrite the code so that you no longer need this "delete".(Áğ¯8‹ôŠ‚ò1J$0a7005e8-9917-4722-9182-420ef543cf60
+p	cpp:S5817 ")This function should be declared "const".(«è£Èùÿÿÿÿ8ëÿÉ‚ò1J$00f48764-d41c-45b4-90ec-4093a04f1700
+°	cpp:S3230"iDo not use the constructor's initializer list for data member "ui". Use the in-class initializer instead.(ÛÕçÆÿÿÿÿÿ8ÃôŠ‚ò1J$0de240cc-6739-4714-80ea-39bec805a973
