@@ -17,7 +17,7 @@ Timer::Timer(QGraphicsItem *parent) : QGraphicsTextItem(parent)
     QColor color(0,255,0);
     setDefaultTextColor(color);
     time = 0;
-    timeLimit = 60;
+    timeLimit = 160;
     setPlainText(QString::number(time) + QString(" / ") + QString::number(timeLimit));
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Timer::pauseTimer);

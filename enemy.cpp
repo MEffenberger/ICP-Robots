@@ -53,6 +53,7 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     movementTimer->start(30);
     setTransformOriginPoint(37.5, 37.5);
 
+    setRotation(180);
     this->user = user;
     connect(this, &Enemy::hit, user, &User::decreaseLives);
 }

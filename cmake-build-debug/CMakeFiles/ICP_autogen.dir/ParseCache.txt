@@ -4,27 +4,27 @@
 /mnt/c/Users/marek/CLionProjects/ICP/heart.h
  mmc:Q_OBJECT
 /mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp
-/mnt/c/Users/marek/CLionProjects/ICP/button.cpp
-/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h
- mmc:Q_OBJECT
 /mnt/c/Users/marek/CLionProjects/ICP/enemy.h
  mmc:Q_OBJECT
 /mnt/c/Users/marek/CLionProjects/ICP/heart.cpp
 /mnt/c/Users/marek/CLionProjects/ICP/user.h
  mmc:Q_OBJECT
+/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h
+ mmc:Q_OBJECT
+/mnt/c/Users/marek/CLionProjects/ICP/button.cpp
 /mnt/c/Users/marek/CLionProjects/ICP/mainwindow.h
  mmc:Q_OBJECT
 /mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp
 /mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp
 /mnt/c/Users/marek/CLionProjects/ICP/main.cpp
 /mnt/c/Users/marek/CLionProjects/ICP/popup.cpp
-/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.h
- mmc:Q_OBJECT
-/mnt/c/Users/marek/CLionProjects/ICP/star.cpp
-/mnt/c/Users/marek/CLionProjects/ICP/timer.cpp
-/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp
 /mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp
  uic:./ui_mainwindow.h
+/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp
+/mnt/c/Users/marek/CLionProjects/ICP/timer.cpp
+/mnt/c/Users/marek/CLionProjects/ICP/star.cpp
+/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.h
+ mmc:Q_OBJECT
 /mnt/c/Users/marek/CLionProjects/ICP/user.cpp
 /mnt/c/Users/marek/CLionProjects/ICP/popup.h
  mmc:Q_OBJECT

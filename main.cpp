@@ -35,11 +35,10 @@ int main(int argc, char *argv[])
     scene.addItem(popup);
     popup->setPos(scene.width()/2 - popup->rect().width()/2, scene.height()/2 - popup->rect().height()/2);
 
-    // Create an instance of User
 
     // Add the user to the scene
     scene.addItem(user);
-    user->setFlag(QGraphicsItem::ItemIsFocusable);
+    user->setFlag(QGraphicsItem::ItemIsFocusable); // construktor?
     user->setFocus();
     user->setPos(scene.sceneRect().center());
 

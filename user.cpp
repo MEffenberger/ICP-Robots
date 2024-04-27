@@ -15,7 +15,7 @@ User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
     setPen(pen);
 
     // Create the vision point
-    visionPoint = new QGraphicsEllipseItem(37.5, 56.25, 15, 15, this); // Positioned above the center of the User
+    visionPoint = new QGraphicsEllipseItem(37.5 - 15/2, 18.75, 15, 15, this); // Positioned above the center of the User
     QPixmap eye("../images/eye4.png");
     eye = eye.scaled(visionPoint->rect().width(), visionPoint->rect().height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     QBrush eyeBrush(eye);

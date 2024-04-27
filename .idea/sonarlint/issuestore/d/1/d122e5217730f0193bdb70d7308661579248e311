@@ -1,6 +1,6 @@
 
-›	cpp:S3230"`Do not assign data members in a constructor. Initialize member "time" in an initialization list.(üîœJ$e4e242ff-ebca-4a02-92b6-3dc4a193559c
- 	cpp:S3230"eDo not assign data members in a constructor. Initialize member "timeLimit" in an initialization list.(í·³J$83d18eae-0aea-4c93-ba57-d0b96f43471f
-Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Û†ÁïJ$acd20ef8-b1a2-4837-93d1-ecadb1b3d282
-›	cpp:S11863"YAdd a nested comment explaining why this method is empty, or complete the implementation.(›Äó°8±’ûûñ1J$0547dfab-adae-481e-b584-a3098daef3b1
-E	cpp:S58173")This function should be declared "const".(›Äó°8éş„üñ1
+›	cpp:S3230"`Do not assign data members in a constructor. Initialize member "time" in an initialization list.(üîœJ$7335ed3b-4027-43f2-b8ef-19c8d3de7287
+ 	cpp:S3230"eDo not assign data members in a constructor. Initialize member "timeLimit" in an initialization list.(€ÖÎ¸J$91165c27-3521-4095-b226-00dc698b012d
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Û†ÁïJ$7543499d-c43f-456c-9133-346ac559a588
+›	cpp:S11863"YAdd a nested comment explaining why this method is empty, or complete the implementation.(›Äó°8±’ûûñ1J$83e526d1-7178-4692-8642-aa69e21137d7
+k	cpp:S58173")This function should be declared "const".(›Äó°8éş„üñ1J$8b2b0445-0109-4e31-b95b-ba46c75a51bb
