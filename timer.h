@@ -18,7 +18,7 @@ Q_OBJECT
 
 public:
 
-    Timer(QGraphicsItem *parent = 0);
+    Timer(QGraphicsItem *parent = 0, int timeL = 60);
 
 private:
 

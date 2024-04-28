@@ -1,26 +1,26 @@
 
-¤	cpp:S5276	"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8õŠµñ1J$50344f60-30d9-4519-8db6-236fb32e81be
-¤	cpp:S5276	"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8÷Šµñ1J$820fe9c2-bf03-4894-8085-cd24b07e4536
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(£İ¶ßıÿÿÿÿ8ë†‡Óñ1J$13780825-97ba-40f1-8eba-207850defe58
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(£İ¶ßıÿÿÿÿ8ì†‡Óñ1J$393ed1e2-82c8-4dca-a21a-e4375b65e53f
-¥	cpp:S5276«"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8‚ˆ¿àñ1J$683dadfe-8cee-47cf-b07a-4dfa57161b3a
-¥	cpp:S5276«"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8‚ˆ¿àñ1J$17af8996-1654-4d00-9d3e-d8dfb1f992a8
-¥	cpp:S5276Ì"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8‚ˆ¿àñ1J$089d7e94-20cb-466f-9de7-f806e887858c
-¥	cpp:S5276Ì"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8‚ˆ¿àñ1J$eae86c32-2fd8-49e8-a734-9594f330e787
-£	cpp:S3230"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(£Õ†Ñ8Ù‡‡Óñ1J$25f9fd0b-a157-4068-8dfb-93810c2969dc
-«	cpp:S3230"iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åš8ÿø–Óñ1J$00c764f7-acee-409c-ad79-5bac3b46c934
-¥	cpp:S32300"cDo not assign data members in a constructor. Initialize member "Stunned" in an initialization list.(êúÎÍ8Ù‡‡Óñ1J$6ac6b1a7-11e9-465e-8ba1-c4bc1a189b41
-«	cpp:S32301"iDo not assign data members in a constructor. Initialize member "numberOfLives" in an initialization list.(É–8ÿø–Óñ1J$ff50020b-35b8-4f50-921e-a16b61b9236d
-«	cpp:S32305"iDo not assign data members in a constructor. Initialize member "isCoolingDown" in an initialization list.(å³¼ó8€ù–Óñ1J$fe383291-137e-4cb5-8f1e-f7addddef930
-˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(‹˜‘‡ûÿÿÿÿ8‡ù–Óñ1J$2efe9d7e-3296-4e7e-99ce-e418dc1029aa
-“	cpp:S5025!"QReplace the use of "new" with an operation that automatically manages the memory.(Áæùà8ˆù–Óñ1J$5c4c960a-73ba-43d2-bd56-eb9c72146ac0
-’	cpp:S5025#"QReplace the use of "new" with an operation that automatically manages the memory.(õ€8ˆù–Óñ1J$63864480-7482-4b4b-baa6-15691658397a
-˜	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(­â¯„şÿÿÿÿ8‰ù–Óñ1J$132f1abd-3d41-485e-a8ca-21d5983ffc14
-“	cpp:S5025+"QReplace the use of "new" with an operation that automatically manages the memory.(´ÊĞı8Šù–Óñ1J$1ebd8d06-0e9d-4e8b-b35c-368a8f59647f
-“	cpp:S50253"QReplace the use of "new" with an operation that automatically manages the memory.(ÊÕÇÁ8Š‰¿àñ1J$dc1b3be9-ef2d-4aa7-ae8b-74456cc11211
-ˆ	cpp:S6004J"AUse the init-statement to declare "newY" inside the if statement.(Å±œ½úÿÿÿÿ8ìˆ¿àñ1J$7137c855-105d-4464-90a7-f3f0b98db0de
-‰	cpp:S6004"AUse the init-statement to declare "newY" inside the if statement.(Å±œ½úÿÿÿÿ8¡Ñıñ1J$31fd95e7-e0f0-4422-a230-db681c6dc88b
-o	cpp:S5827º"'Replace the redundant type with "auto".(Äô­”ÿÿÿÿÿ8ˆ‰¿àñ1J$372408dd-9d8e-4160-b952-d2157f0ff93a
-™	cpp:S5025º"QReplace the use of "new" with an operation that automatically manages the memory.(Äô­”ÿÿÿÿÿ8­¾£›ò1J$3717e8cb-28ae-4871-9b8d-8dad461b7c26
-}	cpp:S5025Ñ":Rewrite the code so that you no longer need this "delete".(İóî8•‰¿àñ1J$9d8def0d-7aef-4cd6-ad93-d1e7338604a4
-q	cpp:S5817ï")This function should be declared "const".(«Ÿ‚Ñüÿÿÿÿ8ô÷£›ò1J$26c9856c-c777-4f32-9f0f-385ba4c4485d
+¤	cpp:S5276	"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8õŠµñ1J$b9062c97-8c35-4771-ac30-20e04e0cec21
+¤	cpp:S5276	"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8÷Šµñ1J$bb1ca809-543c-4981-9cf0-6a9e6ba53723
+¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(£İ¶ßıÿÿÿÿ8ë†‡Óñ1J$3fd7a060-76da-464f-9d22-6ac79a1ba3ab
+¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(£İ¶ßıÿÿÿÿ8ì†‡Óñ1J$58e5e08f-21e1-43c0-bf51-2125bccccc95
+¥	cpp:S5276­"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8‚ˆ¿àñ1J$be6eabf6-65ab-4512-81a0-cb01dfa6935f
+¥	cpp:S5276­"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8‚ˆ¿àñ1J$c9ff3426-582d-4a08-9d99-22f9a0e88db4
+¥	cpp:S5276Î"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8‚ˆ¿àñ1J$562f93c2-20d1-4059-aa2e-a36a55fba34b
+¥	cpp:S5276Î"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8‚ˆ¿àñ1J$b474f45a-248b-4e72-b2b0-e9548b0a5f5a
+¨	cpp:S3230"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(Äë—°üÿÿÿÿ8Ù‡‡Óñ1J$80b7dc5d-a764-4969-a93d-ae1cb05dcd51
+«	cpp:S3230"iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åš8ÿø–Óñ1J$cd06006e-7e02-4ffb-a0f7-e8a66c1676b6
+¥	cpp:S32300"cDo not assign data members in a constructor. Initialize member "Stunned" in an initialization list.(êúÎÍ8Ù‡‡Óñ1J$01309244-756b-43fd-9bb5-24b716be6593
+«	cpp:S32301"iDo not assign data members in a constructor. Initialize member "numberOfLives" in an initialization list.(É–8ÿø–Óñ1J$6aafd62f-bf94-4c47-811b-815234a064d0
+«	cpp:S32305"iDo not assign data members in a constructor. Initialize member "isCoolingDown" in an initialization list.(å³¼ó8€ù–Óñ1J$258120f2-5472-4638-885f-d0556f1de2d7
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(‹˜‘‡ûÿÿÿÿ8‡ù–Óñ1J$b951886e-472b-49dd-a3cc-210b0b2bc357
+“	cpp:S5025!"QReplace the use of "new" with an operation that automatically manages the memory.(Áæùà8ˆù–Óñ1J$e667b1ce-8c2b-44e8-b2cc-c5dd409e8ea2
+’	cpp:S5025#"QReplace the use of "new" with an operation that automatically manages the memory.(õ€8ˆù–Óñ1J$a1deda76-d7c6-4d66-90a5-2ffb9451ea1b
+˜	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(­â¯„şÿÿÿÿ8‰ù–Óñ1J$1dbba270-01fc-49c4-bacf-347bca1510a3
+“	cpp:S5025+"QReplace the use of "new" with an operation that automatically manages the memory.(´ÊĞı8Šù–Óñ1J$3691521b-493d-407a-bd67-2e369ea1032d
+“	cpp:S50253"QReplace the use of "new" with an operation that automatically manages the memory.(ÊÕÇÁ8Š‰¿àñ1J$b146f1cc-21ae-438e-901f-7e1edb0d3a0e
+ˆ	cpp:S6004L"AUse the init-statement to declare "newY" inside the if statement.(Å±œ½úÿÿÿÿ8ìˆ¿àñ1J$614dc35d-ea1e-4f72-a2d0-7a3072cef7c5
+‰	cpp:S6004‘"AUse the init-statement to declare "newY" inside the if statement.(Å±œ½úÿÿÿÿ8¡Ñıñ1J$aeb42fcf-f171-41f1-97ef-ce480734fa90
+o	cpp:S5827¼"'Replace the redundant type with "auto".(Äô­”ÿÿÿÿÿ8ˆ‰¿àñ1J$38d23d84-c6cf-4a1c-9c10-c88cd3253e0b
+™	cpp:S5025¼"QReplace the use of "new" with an operation that automatically manages the memory.(Äô­”ÿÿÿÿÿ8­¾£›ò1J$2fbe6c1d-fbb3-4e60-801f-26d3c9baf643
+}	cpp:S5025Ó":Rewrite the code so that you no longer need this "delete".(İóî8•‰¿àñ1J$d73230cf-a77a-42a5-8178-82309d616e49
+q	cpp:S5817ñ")This function should be declared "const".(«Ÿ‚Ñüÿÿÿÿ8ô÷£›ò1J$fef07148-7438-4fe0-a802-4ef9ffc61d2d

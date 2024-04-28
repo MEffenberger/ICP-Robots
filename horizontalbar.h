@@ -27,7 +27,7 @@
 class HorizontalUpperBar : public QObject, public QGraphicsRectItem {
 Q_OBJECT
 public:
-    HorizontalUpperBar(User *user);
+    HorizontalUpperBar(User *user, int timeLimit);
 
 private:
     int width{};

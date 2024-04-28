@@ -5,7 +5,7 @@
 #include "timer.h"
 
 
-Timer::Timer(QGraphicsItem *parent) : QGraphicsTextItem(parent)
+Timer::Timer(QGraphicsItem *parent, int timeL) : QGraphicsTextItem(parent)
 {
     int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
     QString family = QFontDatabase::applicationFontFamilies(fontId).at(0);
@@ -17,7 +17,7 @@ Timer::Timer(QGraphicsItem *parent) : QGraphicsTextItem(parent)
     QColor color(0,255,0);
     setDefaultTextColor(color);
     time = 0;
-    timeLimit = 160;
+    timeLimit = timeL;
     setPlainText(QString::number(time) + QString(" / ") + QString::number(timeLimit));
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Timer::pauseTimer);

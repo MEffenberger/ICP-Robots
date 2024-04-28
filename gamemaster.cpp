@@ -33,7 +33,7 @@ void GameMaster::createNewMapWindow() {
 void GameMaster::startGame() {
 
     //this->mapData = new QJsonArray();
-    loadFile();
+    mainEvent();
 
 }
 
@@ -70,30 +70,33 @@ void GameMaster::loadFile() {
         int x = attributesObject["x"].toInt();
         int y = attributesObject["y"].toInt();
         if (type == "Robot") {
-            userFound = true;
+            UserData.push_back(x);
+            UserData.push_back(y);
             qDebug() << "ROBOT\n";
             QJsonObject attributesObject = cellObject["attributes"].toObject();
-            int orientation = attributesObject["orientation"].toInt();
-            int velocity = attributesObject["velocity"].toInt();
-            qDebug() << orientation << velocity;
+            UserData.push_back(attributesObject["orientation"].toInt());
+            UserData.push_back(attributesObject["velocity"].toInt());
             qDebug() << "X:" << x << "Y:" << y;
         } else if (type == "Obstacle") {
+            ObstacleData.push_back(std::make_pair(x, y));
             qDebug() << "OBSTACLE\n";
             qDebug() << "X:" << x << "Y:" << y;
         } else if (type == "Enemy") {
             qDebug() << "ENEMY\n";
+            EnemyData.push_back(std::vector<int>());
+            EnemyData.back().push_back(x);
+            EnemyData.back().push_back(y);
             QJsonObject attributesObject = cellObject["attributes"].toObject();
-            int distance = attributesObject["distance"].toInt();
-            int orientation = attributesObject["orientation"].toInt();
-            int rotationAngle = attributesObject["rotationAngle"].toInt();
-            int velocity = attributesObject["velocity"].toInt();
-            qDebug() << orientation << distance << rotationAngle << velocity;
+            EnemyData.back().push_back(attributesObject["distance"].toInt());
+            EnemyData.back().push_back(attributesObject["orientation"].toInt());
+            EnemyData.back().push_back(attributesObject["rotationAngle"].toInt());
+            EnemyData.back().push_back(attributesObject["velocity"].toInt());
             qDebug() << "X:" << x << "Y:" << y;
         } else if(type == "TimeLimit"){
             qDebug() << "TIME\n";
             QJsonObject attributesObject = cellObject["time"].toObject();
-            int time = attributesObject["seconds"].toInt();
-            qDebug() << time;
+            timeLimitData = attributesObject["seconds"].toInt();
+            qDebug() << timeLimitData;
         }
     }
 
@@ -102,3 +105,60 @@ void GameMaster::loadFile() {
         run();
     }
 }
+
+void GameMaster::mainEvent(){
+
+    QGraphicsScene *scene = new QGraphicsScene();
+    scene->setSceneRect(0, 0, 1200, 800);
+
+    QPixmap background("../images/bg.png");
+    background = background.scaled(scene->width(), scene->height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    scene->setBackgroundBrush(background);
+
+    User *user = new User(nullptr, UserData[2], UserData[3]);
+    scene->addItem(user);
+    user->setFlag(QGraphicsItem::ItemIsFocusable); // construktor?
+    user->setFocus();
+    user->setPos(UserData[0], UserData[1] + 100); // Has to be accounted because of the Horizontal Upper Bar
+
+    HorizontalLowerBar *lowerBar = new HorizontalLowerBar(user);
+    scene->addItem(lowerBar);
+    lowerBar->setPos(0, 700);
+
+    HorizontalUpperBar *upperBar = new HorizontalUpperBar(user, timeLimitData);
+    scene->addItem(upperBar);
+    upperBar->setPos(0, 0);
+
+    PopUp *popup = new PopUp(nullptr, "gameover");
+    scene->addItem(popup);
+    popup->setPos(scene->width()/2 - popup->rect().width()/2, scene->height()/2 - popup->rect().height()/2);
+
+    PopUp *popup2 = new PopUp(nullptr, "victory");
+    scene->addItem(popup2);
+    popup2->setPos(scene->width()/2 - popup2->rect().width()/2, scene->height()/2 - popup2->rect().height()/2);
+
+    PopUp *popup3 = new PopUp(nullptr, "pause");
+    scene->addItem(popup3);
+    popup3->setPos(scene->width()/2 - popup3->rect().width()/2, scene->height()/2 - popup3->rect().height()/2);
+
+    for (std::pair<int, int> obstacle : ObstacleData) {
+        Obstacle *brick = new Obstacle();
+        scene->addItem(brick);
+        brick->setPos(obstacle.first, obstacle.second);
+    }
+
+    for (std::vector<int> enemak : EnemyData) {
+        Enemy *enemy = new Enemy(nullptr, user, enemak[2], enemak[3], enemak[5], enemak[4]);
+        scene->addItem(enemy);
+        enemy->setPos(enemak[0], enemak[1]);
+        QTimer::singleShot(3000, enemy, &Enemy::startAutonomousMovement);
+    }
+
+    QGraphicsView *view = new QGraphicsView(scene);
+    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setFixedSize(1200, 800);
+    user->setFocus();
+    view->show();
+}
+

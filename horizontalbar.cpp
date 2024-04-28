@@ -73,7 +73,7 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
 
 }
 
-HorizontalUpperBar::HorizontalUpperBar(User *user) {
+HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
     width = 1200;
     height = 100;
     setRect(0, 0, width, height);
@@ -103,7 +103,7 @@ HorizontalUpperBar::HorizontalUpperBar(User *user) {
     connect(user, &User::deleteLife2, gameInfo, &GameInfo::damage);
     connect(user, &User::deleteLife3, gameInfo, &GameInfo::damage);
 
-    timer = new Timer(this);
+    timer = new Timer(this, timeLimit);
     timer->setPos(950, 17);
 
     QPixmap pixmap2("../images/pause.png");

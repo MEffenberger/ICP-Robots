@@ -1,7 +1,7 @@
 #include "user.h"
 
 
-User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
+User::User(QGraphicsItem *parent,  int orientation, int velocity) : QObject(), QGraphicsEllipseItem(parent)
 {
     setRect(0, 0, 50, 50); // Set the size of the ellipse
 
@@ -26,7 +26,7 @@ User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
 
 
 
-    speed = 5.0;
+    speed = velocity;
     rotationSpeed = 10.0;
     setTransformOriginPoint(rect().width()/2, rect().height()/2);
 
@@ -51,6 +51,8 @@ User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
     coolDown = new QTimer(this);
     connect(coolDown, &QTimer::timeout, this, &User::endCoolDown); // Connect the timer's timeout signal to the endCooldown slot
     isCoolingDown = false;
+
+    setRotation(orientation);
 }
 
 void User::moveForward() {

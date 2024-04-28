@@ -8,11 +8,6 @@
 	"HEADERS" : 
 	[
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/ObstacleItem.h",
-			"MU",
-			"EWIEGA46WW/moc_ObstacleItem.cpp"
-		],
-		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/button.h",
 			"MU",
 			"EWIEGA46WW/moc_button.cpp"
@@ -61,6 +56,11 @@
 			"/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h",
 			"MU",
 			"EWIEGA46WW/moc_obstacle.cpp"
+		],
+		[
+			"/mnt/c/Users/marek/CLionProjects/ICP/obstacleitem.h",
+			"MU",
+			"EWIEGA46WW/moc_obstacleitem.cpp"
 		],
 		[
 			"/mnt/c/Users/marek/CLionProjects/ICP/popup.h",

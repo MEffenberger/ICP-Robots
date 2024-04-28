@@ -421,6 +421,7 @@ CMakeFiles/ICP.dir/enemy.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QKeyEvent
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QList
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
@@ -683,16 +684,28 @@ CMakeFiles/ICP.dir/gameinfo.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o
+ /mnt/c/Users/marek/CLionProjects/ICP/button.h
+ /mnt/c/Users/marek/CLionProjects/ICP/enemy.h
+ /mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h
  /mnt/c/Users/marek/CLionProjects/ICP/gamemaster.cpp
  /mnt/c/Users/marek/CLionProjects/ICP/gamemaster.h
+ /mnt/c/Users/marek/CLionProjects/ICP/heart.h
+ /mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.h
  /mnt/c/Users/marek/CLionProjects/ICP/mainwindow.h
  /mnt/c/Users/marek/CLionProjects/ICP/mapwindow.h
+ /mnt/c/Users/marek/CLionProjects/ICP/obstacle.h
+ /mnt/c/Users/marek/CLionProjects/ICP/popup.h
+ /mnt/c/Users/marek/CLionProjects/ICP/star.h
+ /mnt/c/Users/marek/CLionProjects/ICP/timer.h
+ /mnt/c/Users/marek/CLionProjects/ICP/user.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonArray
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtMath
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
@@ -701,6 +714,7 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
@@ -736,6 +750,7 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -768,6 +783,7 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
@@ -775,8 +791,15 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QFontDatabase
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QKeyEvent
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QList
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QShowEvent
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
@@ -793,6 +816,7 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
@@ -813,10 +837,22 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+ /usr/include/x86_64-linux-gnu/qt5/QtMultimedia/QSound
+ /usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qsound.h
+ /usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qtmultimedia-config.h
+ /usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qtmultimediaglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsEllipseItem
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsPixmapItem
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsPolygonItem
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsRectItem
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsSceneMouseEvent
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsTextItem
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QInputDialog
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
@@ -824,6 +860,7 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
@@ -834,6 +871,9 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfiledialog.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicssceneevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qinputdialog.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
@@ -843,6 +883,7 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
@@ -1049,6 +1090,7 @@ CMakeFiles/ICP.dir/horizontalbar.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QFontDatabase
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QKeyEvent
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QList
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
@@ -1738,12 +1780,15 @@ CMakeFiles/ICP.dir/obstacle.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
@@ -2416,6 +2461,8 @@ CMakeFiles/ICP.dir/user.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QKeyEvent
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QList
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainterPath
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h

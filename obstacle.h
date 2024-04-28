@@ -8,6 +8,8 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsItem>
 #include <QBrush>
+#include <QPen>
+#include <QPainterPath>
 
 
 class Obstacle : public QGraphicsRectItem

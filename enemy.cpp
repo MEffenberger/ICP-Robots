@@ -5,8 +5,7 @@
 #include "enemy.h"
 
 
-Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseItem(parent)
-{
+Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, int velocity, int rotationAngle ) : QObject(), QGraphicsEllipseItem(parent) {
     setRect(0, 0, 50, 50); // Set the size of the ellipse
     setFlag(QGraphicsItem::ItemClipsToShape);
 
@@ -23,17 +22,18 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     setPen(pen);
 
     // Create the vision point
-    visionPoint = new QGraphicsEllipseItem(rect().width()/2, rect().height() - rect().height()/5, 7, 7, this); // Positioned above the center of the User
+    visionPoint = new QGraphicsEllipseItem(rect().width() / 2, rect().height() - rect().height() / 5, 7, 7,
+                                           this); // Positioned above the center of the User
     visionPoint->setBrush(Qt::red); // Set the color to red
     visionPoint->setZValue(-12); // Set the z value to 1 so it's drawn on top of the vision field
 
     // Create the vision rectangle
-    visionLength = 5;
+    visionLength = distance;
     QVector<QPointF> points;
-    points << QPointF(rect().width()/2 - rect().width()/5, rect().height() - rect().height()/5)
-           << QPointF(0, rect().height() + visionLength*10)
-           << QPointF(rect().width(), rect().height() + visionLength*10)
-           << QPointF(rect().width()/2 + rect().width()/5, rect().height() - rect().height()/5);
+    points << QPointF(rect().width() / 2 - rect().width() / 5, rect().height() - rect().height() / 5)
+           << QPointF(0, rect().height() + visionLength * 10)
+           << QPointF(rect().width(), rect().height() + visionLength * 10)
+           << QPointF(rect().width() / 2 + rect().width() / 5, rect().height() - rect().height() / 5);
 
     // Create the vision trapezoid
     visionField = new QGraphicsPolygonItem(QPolygonF(points), this);
@@ -43,9 +43,13 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     visionField->setZValue(-1); // Below the Enemy:
 
     // Initialize movement parameters
-    turningAngle = 30;
-    clockwise = true;// Initialize movement parameters
-    speed = 5.0;
+    turningAngle = rotationAngle;
+    if (rotationAngle < 0){
+        clockwise = false;
+    } else {
+        clockwise = true;
+    }
+    speed = velocity;
     rotationSpeed = 3.0;
     userCollisionFlag = false;
     QTimer *movementTimer = new QTimer(this);
@@ -64,6 +68,8 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
 
     chaseTimer = new QTimer(this);
     connect(chaseTimer, &QTimer::timeout, this, &Enemy::stopChasing);
+
+    setRotation(orientation);
 }
 
 void Enemy::startAutonomousMovement() {
@@ -111,7 +117,7 @@ void Enemy::autonomousMovement(){
         }
     }
     QPointF newPos = QPointF(newX, newY);
-    if (QPointF::dotProduct(newPos - lastPos, newPos - lastPos) > 600) { // If moved more than sqrt(500) units
+    if (QPointF::dotProduct(newPos - lastPos, newPos - lastPos) > 800) { // If moved more than sqrt(500) units
         lastPos = newPos;
         stuckTimer->start(5000); // Restart stuckTimer
     }
@@ -223,7 +229,7 @@ void Enemy::emitHit() {
 void Enemy::checkStuck() {
     qDebug() << "Checking if I'm stuck";
     qDebug() << QPointF::dotProduct(pos() - lastPos, pos() - lastPos);
-    if (QPointF::dotProduct(pos() - lastPos, pos() - lastPos) < 600) { // If moved less than 10 units
+    if (QPointF::dotProduct(pos() - lastPos, pos() - lastPos) < 800) { // If moved less than 10 units
         getUnstuck();
     }
     lastPos = pos(); // Update lastPosition

@@ -15,6 +15,15 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QFile>
+#include "user.h"
+#include "obstacle.h"
+#include "enemy.h"
+#include "horizontalbar.h"
+#include "popup.h"
+#include "mapwindow.h"
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QApplication>
 
 
 
@@ -23,10 +32,10 @@ class GameMaster : public QObject {
 
 
 private:
-    std::vector<std::vector<int>> Enemy;
-    std::vector<int> User;
-    std::pair<int, int> Obstacle;
-    int timeLimit;
+    std::vector<std::vector<int>> EnemyData;
+    std::vector<int> UserData;
+    std::vector<std::pair<int, int>> ObstacleData;
+    int timeLimitData;
     //void parseJson();
     MainWindow *mainWindow;
     MapWindow *mapWindow;
@@ -43,6 +52,7 @@ private slots:
     void createNewMapWindow();
     void loadFile();
     void showJSONpopup();
+    void mainEvent();
 
 
 };
