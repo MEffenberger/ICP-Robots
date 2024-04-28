@@ -158,9 +158,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/ObstacleItem.h">
-			<Option target="ICP"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/button.cpp">
 			<Option target="ICP"/>
 		</Unit>
@@ -231,6 +228,9 @@
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/obstacleitem.h">
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/popup.cpp">

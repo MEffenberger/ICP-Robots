@@ -45,7 +45,7 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     // Initialize movement parameters
     turningAngle = 30;
     clockwise = true;// Initialize movement parameters
-    speed = 1.0;
+    speed = 5.0;
     rotationSpeed = 3.0;
     userCollisionFlag = false;
     QTimer *movementTimer = new QTimer(this);
@@ -62,8 +62,8 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     connect(stuckTimer, &QTimer::timeout, this, &Enemy::checkStuck);
     stuckTimer->start(5000);
 
-//    chaseTimer = new QTimer(this);
-//    connect(chaseTimer, &QTimer::timeout, this, &Enemy::stopChasing);
+    chaseTimer = new QTimer(this);
+    connect(chaseTimer, &QTimer::timeout, this, &Enemy::stopChasing);
 }
 
 void Enemy::startAutonomousMovement() {
@@ -104,14 +104,14 @@ void Enemy::autonomousMovement(){
     if (!(newX >= 20 && newX <= 1200 - rect().width() - 10 && newY >= 100 + 20 && newY <= 700 - rect().height() - 10)){
         // Apply the movement if within the scene
         if (clockwise){
-            setRotation(rotation() - turningAngle);
+            setRotation(rotation() - (0.7 * turningAngle));
         }
         else {
-            setRotation(rotation() + turningAngle);
+            setRotation(rotation() + (0.7 * turningAngle));
         }
     }
     QPointF newPos = QPointF(newX, newY);
-    if (QPointF::dotProduct(newPos - lastPos, newPos - lastPos) > 300) { // If moved more than sqrt(500) units
+    if (QPointF::dotProduct(newPos - lastPos, newPos - lastPos) > 600) { // If moved more than sqrt(500) units
         lastPos = newPos;
         stuckTimer->start(5000); // Restart stuckTimer
     }
@@ -193,7 +193,7 @@ void Enemy::userCollision(User *user){
 
         setRotation(currentAngle + (angleDifference * 0.1));
 //
-//        chaseTimer->start(3000); // Chase the user for 3 seconds
+        if(!chaseTimer->isActive()) chaseTimer->start(5000); // Chase the user for 3 seconds
 
 
         return;
@@ -223,7 +223,7 @@ void Enemy::emitHit() {
 void Enemy::checkStuck() {
     qDebug() << "Checking if I'm stuck";
     qDebug() << QPointF::dotProduct(pos() - lastPos, pos() - lastPos);
-    if (QPointF::dotProduct(pos() - lastPos, pos() - lastPos) < 300) { // If moved less than 10 units
+    if (QPointF::dotProduct(pos() - lastPos, pos() - lastPos) < 600) { // If moved less than 10 units
         getUnstuck();
     }
     lastPos = pos(); // Update lastPosition
@@ -243,11 +243,11 @@ void Enemy::getUnstuck() {
     setPos(newX, newY);
 }
 
-//void Enemy::stopChasing() {
-//    // Stop chasing the user
-//    qDebug() << "I lost you!";
-//    chaseTimer->stop();
-//
-//    // Rotate away from the user
-//    setRotation(rotation() + 180);
-//}
+void Enemy::stopChasing() {
+    // Stop chasing the user
+    qDebug() << "I lost you!";
+    chaseTimer->stop();
+
+    // Rotate away from the user
+    setRotation(rotation() + 180);
+}

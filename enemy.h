@@ -44,7 +44,7 @@ private:
     User *user;
     QPointF lastPos;
     QTimer *stuckTimer;
-   // QTimer *chaseTimer;
+    QTimer *chaseTimer;
 
 
 protected:
@@ -57,7 +57,7 @@ public slots:
     void emitHit();
     void checkStuck();
     void getUnstuck();
-   // void stopChasing();
+    void stopChasing();
 
 
 private slots:
