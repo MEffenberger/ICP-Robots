@@ -40,7 +40,6 @@ private:
     qreal turningAngle;
     int visionLength;
     bool clockwise;
-    bool userCollisionFlag;
     User *user;
     QPointF lastPos;
     QTimer *stuckTimer;

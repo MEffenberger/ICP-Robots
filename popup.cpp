@@ -22,7 +22,7 @@ PopUp::PopUp(QGraphicsItem *parent, std::string name) : QGraphicsRectItem(parent
     if (name == "gameover") {
         text = createTextItem("Game Over", family, 37, QColor(255, 0, 0));
     } else if (name == "paused") {
-        text = createTextItem("Paused", family, 37, QColor(0, 255, 0));
+        text = createTextItem("Resume", family, 37, QColor(0, 255, 0));
     } else if (name == "win") {
         text = createTextItem("You Win", family, 37, QColor(255, 250, 205));
     }

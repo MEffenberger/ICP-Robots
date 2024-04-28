@@ -28,6 +28,7 @@ class HorizontalUpperBar : public QObject, public QGraphicsRectItem {
 Q_OBJECT
 public:
     HorizontalUpperBar(User *user, int timeLimit);
+    Button *pauseButton;
 
 private:
     int width{};
@@ -35,12 +36,12 @@ private:
     //QGraphicsRectItem *Timer;
     //QGraphicsRectItem *Pause;
     Heart *Heart1;
-    Button *pauseButton;
     Heart *Heart2;
     Heart *Heart3;
     GameInfo *gameInfo;
     Timer *timer;
     //User *userPtr;
+
 };
 
 class HorizontalLowerBar : public QObject, public QGraphicsRectItem {

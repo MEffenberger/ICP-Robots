@@ -51,13 +51,11 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
     }
     speed = velocity;
     rotationSpeed = 3.0;
-    userCollisionFlag = false;
     QTimer *movementTimer = new QTimer(this);
     QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
     movementTimer->start(30);
     setTransformOriginPoint(rect().width()/2, rect().width()/2);
 
-    setRotation(180);
     this->user = user;
     connect(this, &Enemy::hit, user, &User::decreaseLives);
 
@@ -69,7 +67,7 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
     chaseTimer = new QTimer(this);
     connect(chaseTimer, &QTimer::timeout, this, &Enemy::stopChasing);
 
-    setRotation(orientation);
+    setRotation(orientation + 180);
 }
 
 void Enemy::startAutonomousMovement() {
@@ -146,7 +144,6 @@ void Enemy::checkCollisions(){
 
 void Enemy::obstacleCollision(Obstacle *obstacle){
     // Handle collision with obstacle
-    userCollisionFlag = false;
     if (visionField->collidesWithItem(obstacle)){
         QColor semiTransparentBlue(0,0,255,125); // RGBA color: semi-transparent blue
         visionField->setBrush(semiTransparentBlue);

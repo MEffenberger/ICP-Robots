@@ -1,34 +1,34 @@
 
-r	cpp:S1117A"+declaration shadows a field of 'GameMaster'(¤Å–Ùüÿÿÿÿ8‘¸æ©ò1J$9f2f342f-1128-4f4b-967c-6cbd7a02c549
-k	cpp:S1117L"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8‘¸æ©ò1J$f0f21db0-56b4-4363-a4bd-44fb84330d0a
-k	cpp:S1117Y"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8‘¸æ©ò1J$6b4a2553-a95d-4733-aba0-bf40cb737564
-e	cpp:S1117a"$declaration shadows a local variable(Ï„“H8‘¸æ©ò1J$ad1f2d5c-00e9-4bd2-abfb-3f5f7c0668af
-Ÿ	cpp:S5276s"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³Å8’¸æ©ò1J$7219f619-19e7-4390-acf3-6395328538b4
-Ÿ	cpp:S5276s"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³Å8’¸æ©ò1J$9dd59cdf-c776-4fa9-869c-639fdc93138c
-‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÅîíûÿÿÿÿJ$f6869c63-7bee-4f24-914d-c2876a0a8c57
-Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ª†Ã¡J$be7c343b-7504-4add-9064-1a5f45b0e235
-˜	cpp:S50255"QReplace the use of "new" with an operation that automatically manages the memory.(îéìåøÿÿÿÿ8ù¸æ©ò1J$fca8475a-550c-4a0c-ad2a-9054748bdfca
-°	cpp:S5350A"iMake the type of this variable a pointer-to-const. The current type of "mapData" is "class QJsonArray *".(¤Å–Ùüÿÿÿÿ8ÿ¸æ©ò1J$40278177-75f6-481f-9d8d-e7ad937fe3c9
-{	cpp:S6003V"4Replace this use of "push_back" with "emplace_back".(“ı­‘şÿÿÿÿ8“¹æ©ò1J$206012d8-6e7d-409f-a575-87dde2471903
-n	cpp:S5827o"'Replace the redundant type with "auto".(Ì™‹´ÿÿÿÿÿ8 ¹æ©ò1J$e438d6b6-bd7d-44bf-8534-588fcb6a8922
-i	cpp:S5827v"'Replace the redundant type with "auto".(Ùñ¡µ8¢¹æ©ò1J$a555380d-a639-4ec4-a94e-f6303293a531
-n	cpp:S5827|"'Replace the redundant type with "auto".(ÃŒ²öúÿÿÿÿ8£¹æ©ò1J$4685cbe3-4430-4990-8b98-5f55ac3294a0
-o	cpp:S5827€"'Replace the redundant type with "auto".(úñ­ùÿÿÿÿ8¤¹æ©ò1J$95638bd2-3596-4ca9-8957-be3036f96d5e
-o	cpp:S5827„"'Replace the redundant type with "auto".(²·®øüÿÿÿÿ8¥¹æ©ò1J$819308e0-10d0-4823-b2ea-604e5ddcb03b
-j	cpp:S5827ˆ"'Replace the redundant type with "auto".(Ì¶ ˆ8¦¹æ©ò1J$c5ce383b-118a-4a38-a28b-c6005e0e5407
-o	cpp:S5827Œ"'Replace the redundant type with "auto".(€É‡ûÿÿÿÿ8§¹æ©ò1J$3e25fb23-3c63-4920-842a-21df1639ea8c
-o	cpp:S5827"'Replace the redundant type with "auto".(£Ç¡üÿÿÿÿ8¨¹æ©ò1J$45e190c3-10b5-4ea7-a8ea-cd1b41aac76a
-˜	cpp:S5025o"QReplace the use of "new" with an operation that automatically manages the memory.(Ì™‹´ÿÿÿÿÿ8ª¹æ©ò1J$91850810-065a-4966-bbb2-d703a6670b52
-“	cpp:S5025v"QReplace the use of "new" with an operation that automatically manages the memory.(Ùñ¡µ8¬¹æ©ò1J$dd2e0078-dc1a-4448-9ad6-e57b1fb66fb1
-˜	cpp:S5025|"QReplace the use of "new" with an operation that automatically manages the memory.(ÃŒ²öúÿÿÿÿ8­¹æ©ò1J$6370f221-8aa1-4b1b-b98c-180692f6e74c
-™	cpp:S5025€"QReplace the use of "new" with an operation that automatically manages the memory.(úñ­ùÿÿÿÿ8­¹æ©ò1J$7049d057-3fc3-4160-9266-f1009fd05005
-™	cpp:S5025„"QReplace the use of "new" with an operation that automatically manages the memory.(²·®øüÿÿÿÿ8®¹æ©ò1J$ecf2b22a-baeb-4cce-b13e-206943798dcc
-”	cpp:S5025ˆ"QReplace the use of "new" with an operation that automatically manages the memory.(Ì¶ ˆ8°¹æ©ò1J$34ae5578-aa9d-4bbb-b140-c3f6dd4d5eb8
-™	cpp:S5025Œ"QReplace the use of "new" with an operation that automatically manages the memory.(€É‡ûÿÿÿÿ8±¹æ©ò1J$e0e83f39-0ed8-4c12-8905-a898406738ed
-…	cpp:S6005"=Replace this declaration by a structured binding declaration.(½İğıÿÿÿÿ8µ¹æ©ò1J$2521a568-209e-4e4d-b80f-f7930fc38417
-j	cpp:S5827‘"'Replace the redundant type with "auto".(ññöº8µ¹æ©ò1J$aaac6e18-bf06-47f3-b4e9-015973214b60
-”	cpp:S5025‘"QReplace the use of "new" with an operation that automatically manages the memory.(ññöº8¶¹æ©ò1J$74f25fd0-4929-43e9-be31-b83ef2ee38b6
-j	cpp:S5827—"'Replace the redundant type with "auto".(šø¹Ì8¸¹æ©ò1J$eaa45f06-9dad-4cb4-bea2-2dc063e13474
-”	cpp:S5025—"QReplace the use of "new" with an operation that automatically manages the memory.(šø¹Ì8º¹æ©ò1J$e3a42021-9e84-4932-a979-6215ff8d11d9
-™	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(£Ç¡üÿÿÿÿ8¼¹æ©ò1J$1901a1c6-6f38-463f-91f9-ce94c4a7a0e0
-dcpp:S1254"Remove the commented out code.(ÊèÓ‰úÿÿÿÿ8ûÿæ©ò1J$8523ee36-e274-4c78-a816-dc2eca38f216
+r	cpp:S1117@"+declaration shadows a field of 'GameMaster'(¤Å–Ùüÿÿÿÿ8ì…ëªò1J$d9a1f63e-2eab-4760-bbe4-101bb9aede3c
+k	cpp:S1117L"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8ì…ëªò1J$224199c0-8ddf-4463-bb78-7707194329ca
+k	cpp:S1117Y"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8ì…ëªò1J$ad826e8e-863b-45b0-81ca-845b0c7b2702
+e	cpp:S1117a"$declaration shadows a local variable(Ï„“H8ì…ëªò1J$0e714273-1ea7-4908-bdf4-92199f10cd63
+Ÿ	cpp:S5276v"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³Å8Ï½¬«ò1J$c18a2d69-abb8-47a0-b097-b5da291c0dc5
+Ÿ	cpp:S5276v"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³Å8Ñ½¬«ò1J$60533909-6c65-4cf2-8022-552f00ef5951
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÅîíûÿÿÿÿJ$e73214ee-5f13-42eb-afa3-09f58ebd5920
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ª†Ã¡J$bb6f0997-a7fa-4f1d-9825-0f295d1d2059
+˜	cpp:S50254"QReplace the use of "new" with an operation that automatically manages the memory.(îéìåøÿÿÿÿ8Ò†ëªò1J$61143978-b9de-4f21-a039-d5f5ba8cfb12
+°	cpp:S5350@"iMake the type of this variable a pointer-to-const. The current type of "mapData" is "class QJsonArray *".(¤Å–Ùüÿÿÿÿ8Ø†ëªò1J$e5cab127-02f5-46e2-a2b8-27cce97d42be
+{	cpp:S6003V"4Replace this use of "push_back" with "emplace_back".(“ı­‘şÿÿÿÿ8î†ëªò1J$e9c193ce-efbd-44e4-bc96-66d5d52c5939
+n	cpp:S5827r"'Replace the redundant type with "auto".(Ì™‹´ÿÿÿÿÿ8ö‡©«ò1J$c090ff84-622f-4041-b689-03023ee26c0f
+i	cpp:S5827y"'Replace the redundant type with "auto".(Ùñ¡µ8ü†ëªò1J$8d949486-791e-442a-b474-b47c9f15de84
+n	cpp:S5827"'Replace the redundant type with "auto".(ÃŒ²öúÿÿÿÿ8ü†ëªò1J$d06a4bba-c0b6-434a-9c5d-97fe2ce63912
+o	cpp:S5827„"'Replace the redundant type with "auto".(úñ­ùÿÿÿÿ8ı†ëªò1J$49857715-c591-4057-8913-0720a86864be
+o	cpp:S5827‰"'Replace the redundant type with "auto".(²·®øüÿÿÿÿ8ı†ëªò1J$dfd4fc47-865a-4492-980d-3c1ab1e9259a
+o	cpp:S5827"'Replace the redundant type with "auto".(«ìß¾üÿÿÿÿ8ı†ëªò1J$0528d6f7-2a59-4546-a483-675f8e317732
+o	cpp:S5827‘"'Replace the redundant type with "auto".(ü¥ñëûÿÿÿÿ8ı†ëªò1J$aa432459-f425-4044-a6f2-c729be986d43
+o	cpp:S5827¤"'Replace the redundant type with "auto".(£Ç¡üÿÿÿÿ8ù‡©«ò1J$c81d736d-37ca-4e0f-8119-7598029944b1
+˜	cpp:S5025r"QReplace the use of "new" with an operation that automatically manages the memory.(Ì™‹´ÿÿÿÿÿ8‡ëªò1J$ffa3341f-152d-4237-a41f-47c8d8153b83
+“	cpp:S5025y"QReplace the use of "new" with an operation that automatically manages the memory.(Ùñ¡µ8‚‡ëªò1J$7cab3ad8-6d55-4fba-8c54-96c11be76ab2
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÃŒ²öúÿÿÿÿ8‚‡ëªò1J$0eaaa862-c452-4052-b68c-351020aa19f8
+™	cpp:S5025„"QReplace the use of "new" with an operation that automatically manages the memory.(úñ­ùÿÿÿÿ8ƒ‡ëªò1J$d40f77d4-164e-4572-9174-9c02f42db579
+™	cpp:S5025‰"QReplace the use of "new" with an operation that automatically manages the memory.(²·®øüÿÿÿÿ8†‡ëªò1J$6eeae035-6860-4e40-aa74-d21be6ceb5c7
+™	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(«ìß¾üÿÿÿÿ8ˆ‡ëªò1J$c38c8c74-3ef2-4f1f-9e7d-195fcf4fe26d
+™	cpp:S5025‘"QReplace the use of "new" with an operation that automatically manages the memory.(ü¥ñëûÿÿÿÿ8‡ëªò1J$63137396-59f9-4882-94ab-5a43fa3cbc57
+…	cpp:S6005—"=Replace this declaration by a structured binding declaration.(½İğıÿÿÿÿ8‡ëªò1J$b9d59bef-49ea-4718-9f4c-dea9637992f7
+j	cpp:S5827˜"'Replace the redundant type with "auto".(ññöº8‡ëªò1J$4cd9b22e-72b4-4748-84b4-62dd1abf3dd2
+”	cpp:S5025˜"QReplace the use of "new" with an operation that automatically manages the memory.(ññöº8’‡ëªò1J$1ed82884-1c58-46f8-bc95-ecfb79536458
+j	cpp:S5827"'Replace the redundant type with "auto".(šø¹Ì8‘‡ëªò1J$bd9d3c6f-8466-4259-b82c-e0bc3ff275e6
+”	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(šø¹Ì8‹ˆ©«ò1J$e234a4d2-843a-4ab3-84e7-a67b5ca6b8c6
+™	cpp:S5025¤"QReplace the use of "new" with an operation that automatically manages the memory.(£Ç¡üÿÿÿÿ8Œˆ©«ò1J$c6699cec-d0c8-4518-8e8e-3dea381eb8a9
+dcpp:S1253"Remove the commented out code.(ÊèÓ‰úÿÿÿÿ8Éµëªò1J$a27add0c-f421-4736-a574-1f7379403a8d

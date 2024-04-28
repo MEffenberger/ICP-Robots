@@ -127,10 +127,12 @@ bool GameMaster::mainEvent(){
     HorizontalLowerBar *lowerBar = new HorizontalLowerBar(user);
     scene->addItem(lowerBar);
     lowerBar->setPos(0, 700);
+    lowerBar->setZValue(5);
 
     HorizontalUpperBar *upperBar = new HorizontalUpperBar(user, timeLimitData);
     scene->addItem(upperBar);
     upperBar->setPos(0, 0);
+    upperBar->setZValue(5);
 
     PopUp *popup = new PopUp(nullptr, "gameover");
     scene->addItem(popup);
@@ -143,6 +145,8 @@ bool GameMaster::mainEvent(){
     PopUp *popup3 = new PopUp(nullptr, "paused");
     scene->addItem(popup3);
     popup3->setPos(scene->width()/2 - popup3->rect().width()/2, scene->height()/2 - popup3->rect().height()/2);
+    connect(upperBar->pauseButton, &Button::released, popup3, &PopUp::show);
+    connect(popup3->resumeButton, &Button::released, popup3, &PopUp::hide);
 
     for (std::pair<int, int> obstacle : ObstacleData) {
         Obstacle *brick = new Obstacle();

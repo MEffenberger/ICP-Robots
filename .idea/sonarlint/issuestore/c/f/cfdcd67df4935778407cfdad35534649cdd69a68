@@ -1,8 +1,6 @@
 
-]cpp:S125&"Remove the commented out code.(òÔ¸úûÿÿÿÿJ$c78a7cd6-d165-4afd-84b4-a6f4d0c188e5
-U	cpp:S4962"Use the "nullptr" literal.(ÀìÇÆJ$c7773856-43d4-4ccc-8e9f-b85ab32c05fe
->cpp:S125&"Remove the commented out code.(òÔ¸úûÿÿÿÿ8ªÁåşñ1
-È	cpp:S1242*"ŒRename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(ˆ›—J$60b1686c-da68-46bb-8adf-0dede8246b5f
-È	cpp:S1242+"ŒRename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(ş”¶ÛJ$d5663069-b73e-434b-ab33-30b73d19810e
-6	cpp:S4962"Use the "nullptr" literal.(ÀìÇÆ8İ¸çşñ1
->cpp:S125&"Remove the commented out code.(òÔ¸úûÿÿÿÿ8£¹çşñ1
+K	cpp:S5414"*Don't mix public and private data members.(Ê´ş·øÿÿÿÿ8÷¤ó¬ò1
+È	cpp:S1242*"ŒRename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(ˆ›—J$4d381d83-f2c9-4ec8-b1ee-4a625fdcb528
+È	cpp:S1242+"ŒRename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(ş”¶ÛJ$286b949c-3a38-4ec1-9878-c371c87acbf7
+U	cpp:S4962"Use the "nullptr" literal.(ÀìÇÆJ$40abf23c-f911-4677-984f-c10a015fb00c
+]cpp:S125&"Remove the commented out code.(òÔ¸úûÿÿÿÿJ$37f7f369-8497-46a6-93e5-61f7cebb214c

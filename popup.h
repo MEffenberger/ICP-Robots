@@ -27,11 +27,11 @@ class PopUp : public QObject, public QGraphicsRectItem {
 Q_OBJECT
 public:
     PopUp(QGraphicsItem *parent = 0, std::string name = "");
-private:
     Button *exitButton;
     Button *restartButton;
     Button *resumeButton;
     Button *mainMenuButton;
+private:
     std::string name;
     QGraphicsTextItem *createTextItem(const QString& text, const QString& fontFamily, int fontSize, const QColor& color);
 public slots:

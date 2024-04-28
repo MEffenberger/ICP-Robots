@@ -60,6 +60,7 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
     Autopilot->setBrush(pixmap);
     Autopilot->setOpacity(0.7);
     Autopilot->setPen(QPen(Qt::NoPen));
+    Autopilot->setZValue(15);
     QGraphicsTextItem *text1 = new QGraphicsTextItem("Release For", Autopilot);
     font.setPointSize(7);
     text1->setFont(font);
