@@ -54,6 +54,7 @@ PopUp::PopUp(QGraphicsItem *parent, std::string name) : QGraphicsRectItem(parent
 }
 
 void PopUp::show() {
+    emit pauseTimers();
     this->setZValue(100);
     setVisible(true);
     clearFocus();

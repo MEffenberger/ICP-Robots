@@ -42,6 +42,17 @@ private:
     QJsonArray *mapData;
 
 
+    std::vector<Enemy*> enemies;
+    User *user;
+    std::vector<Obstacle*> obstacles;
+    HorizontalUpperBar *upperBar;
+    HorizontalLowerBar *lowerBar;
+    QGraphicsScene *scene;
+    PopUp *popup;
+    PopUp *popup2;
+    PopUp *popup3;
+    QGraphicsView *view;
+
 
 
 public:
@@ -53,6 +64,8 @@ private slots:
     bool loadFile();
     void showJSONpopup();
     bool mainEvent();
+    void pauseTheGame();
+    void resumeTheGame();
 
 
 };

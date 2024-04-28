@@ -25,6 +25,7 @@ private:
     QTimer *timer;
     int time;
     int timeLimit;
+    int internalTimer;
 
 signals:
     void timeIsUp();

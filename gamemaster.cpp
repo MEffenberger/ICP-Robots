@@ -111,57 +111,61 @@ bool GameMaster::mainEvent(){
     if(!loadFile()){
         return false;
     }
-    QGraphicsScene *scene = new QGraphicsScene();
+    this->scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, 1200, 800);
 
     QPixmap background("../images/bg.png");
     background = background.scaled(scene->width(), scene->height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     scene->setBackgroundBrush(background);
 
-    User *user = new User(nullptr, UserData[2], UserData[3]);
+    this->user = new User(nullptr, UserData[2], UserData[3]);
     scene->addItem(user);
     user->setFlag(QGraphicsItem::ItemIsFocusable); // construktor?
     user->setFocus();
     user->setPos(UserData[0], UserData[1] + 100); // Has to be accounted because of the Horizontal Upper Bar
 
-    HorizontalLowerBar *lowerBar = new HorizontalLowerBar(user);
+    this->lowerBar = new HorizontalLowerBar(user);
     scene->addItem(lowerBar);
     lowerBar->setPos(0, 700);
     lowerBar->setZValue(5);
 
-    HorizontalUpperBar *upperBar = new HorizontalUpperBar(user, timeLimitData);
+    this->upperBar = new HorizontalUpperBar(user, timeLimitData);
     scene->addItem(upperBar);
     upperBar->setPos(0, 0);
     upperBar->setZValue(5);
+    connect(upperBar->pauseButton, &Button::released, this, &GameMaster::pauseTheGame);
 
-    PopUp *popup = new PopUp(nullptr, "gameover");
+    this->popup = new PopUp(nullptr, "gameover");
     scene->addItem(popup);
     popup->setPos(scene->width()/2 - popup->rect().width()/2, scene->height()/2 - popup->rect().height()/2);
 
-    PopUp *popup2 = new PopUp(nullptr, "win");
+    this->popup2 = new PopUp(nullptr, "win");
     scene->addItem(popup2);
     popup2->setPos(scene->width()/2 - popup2->rect().width()/2, scene->height()/2 - popup2->rect().height()/2);
 
-    PopUp *popup3 = new PopUp(nullptr, "paused");
+    this->popup3 = new PopUp(nullptr, "paused");
     scene->addItem(popup3);
     popup3->setPos(scene->width()/2 - popup3->rect().width()/2, scene->height()/2 - popup3->rect().height()/2);
     connect(upperBar->pauseButton, &Button::released, popup3, &PopUp::show);
     connect(popup3->resumeButton, &Button::released, popup3, &PopUp::hide);
+    connect(popup3->resumeButton, &Button::released, this, &GameMaster::resumeTheGame);
 
     for (std::pair<int, int> obstacle : ObstacleData) {
         Obstacle *brick = new Obstacle();
+        obstacles.push_back(brick);
         scene->addItem(brick);
         brick->setPos(obstacle.first, obstacle.second + 100);
     }
 
     for (std::vector<int> enemak : EnemyData) {
         Enemy *enemy = new Enemy(nullptr, user, enemak[2], enemak[3], enemak[5], enemak[4]);
+        enemies.push_back(enemy);
         scene->addItem(enemy);
         enemy->setPos(enemak[0], enemak[1] + 100);
         QTimer::singleShot(3000, enemy, &Enemy::startAutonomousMovement);
     }
 
-    QGraphicsView *view = new QGraphicsView(scene);
+    this->view = new QGraphicsView(scene);
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setFixedSize(1200, 800);
@@ -170,3 +174,21 @@ bool GameMaster::mainEvent(){
     return true;
 }
 
+
+void GameMaster::pauseTheGame() {
+    this->user->stopAllTimers();
+    upperBar->timer->stopTimer();
+    for (Enemy *enemy : enemies) {
+        if (enemy != nullptr){
+        enemy->stopAllTimers();
+        }
+    }
+}
+
+void GameMaster::resumeTheGame() {
+    this->user->resumeAllTimers();
+    upperBar->timer->continueTimer();
+    for (Enemy *enemy : enemies) {
+        enemy->resumeAllTimers();
+    }
+}

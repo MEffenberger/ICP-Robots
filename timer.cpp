@@ -45,9 +45,10 @@ void Timer::pauseTimer() {
 }
 
 void Timer::stopTimer() {
+    internalTimer = timer->remainingTime();
     timer->stop();
 }
 
 void Timer::continueTimer() {
-
+    timer->start(internalTimer);
 }

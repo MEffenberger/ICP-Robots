@@ -1,10 +1,10 @@
 
-}	cpp:S1238";Pass expensive to copy object "name" by reference to const.(îãä’8ÜşÊ÷ñ1J$75d6361b-a936-436f-84b4-662894cc3b4d
-‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Ç¶¶–şÿÿÿÿJ$c1e41baf-e007-4041-8287-2c0227ff5252
-Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÈÊìJ$be03a15f-f81a-4cd0-8220-ac633401ff1d
-‘	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(şÚÍÖûÿÿÿÿJ$8deaebc2-185d-48bc-9950-7e3765621e18
-˜	cpp:S5025/"QReplace the use of "new" with an operation that automatically manages the memory.(†»÷ùÿÿÿÿ8ˆ©™õñ1J$8c658a07-31d7-4270-969f-64f6c979bbf1
-n	cpp:S5827F"'Replace the redundant type with "auto".(ƒ‘Ç¡ùÿÿÿÿ8ˆ¿Â÷ñ1J$07676141-ff16-4a53-997a-3a895ce77b7b
-˜	cpp:S5025F"QReplace the use of "new" with an operation that automatically manages the memory.(ƒ‘Ç¡ùÿÿÿÿ8‰¿Â÷ñ1J$f428a4c8-fda6-423b-989f-2af9db56eaa2
-kcpp:S836"*Called C++ object pointer is uninitialized(¥Ïæ¤8×€Ë÷ñ1J$39d8d842-9a9d-4e75-a178-2ec92708f22b
-]cpp:S125"Remove the commented out code.(Ğ†ñüÿÿÿÿJ$076f22cb-6429-4644-a2c8-cacfe77fe934
+}	cpp:S1238";Pass expensive to copy object "name" by reference to const.(îãä’8ÜşÊ÷ñ1J$59f36af4-a933-4ae5-8d9c-4c29c05cbbd2
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Ç¶¶–şÿÿÿÿJ$96568755-54e3-4df7-9493-2be6005e1579
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÈÊìJ$33379396-5f59-4fbe-8883-60297baa2d32
+‘	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(şÚÍÖûÿÿÿÿJ$280fa16d-1166-41f6-a7bf-87b7c0f43355
+˜	cpp:S5025/"QReplace the use of "new" with an operation that automatically manages the memory.(†»÷ùÿÿÿÿ8ˆ©™õñ1J$4728c762-d584-4a6d-9902-5a2b9bbb55c9
+n	cpp:S5827G"'Replace the redundant type with "auto".(ƒ‘Ç¡ùÿÿÿÿ8ˆ¿Â÷ñ1J$fe19a933-3269-4a22-9e3d-a79b9c7af7e7
+˜	cpp:S5025G"QReplace the use of "new" with an operation that automatically manages the memory.(ƒ‘Ç¡ùÿÿÿÿ8‰¿Â÷ñ1J$3a44cfd0-8092-4c86-8a04-a41e2bd4fdda
+kcpp:S836"*Called C++ object pointer is uninitialized(¥Ïæ¤8×€Ë÷ñ1J$65793ccf-9a66-4fa1-9816-035c8601cf6c
+]cpp:S125"Remove the commented out code.(Ğ†ñüÿÿÿÿJ$fceef575-d641-4a28-9e8b-b4c0257b8208

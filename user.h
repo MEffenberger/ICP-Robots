@@ -37,6 +37,8 @@ private:
     int numberOfLives;
     QTimer *coolDown;
     bool isCoolingDown;
+    int remainingStunnedTime;
+    int remainingCoolDownTime;
 
 
 public slots:
@@ -48,6 +50,8 @@ public slots:
     void decreaseLives();
     void die();
     void switchControl();
+    void stopAllTimers();
+    void resumeAllTimers();
 
 private slots:
     void StunTimerExpired();

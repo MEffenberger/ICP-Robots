@@ -41,6 +41,8 @@ public slots:
 //    void mainMenu();
     void show();
     void hide();
+signals:
+    void pauseTimers();
 };
 
 

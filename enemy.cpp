@@ -51,9 +51,9 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
     }
     speed = velocity;
     rotationSpeed = 3.0;
-    QTimer *movementTimer = new QTimer(this);
-    QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
-    movementTimer->start(30);
+    //movementTimer = new QTimer(this);
+    //QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
+    //movementTimer->start(30);
     setTransformOriginPoint(rect().width()/2, rect().width()/2);
 
     this->user = user;
@@ -72,13 +72,14 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
 
 void Enemy::startAutonomousMovement() {
     // Create a timer
-    QTimer *timer = new QTimer();
+    this->movementTimer = new QTimer();
+    movementTimer->start(30);
 
     // Connect the timer's timeout() signal to the enemy's autonomousMovement() slot
-    QObject::connect(timer, &QTimer::timeout, this, &Enemy::autonomousMovement);
+    QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
 
-    // Start the timer with a delay of 3 seconds (3000 milliseconds)
-    timer->start(3000);
+//    // Start the timer with a delay of 3 seconds (3000 milliseconds)
+//    timer->start(3000);
 }
 
 void Enemy::autonomousMovement(){
@@ -253,4 +254,20 @@ void Enemy::stopChasing() {
 
     // Rotate away from the user
     setRotation(rotation() + 180);
+}
+
+void Enemy::stopAllTimers() {
+    // Stop all timers
+    remainingStuckTime = stuckTimer->remainingTime();
+    remainingChaseTime = chaseTimer->remainingTime();
+    movementTimer->stop();
+    stuckTimer->stop();
+    chaseTimer->stop();
+}
+
+void Enemy::resumeAllTimers() {
+    // Resume all timers
+    movementTimer->start();
+    stuckTimer->start(remainingStuckTime);
+    chaseTimer->start(remainingChaseTime);
 }

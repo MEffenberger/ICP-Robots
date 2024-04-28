@@ -35,6 +35,8 @@ private:
     QGraphicsPolygonItem *visionField;
     QGraphicsEllipseItem *armor;
     QTimer *movementTimer;
+    QTimer *stuckTimer;
+    QTimer *chaseTimer;
     qreal speed;
     qreal rotationSpeed;
     qreal turningAngle;
@@ -42,9 +44,8 @@ private:
     bool clockwise;
     User *user;
     QPointF lastPos;
-    QTimer *stuckTimer;
-    QTimer *chaseTimer;
-
+    int remainingStuckTime;
+    int remainingChaseTime;
 
 protected:
 
@@ -57,6 +58,8 @@ public slots:
     void checkStuck();
     void getUnstuck();
     void stopChasing();
+    void stopAllTimers();
+    void resumeAllTimers();
 
 
 private slots:

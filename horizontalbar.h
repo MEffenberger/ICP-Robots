@@ -29,6 +29,7 @@ Q_OBJECT
 public:
     HorizontalUpperBar(User *user, int timeLimit);
     Button *pauseButton;
+    Timer *timer;
 
 private:
     int width{};
@@ -39,7 +40,6 @@ private:
     Heart *Heart2;
     Heart *Heart3;
     GameInfo *gameInfo;
-    Timer *timer;
     //User *userPtr;
 
 };

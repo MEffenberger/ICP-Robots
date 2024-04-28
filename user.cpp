@@ -252,3 +252,21 @@ void User::endCoolDown() {
 void User::switchControl() {
     setFocus();
 }
+
+void User::stopAllTimers() {
+    remainingStunnedTime = StunnedTimer->remainingTime();
+    remainingCoolDownTime = coolDown->remainingTime();
+    StunnedTimer->stop();
+    ForwardTimer->stop();
+    ClockwiseTimer->stop();
+    CounterClockwiseTimer->stop();
+    coolDown->stop();
+}
+
+void User::resumeAllTimers() {
+    StunnedTimer->start(remainingStunnedTime);
+    ForwardTimer->start();
+    ClockwiseTimer->start();
+    CounterClockwiseTimer->start();
+    coolDown->start(remainingCoolDownTime);
+}
