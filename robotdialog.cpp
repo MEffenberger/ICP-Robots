@@ -10,7 +10,9 @@ CustomDialog::CustomDialog(QWidget *parent, bool robotExists) : QDialog(parent) 
     distanceSpinBox->setRange(1, 1000);
     distanceSpinBox->setEnabled(!robotExists);
     rotationAngleSpinBox->setRange(-360, 360);
+    rotationAngleSpinBox->setEnabled(!robotExists);
     velocitySpinBox->setRange(1, 10);
+    
 
     QFormLayout *layout = new QFormLayout(this);
     layout->addRow(new QLabel("Robot map orientation (degrees):"), orientationSpinBox);
