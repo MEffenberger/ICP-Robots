@@ -7,7 +7,7 @@ CustomDialog::CustomDialog(QWidget *parent, bool robotExists) : QDialog(parent) 
     velocitySpinBox = new QSpinBox(this);
 
     orientationSpinBox->setRange(0, 360);
-    distanceSpinBox->setRange(1, 1000);
+    distanceSpinBox->setRange(1, 5);
     distanceSpinBox->setEnabled(!robotExists);
     rotationAngleSpinBox->setRange(-360, 360);
     rotationAngleSpinBox->setEnabled(!robotExists);
@@ -16,13 +16,19 @@ CustomDialog::CustomDialog(QWidget *parent, bool robotExists) : QDialog(parent) 
 
     QFormLayout *layout = new QFormLayout(this);
     layout->addRow(new QLabel("Robot map orientation (degrees):"), orientationSpinBox);
-    layout->addRow(new QLabel("Distance of detecting obstacles (pixels):"), distanceSpinBox);
+    layout->addRow(new QLabel("Distance of detecting obstacles (5 max, 1 min):"), distanceSpinBox);
     layout->addRow(new QLabel("Rotation after detection obstacle (degrees):"), rotationAngleSpinBox);
     layout->addRow(new QLabel("Robot speed (10 max, 1 min):"), velocitySpinBox);
 
-    QPushButton *okButton = new QPushButton("OK", this);
-    layout->addWidget(okButton);
-    connect(okButton, &QPushButton::clicked, this, &QDialog::accept);
+    QHBoxLayout* buttonLayout = new QHBoxLayout;  // Horizontal layout for buttons
+    QPushButton *cancelButton = new QPushButton("Cancel", this);
+    connect(cancelButton, &QPushButton::clicked, this, &QDialog::reject);
+    QPushButton *confirmButton = new QPushButton("Confirm", this);
+    connect(confirmButton, &QPushButton::clicked, this, &QDialog::accept);
+    buttonLayout->addWidget(cancelButton); 
+    buttonLayout->addWidget(confirmButton); 
+    buttonLayout->setAlignment(Qt::AlignRight);
+    layout->addRow(buttonLayout);
 }
 
 int CustomDialog::getOrientation() const {

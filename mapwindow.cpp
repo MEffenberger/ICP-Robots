@@ -421,7 +421,7 @@ void MapWindow::handleCellClicked(int row, int column) {
                                                             Qt::IgnoreAspectRatio,
                                                             Qt::SmoothTransformation)));
 
-
+                obstacleItem->setFlags(obstacleItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
                 obstacleCount++; // Increment the obstacle count
                 ui->tableWidget->setItem(row, column, obstacleItem);
             }
@@ -461,8 +461,10 @@ void MapWindow::handleCellClicked(int row, int column) {
                                                                      ui->tableWidget->rowHeight(row),
                                                                      Qt::IgnoreAspectRatio,
                                                                      Qt::SmoothTransformation)));
+                        
                         controlledRobotsCount++; // Increment the robot count
                     }
+                    robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
                     ui->tableWidget->setItem(row, column, robotItem);
                 }
                 updateControlledRobotCounter();
@@ -507,8 +509,10 @@ void MapWindow::handleCellClicked(int row, int column) {
                                                                     ui->tableWidget->rowHeight(row),
                                                                     Qt::IgnoreAspectRatio,
                                                                     Qt::SmoothTransformation)));
+                    
                     enemyCount++; // Increment the robot count
                 }
+                enemyItem->setFlags(enemyItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
                 ui->tableWidget->setItem(row, column, enemyItem);
             }
                 updateEnemyCounter();
