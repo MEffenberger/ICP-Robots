@@ -32,7 +32,7 @@ void GameMaster::createNewMapWindow() {
 
 void GameMaster::startGame() {
 
-    this->mapData = new QJsonArray();
+    //this->mapData = new QJsonArray();
     loadFile();
 
 }
@@ -42,23 +42,27 @@ void GameMaster::showJSONpopup() {
     QString filename = QFileDialog::getOpenFileName(this->mainWindow, "Load Map", "", "JSON Files (*.json)");
     if (filename.isEmpty()) return; // Nothing to do
 
-    this->file.setFileName(filename);
+    QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         return;
     }
+    QByteArray jsonData = file.readAll();
+    QJsonDocument doc = QJsonDocument::fromJson(jsonData);
+
+    //QJsonArray mapData = doc.array();
+    this->mapData = doc.array();
     loadFile();
 }
 
 void GameMaster::loadFile() {
     if(mainWindow == nullptr){
+        this->mapData = mapWindow->mapData;
         emit mapWindow->close();
     } else {
         emit mainWindow->close();
     }
-    QByteArray jsonData = file.readAll();
-    QJsonDocument doc = QJsonDocument::fromJson(jsonData);
-
-    QJsonArray mapData = doc.array();
+    bool userFound = false;
+    QJsonArray mapData = this->mapData;
     for (const QJsonValueRef &cellValue : mapData) {
         QJsonObject cellObject = cellValue.toObject();
         QString type = cellObject["type"].toString();
@@ -66,6 +70,7 @@ void GameMaster::loadFile() {
         int x = attributesObject["x"].toInt();
         int y = attributesObject["y"].toInt();
         if (type == "Robot") {
+            userFound = true;
             qDebug() << "ROBOT\n";
             QJsonObject attributesObject = cellObject["attributes"].toObject();
             int orientation = attributesObject["orientation"].toInt();
@@ -93,4 +98,8 @@ void GameMaster::loadFile() {
         }
     }
 
+    if(!userFound){
+        QMessageBox::critical(this->mainWindow, "Error", "No user controlled robot found in the map");
+        run();
+    }
 }

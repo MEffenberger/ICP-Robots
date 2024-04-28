@@ -41,7 +41,7 @@ public:
     void setTimer();
     void startGame();
     void loadMap();
-
+    QJsonArray mapData;
     ~MapWindow();
 signals:
     void startSession();

@@ -23,7 +23,7 @@ MapWindow::MapWindow(QWidget *parent) :
     connect(ui->tableWidget, &QTableWidget::cellClicked, this, &MapWindow::handleCellClicked);
     ui->tableWidget->verticalHeader()->setVisible(false); // Hides the row numbers
     ui->tableWidget->horizontalHeader()->setVisible(false); // Hides the column letters/numbers
-    QString styleSheet = "QTableWidget { background-image: url(../images/background.png); }";
+    QString styleSheet = "QTableWidget { background-image: url(../images/bg.png); }";
     ui->tableWidget->setStyleSheet(styleSheet);
     setFixedSize(QSize(1200, 720));
     // QString styleSheetB = "QWidget { background-image: url(:/images/background.jpg); }";
@@ -107,6 +107,61 @@ MapWindow::~MapWindow() {
 }
 
 void MapWindow::startGame(){
+    QJsonArray mapData;
+    QJsonObject timeLimitObject;
+    timeLimitObject["type"] = "TimeLimit";
+    timeLimitObject["time"] = QJsonObject({
+        {"seconds", this->timeLimit}
+    });
+    mapData.append(timeLimitObject);
+    for (int row = 0; row < ui->tableWidget->rowCount(); ++row) {
+        for (int col = 0; col < ui->tableWidget->columnCount(); ++col) {
+            QTableWidgetItem *item = ui->tableWidget->item(row, col);
+            if (!item) continue; // Skip empty cells
+
+            QJsonObject cellObject;
+
+            // Get coordinates relative to the QTableWidget
+            QPoint cellPosition = ui->tableWidget->visualItemRect(item).topLeft();
+
+            if (RobotItem *robot = dynamic_cast<RobotItem*>(item)) {
+                cellObject["type"] = "Robot";
+                cellObject["position"] = QJsonObject({
+                    {"x", cellPosition.x()},
+                    {"y", cellPosition.y()}
+                });
+                cellObject["attributes"] = QJsonObject({
+                    {"orientation", robot->getOrientation()},
+                    {"rotationAngle", robot->getRotationAngle()},
+                    {"velocity", robot->getVelocity()}
+                });
+
+            } else if (ObstacleItem *obstacle = dynamic_cast<ObstacleItem*>(item)) {
+                cellObject["type"] = "Obstacle";
+                cellObject["position"] = QJsonObject({
+                    {"x", cellPosition.x()},
+                    {"y", cellPosition.y()}
+                });
+
+            } else if (EnemyItem *enemy = dynamic_cast<EnemyItem*>(item)) {
+                cellObject["type"] = "Enemy";
+                cellObject["position"] = QJsonObject({
+                    {"x", cellPosition.x()},
+                    {"y", cellPosition.y()}
+                });
+                cellObject["attributes"] = QJsonObject({
+                    {"orientation", enemy->getOrientation()},
+                    {"distance", enemy->getDistance()},
+                    {"rotationAngle", enemy->getRotationAngle()},
+                    {"velocity", enemy->getVelocity()}
+                });
+            } else {
+                continue;
+            }
+            mapData.append(cellObject);
+        }
+    }
+    this->mapData = mapData;
     emit startSession();
 }
 
