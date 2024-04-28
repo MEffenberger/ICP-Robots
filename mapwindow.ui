@@ -309,7 +309,36 @@
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>ROBOT MAP CREATOR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonMap">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>670</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Black</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>LOAD MAP</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
   </widget>
  </widget>

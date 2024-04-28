@@ -40,6 +40,7 @@ public:
     void saveFile();
     void setTimer();
     void startGame();
+    void loadMap();
 
     ~MapWindow();
 signals:

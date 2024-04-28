@@ -42,7 +42,7 @@ set(PROJECT_SOURCES
         mapwindow.cpp
         mapwindow.h
         mapwindow.ui
-        ObstacleItem.h
+        obstacleitem.h
         robotdialog.cpp
         robotdialog.cpp
         robotitem.cpp

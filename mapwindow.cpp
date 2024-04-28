@@ -71,6 +71,8 @@ MapWindow::MapWindow(QWidget *parent) :
     ui->pushButtonTimer->setFont(customFont);
     connect(ui->pushButtonStart, &QPushButton::clicked, this, &MapWindow::startGame);
     ui->pushButtonStart->setFont(customFont);
+    connect(ui->pushButtonMap, &QPushButton::clicked, this, &MapWindow::loadMap);
+    ui->pushButtonMap->setFont(customFont);
 
     //
 
@@ -106,6 +108,98 @@ MapWindow::~MapWindow() {
 
 void MapWindow::startGame(){
     emit startSession();
+}
+
+void MapWindow::loadMap(){
+    QString filename = QFileDialog::getOpenFileName(this, "Load Map", "", "JSON Files (*.json)");
+    if (filename.isEmpty()) return; // Nothing to do
+
+    QFile file(filename);
+    if (!file.open(QIODevice::ReadOnly)) {
+        return;
+    }
+
+    QByteArray jsonData = file.readAll();
+    QJsonDocument doc = QJsonDocument::fromJson(jsonData);
+
+    QJsonArray mapData = doc.array();
+    for (const QJsonValueRef &cellValue : mapData) {
+        QJsonObject cellObject = cellValue.toObject();
+        QString type = cellObject["type"].toString();
+        QJsonObject attributesObject = cellObject["position"].toObject();
+        int col = attributesObject["x"].toInt() / 75;
+        int row = attributesObject["y"].toInt() / 75;
+        if (type == "Robot") {
+            qDebug() << "ROBOT\n";
+            QJsonObject attributesObject = cellObject["attributes"].toObject();
+            int orientation = attributesObject["orientation"].toInt();
+            int rotationAngle = attributesObject["rotationAngle"].toInt();
+            int velocity = attributesObject["velocity"].toInt();
+            RobotItem* robotItem = new RobotItem;
+            robotItem->setOrientation(orientation);
+            robotItem->setRotationAngle(rotationAngle);
+            robotItem->setVelocity(velocity);
+            QPixmap pixmap(":/images/robot.png");
+            QTransform transform;
+            transform.rotate(orientation);
+            pixmap = pixmap.transformed(transform);
+            robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
+            robotItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(col),
+                                                         ui->tableWidget->rowHeight(row),
+                                                         Qt::IgnoreAspectRatio,
+                                                         Qt::SmoothTransformation)));
+            ui->tableWidget->setItem(row, col, robotItem);
+            controlledRobotsCount++;
+            //qDebug() << orientation << rotationAngle << velocity;
+            //qDebug() << "X:" << x << "Y:" << y;
+        } else if (type == "Obstacle") {
+            ObstacleItem* obstacleItem = new ObstacleItem;
+            QPixmap pixmap(":/images/obstacle.png");
+            obstacleItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(col),
+                                                        ui->tableWidget->rowHeight(row),
+                                                        Qt::IgnoreAspectRatio,
+                                                        Qt::SmoothTransformation)));
+            ui->tableWidget->setItem(row, col, obstacleItem);
+            obstacleCount++;
+            // qDebug() << "OBSTACLE\n";
+            // qDebug() << "X:" << x << "Y:" << y;
+        } else if (type == "Enemy") {
+            qDebug() << "ENEMY\n";
+            QJsonObject attributesObject = cellObject["attributes"].toObject();
+            int distance = attributesObject["distance"].toInt();
+            int orientation = attributesObject["orientation"].toInt();
+            int rotationAngle = attributesObject["rotationAngle"].toInt();
+            int velocity = attributesObject["velocity"].toInt();
+            EnemyItem* enemyItem = new EnemyItem;
+            enemyItem->setOrientation(orientation);
+            enemyItem->setDistance(distance);
+            enemyItem->setRotationAngle(rotationAngle);
+            enemyItem->setVelocity(velocity);
+            QPixmap pixmap(":/images/enemy.png");
+            QTransform transform;
+            transform.rotate(orientation);
+            pixmap = pixmap.transformed(transform);
+            enemyItem->setFlags(enemyItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
+            enemyItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(col),
+                                                         ui->tableWidget->rowHeight(row),
+                                                         Qt::IgnoreAspectRatio,
+                                                         Qt::SmoothTransformation)));
+            ui->tableWidget->setItem(row, col, enemyItem);
+            enemyCount++;
+            // qDebug() << orientation << distance << rotationAngle << velocity;
+            // qDebug() << "X:" << x << "Y:" << y;
+        } else if(type == "TimeLimit"){
+            qDebug() << "TIME\n";
+            QJsonObject attributesObject = cellObject["time"].toObject();
+            int time = attributesObject["seconds"].toInt();
+            this->timeLimit = time;
+            qDebug() << time;
+        }
+    }
+    updateObstacleCounter();
+    updateControlledRobotCounter();
+    updateEnemyCounter();
+    updateTimer();
 }
 
 void MapWindow::saveFile() {
