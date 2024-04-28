@@ -26,15 +26,14 @@ void GameMaster::createNewMapWindow() {
     mapWindow->updateEnemyCounter();
     mapWindow->updateTimer();
     mapWindow->show();
-    connect(mapWindow, &MapWindow::startSession, this, &GameMaster::loadFile);
+    connect(mapWindow, &MapWindow::startSession, this, &GameMaster::startGame);
 
 }
 
 void GameMaster::startGame() {
-
-    //this->mapData = new QJsonArray();
-    mainEvent();
-
+    if(!mainEvent()){
+        run();
+    }
 }
 
 void GameMaster::showJSONpopup() {
@@ -51,10 +50,10 @@ void GameMaster::showJSONpopup() {
 
     //QJsonArray mapData = doc.array();
     this->mapData = new QJsonArray(doc.array());
-    loadFile();
+    mainEvent();
 }
 
-void GameMaster::loadFile() {
+bool GameMaster::loadFile() {
     if(mainWindow == nullptr){
         this->mapData = mapWindow->mapData;
         emit mapWindow->close();
@@ -70,6 +69,7 @@ void GameMaster::loadFile() {
         int x = attributesObject["x"].toInt();
         int y = attributesObject["y"].toInt();
         if (type == "Robot") {
+            userFound = true;
             UserData.push_back(x);
             UserData.push_back(y);
             qDebug() << "ROBOT\n";
@@ -102,12 +102,15 @@ void GameMaster::loadFile() {
 
     if(!userFound){
         QMessageBox::critical(this->mainWindow, "Error", "No user controlled robot found in the map");
-        run();
+        return false;
     }
+    return true;
 }
 
-void GameMaster::mainEvent(){
-
+bool GameMaster::mainEvent(){
+    if(!loadFile()){
+        return false;
+    }
     QGraphicsScene *scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, 1200, 800);
 
@@ -133,24 +136,24 @@ void GameMaster::mainEvent(){
     scene->addItem(popup);
     popup->setPos(scene->width()/2 - popup->rect().width()/2, scene->height()/2 - popup->rect().height()/2);
 
-    PopUp *popup2 = new PopUp(nullptr, "victory");
+    PopUp *popup2 = new PopUp(nullptr, "win");
     scene->addItem(popup2);
     popup2->setPos(scene->width()/2 - popup2->rect().width()/2, scene->height()/2 - popup2->rect().height()/2);
 
-    PopUp *popup3 = new PopUp(nullptr, "pause");
+    PopUp *popup3 = new PopUp(nullptr, "paused");
     scene->addItem(popup3);
     popup3->setPos(scene->width()/2 - popup3->rect().width()/2, scene->height()/2 - popup3->rect().height()/2);
 
     for (std::pair<int, int> obstacle : ObstacleData) {
         Obstacle *brick = new Obstacle();
         scene->addItem(brick);
-        brick->setPos(obstacle.first, obstacle.second);
+        brick->setPos(obstacle.first, obstacle.second + 100);
     }
 
     for (std::vector<int> enemak : EnemyData) {
         Enemy *enemy = new Enemy(nullptr, user, enemak[2], enemak[3], enemak[5], enemak[4]);
         scene->addItem(enemy);
-        enemy->setPos(enemak[0], enemak[1]);
+        enemy->setPos(enemak[0], enemak[1] + 100);
         QTimer::singleShot(3000, enemy, &Enemy::startAutonomousMovement);
     }
 
@@ -160,5 +163,6 @@ void GameMaster::mainEvent(){
     view->setFixedSize(1200, 800);
     user->setFocus();
     view->show();
+    return true;
 }
 

@@ -50,9 +50,9 @@ public:
 private slots:
     void startGame();
     void createNewMapWindow();
-    void loadFile();
+    bool loadFile();
     void showJSONpopup();
-    void mainEvent();
+    bool mainEvent();
 
 
 };

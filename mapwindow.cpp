@@ -96,9 +96,11 @@ void MapWindow::updateCounts(){
     obstacleCount = 0;
     controlledRobotsCount = 0;
     enemyCount = 0;
+    timeLimit = 60;
     updateObstacleCounter();
     updateControlledRobotCounter();
     updateEnemyCounter();
+    updateTimer();
 }
 
 
@@ -166,6 +168,7 @@ QJsonArray* MapWindow::fillFile(bool* robotFound){
 }
 
 void MapWindow::startGame(){
+    
     bool robotFound;
     this->mapData = fillFile(&robotFound);
     emit startSession();
