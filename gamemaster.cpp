@@ -50,7 +50,7 @@ void GameMaster::showJSONpopup() {
     QJsonDocument doc = QJsonDocument::fromJson(jsonData);
 
     //QJsonArray mapData = doc.array();
-    this->mapData = doc.array();
+    this->mapData = new QJsonArray(doc.array());
     loadFile();
 }
 
@@ -62,8 +62,8 @@ void GameMaster::loadFile() {
         emit mainWindow->close();
     }
     bool userFound = false;
-    QJsonArray mapData = this->mapData;
-    for (const QJsonValueRef &cellValue : mapData) {
+    QJsonArray*  mapData = this->mapData;
+    for (const QJsonValueRef &cellValue : *mapData) {
         QJsonObject cellObject = cellValue.toObject();
         QString type = cellObject["type"].toString();
         QJsonObject attributesObject = cellObject["position"].toObject();
@@ -74,9 +74,8 @@ void GameMaster::loadFile() {
             qDebug() << "ROBOT\n";
             QJsonObject attributesObject = cellObject["attributes"].toObject();
             int orientation = attributesObject["orientation"].toInt();
-            int rotationAngle = attributesObject["rotationAngle"].toInt();
             int velocity = attributesObject["velocity"].toInt();
-            qDebug() << orientation << rotationAngle << velocity;
+            qDebug() << orientation << velocity;
             qDebug() << "X:" << x << "Y:" << y;
         } else if (type == "Obstacle") {
             qDebug() << "OBSTACLE\n";

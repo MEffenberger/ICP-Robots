@@ -106,14 +106,15 @@ MapWindow::~MapWindow() {
     delete ui;
 }
 
-void MapWindow::startGame(){
-    QJsonArray mapData;
+QJsonArray* MapWindow::fillFile(bool* robotFound){
+    QJsonArray* mapData = new QJsonArray();
     QJsonObject timeLimitObject;
     timeLimitObject["type"] = "TimeLimit";
     timeLimitObject["time"] = QJsonObject({
         {"seconds", this->timeLimit}
     });
-    mapData.append(timeLimitObject);
+    mapData->append(timeLimitObject);
+    *robotFound = false;
     for (int row = 0; row < ui->tableWidget->rowCount(); ++row) {
         for (int col = 0; col < ui->tableWidget->columnCount(); ++col) {
             QTableWidgetItem *item = ui->tableWidget->item(row, col);
@@ -125,6 +126,7 @@ void MapWindow::startGame(){
             QPoint cellPosition = ui->tableWidget->visualItemRect(item).topLeft();
 
             if (RobotItem *robot = dynamic_cast<RobotItem*>(item)) {
+                *robotFound = true;
                 cellObject["type"] = "Robot";
                 cellObject["position"] = QJsonObject({
                     {"x", cellPosition.x()},
@@ -132,7 +134,6 @@ void MapWindow::startGame(){
                 });
                 cellObject["attributes"] = QJsonObject({
                     {"orientation", robot->getOrientation()},
-                    {"rotationAngle", robot->getRotationAngle()},
                     {"velocity", robot->getVelocity()}
                 });
 
@@ -158,14 +159,20 @@ void MapWindow::startGame(){
             } else {
                 continue;
             }
-            mapData.append(cellObject);
+            mapData->append(cellObject);
         }
     }
-    this->mapData = mapData;
+    return mapData;
+}
+
+void MapWindow::startGame(){
+    bool robotFound;
+    this->mapData = fillFile(&robotFound);
     emit startSession();
 }
 
 void MapWindow::loadMap(){
+    updateCounts();
     QString filename = QFileDialog::getOpenFileName(this, "Load Map", "", "JSON Files (*.json)");
     if (filename.isEmpty()) return; // Nothing to do
 
@@ -184,17 +191,18 @@ void MapWindow::loadMap(){
         QJsonObject attributesObject = cellObject["position"].toObject();
         int col = attributesObject["x"].toInt() / 75;
         int row = attributesObject["y"].toInt() / 75;
+
         if (type == "Robot") {
             qDebug() << "ROBOT\n";
             QJsonObject attributesObject = cellObject["attributes"].toObject();
-            int orientation = attributesObject["orientation"].toInt();
-            int rotationAngle = attributesObject["rotationAngle"].toInt();
-            int velocity = attributesObject["velocity"].toInt();
+
             RobotItem* robotItem = new RobotItem;
+            int orientation = attributesObject["orientation"].toInt();
             robotItem->setOrientation(orientation);
-            robotItem->setRotationAngle(rotationAngle);
-            robotItem->setVelocity(velocity);
-            QPixmap pixmap(":/images/robot.png");
+            robotItem->setVelocity(attributesObject["velocity"].toInt());
+            qDebug() << orientation << attributesObject["velocity"].toInt();
+
+            QPixmap pixmap("../images/user3.png");
             QTransform transform;
             transform.rotate(orientation);
             pixmap = pixmap.transformed(transform);
@@ -209,7 +217,7 @@ void MapWindow::loadMap(){
             //qDebug() << "X:" << x << "Y:" << y;
         } else if (type == "Obstacle") {
             ObstacleItem* obstacleItem = new ObstacleItem;
-            QPixmap pixmap(":/images/obstacle.png");
+            QPixmap pixmap("../images/obstacle.png");
             obstacleItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(col),
                                                         ui->tableWidget->rowHeight(row),
                                                         Qt::IgnoreAspectRatio,
@@ -221,16 +229,15 @@ void MapWindow::loadMap(){
         } else if (type == "Enemy") {
             qDebug() << "ENEMY\n";
             QJsonObject attributesObject = cellObject["attributes"].toObject();
-            int distance = attributesObject["distance"].toInt();
-            int orientation = attributesObject["orientation"].toInt();
-            int rotationAngle = attributesObject["rotationAngle"].toInt();
-            int velocity = attributesObject["velocity"].toInt();
+
             EnemyItem* enemyItem = new EnemyItem;
+            int orientation = attributesObject["orientation"].toInt();
             enemyItem->setOrientation(orientation);
-            enemyItem->setDistance(distance);
-            enemyItem->setRotationAngle(rotationAngle);
-            enemyItem->setVelocity(velocity);
-            QPixmap pixmap(":/images/enemy.png");
+            enemyItem->setDistance(attributesObject["orientation"].toInt());
+            enemyItem->setRotationAngle(attributesObject["rotationAngle"].toInt());
+            enemyItem->setVelocity(attributesObject["velocity"].toInt());
+
+            QPixmap pixmap("../images/enemy2.png");
             QTransform transform;
             transform.rotate(orientation);
             pixmap = pixmap.transformed(transform);
@@ -246,8 +253,7 @@ void MapWindow::loadMap(){
         } else if(type == "TimeLimit"){
             qDebug() << "TIME\n";
             QJsonObject attributesObject = cellObject["time"].toObject();
-            int time = attributesObject["seconds"].toInt();
-            this->timeLimit = time;
+            this->timeLimit = attributesObject["seconds"].toInt();
             qDebug() << time;
         }
     }
@@ -258,75 +264,24 @@ void MapWindow::loadMap(){
 }
 
 void MapWindow::saveFile() {
-    QString filename = QFileDialog::getSaveFileName(this, "Save Map", "", "JSON Files (*.json)");
+    QString filename = QFileDialog::getSaveFileName(this, "Save Map", "", "All Files (*.*)"); // Changed filter
     if (filename.isEmpty()) {
         return;
+    }
+
+    // Enforce .json extension (since there's no default suggestion anymore)
+    if (!filename.endsWith(".json", Qt::CaseInsensitive)) {
+        filename += ".json"; 
     }
 
     QFile file(filename);
     if (!file.open(QIODevice::WriteOnly)) {
         return;
     }
-    QJsonArray mapData;
-
-    QJsonObject timeLimitObject;
-    timeLimitObject["type"] = "TimeLimit";
-    timeLimitObject["time"] = QJsonObject({
-        {"seconds", this->timeLimit}
-    });
-    mapData.append(timeLimitObject);
-
-    bool playerRobotFound = false;
-    for (int row = 0; row < ui->tableWidget->rowCount(); ++row) {
-        for (int col = 0; col < ui->tableWidget->columnCount(); ++col) {
-            QTableWidgetItem *item = ui->tableWidget->item(row, col);
-            if (!item) continue; // Skip empty cells
-
-            QJsonObject cellObject;
-
-            // Get coordinates relative to the QTableWidget
-            QPoint cellPosition = ui->tableWidget->visualItemRect(item).topLeft();
-
-            if (RobotItem *robot = dynamic_cast<RobotItem*>(item)) {
-                playerRobotFound = true;
-                cellObject["type"] = "Robot";
-                cellObject["position"] = QJsonObject({
-                    {"x", cellPosition.x()},
-                    {"y", cellPosition.y()}
-                });
-                cellObject["attributes"] = QJsonObject({
-                    {"orientation", robot->getOrientation()},
-                    {"rotationAngle", robot->getRotationAngle()},
-                    {"velocity", robot->getVelocity()}
-                });
-
-            } else if (ObstacleItem *obstacle = dynamic_cast<ObstacleItem*>(item)) {
-                cellObject["type"] = "Obstacle";
-                cellObject["position"] = QJsonObject({
-                    {"x", cellPosition.x()},
-                    {"y", cellPosition.y()}
-                });
-
-            } else if (EnemyItem *enemy = dynamic_cast<EnemyItem*>(item)) {
-                cellObject["type"] = "Enemy";
-                cellObject["position"] = QJsonObject({
-                    {"x", cellPosition.x()},
-                    {"y", cellPosition.y()}
-                });
-                cellObject["attributes"] = QJsonObject({
-                    {"orientation", enemy->getOrientation()},
-                    {"distance", enemy->getDistance()},
-                    {"rotationAngle", enemy->getRotationAngle()},
-                    {"velocity", enemy->getVelocity()}
-                });
-            } else {
-                continue;
-            }
-            mapData.append(cellObject);
-        }
-    }
+    bool playerRobotFound;
+    QJsonArray* mapData = fillFile(&playerRobotFound);
     if(playerRobotFound){
-    QJsonDocument saveDoc(mapData);
+    QJsonDocument saveDoc(*mapData);
     file.write(saveDoc.toJson());
     file.close();
     } else {
@@ -351,11 +306,6 @@ void MapWindow::updateTimer(){
     ui->DurationLabel->setText(QString("Duration: %1 (s)").arg(this->timeLimit));
 }
 
-//void MapWindow::showEvent(QShowEvent *event)
-//{
-//    QWidget::showEvent(event);
-//    emit windowShown();  // Emit the signal when the window is shown
-//}
 
 void MapWindow::updateObstacleCounter() {
     QVariant currentData = ui->levelComboBox->currentData();
@@ -494,13 +444,9 @@ void MapWindow::handleCellClicked(int row, int column) {
                     CustomDialog dialog(this, true);
                     if (dialog.exec() == QDialog::Accepted) {
                         int orientation = dialog.getOrientation();
-                        int distance = dialog.getDistance();
-                        int rotationAngle = dialog.getRotationAngle();
                         int velocity = dialog.getVelocity();
 
                         robotItem->setOrientation(orientation);
-                        robotItem->setDistance(distance);
-                        robotItem->setRotationAngle(rotationAngle);
                         robotItem->setVelocity(velocity);
 
                         QPixmap pixmap("../images/user3.png");

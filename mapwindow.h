@@ -41,7 +41,8 @@ public:
     void setTimer();
     void startGame();
     void loadMap();
-    QJsonArray mapData;
+    QJsonArray* fillFile(bool* robotFound);
+    QJsonArray *mapData;
     ~MapWindow();
 signals:
     void startSession();

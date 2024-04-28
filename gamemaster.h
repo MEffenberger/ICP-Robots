@@ -30,7 +30,7 @@ private:
     //void parseJson();
     MainWindow *mainWindow;
     MapWindow *mapWindow;
-    QJsonArray mapData;
+    QJsonArray *mapData;
 
 
 
