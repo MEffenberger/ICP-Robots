@@ -37,6 +37,10 @@ void Button::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
         emit autoPilot();
         qDebug() << "Button " << QString::fromStdString(name) << " is released";
     }
+    if(name == "Clockwise" || name == "CounterClockwise") {
+        emit released();
+        qDebug() << "Button " << QString::fromStdString(name) << " is released";
+    }
 }
 
 void Button::setBorderWidth(int width) {

@@ -22,9 +22,10 @@ Q_OBJECT
 public:
     User(QGraphicsItem *parent = 0);
     void keyPressEvent(QKeyEvent *event);
+    QGraphicsEllipseItem *visionPoint;
 
 private:
-    QGraphicsEllipseItem *visionPoint;
+
     qreal speed;
     qreal rotationSpeed;
     bool Stunned;
@@ -36,6 +37,7 @@ private:
     int numberOfLives;
     QTimer *coolDown;
     bool isCoolingDown;
+
 
 public slots:
     void startRotatingClockwise();

@@ -1,12 +1,11 @@
 
+	cpp:S3806"cnon-portable path to file '"ObstacleItem.h"'; specified path differs in case from file name on disk(•ğºÇ8¼Áúšò1
 `	cpp:S1117»"$declaration shadows a local variable(’ÉÀÙJ$a3cf5002-1ccf-4b18-8288-54b96d5d3310
 e	cpp:S1117Ø"$declaration shadows a local variable(€ŒÄ­ÿÿÿÿÿJ$57d5bc9e-7460-4908-8a56-39142ffc15ec
 `	cpp:S1117†"$declaration shadows a local variable(ßÉ­ÅJ$4c65c414-1067-4fb0-962b-297fe1d2f7ba
 Œ	cpp:S5025
 "QReplace the use of "new" with an operation that automatically manages the memory.(ª³®J$166cddac-1be0-4293-9cd5-49e2af0be3a1
 u	cpp:S5025h":Rewrite the code so that you no longer need this "delete".(Áğ¯J$0a43dc32-2e78-4238-bc8c-b9c65e13532c
-”	cpp:S1186k"YAdd a nested comment explaining why this method is empty, or complete the implementation.(ğ¨Ñ¡J$d6d5746e-e9d0-4f7e-a588-ac8e58df048c
-k	cpp:S5817k")This function should be declared "const".(ğ¨Ñ¡8º¬´‚ò1J$62ba22c8-7bc2-4550-a35a-251841013561
 h	cpp:S5827"'Replace the redundant type with "auto".(ˆáÖÙùÿÿÿÿJ$e3f2ef6b-4dc8-4d3a-a22d-301eb365ed5f
 c	cpp:S5827š"'Replace the redundant type with "auto".(µí•ıJ$3e31012b-a5a9-4286-99ee-4d374155dae8
 ¯	cpp:S5350š"lMake the type of this variable a pointer-to-const. The current type of "obstacle" is "class ObstacleItem *".(µí•ı8Ó¬´‚ò1J$6b7406bc-47fc-4ebe-ae08-9d7aede77cfd

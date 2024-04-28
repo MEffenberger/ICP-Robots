@@ -7,11 +7,11 @@
 
 Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseItem(parent)
 {
-    setRect(0, 0, 75, 75); // Set the size of the ellipse
+    setRect(0, 0, 50, 50); // Set the size of the ellipse
     setFlag(QGraphicsItem::ItemClipsToShape);
 
     // The armor is needed so the vision field is not visible where it intersects with the Enemy
-    armor = new QGraphicsEllipseItem(0, 0, 75, 75, this); // Set the size of the ellipse
+    armor = new QGraphicsEllipseItem(0, 0, 50, 50, this); // Set the size of the ellipse
     QPixmap pixmap("../images/enemy2.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     armor->setBrush(pixmap);
@@ -23,17 +23,17 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     setPen(pen);
 
     // Create the vision point
-    visionPoint = new QGraphicsEllipseItem(37.5, 56.25, 10, 10, this); // Positioned above the center of the User
+    visionPoint = new QGraphicsEllipseItem(rect().width()/2, rect().height() - rect().height()/5, 7, 7, this); // Positioned above the center of the User
     visionPoint->setBrush(Qt::red); // Set the color to red
     visionPoint->setZValue(-12); // Set the z value to 1 so it's drawn on top of the vision field
 
     // Create the vision rectangle
     visionLength = 5;
     QVector<QPointF> points;
-    points << QPointF(25, 56.25)
-           << QPointF(0, 75 + visionLength*15)
-           << QPointF(75, 75 + visionLength*15)
-           << QPointF(50, 56.25);
+    points << QPointF(rect().width()/2 - rect().width()/5, rect().height() - rect().height()/5)
+           << QPointF(0, rect().height() + visionLength*10)
+           << QPointF(rect().width(), rect().height() + visionLength*10)
+           << QPointF(rect().width()/2 + rect().width()/5, rect().height() - rect().height()/5);
 
     // Create the vision trapezoid
     visionField = new QGraphicsPolygonItem(QPolygonF(points), this);
@@ -45,17 +45,25 @@ Enemy::Enemy(QGraphicsItem *parent, User *user) : QObject(), QGraphicsEllipseIte
     // Initialize movement parameters
     turningAngle = 30;
     clockwise = true;// Initialize movement parameters
-    speed = 5.0;
+    speed = 1.0;
     rotationSpeed = 3.0;
     userCollisionFlag = false;
     QTimer *movementTimer = new QTimer(this);
     QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
     movementTimer->start(30);
-    setTransformOriginPoint(37.5, 37.5);
+    setTransformOriginPoint(rect().width()/2, rect().width()/2);
 
     setRotation(180);
     this->user = user;
     connect(this, &Enemy::hit, user, &User::decreaseLives);
+
+    lastPos = pos();
+    stuckTimer = new QTimer(this);
+    connect(stuckTimer, &QTimer::timeout, this, &Enemy::checkStuck);
+    stuckTimer->start(5000);
+
+//    chaseTimer = new QTimer(this);
+//    connect(chaseTimer, &QTimer::timeout, this, &Enemy::stopChasing);
 }
 
 void Enemy::startAutonomousMovement() {
@@ -93,7 +101,7 @@ void Enemy::autonomousMovement(){
 
     this->checkCollisions();
     // Check if the new position is within boundaries
-    if (!(newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 + 10 && newY <= 700 - rect().height() - 10)){
+    if (!(newX >= 20 && newX <= 1200 - rect().width() - 10 && newY >= 100 + 20 && newY <= 700 - rect().height() - 10)){
         // Apply the movement if within the scene
         if (clockwise){
             setRotation(rotation() - turningAngle);
@@ -101,6 +109,11 @@ void Enemy::autonomousMovement(){
         else {
             setRotation(rotation() + turningAngle);
         }
+    }
+    QPointF newPos = QPointF(newX, newY);
+    if (QPointF::dotProduct(newPos - lastPos, newPos - lastPos) > 300) { // If moved more than sqrt(500) units
+        lastPos = newPos;
+        stuckTimer->start(5000); // Restart stuckTimer
     }
     setPos(newX, newY);
 
@@ -160,16 +173,42 @@ void Enemy::enemyCollision(Enemy *enemy) {
 
 void Enemy::userCollision(User *user){
     // Handle collision with user
-    if (visionField->collidesWithItem(user)){
+    if (visionField->collidesWithItem(user) && !(armor->collidesWithItem(user))){
         // change color of visionField to red
         QColor red(255, 0, 0, 100); // RGBA color: semi-transparent red
         visionField->setBrush(red);
+        // Start chasing the user
+
+        qDebug() << "I see you!";
+
+        //TODO implement the chase
+        QPointF direction = user->pos() - this->pos();
+        qreal angleToUser = atan2(direction.y(), direction.x()) * 180 / M_PI - 90; // Adjust as necessary
+        qreal currentAngle = rotation();
+
+        qreal angleDifference = angleToUser - currentAngle;
+        // Normalize the angle difference within [-180, 180]
+        while (angleDifference < -180) angleDifference += 360;
+        while (angleDifference > 180) angleDifference -= 360;
+
+        setRotation(currentAngle + (angleDifference * 0.1));
+//
+//        chaseTimer->start(3000); // Chase the user for 3 seconds
+
+
         return;
+
     }
     if (armor->collidesWithItem(user)) {
         // the user is dead, game over
         // debug as of now
-        qDebug() << "User is dead";
+        qDebug() << "Hit";
+        if (clockwise){
+            setRotation(rotation() - turningAngle);
+        }
+        else {
+            setRotation(rotation() + turningAngle);
+        }
         emitHit();
         return;
     }
@@ -179,3 +218,36 @@ void Enemy::emitHit() {
     // Emit the hit signal
     emit hit();
 }
+
+
+void Enemy::checkStuck() {
+    qDebug() << "Checking if I'm stuck";
+    qDebug() << QPointF::dotProduct(pos() - lastPos, pos() - lastPos);
+    if (QPointF::dotProduct(pos() - lastPos, pos() - lastPos) < 300) { // If moved less than 10 units
+        getUnstuck();
+    }
+    lastPos = pos(); // Update lastPosition
+}
+
+void Enemy::getUnstuck() {
+    qDebug() << "STEPBRO I NEED YOUR HELP!";
+    setRotation(rotation() + turningAngle);
+
+    // if the enemy is out the scene, move it back
+    qreal newX = x();
+    qreal newY = y();
+    if (newX < 20) newX = 20;
+    if (newX > 1200 - rect().width() - 10) newX = 1200 - rect().width() - 10;
+    if (newY < 100 + 20) newY = 100 + 20;
+    if (newY > 700 - rect().height() - 10) newY = 700 - rect().height() - 10;
+    setPos(newX, newY);
+}
+
+//void Enemy::stopChasing() {
+//    // Stop chasing the user
+//    qDebug() << "I lost you!";
+//    chaseTimer->stop();
+//
+//    // Rotate away from the user
+//    setRotation(rotation() + 180);
+//}

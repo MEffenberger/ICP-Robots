@@ -96,7 +96,7 @@ HorizontalUpperBar::HorizontalUpperBar(User *user) {
     connect(user, &User::deleteLife3, Heart3, &Heart::setDead);
 
     gameInfo = new GameInfo(this);
-    gameInfo->setPos(810, 12.5);
+    gameInfo->setPos(730, 12.5);
 
     connect(user, &User::stunned, gameInfo, &GameInfo::ouch);
     connect(user, &User::deleteLife1, gameInfo, &GameInfo::damage);
@@ -104,7 +104,7 @@ HorizontalUpperBar::HorizontalUpperBar(User *user) {
     connect(user, &User::deleteLife3, gameInfo, &GameInfo::damage);
 
     timer = new Timer(this);
-    timer->setPos(1000, 17);
+    timer->setPos(950, 17);
 
     QPixmap pixmap2("../images/pause.png");
     pixmap2 = pixmap2.scaled(75, 75, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);

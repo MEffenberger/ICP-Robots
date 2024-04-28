@@ -42,6 +42,10 @@ private:
     bool clockwise;
     bool userCollisionFlag;
     User *user;
+    QPointF lastPos;
+    QTimer *stuckTimer;
+   // QTimer *chaseTimer;
+
 
 protected:
 
@@ -51,6 +55,10 @@ signals:
 public slots:
     void startAutonomousMovement();
     void emitHit();
+    void checkStuck();
+    void getUnstuck();
+   // void stopChasing();
+
 
 private slots:
     void autonomousMovement();

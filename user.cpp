@@ -3,7 +3,7 @@
 
 User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
 {
-    setRect(0, 0, 75, 75); // Set the size of the ellipse
+    setRect(0, 0, 50, 50); // Set the size of the ellipse
 
     QPixmap pixmap("../images/user3.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -15,7 +15,7 @@ User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
     setPen(pen);
 
     // Create the vision point
-    visionPoint = new QGraphicsEllipseItem(37.5 - 15/2, 18.75, 15, 15, this); // Positioned above the center of the User
+    visionPoint = new QGraphicsEllipseItem(rect().width()/2, rect().height()- 0.8*(rect().height()), 10, 10, this); // Positioned above the center of the User
     QPixmap eye("../images/eye4.png");
     eye = eye.scaled(visionPoint->rect().width(), visionPoint->rect().height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     QBrush eyeBrush(eye);
@@ -26,22 +26,22 @@ User::User(QGraphicsItem *parent) : QObject(), QGraphicsEllipseItem(parent)
 
 
 
-    speed = 10.0;
+    speed = 5.0;
     rotationSpeed = 10.0;
-    setTransformOriginPoint(37.5, 37.5);
+    setTransformOriginPoint(rect().width()/2, rect().height()/2);
 
     StunnedTimer = new QTimer(this);
 
     ForwardTimer = new QTimer(this);
-    ForwardTimer->setInterval(50); // Adjust this value as needed
+    ForwardTimer->setInterval(30); // Adjust this value as needed
     connect(ForwardTimer, &QTimer::timeout, this, &User::moveForward);
 
     ClockwiseTimer = new QTimer(this);
-    ClockwiseTimer->setInterval(50); // Adjust this value as needed
+    ClockwiseTimer->setInterval(30); // Adjust this value as needed
     connect(ClockwiseTimer, &QTimer::timeout, this, &User::rotateClockwise);
 
     CounterClockwiseTimer = new QTimer(this);
-    CounterClockwiseTimer->setInterval(50); // Adjust this value as needed
+    CounterClockwiseTimer->setInterval(30); // Adjust this value as needed
     connect(CounterClockwiseTimer, &QTimer::timeout, this, &User::rotateCounterClockwise);
 
     connect(StunnedTimer, SIGNAL(timeout()), this, SLOT(StunTimerExpired()));
@@ -181,7 +181,7 @@ void User::spawnStars(int starCount) {
     if (starCount < 5) {
         QTimer::singleShot(723, this, [this, starCount]() {
             qreal angleStep = 360.0 / 5;  // Divide a full circle into 5 steps (for 5 stars)
-            qreal radius = 30;  // Adjust this radius if needed to spread out the stars
+            qreal radius = 20;  // Adjust this radius if needed to spread out the stars
 
             Star *star = new Star(this);  // New instance creation
             qreal angle = qDegreesToRadians(angleStep * starCount);
