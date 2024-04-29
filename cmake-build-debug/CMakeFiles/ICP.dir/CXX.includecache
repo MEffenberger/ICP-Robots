@@ -30,6 +30,10 @@ QTimer
 QDebug
 -
 
+/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp
+enemy.h
+/mnt/c/Users/marek/CLionProjects/ICP/enemy.h
+
 /mnt/c/Users/marek/CLionProjects/ICP/enemy.h
 QGraphicsEllipseItem
 -
@@ -62,8 +66,6 @@ QPainterPath
 user.h
 /mnt/c/Users/marek/CLionProjects/ICP/user.h
 QGraphicsPolygonItem
--
-QSound
 -
 
 /mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h
@@ -217,6 +219,8 @@ QFont
 -
 QDebug
 -
+QToolBar
+-
 
 /mnt/c/Users/marek/CLionProjects/ICP/obstacle.h
 QGraphicsRectItem
@@ -316,8 +320,6 @@ QtMath
 QTimer
 -
 QPixmap
--
-QSound
 -
 star.h
 /mnt/c/Users/marek/CLionProjects/ICP/star.h
@@ -1620,24 +1622,6 @@ QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtMultimedia/QSound
-qsound.h
-/usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qsound.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qsound.h
-QtMultimedia/qtmultimediaglobal.h
--
-QtCore/qobject.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qtmultimedia-config.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qtmultimediaglobal.h
-QtGui/qtguiglobal.h
--
-QtMultimedia/qtmultimedia-config.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
 qapplication.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
@@ -1706,6 +1690,10 @@ qmainwindow.h
 qmessagebox.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
+qtoolbar.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 qwidget.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
@@ -1736,6 +1724,28 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 QtGui/qvalidator.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtGui/qkeysequence.h
+-
+QtCore/qstring.h
+-
+QtWidgets/qwidget.h
+-
+QtCore/qvariant.h
+-
+QtGui/qicon.h
+-
+QtWidgets/qactiongroup.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qaction.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
@@ -2042,6 +2052,14 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 QtGui/qicon.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qaction.h
+-
+QtWidgets/qwidget.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h

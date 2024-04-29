@@ -1,4 +1,5 @@
 #include "user.h"
+#include "enemy.h"
 
 
 User::User(QGraphicsItem *parent,  int orientation, int velocity) : QObject(), QGraphicsEllipseItem(parent)
@@ -26,7 +27,7 @@ User::User(QGraphicsItem *parent,  int orientation, int velocity) : QObject(), Q
 
 
 
-    speed = velocity;
+    speed = 2 + velocity*0.5;
     rotationSpeed = 10.0;
     setTransformOriginPoint(rect().width()/2, rect().height()/2);
 
@@ -53,9 +54,11 @@ User::User(QGraphicsItem *parent,  int orientation, int velocity) : QObject(), Q
     isCoolingDown = false;
 
     setRotation(orientation);
+    hit = false;
 }
 
 void User::moveForward() {
+
     if(Stunned) return;
     QPointF centerPos = mapToScene(rect().center()); // Get the center point in scene coordinates
     QPointF visionPos = mapToScene(visionPoint->rect().center()); // Get the vision point in scene coordinates
@@ -73,10 +76,11 @@ void User::moveForward() {
     qreal newY = y() + speed * dy;
 
     // Check if the new position is within boundaries
-    if (newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 && newY <= 700 - rect().height()) {
+    if (newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 && newY <= 700 - rect().height() && !hit) {
         // Apply the movement if within the scene
         setPos(newX, newY);
     }
+    hit = false;
     CheckCollisions();
 }
 
@@ -142,10 +146,11 @@ void User::keyPressEvent(QKeyEvent *event) {
 
 
         // Check if the new position is within boundaries
-        if (newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 && newY <= 700 - rect().height()) {
+        if (newX >= 0 && newX <= 1200 - rect().width() && newY >= 100 && newY <= 700 - rect().height() && !hit && !Stunned) {
             // Apply the movement if within the scene
             setPos(newX, newY);
         }
+        hit = false;
         forward = true;
     }
     if (forward) {
@@ -167,13 +172,17 @@ void User::CheckCollisions() {
             // Stun the user
             Stunned = true;
             StunnedTimer->start(5000); // Stun for 2 seconds
-            QSound::play("../sounds/anotherone.wav");
-           // QSound::play("../anotherone.wav");
             QPixmap pixmap("../images/user3broken.png");
             pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
             QBrush brush(pixmap);
             setBrush(brush);
             emit stunned();
+            return;
+        }
+        if (Enemy const *enemy = dynamic_cast<Enemy *>(item)) {
+            // Handle collision with enemy
+            qDebug() << "Collision with enemy detected!";
+            hit = true;
             return;
         }
     }
@@ -223,13 +232,10 @@ void User::decreaseLives() {
 
 
     if (numberOfLives == 3){
-        QSound::play("../sounds/omg.wav");
         emit deleteLife3();
     } else if (numberOfLives == 2){
-        QSound::play("../sounds/omg.wav");
         emit deleteLife2();
     } else if (numberOfLives == 1){
-        QSound::play("../sounds/gameover.wav");
         emit deleteLife1();
         die();
     }

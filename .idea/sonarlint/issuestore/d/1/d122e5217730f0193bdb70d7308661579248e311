@@ -2,5 +2,3 @@
 ¢	cpp:S3230"`Do not assign data members in a constructor. Initialize member "time" in an initialization list.(üîœ8“‚Ÿ®ò1J$10376156-da80-46fd-a079-bb3f1b2ac55e
 §	cpp:S3230"eDo not assign data members in a constructor. Initialize member "timeLimit" in an initialization list.(Ó¬‹Ì8“‚Ÿ®ò1J$1283b808-7f7c-4aad-ba39-c7f8b3678402
 Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Û†ÁïJ$9194b9d0-8b74-4a7d-aec1-8367ec61982c
-›	cpp:S11864"YAdd a nested comment explaining why this method is empty, or complete the implementation.(›Äó°8±’ûûñ1J$4857f2ff-4308-4efd-8d83-3427ab563768
-J	cpp:S58173")This function should be declared "const".(µáÎüÿÿÿÿ8ˆÇ¾®ò1

@@ -13,7 +13,6 @@
 #include <QtMath>
 #include <QTimer>
 #include <QPixmap>
-#include <QSound>
 #include "star.h"
 
 class User : public QObject, public QGraphicsEllipseItem
@@ -39,6 +38,7 @@ private:
     bool isCoolingDown;
     int remainingStunnedTime;
     int remainingCoolDownTime;
+    bool hit;
 
 
 public slots:

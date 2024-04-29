@@ -138,10 +138,18 @@ bool GameMaster::mainEvent(){
     this->popup = new PopUp(nullptr, "gameover");
     scene->addItem(popup);
     popup->setPos(scene->width()/2 - popup->rect().width()/2, scene->height()/2 - popup->rect().height()/2);
+    connect(user, &User::deleteLife1, popup, &PopUp::show);
+    connect(popup->restartButton, &Button::released, this, &GameMaster::restartGame);
+    connect(popup->mainMenuButton, &Button::released, this, &GameMaster::headtoMainMenu);
+    connect(popup->exitButton, &Button::released, this, &GameMaster::exitGame);
 
     this->popup2 = new PopUp(nullptr, "win");
     scene->addItem(popup2);
     popup2->setPos(scene->width()/2 - popup2->rect().width()/2, scene->height()/2 - popup2->rect().height()/2);
+    connect(upperBar->timer, &Timer::timeIsUp, popup2, &PopUp::show);
+    connect(popup2->restartButton, &Button::released, this, &GameMaster::restartGame);
+    connect(popup2->mainMenuButton, &Button::released, this, &GameMaster::headtoMainMenu);
+    connect(popup2->exitButton, &Button::released, this, &GameMaster::exitGame);
 
     this->popup3 = new PopUp(nullptr, "paused");
     scene->addItem(popup3);

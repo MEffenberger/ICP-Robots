@@ -335,9 +335,7 @@ ICP: CMakeFiles/ICP.dir/robotitem.cpp.o
 ICP: CMakeFiles/ICP.dir/gamemaster.cpp.o
 ICP: CMakeFiles/ICP.dir/build.make
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
-ICP: /usr/lib/x86_64-linux-gnu/libQt5Multimedia.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
-ICP: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 ICP: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 ICP: CMakeFiles/ICP.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable ICP"

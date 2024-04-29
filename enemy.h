@@ -21,7 +21,6 @@
 #include <QPainterPath>
 #include "user.h"
 #include <QGraphicsPolygonItem>
-#include <QSound>
 
 
 class Enemy : public QObject, public QGraphicsEllipseItem
@@ -46,6 +45,7 @@ private:
     QPointF lastPos;
     int remainingStuckTime;
     int remainingChaseTime;
+    bool collision;
 
 protected:
 

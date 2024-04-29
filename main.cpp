@@ -79,7 +79,6 @@ int main(int argc, char *argv[])
 //    view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 //    view.setFocusPolicy(Qt::StrongFocus);
 //
-//    QSound::play("../sounds/missionimpossible.wav");
 //    // Show the view
 //    view.show();
 

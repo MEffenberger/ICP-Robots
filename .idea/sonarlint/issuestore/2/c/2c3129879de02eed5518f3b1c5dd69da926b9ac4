@@ -1,26 +1,27 @@
 
-r	cpp:S1117@"+declaration shadows a field of 'GameMaster'(¤Å–Ùüÿÿÿÿ8ì…ëªò1J$b2121d02-d08c-4e71-b3b0-120d84563622
-k	cpp:S1117L"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8ì…ëªò1J$31b5cb62-9ddd-4920-9959-7cd33a37830c
-k	cpp:S1117Y"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8ì…ëªò1J$70980274-1493-4c25-9652-77059a846b20
-e	cpp:S1117a"$declaration shadows a local variable(Ï„“H8ì…ëªò1J$01759df9-dd5e-40a3-aa73-a2b440633aa9
-Ÿ	cpp:S5276v"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³Å8Óƒú®ò1J$3c574465-ad76-437b-9c4d-25a9dd99dfb5
-Ÿ	cpp:S5276v"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³Å8Ôƒú®ò1J$edd3aabf-c087-4827-9f23-6b4511b2a5c3
-‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÅîíûÿÿÿÿJ$2e74dfed-7500-4e4b-87fa-4b0e3710f385
-Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ª†Ã¡J$b82ac9ac-49d7-4ce5-bd9c-603c148cd2d5
-˜	cpp:S50254"QReplace the use of "new" with an operation that automatically manages the memory.(îéìåøÿÿÿÿ8Ò†ëªò1J$f2a05892-bbdc-4787-b8ed-d647a9addbce
-°	cpp:S5350@"iMake the type of this variable a pointer-to-const. The current type of "mapData" is "class QJsonArray *".(¤Å–Ùüÿÿÿÿ8Ø†ëªò1J$3cad19a2-d279-4635-95fd-acb0335d45e8
-{	cpp:S6003V"4Replace this use of "push_back" with "emplace_back".(“ı­‘şÿÿÿÿ8î†ëªò1J$8552c2d2-e02a-4f03-8599-e7b2fcad4f1d
-“	cpp:S5025r"QReplace the use of "new" with an operation that automatically manages the memory.(¼‡¥ÿ8‡ëªò1J$bf88d53b-ac6b-45c2-985f-4eb522eabdf8
-’	cpp:S5025y"QReplace the use of "new" with an operation that automatically manages the memory.(Õ‰Ü8‚‡ëªò1J$0672bae0-7456-4a4e-a20c-a116159813e8
-’	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ãÁ›8‚‡ëªò1J$f40326b3-ab8f-4ae8-955c-cfe83b30becb
-”	cpp:S5025„"QReplace the use of "new" with an operation that automatically manages the memory.(öĞ—ò8ƒ‡ëªò1J$6e56ffde-3add-4a37-8094-329cadac311a
-”	cpp:S5025Š"QReplace the use of "new" with an operation that automatically manages the memory.(Ç°àÅ8†‡ëªò1J$b6932f6d-f0e0-4af3-bae5-374a41b18571
-™	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(¿¡ï®øÿÿÿÿ8ˆ‡ëªò1J$a11f6434-9fa3-4826-82fc-b4f89dbde3e1
-”	cpp:S5025’"QReplace the use of "new" with an operation that automatically manages the memory.(»î÷ô8‡ëªò1J$9753352d-a516-4085-bb39-8fe4e699921f
-…	cpp:S6005™"=Replace this declaration by a structured binding declaration.(½İğıÿÿÿÿ8‡ëªò1J$09a957e4-3cc1-4a27-a229-c256cb15510c
-j	cpp:S5827š"'Replace the redundant type with "auto".(ññöº8‡ëªò1J$28b7479c-08f2-4a9d-b4df-0f2ad62f18d8
-”	cpp:S5025š"QReplace the use of "new" with an operation that automatically manages the memory.(ññöº8’‡ëªò1J$a73c16d4-f2d7-486f-93e2-a5743af2024e
-j	cpp:S5827¡"'Replace the redundant type with "auto".(šø¹Ì8‘‡ëªò1J$41d6b610-3a63-46a3-ac4d-013c12febf12
-”	cpp:S5025¡"QReplace the use of "new" with an operation that automatically manages the memory.(šø¹Ì8‹ˆ©«ò1J$74728dd2-837f-489e-b9f7-b6eb42005f10
-™	cpp:S5025¨"QReplace the use of "new" with an operation that automatically manages the memory.(„Ï¤şÿÿÿÿ8Œˆ©«ò1J$8c3dc10b-8dd1-4ca4-abd9-511c2e1097e9
-dcpp:S1253"Remove the commented out code.(ÊèÓ‰úÿÿÿÿ8Éµëªò1J$4f5f1ee6-4e52-411a-a707-c154befc08c3
+r	cpp:S1117@"+declaration shadows a field of 'GameMaster'(¤Å–Ùüÿÿÿÿ8ì…ëªò1J$2ab4cde1-50b8-46be-929a-83e392f30870
+k	cpp:S1117L"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8ì…ëªò1J$0ee2121e-b4ce-4fc9-8773-7c3f5123f30a
+k	cpp:S1117Y"$declaration shadows a local variable(ô¬Ó°ûÿÿÿÿ8ì…ëªò1J$15ed2b59-d437-4803-b95a-b9d4660480a9
+e	cpp:S1117a"$declaration shadows a local variable(Ï„“H8ì…ëªò1J$322b14e2-9bae-424a-bf9a-efd05aa5e864
+Ÿ	cpp:S5276v"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³Å8Óƒú®ò1J$38f06932-d734-4348-98a3-a570b0b85b21
+Ÿ	cpp:S5276v"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³Å8Ôƒú®ò1J$16feed9c-34f8-448d-a4c7-afff699b4e21
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÅîíûÿÿÿÿJ$d5813279-0249-4684-bb83-0b2508bef801
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ª†Ã¡J$88ffc6ee-43cb-48db-85d5-07689747300a
+˜	cpp:S50254"QReplace the use of "new" with an operation that automatically manages the memory.(îéìåøÿÿÿÿ8Ò†ëªò1J$10ed0f38-a96f-4e25-b659-21df32670c4f
+°	cpp:S5350@"iMake the type of this variable a pointer-to-const. The current type of "mapData" is "class QJsonArray *".(¤Å–Ùüÿÿÿÿ8Ø†ëªò1J$a2b9f5cd-a575-455c-a1e8-1a648491b650
+{	cpp:S6003V"4Replace this use of "push_back" with "emplace_back".(“ı­‘şÿÿÿÿ8î†ëªò1J$c03085c5-969f-43b4-bc60-38765ea290af
+“	cpp:S5025r"QReplace the use of "new" with an operation that automatically manages the memory.(¼‡¥ÿ8‡ëªò1J$6c1d3235-26ae-42db-84e1-5b8932afbb21
+’	cpp:S5025y"QReplace the use of "new" with an operation that automatically manages the memory.(Õ‰Ü8‚‡ëªò1J$27b63666-d328-4421-af75-a5f5ea0a7aa1
+’	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ãÁ›8‚‡ëªò1J$fe99132f-719c-466a-a326-e2fedfa923cf
+”	cpp:S5025„"QReplace the use of "new" with an operation that automatically manages the memory.(öĞ—ò8ƒ‡ëªò1J$cf9f936c-43b4-47dd-b579-063e25bf4db1
+”	cpp:S5025Š"QReplace the use of "new" with an operation that automatically manages the memory.(Ç°àÅ8†‡ëªò1J$3c4c6e98-0dab-4a75-840a-5894f49fe05e
+™	cpp:S5025’"QReplace the use of "new" with an operation that automatically manages the memory.(¿¡ï®øÿÿÿÿ8ˆ‡ëªò1J$b9bf876f-24cf-4406-83e6-5ee55794ac8a
+”	cpp:S5025š"QReplace the use of "new" with an operation that automatically manages the memory.(»î÷ô8Ô—¼Èò1J$2be29037-a2c8-4eae-91b9-197afd3dc177
+…	cpp:S6005¤"=Replace this declaration by a structured binding declaration.(½İğıÿÿÿÿ8Ú—¼Èò1J$c8c53b37-00f8-4fcd-aa88-4f3ef74191c1
+j	cpp:S5827¥"'Replace the redundant type with "auto".(ññöº8Û—¼Èò1J$2dceb5be-fea2-4478-83ba-9d99ee752e2e
+”	cpp:S5025¥"QReplace the use of "new" with an operation that automatically manages the memory.(ññöº8Û—¼Èò1J$beffacf5-99cf-403e-9670-86557cd97654
+j	cpp:S5827¬"'Replace the redundant type with "auto".(šø¹Ì8İ—¼Èò1J$b92ed0f5-646a-412b-aec1-e26a8605e288
+”	cpp:S5025¬"QReplace the use of "new" with an operation that automatically manages the memory.(šø¹Ì8à—¼Èò1J$b1ede171-635d-4436-8bde-b6a8134a0da6
+™	cpp:S5025³"QReplace the use of "new" with an operation that automatically manages the memory.(„Ï¤şÿÿÿÿ8â—¼Èò1J$4be31dd3-38f0-4caa-9690-bf292915034c
+q	cpp:S5817Ï")This function should be declared "const".(‡Ö£åùÿÿÿÿ8è—¼Èò1J$61423915-d8e4-4f7c-b749-8b14b12f6c0d
+dcpp:S1253"Remove the commented out code.(ÊèÓ‰úÿÿÿÿ8Éµëªò1J$258b17e4-a2f7-4646-98c6-f74d60f4ab8a
