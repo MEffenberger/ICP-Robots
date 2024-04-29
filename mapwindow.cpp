@@ -10,6 +10,8 @@ MapWindow::MapWindow(QWidget *parent) :
     ui(new Ui::MapWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Robot Map Creator");
+    
 
     int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
     if (fontId == -1) {
@@ -19,16 +21,13 @@ MapWindow::MapWindow(QWidget *parent) :
     QString fontFamily = familyNames.at(0);
     QFont customFont(fontFamily);
     
-
+    
     connect(ui->tableWidget, &QTableWidget::cellClicked, this, &MapWindow::handleCellClicked);
     ui->tableWidget->verticalHeader()->setVisible(false); // Hides the row numbers
     ui->tableWidget->horizontalHeader()->setVisible(false); // Hides the column letters/numbers
     QString styleSheet = "QTableWidget { background-image: url(../images/bg.png); }";
     ui->tableWidget->setStyleSheet(styleSheet);
     setFixedSize(QSize(1200, 720));
-    // QString styleSheetB = "QWidget { background-image: url(:/images/background.jpg); }";
-    // this->setStyleSheet(styleSheetB);
-
 
     //setStyleSheet("background-color: #000000;"); // Replace #f0f0f0 with the desired background color
 
@@ -76,19 +75,44 @@ MapWindow::MapWindow(QWidget *parent) :
 
     //
 
-    ui->ObstacleLabel->setFont(customFont);
-    ui->DurationLabel->setFont(customFont);
-    ui->EnemyLabel->setFont(customFont);
-    ui->RobotLabel->setFont(customFont);
-    ui->levelComboBox->setFont(customFont);
-    ui->MapLabel->setFont(customFont);
-    // ui->MapLabel->setText(QString("ROBOT MAP CREATOR"));
-    // ui->ObstacleLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    // ui->DurationLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    // ui->EnemyLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    // ui->RobotLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    // ui->levelComboBox->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    QFrame* barTop = new QFrame(this);
+    barTop->setStyleSheet("background-image: url(../images/bar.png);");
+    barTop->setGeometry(QRect(0, 0, 1231, 61));
+    ui->pushButtonTimer->setParent(barTop);
+    ui->MapLabel->setParent(barTop);
+    ui->ObstacleLabel->setParent(barTop);
+    ui->DurationLabel->setParent(barTop);
+    ui->EnemyLabel->setParent(barTop);
+    ui->RobotLabel->setParent(barTop);
+    ui->levelComboBox->setParent(barTop);
+    ui->pushButton_robot->setParent(barTop);
+    ui->pushButton_enemy->setParent(barTop);
+    ui->pushButton->setParent(barTop);
 
+    ui->pushButtonTimer->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    ui->MapLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    ui->ObstacleLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    ui->DurationLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    ui->EnemyLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    ui->RobotLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
+    //ui->levelComboBox->setStyleSheet(QString("font-family: %1; color: rgb(0, 0, 255);").arg(fontFamily));
+    ui->levelComboBox->setStyleSheet(QString("font-family: %1; color: rgb(0, 0, 255); background-color: transparent;").arg(fontFamily));
+
+    
+    QFrame* barBottom = new QFrame(this);
+    barBottom->setStyleSheet("background-image: url(../images/bar.png);");
+    barBottom->setGeometry(QRect(0, 660, 1231, 61));
+    
+    ui->pushButtonSave->setParent(barBottom);
+    ui->pushButtonStart->setParent(barBottom);
+    ui->pushButtonMap->setParent(barBottom);
+    // Set the geometry of the buttons to position them on the bar
+    ui->pushButtonSave->setGeometry(QRect(1000, 10, 191, 41));
+    ui->pushButtonSave->setStyleSheet(QString("font-family: %1; color: rgb(255, 255, 0);").arg(fontFamily));
+    ui->pushButtonStart->setGeometry(QRect(455, 10, 231, 41));
+    ui->pushButtonStart->setStyleSheet(QString("font-family: %1; color: rgb(255, 0, 0);").arg(fontFamily));
+    ui->pushButtonMap->setGeometry(QRect(10, 10, 131, 41));
+    ui->pushButtonMap->setStyleSheet(QString("font-family: %1; color: rgb(255, 255, 0);").arg(fontFamily));
 }
 
 void MapWindow::updateCounts(){
@@ -267,7 +291,7 @@ void MapWindow::loadMap(){
 }
 
 void MapWindow::saveFile() {
-    QString filename = QFileDialog::getSaveFileName(this, "Save Map", "", "All Files (*.*)"); // Changed filter
+    QString filename = QFileDialog::getSaveFileName(this, "Save Map", "", "All Files (*.*)"); 
     if (filename.isEmpty()) {
         return;
     }

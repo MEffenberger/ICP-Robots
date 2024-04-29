@@ -15,7 +15,7 @@
 #include <QFontDatabase>
 #include <QFont>
 #include <QDebug>
-
+#include <QToolBar>
 
 namespace Ui {
 class MapWindow;
@@ -27,28 +27,16 @@ class MapWindow : public QWidget {
 public:
     explicit MapWindow(QWidget *parent = nullptr);
     void updateObstacleCounter();
-    //void setObstacle(int row, int column);
-    void toggleObstaclePlacement();
-    void toggleRobotPlacement();
-    void toggleEnemyPlacement();
-    void handleCellClicked(int row, int column);
-    void updateCounts();
     void updateControlledRobotCounter();
     void updateEnemyCounter();
     void updateTimer();
     void disableEditing();
-    void saveFile();
-    void setTimer();
-    void startGame();
-    void loadMap();
+
     QJsonArray* fillFile(bool* robotFound);
     QJsonArray *mapData;
     ~MapWindow();
 signals:
     void startSession();
-
-protected:
-    //void showEvent(QShowEvent *event) override;  // Override to detect window show
 
 private:
     /// UI of the Map
@@ -62,6 +50,17 @@ private:
     bool placingEnemy;
     int timeLimit;
     bool printTime;
+
+private slots:
+    void handleCellClicked(int row, int column);
+    void toggleObstaclePlacement();
+    void toggleRobotPlacement();
+    void toggleEnemyPlacement();
+    void updateCounts();
+    void saveFile();
+    void setTimer();
+    void startGame();
+    void loadMap();
 };
 
 #endif // MAPWINDOW_H
