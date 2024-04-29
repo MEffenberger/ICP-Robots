@@ -1,5 +1,5 @@
 
-	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿJ$4ca520e6-2c18-4206-9ec1-b95c58502a5a
-	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿJ$ebb28873-7843-40a2-a496-463ddbd71aa3
-g	cpp:S5827"'Replace the redundant type with "auto".(ÍşÇ™úÿÿÿÿJ$6d186fd5-5dc4-4694-8dff-a5f70f052425
-‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÍşÇ™úÿÿÿÿJ$1d4ca733-24d9-4ec4-8a53-f9ef10296f4d
+	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿJ$08856910-e0e5-41bf-a32e-6d9baf2594a8
+	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿJ$d11f1320-e8ec-4b69-8c99-2de1ec14d67e
+g	cpp:S5827"'Replace the redundant type with "auto".(ÍşÇ™úÿÿÿÿJ$d86f58d8-0cdc-48cd-ad60-58a9675c0c7f
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÍşÇ™úÿÿÿÿJ$394b5c60-f2b9-41dc-bbdb-9839d73ff376

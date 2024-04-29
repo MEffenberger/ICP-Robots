@@ -133,35 +133,35 @@ bool GameMaster::mainEvent(){
     scene->addItem(upperBar);
     upperBar->setPos(0, 0);
     upperBar->setZValue(5);
-    connect(upperBar->pauseButton, &Button::released, this, &GameMaster::pauseTheGame);
+    connect(upperBar->pauseButton, &Button::pressed, this, &GameMaster::pauseTheGame);
 
     this->popup = new PopUp(nullptr, "gameover");
     scene->addItem(popup);
     popup->setPos(scene->width()/2 - popup->rect().width()/2, scene->height()/2 - popup->rect().height()/2);
     connect(user, &User::deleteLife1, popup, &PopUp::show);
     connect(popup, &PopUp::pauseTimers, this, &GameMaster::pauseTheGame);
-    connect(popup->restartButton, &Button::released, this, &GameMaster::restartGame);
-    connect(popup->mainMenuButton, &Button::released, this, &GameMaster::headtoMainMenu);
-    connect(popup->exitButton, &Button::released, this, &GameMaster::exitGame);
+    connect(popup->restartButton, &Button::pressed, this, &GameMaster::restartGame);
+    connect(popup->mainMenuButton, &Button::pressed, this, &GameMaster::headtoMainMenu);
+    connect(popup->exitButton, &Button::pressed, this, &GameMaster::exitGame);
 
     this->popup2 = new PopUp(nullptr, "win");
     scene->addItem(popup2);
     popup2->setPos(scene->width()/2 - popup2->rect().width()/2, scene->height()/2 - popup2->rect().height()/2);
     connect(upperBar->timer, &Timer::timeIsUp, popup2, &PopUp::show);
     connect(popup2, &PopUp::pauseTimers, this, &GameMaster::pauseTheGame);
-    connect(popup2->restartButton, &Button::released, this, &GameMaster::restartGame);
-    connect(popup2->mainMenuButton, &Button::released, this, &GameMaster::headtoMainMenu);
-    connect(popup2->exitButton, &Button::released, this, &GameMaster::exitGame);
+    connect(popup2->restartButton, &Button::pressed, this, &GameMaster::restartGame);
+    connect(popup2->mainMenuButton, &Button::pressed, this, &GameMaster::headtoMainMenu);
+    connect(popup2->exitButton, &Button::pressed, this, &GameMaster::exitGame);
 
     this->popup3 = new PopUp(nullptr, "paused");
     scene->addItem(popup3);
     popup3->setPos(scene->width()/2 - popup3->rect().width()/2, scene->height()/2 - popup3->rect().height()/2);
-    connect(upperBar->pauseButton, &Button::released, popup3, &PopUp::show);
-    connect(popup3->resumeButton, &Button::released, popup3, &PopUp::hide);
-    connect(popup3->resumeButton, &Button::released, this, &GameMaster::resumeTheGame);
-    connect(popup3->restartButton, &Button::released, this, &GameMaster::restartGame);
-    connect(popup3->mainMenuButton, &Button::released, this, &GameMaster::headtoMainMenu);
-    connect(popup3->exitButton, &Button::released, this, &GameMaster::exitGame);
+    connect(upperBar->pauseButton, &Button::pressed, popup3, &PopUp::show);
+    connect(popup3->resumeButton, &Button::pressed, popup3, &PopUp::hide);
+    connect(popup3->resumeButton, &Button::pressed, this, &GameMaster::resumeTheGame);
+    connect(popup3->restartButton, &Button::pressed, this, &GameMaster::restartGame);
+    connect(popup3->mainMenuButton, &Button::pressed, this, &GameMaster::headtoMainMenu);
+    connect(popup3->exitButton, &Button::pressed, this, &GameMaster::exitGame);
 
     for (std::pair<int, int> obstacle : ObstacleData) {
         Obstacle *brick = new Obstacle();
@@ -213,7 +213,7 @@ void GameMaster::exitGame() {
 
 void GameMaster::headtoMainMenu() {
     cleanUp();
-    this->view->close();
+    //this->view->close();
     run();
 }
 
@@ -224,45 +224,47 @@ void GameMaster::restartGame() {
     //this->view->close();
     startGame();
 }
+
 void GameMaster::cleanUp() {
 
-    for (auto enemy : enemies) {
-        delete enemy;
-    }
-    qDebug() << "Deleted enemies";
-
-    for (auto obstacle : obstacles) {
-        delete obstacle;
-    }
-    qDebug() << "Deleted obstacles";
-
-    delete this->view;
+    delete view; view = nullptr;
     qDebug() << "Deleted view";
 
-    delete this->popup3;
+    for (auto &enemy : enemies) {
+        delete enemy;
+        qDebug() << "Deleted enemy";
+    }
+    enemies.clear();
+    qDebug() << "Deleted all enemies";
+
+    for (auto &obstacle : obstacles) {
+        qDebug() << "Deleted obstacle";
+        delete obstacle;
+    }
+    obstacles.clear();
+    qDebug() << "Deleted all obstacles";
+
+    delete popup3; popup3 = nullptr;
     qDebug() << "Deleted popup3";
 
-    delete this->popup2;
+    delete popup2; popup2 = nullptr;
     qDebug() << "Deleted popup2";
 
-    delete this->popup;
+    delete popup; popup = nullptr;
     qDebug() << "Deleted popup";
 
-    delete this->upperBar;
-    qDebug() << "Deleted upper bar";
+    delete upperBar; upperBar = nullptr;
+    qDebug() << "Deleted upperBar";
 
-    delete this->lowerBar;
-    qDebug() << "Deleted lower bar";
+    delete lowerBar; lowerBar = nullptr;
+    qDebug() << "Deleted lowerBar";
 
-    delete this->user;
+    delete user; user = nullptr;
     qDebug() << "Deleted user";
 
-    delete this->scene;
+    delete scene; scene = nullptr;
     qDebug() << "Deleted scene";
 
-//    delete this->mapWindow;
-//    qDebug() << "Deleted map window";
-//
-//    delete this->mainWindow;
-//    qDebug() << "Deleted main window";
+
+    qDebug() << "Cleaned up all game elements";
 }

@@ -75,11 +75,26 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
 }
 
 HorizontalLowerBar::~HorizontalLowerBar() {
-    delete ForwardButton;
-    delete ClockwiseButton;
-    delete CounterClockwiseButton;
-    delete KeyboardButton;
-    delete Autopilot;
+    if (ForwardButton != nullptr){
+        delete ForwardButton;
+        ForwardButton = nullptr;
+    }
+    if (ClockwiseButton != nullptr) {
+        delete ClockwiseButton;
+        ClockwiseButton = nullptr;
+    }
+    if (CounterClockwiseButton != nullptr) {
+        delete CounterClockwiseButton;
+        CounterClockwiseButton = nullptr;
+    }
+    if (KeyboardButton != nullptr) {
+        delete KeyboardButton;
+        KeyboardButton = nullptr;
+    }
+    if (Autopilot != nullptr) {
+        delete Autopilot;
+        Autopilot = nullptr;
+    }
 }
 
 void HorizontalLowerBar::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
@@ -133,10 +148,28 @@ HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
 }
 
 HorizontalUpperBar::~HorizontalUpperBar() {
-    delete Heart1;
-    delete Heart2;
-    delete Heart3;
-    delete gameInfo;
-    delete timer;
-    delete pauseButton;
+    if (Heart1 != nullptr) {
+        delete Heart1;
+        Heart1 = nullptr;
+    }
+    if (Heart2 != nullptr) {
+        delete Heart2;
+        Heart2 = nullptr;
+    }
+    if (Heart3 != nullptr) {
+        delete Heart3;
+        Heart3 = nullptr;
+    }
+    if (gameInfo != nullptr) {
+        delete gameInfo;
+        gameInfo = nullptr;
+    }
+    if (timer != nullptr) {
+        delete timer;
+        timer = nullptr;
+    }
+    if (pauseButton != nullptr) {
+        delete pauseButton;
+        pauseButton = nullptr;
+    }
 }

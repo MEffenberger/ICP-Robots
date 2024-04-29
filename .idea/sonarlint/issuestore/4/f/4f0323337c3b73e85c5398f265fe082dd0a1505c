@@ -1,38 +1,38 @@
 
-Ÿ	cpp:S5276;"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(”Ÿ¤Ä8 Ëùñ1J$97e2e5f7-7eca-42a7-a88b-74a1e7e7b0e8
-Ÿ	cpp:S5276;"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(”Ÿ¤Ä8¡Ëùñ1J$aa421237-4dd8-4159-8c80-c92a28e71ef3
+Ÿ	cpp:S5276;"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(”Ÿ¤Ä8 Ëùñ1J$46a31737-88fe-40a5-ac68-1d11ff6d7403
+Ÿ	cpp:S5276;"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(”Ÿ¤Ä8¡Ëùñ1J$3f395361-06d5-4c44-a7a6-95732d17bd59
 ¨	cpp:S3230
-"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8¤ÄÃ®ñ1J$fa1ee3b0-4b34-427c-b7e1-ad419386f0cc
-¤	cpp:S3230"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8¥ÄÃ®ñ1J$8a56e06c-be69-4bde-9fd2-910824b9f2f9
-¥	cpp:S3230"cDo not assign data members in a constructor. Initialize member "userPtr" in an initialization list.(ßëåí8í³…ùñ1J$f0dd6e85-bd7a-4379-9cb9-f9c303f2161e
-n	cpp:S58270"'Replace the redundant type with "auto".(ÛÒ½Éşÿÿÿÿ8ù©Ñºñ1J$28b22b50-395c-42e8-a36a-78a150ed12be
-n	cpp:S5827@"'Replace the redundant type with "auto".(¨Éš­ıÿÿÿÿ8Ù¨Ìøñ1J$3acc4761-327c-4b1b-bcb0-51c2960ff20c
-i	cpp:S5827F"'Replace the redundant type with "auto".(†ÙÅó8Ú¨Ìøñ1J$9e1066b9-24f0-4aae-aa7c-52e11fe9dd25
-˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(“úä´ùÿÿÿÿ8ó°óñ1J$23971744-c511-4bea-93fb-13e278be8dcf
-“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ó¥¡š8Ÿó°óñ1J$557b6e00-a592-4a62-a60a-13b46b2dfa77
-“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÛĞªû8¨ó°óñ1J$f3921333-504d-4ff6-af6d-98aae7ee4214
-“	cpp:S5025("QReplace the use of "new" with an operation that automatically manages the memory.(Á³õº8µ÷ŞÏñ1J$4160d19c-8db2-468f-bc98-73f2397fa8d9
-˜	cpp:S50250"QReplace the use of "new" with an operation that automatically manages the memory.(ÛÒ½Éşÿÿÿÿ8·œÈøñ1J$c94c1a11-7963-4b1b-a601-dc51d910c1e3
-˜	cpp:S50259"QReplace the use of "new" with an operation that automatically manages the memory.(ŸÛÜ¨ùÿÿÿÿ8·œÈøñ1J$1b1a7d48-0174-487c-b7fb-3a16706b04ea
-˜	cpp:S5025@"QReplace the use of "new" with an operation that automatically manages the memory.(¨Éš­ıÿÿÿÿ8·œÈøñ1J$eff93314-2239-4b14-b3bc-dd3a6c3fdd95
-“	cpp:S5025F"QReplace the use of "new" with an operation that automatically manages the memory.(†ÙÅó8¹œÈøñ1J$4bb0727d-ed9a-4536-a673-dcf418f11d32
-|	cpp:S5025N":Rewrite the code so that you no longer need this "delete".(‘ç˜8÷£ÓÑò1J$74b2321b-9a5e-47f8-86ad-fa3d4a7591d0
-|	cpp:S5025O":Rewrite the code so that you no longer need this "delete".(Ä…òØ8÷£ÓÑò1J$edbb333a-9f66-4064-ac31-97c3a1079e80
-	cpp:S5025P":Rewrite the code so that you no longer need this "delete".(ó¢¯«şÿÿÿÿ8÷£ÓÑò1J$c76f31e5-c4dc-4629-bbd7-79c88cc5456b
-|	cpp:S5025Q":Rewrite the code so that you no longer need this "delete".(†´½®8÷£ÓÑò1J$344e3c72-5e0b-46b4-982e-a6b27eec62a0
-{	cpp:S5025R":Rewrite the code so that you no longer need this "delete".(îüö<8÷£ÓÑò1J$57205a86-f1ad-439c-b5af-3b5f4f0f72eb
-¨	cpp:S3230`"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8ù£ÓÑò1J$99c2f210-a959-4ead-a7ee-4c470ba5c4cd
-¤	cpp:S3230a"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8ú£ÓÑò1J$3d92681c-3a35-4c6a-ab07-e01deedc6219
-§cpp:S995_"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(ˆÈºÈıÿÿÿÿ8û£ÓÑò1J$5e694400-29e4-4e18-9f17-1cd3a9d04e9a
-“	cpp:S5025i"QReplace the use of "new" with an operation that automatically manages the memory.(Òó¬8ÿ£ÓÑò1J$82ec75af-e7e0-4182-ad8e-353f29b0ad68
-˜	cpp:S5025j"QReplace the use of "new" with an operation that automatically manages the memory.(æóóŞûÿÿÿÿ8ÿ£ÓÑò1J$3c657e9c-af78-40ab-a213-05efaab1814e
-˜	cpp:S5025k"QReplace the use of "new" with an operation that automatically manages the memory.(î®¼Ëùÿÿÿÿ8€¤ÓÑò1J$78f78880-6f3b-48a5-8bfc-b3e4c63f4263
-“	cpp:S5025u"QReplace the use of "new" with an operation that automatically manages the memory.(ÔÑøà8¤ÓÑò1J$2da3d065-b1a2-4e25-b449-c01567182499
-˜	cpp:S5025}"QReplace the use of "new" with an operation that automatically manages the memory.(Ö×îúÿÿÿÿ8ƒ¤ÓÑò1J$19ac7e8e-636e-4ee6-b2e9-fcc906c9b78f
-™	cpp:S5025‚"QReplace the use of "new" with an operation that automatically manages the memory.(È„Û¾üÿÿÿÿ8„¤ÓÑò1J$fe33f3a3-3cc9-4a80-bc19-e10b247b74fc
-}	cpp:S5025ˆ":Rewrite the code so that you no longer need this "delete".(§áü²8…¤ÓÑò1J$f7c1d2f6-f964-4410-946d-082162260137
-}	cpp:S5025‰":Rewrite the code so that you no longer need this "delete".(šğõÒ8…¤ÓÑò1J$ae0974bf-8095-4f53-877e-f2aac65a53f7
-‚	cpp:S5025Š":Rewrite the code so that you no longer need this "delete".(œñºÿøÿÿÿÿ8…¤ÓÑò1J$2ef69f12-06a3-4f3d-bd6d-4c5118fa06c6
-‚	cpp:S5025‹":Rewrite the code so that you no longer need this "delete".(«’Ööúÿÿÿÿ8…¤ÓÑò1J$794b2485-c9d1-4260-9a75-73e7e941e5ce
-‚	cpp:S5025Œ":Rewrite the code so that you no longer need this "delete".(‡š×şÿÿÿÿ8…¤ÓÑò1J$78053859-d5de-4d9f-a908-3cd97ae7bad5
-‚	cpp:S5025":Rewrite the code so that you no longer need this "delete".(ö‹ËÀÿÿÿÿÿ8†¤ÓÑò1J$557c6527-61f4-42b8-a576-c7fdeb34c270
+"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(ŞæñÆøÿÿÿÿ8¤ÄÃ®ñ1J$f9c2fc75-13b9-465a-a208-8fe2d1a14579
+¤	cpp:S3230"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ı©¢¹8¥ÄÃ®ñ1J$3c4d6a13-d01b-42c7-98f4-8487627957e4
+¥	cpp:S3230"cDo not assign data members in a constructor. Initialize member "userPtr" in an initialization list.(ßëåí8í³…ùñ1J$74ad2f1f-6111-46af-b8e1-954c1133d390
+n	cpp:S58270"'Replace the redundant type with "auto".(ÛÒ½Éşÿÿÿÿ8ù©Ñºñ1J$af217e3c-07dd-4fd4-95e5-e3e6dee683ae
+n	cpp:S5827@"'Replace the redundant type with "auto".(¨Éš­ıÿÿÿÿ8Ù¨Ìøñ1J$3d468b63-7298-4c95-9a4d-22821dbf8859
+i	cpp:S5827F"'Replace the redundant type with "auto".(†ÙÅó8Ú¨Ìøñ1J$40d273c0-ef20-482a-8e3d-3252ab901062
+˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(“úä´ùÿÿÿÿ8ó°óñ1J$4a5a420b-2c93-43ca-8882-263785516e59
+“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ó¥¡š8Ÿó°óñ1J$1b5d4c62-3f74-490c-bdac-081602e8aa72
+“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÛĞªû8¨ó°óñ1J$c1a2f972-b112-43be-a8e4-34484dd827c6
+“	cpp:S5025("QReplace the use of "new" with an operation that automatically manages the memory.(Á³õº8µ÷ŞÏñ1J$284d2328-6797-4cdc-979a-47fbeae26c2c
+˜	cpp:S50250"QReplace the use of "new" with an operation that automatically manages the memory.(ÛÒ½Éşÿÿÿÿ8·œÈøñ1J$0a332e1b-93aa-463f-818a-558c66b60ff6
+˜	cpp:S50259"QReplace the use of "new" with an operation that automatically manages the memory.(ŸÛÜ¨ùÿÿÿÿ8·œÈøñ1J$bb9a247f-e2eb-4efc-89d6-d7bdff5a81e7
+˜	cpp:S5025@"QReplace the use of "new" with an operation that automatically manages the memory.(¨Éš­ıÿÿÿÿ8·œÈøñ1J$d4337af6-7e29-4399-aac4-8eb654b16d48
+“	cpp:S5025F"QReplace the use of "new" with an operation that automatically manages the memory.(†ÙÅó8¹œÈøñ1J$eb2d95b6-e04d-43d3-8e91-dce2b135bb68
+V	cpp:S5025N":Rewrite the code so that you no longer need this "delete".(—ë…€8‰ çÓò1
+|	cpp:S5025O":Rewrite the code so that you no longer need this "delete".(‘ç˜8÷£ÓÑò1J$8a9c16de-6020-41f6-80cc-5b91b38ca5f8
+[	cpp:S5025P":Rewrite the code so that you no longer need this "delete".(µáÎüÿÿÿÿ8‰ çÓò1
+|	cpp:S5025Q":Rewrite the code so that you no longer need this "delete".(Ä…òØ8÷£ÓÑò1J$c537f667-5903-449f-8820-48446edfec08
+	cpp:S5025R":Rewrite the code so that you no longer need this "delete".(ó¢¯«şÿÿÿÿ8÷£ÓÑò1J$52c8404b-bf17-4e04-bafa-91202ede8aab
+‚	cpp:S3230`"aDo not assign data members in a constructor. Initialize member "width" in an initialization list.(µáÎüÿÿÿÿ8 çÓò1
+ƒ	cpp:S3230a"bDo not assign data members in a constructor. Initialize member "height" in an initialization list.(ˆÈºÈıÿÿÿÿ8 çÓò1
+cpp:S995_"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(µáÎüÿÿÿÿ8 çÓò1
+r	cpp:S5025i"QReplace the use of "new" with an operation that automatically manages the memory.(µáÎüÿÿÿÿ8— çÓò1
+r	cpp:S5025j"QReplace the use of "new" with an operation that automatically manages the memory.(µáÎüÿÿÿÿ8˜ çÓò1
+“	cpp:S5025k"QReplace the use of "new" with an operation that automatically manages the memory.(Òó¬8ÿ£ÓÑò1J$facf736e-1cdc-443a-ad8a-96551c61cf6b
+m	cpp:S5025u"QReplace the use of "new" with an operation that automatically manages the memory.(„ì˜Û8š çÓò1
+m	cpp:S5025}"QReplace the use of "new" with an operation that automatically manages the memory.(†áá·8› çÓò1
+n	cpp:S5025‚"QReplace the use of "new" with an operation that automatically manages the memory.(§¾ˆ£8œ çÓò1
+\	cpp:S5025ˆ":Rewrite the code so that you no longer need this "delete".(µáÎüÿÿÿÿ8 çÓò1
+W	cpp:S5025‰":Rewrite the code so that you no longer need this "delete".(´¶“ò8 çÓò1
+}	cpp:S5025Š":Rewrite the code so that you no longer need this "delete".(§áü²8…¤ÓÑò1J$cccc4f8c-3bad-47a0-ba3a-2da87990f968
+}	cpp:S5025‹":Rewrite the code so that you no longer need this "delete".(šğõÒ8…¤ÓÑò1J$574a97d1-c76e-4437-bd9b-66001ed138df
+‚	cpp:S5025Œ":Rewrite the code so that you no longer need this "delete".(œñºÿøÿÿÿÿ8…¤ÓÑò1J$23c75f34-af38-4ccc-9df7-86f16498cb4d
+‚	cpp:S5025":Rewrite the code so that you no longer need this "delete".(«’Ööúÿÿÿÿ8…¤ÓÑò1J$bf2872e1-50d9-4071-8ba3-7cdc7b652b8a

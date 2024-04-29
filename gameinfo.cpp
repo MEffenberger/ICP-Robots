@@ -44,5 +44,8 @@ void GameInfo::resetMessage() {
 }
 
 GameInfo::~GameInfo() {
-    delete timer;
+    if (timer != nullptr){
+        delete timer;
+        timer = nullptr;
+    }
 }

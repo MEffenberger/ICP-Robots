@@ -1,34 +1,0 @@
-
-|	cpp:S1135Ò"4Complete the task associated to this "TODO" comment.(¶ÇÛ»úÿÿÿÿ8”ÿØµò1J$275345dd-cdfe-4301-bf90-57246b4cb554
-|	cpp:S1135†"4Complete the task associated to this "TODO" comment.(ªëìÚûÿÿÿÿ8µÿØµò1J$9d203645-80dc-466e-bb38-55011c0907d2
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8ûÜÌ«ò1J$60d8fcda-0c40-4bcb-ab96-1027e930cdd6
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8ûÜÌ«ò1J$cd054e6d-06a7-4bbd-ac43-d0d48fd01f13
-i	cpp:S1117“"&declaration shadows a field of 'Enemy'(ôÆæ8 Ÿ˜¬ò1J$52596a26-4db0-4343-8476-5ef41f5be9ba
-h	cpp:S1117È"&declaration shadows a field of 'Enemy'(¦ÇŠ.8øŒÙµò1J$a6118f73-a43b-4fff-b54c-7062dccc1cc5
-ª	cpp:S3230"hDo not assign data members in a constructor. Initialize member "visionLength" in an initialization list.(®¶¹µ8ÈİÌ«ò1J$24dcd41a-7935-4ec6-8255-d5e4f6786991
-¯	cpp:S3230."hDo not assign data members in a constructor. Initialize member "turningAngle" in an initialization list.(›¡ââıÿÿÿÿ8ÈİÌ«ò1J$a2551d34-5bbe-46cc-b52c-6c3100033565
-“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Á±¹É8ÓİÌ«ò1J$220ea6c0-b411-4176-b505-686a7e37ffbf
-“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(¢¬Ú„8ÕİÌ«ò1J$3f057fa4-83f4-40ca-bcc0-194276391c3e
-’	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(ğÜ¢H8İİÌ«ò1J$996da3fe-34a3-4c57-bd2f-e41c46d3b0b4
-˜	cpp:S5025?"QReplace the use of "new" with an operation that automatically manages the memory.(·Ÿ™´ıÿÿÿÿ8áİÌ«ò1J$50889641-2826-4f3d-8bb5-6c49acdf51d3
-˜	cpp:S5025C"QReplace the use of "new" with an operation that automatically manages the memory.(¤ªŞÜıÿÿÿÿ8âİÌ«ò1J$d7e89eed-58b1-4ff6-b227-cb737afba636
-“	cpp:S5025M"QReplace the use of "new" with an operation that automatically manages the memory.(Œ¦Ş8äİÌ«ò1J$d25b0539-9a0a-4086-80bb-47d950f79987
-…	cpp:S6004{"CUse the init-statement to declare "newPos" inside the if statement.(Ú»Ğ8›á¢Èò1J$7c621cb4-2ad9-4f48-9baa-f731b5d646cf
-n	cpp:S5827z"'Replace the redundant type with "auto".(¹éêÔüÿÿÿÿ8‹Šêµò1J$ec07884c-119e-474a-b8f9-b3f1f1c3bb52
-o	cpp:S5827"'Replace the redundant type with "auto".(³Á¦Äøÿÿÿÿ8» ˜¬ò1J$814a48dc-464d-41d9-8892-2f6058304e9d
-j	cpp:S5827“"'Replace the redundant type with "auto".(ôÆæ8» ˜¬ò1J$8a2452ad-cdd8-4a56-bb4b-70a81033e241
-o	cpp:S5827—"'Replace the redundant type with "auto".(Ó—¬şÿÿÿÿ8¼ ˜¬ò1J$86b683b2-ce51-4a3a-8617-ce6505e6f0dd
-°cpp:S995Ÿ"iMake the type of this parameter a pointer-to-const. The current type of "obstacle" is "class Obstacle *".(¥Óí»şÿÿÿÿ8šŠêµò1J$ad329c2b-d932-47ac-9dc2-23712104ebfd
-¥cpp:S995¸"cMake the type of this parameter a pointer-to-const. The current type of "enemy" is "class Enemy *".(ÊÎ·¨8İÙµò1J$521c3c43-dc5f-4765-a09b-687a58b7f4fc
-¢cpp:S995È"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(¦ÇŠ.8àÙµò1J$a8e41b07-d510-417a-be72-7a2bb3c1d456
-}	cpp:S5025Ã":Rewrite the code so that you no longer need this "delete".(‡ô¼Õ8™ëöÑò1J$f4295a36-25c8-4439-a134-e5d343f47534
-}	cpp:S5025Ä":Rewrite the code so that you no longer need this "delete".(·Èíæ8™ëöÑò1J$1f4c5da2-820d-4a60-90bc-b483db6527a4
-}	cpp:S5025Å":Rewrite the code so that you no longer need this "delete".(Ñ‰¿¥8™ëöÑò1J$600b07a1-ed33-4701-b8ab-ffcb97e9145f
-‚	cpp:S5025Æ":Rewrite the code so that you no longer need this "delete".(…Íˆ÷úÿÿÿÿ8™ëöÑò1J$109299bc-6e25-41d3-be00-c5949578d698
-}	cpp:S5025Ç":Rewrite the code so that you no longer need this "delete".(ŞîœÇ8™ëöÑò1J$cb319447-2e79-4bf5-9aac-252ff53f8ff3
-‚	cpp:S5025È":Rewrite the code so that you no longer need this "delete".(È·üûÿÿÿÿÿ8™ëöÑò1J$e72d3ecc-56d2-40d1-a6d4-febcf9a18250
-^cpp:S1256"Remove the commented out code.(µØš8š„½¯ò1J$e1920b15-7827-4851-8139-35926cf0ddfa
-dcpp:S125S"Remove the commented out code.(ÓÏ§Äüÿÿÿÿ8¾ã»¯ò1J$e4ebe52b-e1c7-4b5a-8487-0b92ef004d33
-`cpp:S125¬"Remove the commented out code.(Ë‚«Ú8ÓÉÃ±ò1J$2b06ecbe-a76f-4d7e-ae4a-fc02c463c6da
-`cpp:S125î"Remove the commented out code.(Ó‰ 8òèâ±ò1J$32883688-42bc-4c43-8ba6-b558d438a66d
-ecpp:S125†"Remove the commented out code.(ªëìÚûÿÿÿÿ8ûÔÄ±ò1J$22a116c4-c9d7-4f56-947c-29b76ddd4313

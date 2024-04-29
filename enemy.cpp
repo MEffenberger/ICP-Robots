@@ -320,10 +320,28 @@ void Enemy::resumeAllTimers() {
 }
 
 Enemy::~Enemy() {
-    delete movementTimer;
-    delete stuckTimer;
-    delete chaseTimer;
-    delete visionPoint;
-    delete visionField;
-    delete armor;
+    if (movementTimer != nullptr) {
+        delete movementTimer;
+        movementTimer = nullptr;
+    }
+    if (stuckTimer != nullptr) {
+        delete stuckTimer;
+        stuckTimer = nullptr;
+    }
+    if (chaseTimer != nullptr) {
+        delete chaseTimer;
+        chaseTimer = nullptr;
+    }
+    if (armor != nullptr) {
+        delete armor;
+        armor = nullptr;
+    }
+    if (visionPoint != nullptr) {
+        delete visionPoint;
+        visionPoint = nullptr;
+    }
+    if (visionField != nullptr) {
+        delete visionField;
+        visionField = nullptr;
+    }
 }

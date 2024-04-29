@@ -278,15 +278,36 @@ void User::resumeAllTimers() {
 }
 
 User::~User() {
-    delete StunnedTimer;
-    delete ForwardTimer;
-    delete ClockwiseTimer;
-    delete CounterClockwiseTimer;
-    delete coolDown;
-    if (stars.size() > 0) {
-        foreach (Star *star, stars) {
-            delete star;
-        }
+    if (StunnedTimer != nullptr) {
+        delete StunnedTimer;
+        StunnedTimer = nullptr;
     }
-    delete visionPoint;
+    if (ForwardTimer != nullptr) {
+        delete ForwardTimer;
+        ForwardTimer = nullptr;
+    }
+    if (ClockwiseTimer != nullptr) {
+        delete ClockwiseTimer;
+        ClockwiseTimer = nullptr;
+    }
+    if (CounterClockwiseTimer != nullptr) {
+        delete CounterClockwiseTimer;
+        CounterClockwiseTimer = nullptr;
+    }
+    if (coolDown != nullptr) {
+        delete coolDown;
+        coolDown = nullptr;
+    }
+    if (stars.size() > 0) {
+                foreach (Star *star, stars) {
+                if (star != nullptr) {
+                    delete star;
+                    star = nullptr;
+                }
+            }
+    }
+    if (visionPoint != nullptr) {
+        delete visionPoint;
+        visionPoint = nullptr;
+    }
 }

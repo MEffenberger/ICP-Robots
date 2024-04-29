@@ -78,8 +78,20 @@ QGraphicsTextItem* PopUp::createTextItem(const QString& text, const QString& fon
 }
 
 PopUp::~PopUp() {
-    delete exitButton;
-    delete restartButton;
-    delete resumeButton;
-    delete mainMenuButton;
+    if (exitButton != nullptr) {
+        delete exitButton;
+        exitButton = nullptr;
+    }
+    if (restartButton != nullptr) {
+        delete restartButton;
+        restartButton = nullptr;
+    }
+    if (resumeButton != nullptr) {
+        delete resumeButton;
+        resumeButton = nullptr;
+    }
+    if (mainMenuButton != nullptr) {
+        delete mainMenuButton;
+        mainMenuButton = nullptr;
+    }
 }

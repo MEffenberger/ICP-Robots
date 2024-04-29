@@ -1,14 +1,14 @@
 
-}	cpp:S1238";Pass expensive to copy object "name" by reference to const.(îãä’8ÜşÊ÷ñ1J$c6457e5d-8e7d-4e2c-8b8d-d8615824ad89
-‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Ç¶¶–şÿÿÿÿJ$6cc06687-c2a2-40c7-8296-f65e7d33d4aa
-Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÈÊìJ$19e434bb-1a59-40dd-9894-4dff874df75f
-‘	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(şÚÍÖûÿÿÿÿJ$8a8f8580-b7b8-49da-a284-1bfd597293d8
-˜	cpp:S5025/"QReplace the use of "new" with an operation that automatically manages the memory.(†»÷ùÿÿÿÿ8ˆ©™õñ1J$fd437122-ec4e-4ab1-8260-842cde80f442
-n	cpp:S5827G"'Replace the redundant type with "auto".(ƒ‘Ç¡ùÿÿÿÿ8ˆ¿Â÷ñ1J$030d9bde-b090-4c9d-9fb3-4e06073738a1
-˜	cpp:S5025G"QReplace the use of "new" with an operation that automatically manages the memory.(ƒ‘Ç¡ùÿÿÿÿ8‰¿Â÷ñ1J$0412aa52-4e84-4b9f-9b99-6fcc728840d5
-V	cpp:S5025Q":Rewrite the code so that you no longer need this "delete".(âù¬Æ8¯¹¿Òò1
-[	cpp:S5025R":Rewrite the code so that you no longer need this "delete".(ÃÜïøÿÿÿÿ8¯¹¿Òò1
-[	cpp:S5025S":Rewrite the code so that you no longer need this "delete".(±ßßİûÿÿÿÿ8¯¹¿Òò1
-[	cpp:S5025T":Rewrite the code so that you no longer need this "delete".(ââĞ¢ùÿÿÿÿ8°¹¿Òò1
-kcpp:S836"*Called C++ object pointer is uninitialized(¥Ïæ¤8×€Ë÷ñ1J$c9a4684e-ea9b-4187-b859-48d94168f44b
-]cpp:S125"Remove the commented out code.(Ğ†ñüÿÿÿÿJ$2aab385d-e259-4322-b5de-5734b38819e1
+}	cpp:S1238";Pass expensive to copy object "name" by reference to const.(îãä’8ÜşÊ÷ñ1J$af61116c-5ab1-445f-bd7f-8cf73cd3e81b
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Ç¶¶–şÿÿÿÿJ$fd6d706c-0d2e-4de5-8c1d-dad52fc462ec
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÈÊìJ$0ebf7396-9da9-4919-b5d9-a3da3a2ac23b
+‘	cpp:S5025'"QReplace the use of "new" with an operation that automatically manages the memory.(şÚÍÖûÿÿÿÿJ$53d2854d-2c82-4c14-b762-dc7731f07322
+˜	cpp:S5025/"QReplace the use of "new" with an operation that automatically manages the memory.(†»÷ùÿÿÿÿ8ˆ©™õñ1J$8596cf01-c10e-4def-91ef-b9d2d5249256
+n	cpp:S5827G"'Replace the redundant type with "auto".(ƒ‘Ç¡ùÿÿÿÿ8ˆ¿Â÷ñ1J$1e98db93-6855-48ed-abef-ee5c7f34d6b2
+˜	cpp:S5025G"QReplace the use of "new" with an operation that automatically manages the memory.(ƒ‘Ç¡ùÿÿÿÿ8‰¿Â÷ñ1J$0c6fc604-98d7-4a17-bea0-3eedd4795d22
+|	cpp:S5025R":Rewrite the code so that you no longer need this "delete".(âù¬Æ8°¹¿Òò1J$6cd1839c-44a4-4913-826e-af4a48f2d2a8
+[	cpp:S5025V":Rewrite the code so that you no longer need this "delete".(ÃÜïøÿÿÿÿ8Ğ§ßÓò1
+[	cpp:S5025Z":Rewrite the code so that you no longer need this "delete".(±ßßİûÿÿÿÿ8Ğ§ßÓò1
+[	cpp:S5025^":Rewrite the code so that you no longer need this "delete".(ââĞ¢ùÿÿÿÿ8Ñ§ßÓò1
+kcpp:S836"*Called C++ object pointer is uninitialized(¥Ïæ¤8×€Ë÷ñ1J$ff8ea91d-87fc-48c5-9b65-cddccf1892b4
+]cpp:S125"Remove the commented out code.(Ğ†ñüÿÿÿÿJ$64dcf2c8-9f34-4fae-8cc3-9ca3619b4207

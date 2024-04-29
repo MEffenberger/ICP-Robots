@@ -55,5 +55,8 @@ void Timer::continueTimer() {
 }
 
 Timer::~Timer() {
+    if (timer != nullptr){
     delete timer;
+    timer = nullptr;
+    }
 }

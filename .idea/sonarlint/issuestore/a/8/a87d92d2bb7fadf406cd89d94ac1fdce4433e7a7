@@ -1,6 +1,8 @@
 
-q	cpp:S5414"*Don't mix public and private data members.(’µµ…ÿÿÿÿÿ8Á÷’­ò1J$e55c5a74-b0a5-4e28-a21a-576f7252aba1
-q	cpp:S5414/"*Don't mix public and private data members.(µáÎüÿÿÿÿ8“Ú´ùñ1J$d6950982-a41b-4cd9-b70a-88c16490f2f2
-v	cpp:S17092"/Add the "explicit" keyword to this constructor.(îĞÎúüÿÿÿÿ8Òæ”ßñ1J$cc863631-a852-4938-95db-7b293d994869
-9cpp:S125%"Remove the commented out code.(‚é×ê8¶’‚Èò1
-_cpp:S125+"Remove the commented out code.(ˆæ8Ñˆşøñ1J$51d1753e-4f1a-49a4-82ec-5eb33dfd42b3
+q	cpp:S5414"*Don't mix public and private data members.(’µµ…ÿÿÿÿÿ8Á÷’­ò1J$b00319c5-38c1-4359-85d4-d0563c691114
+S	cpp:S3471"2Annotate this function with "override" or "final".(­Ç¤Îıÿÿÿÿ8ññèÓò1
+K	cpp:S54140"*Don't mix public and private data members.(‰‹ø¥ûÿÿÿÿ8óñèÓò1
+K	cpp:S17093"/Add the "explicit" keyword to this constructor.(ñ«˜¨8øñèÓò1
+S	cpp:S34714"2Annotate this function with "override" or "final".(ÈÅ°¾ùÿÿÿÿ8øñèÓò1
+9cpp:S125&"Remove the commented out code.(ƒÇŸ±8ÿòèÓò1
+9cpp:S125,"Remove the commented out code.(ÂñŒí8€óèÓò1
