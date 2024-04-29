@@ -7,10 +7,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("EBS Main Menu");
     this->setFixedSize(QSize(350, 430));
     int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
     if (fontId == -1) {
-        exit(1);
+        exit(EXIT_FAILURE);
     }
     QStringList familyNames = QFontDatabase::applicationFontFamilies(fontId);
     QString fontFamily = familyNames.at(0);

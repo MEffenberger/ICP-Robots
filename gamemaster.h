@@ -36,7 +36,6 @@ private:
     std::vector<int> UserData;
     std::vector<std::pair<int, int>> ObstacleData;
     int timeLimitData;
-    //void parseJson();
     MainWindow *mainWindow;
     MapWindow *mapWindow;
     QJsonArray *mapData;
