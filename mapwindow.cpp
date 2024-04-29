@@ -13,7 +13,7 @@ MapWindow::MapWindow(QWidget *parent) :
 
     int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
     if (fontId == -1) {
-        exit(1);
+        exit(EXIT_FAILURE);
     }
     QStringList familyNames = QFontDatabase::applicationFontFamilies(fontId);
     QString fontFamily = familyNames.at(0);
@@ -313,21 +313,17 @@ void MapWindow::updateTimer(){
 void MapWindow::updateObstacleCounter() {
     QVariant currentData = ui->levelComboBox->currentData();
     int obstaclesLeft = currentData.value<QPair<int, int>>().first - obstacleCount; // Calculate how many obstacles are left
-    //int obstaclesLeft = ui->levelComboBox->currentData().toInt() - obstacleCount; // Calculate how many obstacles are left
-    //qDebug() << "Obstacles left: " << ui->levelComboBox->currentData().toInt();
     ui->ObstacleLabel->setText(QString("Obstacles left: %1").arg(obstaclesLeft));
 }
 
 void MapWindow::updateControlledRobotCounter() {
     int robotsLeft = 1 - controlledRobotsCount;
-    //qDebug() << "Obstacles left: " << ui->levelComboBox->currentData().toInt();
     ui->RobotLabel->setText(QString("Robots left: %1").arg(robotsLeft));
 }
 
 void MapWindow::updateEnemyCounter() {
     QVariant currentData = ui->levelComboBox->currentData();
     int enemyLeft = currentData.value<QPair<int, int>>().second - enemyCount; 
-    //qDebug() << "Obstacles left: " << ui->levelComboBox->currentData().toInt();
     ui->EnemyLabel->setText(QString("Enemies left: %1").arg(enemyLeft));
 }
 
@@ -348,7 +344,13 @@ void MapWindow::disableEditing() {
 }
 
 void MapWindow::toggleObstaclePlacement() {
-    if(placingRobot || placingEnemy) return; 
+    if(placingRobot){
+        placingRobot = false;
+        ui->pushButton_robot->setStyleSheet("");
+    } else if(placingEnemy){
+        placingEnemy = false;
+        ui->pushButton_enemy->setStyleSheet("");
+    }
     placingObstacle = !placingObstacle;  // Toggle the placement mode
 
     if (placingObstacle) {
@@ -362,7 +364,13 @@ void MapWindow::toggleObstaclePlacement() {
 }
 
 void MapWindow::toggleRobotPlacement() {
-    if(placingObstacle || placingEnemy) return; // Exit if we're not in robot placement mode
+    if(placingObstacle){
+        placingObstacle = false;
+        ui->pushButton->setStyleSheet("");
+    } else if(placingEnemy){
+        placingEnemy = false;
+        ui->pushButton_enemy->setStyleSheet("");
+    }
     placingRobot = !placingRobot;  // Toggle the placement mode
 
     if (placingRobot) {
@@ -376,7 +384,13 @@ void MapWindow::toggleRobotPlacement() {
 }
 
 void MapWindow::toggleEnemyPlacement() {
-    if(placingObstacle || placingRobot) return; // Exit if we're not in robot placement mode
+    if(placingObstacle){
+        placingObstacle = false;
+        ui->pushButton->setStyleSheet("");
+    } else if(placingRobot){
+        placingRobot = false;
+        ui->pushButton_robot->setStyleSheet("");
+    }
     placingEnemy = !placingEnemy;  // Toggle the placement mode
 
     if (placingEnemy) {
@@ -425,50 +439,50 @@ void MapWindow::handleCellClicked(int row, int column) {
                 obstacleCount++; // Increment the obstacle count
                 ui->tableWidget->setItem(row, column, obstacleItem);
             }
-        updateObstacleCounter(); // Update the display to show how many obstacles are left
+            updateObstacleCounter(); // Update the display to show how many obstacles are left
         }
     } else if (placingRobot) {
         RobotItem *robotItem = dynamic_cast<RobotItem*>(item);
-            if (robotItem) {
-                robotItem->setBackground(QBrush()); // Unset the background
-                controlledRobotsCount--; // Decrement the robot count
-                QTableWidgetItem *defaultItem = new QTableWidgetItem();
-                defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
-                ui->tableWidget->setItem(row, column, defaultItem);
+        if (robotItem) {
+            robotItem->setBackground(QBrush()); // Unset the background
+            controlledRobotsCount--; // Decrement the robot count
+            QTableWidgetItem *defaultItem = new QTableWidgetItem();
+            defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
+            ui->tableWidget->setItem(row, column, defaultItem);
 
-                updateControlledRobotCounter();
-            } else {
-                if (dynamic_cast<EnemyItem*>(item) || dynamic_cast<ObstacleItem*>(item)) {
-                    return; 
-                }
-
-                if (controlledRobotsCount < 1) {
-                    RobotItem *robotItem = new RobotItem();
-                    CustomDialog dialog(this, true);
-                    if (dialog.exec() == QDialog::Accepted) {
-                        int orientation = dialog.getOrientation();
-                        int velocity = dialog.getVelocity();
-
-                        robotItem->setOrientation(orientation);
-                        robotItem->setVelocity(velocity);
-
-                        QPixmap pixmap("../images/user3.png");
-                        QTransform transform;
-                        transform.rotate(orientation);
-                        pixmap = pixmap.transformed(transform);
-                        robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-                        robotItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
-                                                                     ui->tableWidget->rowHeight(row),
-                                                                     Qt::IgnoreAspectRatio,
-                                                                     Qt::SmoothTransformation)));
-                        
-                        controlledRobotsCount++; // Increment the robot count
-                    }
-                    robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-                    ui->tableWidget->setItem(row, column, robotItem);
-                }
-                updateControlledRobotCounter();
+            updateControlledRobotCounter();
+        } else {
+            if (dynamic_cast<EnemyItem*>(item) || dynamic_cast<ObstacleItem*>(item)) {
+                return; 
             }
+
+            if (controlledRobotsCount < 1) {
+                RobotItem *robotItem = new RobotItem();
+                CustomDialog dialog(this, true);
+                if (dialog.exec() == QDialog::Accepted) {
+                    int orientation = dialog.getOrientation();
+                    int velocity = dialog.getVelocity();
+
+                    robotItem->setOrientation(orientation);
+                    robotItem->setVelocity(velocity);
+
+                    QPixmap pixmap("../images/user3.png");
+                    QTransform transform;
+                    transform.rotate(orientation);
+                    pixmap = pixmap.transformed(transform);
+                    robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
+                    robotItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
+                                                                    ui->tableWidget->rowHeight(row),
+                                                                    Qt::IgnoreAspectRatio,
+                                                                    Qt::SmoothTransformation)));
+                    
+                    controlledRobotsCount++; // Increment the robot count
+                }
+                robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
+                ui->tableWidget->setItem(row, column, robotItem);
+            }
+            updateControlledRobotCounter();
+        }
     } else if(placingEnemy){
         QVariant currentData = ui->levelComboBox->currentData();
         int enemies = currentData.value<QPair<int, int>>().second;
@@ -515,7 +529,7 @@ void MapWindow::handleCellClicked(int row, int column) {
                 enemyItem->setFlags(enemyItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
                 ui->tableWidget->setItem(row, column, enemyItem);
             }
-                updateEnemyCounter();
+            updateEnemyCounter();
         }
     }
 }
