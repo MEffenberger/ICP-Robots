@@ -76,3 +76,10 @@ QGraphicsTextItem* PopUp::createTextItem(const QString& text, const QString& fon
     item->setDefaultTextColor(color);
     return item;
 }
+
+PopUp::~PopUp() {
+    delete exitButton;
+    delete restartButton;
+    delete resumeButton;
+    delete mainMenuButton;
+}

@@ -52,3 +52,4 @@ void Button::setBorderWidth(int width) {
     }
     this->setPen(pen);
 }
+

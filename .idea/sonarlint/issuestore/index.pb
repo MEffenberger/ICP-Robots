@@ -82,3 +82,6 @@ Q.idea/sonarlint/securityhotspotstore/d/1/d122e5217730f0193bdb70d7308661579248e3
 gamemaster.h,7\5\759cbe0a42f1a5fb1e876aac949e546eb52a1ec7
 >
 gamemaster.cpp,2\c\2c3129879de02eed5518f3b1c5dd69da926b9ac4
+:
+
+gameinfo.h,b\7\b7572b6b9117d5736984f93781815c554a91a988

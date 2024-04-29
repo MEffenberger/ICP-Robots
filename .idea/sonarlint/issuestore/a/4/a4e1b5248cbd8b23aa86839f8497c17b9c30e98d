@@ -1,10 +1,4 @@
 
-dcpp:S125G"Remove the commented out code.(ÎÁîÓùÿÿÿÿ8ê¨ò1J$aea1ac46-5863-4bc8-96f2-560c85c7acc5
->cpp:S125G"Remove the commented out code.(ÎÁîÓùÿÿÿÿ8µ’‚Èò1
->cpp:S125G"Remove the commented out code.(ÎÁîÓùÿÿÿÿ8ÆŞƒÈò1
-Z	cpp:S4962"Use the "nullptr" literal.(ùµüšøÿÿÿÿJ$107bf542-9b02-4c8f-9f54-31803d9ccaa2
->cpp:S125G"Remove the commented out code.(ÎÁîÓùÿÿÿÿ8“À„Èò1
->cpp:S125G"Remove the commented out code.(ÎÁîÓùÿÿÿÿ8Û­…Èò1
-ˆ	cpp:S35392"ARemove this access specifier; it does not affect any declaration.(±ãÕËşÿÿÿÿ8®ıÛ¥ò1J$1366c6c5-82b2-4f05-9c54-6032b15f7b15
-;	cpp:S4962"Use the "nullptr" literal.(ùµüšøÿÿÿÿ8²‡Èò1
->cpp:S125G"Remove the commented out code.(ÎÁîÓùÿÿÿÿ8ï²‡Èò1
+ˆ	cpp:S35392"ARemove this access specifier; it does not affect any declaration.(±ãÕËşÿÿÿÿ8®ıÛ¥ò1J$0ea806cf-32a6-452f-851d-68dbaf6425c6
+Z	cpp:S4962"Use the "nullptr" literal.(ùµüšøÿÿÿÿJ$e6c028d4-3958-4556-8a1e-c5358cbe1cd8
+dcpp:S125G"Remove the commented out code.(ÎÁîÓùÿÿÿÿ8ê¨ò1J$f0e533dd-5a02-45b2-8e46-fd2c6a8626e8

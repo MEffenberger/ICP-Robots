@@ -19,6 +19,7 @@ class Star : public QObject, public QGraphicsEllipseItem {
 Q_OBJECT
 public:
     Star(QGraphicsItem *parent = 0);
+    ~Star() = default;
 public slots:
     void move();
 

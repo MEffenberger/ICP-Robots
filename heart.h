@@ -19,6 +19,7 @@ class Heart : public QObject, public QGraphicsRectItem {
     Q_OBJECT
 public:
     explicit Heart(QGraphicsItem *parent = 0);
+    ~Heart() = default;
 public slots:
     void setDead();
 };

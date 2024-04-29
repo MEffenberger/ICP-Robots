@@ -207,15 +207,62 @@ void GameMaster::resumeTheGame() {
 }
 
 void GameMaster::exitGame() {
+    cleanUp();
     QApplication::quit();
 }
 
 void GameMaster::headtoMainMenu() {
+    cleanUp();
     this->view->close();
     run();
 }
 
 void GameMaster::restartGame() {
-    this->view->close();
+    qDebug() << "Restarting game";
+    cleanUp();
+    qDebug() << "Cleaned up";
+    //this->view->close();
     startGame();
+}
+void GameMaster::cleanUp() {
+
+    for (auto enemy : enemies) {
+        delete enemy;
+    }
+    qDebug() << "Deleted enemies";
+
+    for (auto obstacle : obstacles) {
+        delete obstacle;
+    }
+    qDebug() << "Deleted obstacles";
+
+    delete this->view;
+    qDebug() << "Deleted view";
+
+    delete this->popup3;
+    qDebug() << "Deleted popup3";
+
+    delete this->popup2;
+    qDebug() << "Deleted popup2";
+
+    delete this->popup;
+    qDebug() << "Deleted popup";
+
+    delete this->upperBar;
+    qDebug() << "Deleted upper bar";
+
+    delete this->lowerBar;
+    qDebug() << "Deleted lower bar";
+
+    delete this->user;
+    qDebug() << "Deleted user";
+
+    delete this->scene;
+    qDebug() << "Deleted scene";
+
+//    delete this->mapWindow;
+//    qDebug() << "Deleted map window";
+//
+//    delete this->mainWindow;
+//    qDebug() << "Deleted main window";
 }

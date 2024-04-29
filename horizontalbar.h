@@ -28,6 +28,7 @@ class HorizontalUpperBar : public QObject, public QGraphicsRectItem {
 Q_OBJECT
 public:
     HorizontalUpperBar(User *user, int timeLimit);
+    ~HorizontalUpperBar();
     Button *pauseButton;
     Timer *timer;
 
@@ -48,6 +49,7 @@ class HorizontalLowerBar : public QObject, public QGraphicsRectItem {
 Q_OBJECT
 public:
     HorizontalLowerBar(User *user);
+    ~HorizontalLowerBar();
     QGraphicsRectItem *Autopilot;
 private:
     int width{};
@@ -58,7 +60,6 @@ private:
     Button *KeyboardButton;
 
     User *userPtr;
-    Heart *Heart1;
 
 protected:
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;

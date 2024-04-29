@@ -20,6 +20,7 @@ class User : public QObject, public QGraphicsEllipseItem
 Q_OBJECT
 public:
     User(QGraphicsItem *parent = 0,  int orientation = 0, int velocity = 5);
+    ~User();
     void keyPressEvent(QKeyEvent *event);
     QGraphicsEllipseItem *visionPoint;
 

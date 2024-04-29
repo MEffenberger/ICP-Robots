@@ -16,6 +16,7 @@ class Obstacle : public QGraphicsRectItem
 {
 public:
     Obstacle(QGraphicsItem *parent = 0);
+    ~Obstacle() = default;
 
 };
 

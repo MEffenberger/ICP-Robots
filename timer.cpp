@@ -53,3 +53,7 @@ void Timer::stopTimer() {
 void Timer::continueTimer() {
     timer->start(internalTimer);
 }
+
+Timer::~Timer() {
+    delete timer;
+}

@@ -68,6 +68,7 @@ private slots:
     void exitGame();
     void headtoMainMenu();
     void restartGame();
+    void cleanUp();
 };
 
 

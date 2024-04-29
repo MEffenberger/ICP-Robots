@@ -27,6 +27,7 @@ class PopUp : public QObject, public QGraphicsRectItem {
 Q_OBJECT
 public:
     PopUp(QGraphicsItem *parent = 0, std::string name = "");
+    ~PopUp();
     Button *exitButton;
     Button *restartButton;
     Button *resumeButton;

@@ -276,3 +276,17 @@ void User::resumeAllTimers() {
     CounterClockwiseTimer->start();
     coolDown->start(remainingCoolDownTime);
 }
+
+User::~User() {
+    delete StunnedTimer;
+    delete ForwardTimer;
+    delete ClockwiseTimer;
+    delete CounterClockwiseTimer;
+    delete coolDown;
+    if (stars.size() > 0) {
+        foreach (Star *star, stars) {
+            delete star;
+        }
+    }
+    delete visionPoint;
+}

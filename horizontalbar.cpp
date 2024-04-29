@@ -74,6 +74,24 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
 
 }
 
+HorizontalLowerBar::~HorizontalLowerBar() {
+    delete ForwardButton;
+    delete ClockwiseButton;
+    delete CounterClockwiseButton;
+    delete KeyboardButton;
+    delete Autopilot;
+}
+
+void HorizontalLowerBar::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
+    if (Autopilot->contains(event->pos())) {
+        qDebug() << "Autopilot button is released";
+        emit userPtr->switchControl();
+    }
+}
+
+
+
+
 HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
     width = 1200;
     height = 100;
@@ -114,9 +132,11 @@ HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
 
 }
 
-void HorizontalLowerBar::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
-    if (Autopilot->contains(event->pos())) {
-        qDebug() << "Autopilot button is released";
-        emit userPtr->switchControl();
-    }
+HorizontalUpperBar::~HorizontalUpperBar() {
+    delete Heart1;
+    delete Heart2;
+    delete Heart3;
+    delete gameInfo;
+    delete timer;
+    delete pauseButton;
 }

@@ -318,3 +318,12 @@ void Enemy::resumeAllTimers() {
     stuckTimer->start(remainingStuckTime);
     chaseTimer->start(remainingChaseTime);
 }
+
+Enemy::~Enemy() {
+    delete movementTimer;
+    delete stuckTimer;
+    delete chaseTimer;
+    delete visionPoint;
+    delete visionField;
+    delete armor;
+}

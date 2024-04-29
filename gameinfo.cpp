@@ -42,3 +42,7 @@ void GameInfo::resetMessage() {
     setDefaultTextColor(QColor(0, 255, 0)); // Reset the color
     timer->stop();
 }
+
+GameInfo::~GameInfo() {
+    delete timer;
+}

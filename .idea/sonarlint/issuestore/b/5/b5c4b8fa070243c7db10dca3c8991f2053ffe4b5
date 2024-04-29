@@ -1,10 +1,6 @@
 
-?	cpp:S1117"*declaration shadows a field of 'RobotItem'(óËœÒ
-?	cpp:S1117"*declaration shadows a field of 'RobotItem'(ğ¤¸’
-D	cpp:S1117"*declaration shadows a field of 'RobotItem'(²Í›úÿÿÿÿ
-D	cpp:S1117!"*declaration shadows a field of 'RobotItem'(öïÀıÿÿÿÿ
+?	cpp:S1117"*declaration shadows a field of 'RobotItem'(óËœÒ
+D	cpp:S1117"*declaration shadows a field of 'RobotItem'(öïÀıÿÿÿÿ
 p	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(ÈÇÉùÿÿÿÿ
 C	cpp:S5817")This function should be declared "const".(‚ÉÌÜøÿÿÿÿ
-C	cpp:S5817	")This function should be declared "const".(¨äÀ½øÿÿÿÿ
->	cpp:S5817")This function should be declared "const".(Š©à“
-C	cpp:S5817")This function should be declared "const".(ıŸîèüÿÿÿÿ
+C	cpp:S5817	")This function should be declared "const".(ıŸîèüÿÿÿÿ

@@ -28,9 +28,9 @@ class Enemy : public QObject, public QGraphicsEllipseItem
 Q_OBJECT
 public:
     Enemy(QGraphicsItem *parent = 0, User *user = nullptr, int distance = 3, int orientation = 0, int velocity = 3, int rotationAngle = 30);
+    ~Enemy();
 private:
     QGraphicsEllipseItem *visionPoint;
-    QGraphicsRectItem *visionRect;
     QGraphicsPolygonItem *visionField;
     QGraphicsEllipseItem *armor;
     QTimer *movementTimer;

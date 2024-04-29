@@ -26,7 +26,7 @@ class Button : public QObject, public QGraphicsRectItem {
 
 public:
     explicit Button(const QPixmap& pixmap, std::string name, QGraphicsItem *parent = 0, qreal x = 0, qreal y = 0);
-
+    ~Button() = default;
 signals:
     void pressed();
     void released();
@@ -39,7 +39,6 @@ protected:
 
 private:
     std::string name;
-    QTimer *timer;
     QRectF autoPilotPosition;
 
 public slots:
