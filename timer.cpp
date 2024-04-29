@@ -38,6 +38,7 @@ void Timer::pauseTimer() {
     }
 
     setPlainText(QString::number(time) + QString(" / ") + QString::number(timeLimit));
+    timer->start(1000);
     if (time == timeLimit) {
         timer->stop();
         emit timeIsUp();
