@@ -149,6 +149,9 @@ bool GameMaster::mainEvent(){
     connect(upperBar->pauseButton, &Button::released, popup3, &PopUp::show);
     connect(popup3->resumeButton, &Button::released, popup3, &PopUp::hide);
     connect(popup3->resumeButton, &Button::released, this, &GameMaster::resumeTheGame);
+    connect(popup3->restartButton, &Button::released, this, &GameMaster::restartGame);
+    connect(popup3->mainMenuButton, &Button::released, this, &GameMaster::headtoMainMenu);
+    connect(popup3->exitButton, &Button::released, this, &GameMaster::exitGame);
 
     for (std::pair<int, int> obstacle : ObstacleData) {
         Obstacle *brick = new Obstacle();
@@ -191,4 +194,18 @@ void GameMaster::resumeTheGame() {
     for (Enemy *enemy : enemies) {
         enemy->resumeAllTimers();
     }
+}
+
+void GameMaster::exitGame() {
+    QApplication::quit();
+}
+
+void GameMaster::headtoMainMenu() {
+    this->view->close();
+    run();
+}
+
+void GameMaster::restartGame() {
+    this->view->close();
+    startGame();
 }

@@ -66,8 +66,9 @@ private slots:
     bool mainEvent();
     void pauseTheGame();
     void resumeTheGame();
-
-
+    void exitGame();
+    void headtoMainMenu();
+    void restartGame();
 };
 
 
