@@ -7,12 +7,12 @@
 
 
 void GameMaster::run() {
-
+    qDebug() << "Running";
     this->mainWindow = new MainWindow();
     this->mainWindow->show();
+    qDebug() << "Window shown";
     connect(mainWindow, &MainWindow::createNewMapWindow, this, &GameMaster::createNewMapWindow);
     connect(mainWindow, &MainWindow::loadFile, this, &GameMaster::showJSONpopup);
-
 }
 
 
@@ -62,6 +62,16 @@ bool GameMaster::loadFile() {
     }
     bool userFound = false;
     QJsonArray*  mapData = this->mapData;
+
+    if(this->UserData.size() > 0){
+        UserData.clear();
+    }
+    if(this->ObstacleData.size() > 0){
+        ObstacleData.clear();
+    }
+    if(this->EnemyData.size() > 0){
+        EnemyData.clear();
+    }
     for (const QJsonValueRef &cellValue : *mapData) {
         QJsonObject cellObject = cellValue.toObject();
         QString type = cellObject["type"].toString();
@@ -111,19 +121,20 @@ bool GameMaster::mainEvent(){
     if(!loadFile()){
         return false;
     }
+    qDebug() << "Here1";
     this->scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, 1200, 800);
-
+    qDebug() << "Here2";
     QPixmap background("../images/bg.png");
     background = background.scaled(scene->width(), scene->height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     scene->setBackgroundBrush(background);
-
+    qDebug() << "Here3";
     this->user = new User(nullptr, UserData[2], UserData[3]);
     scene->addItem(user);
     user->setFlag(QGraphicsItem::ItemIsFocusable); // construktor?
     user->setFocus();
     user->setPos(UserData[0], UserData[1] + 100); // Has to be accounted because of the Horizontal Upper Bar
-
+    qDebug() << "Here4";
     this->lowerBar = new HorizontalLowerBar(user);
     scene->addItem(lowerBar);
     lowerBar->setPos(0, 700);
@@ -134,7 +145,7 @@ bool GameMaster::mainEvent(){
     upperBar->setPos(0, 0);
     upperBar->setZValue(5);
     connect(upperBar->pauseButton, &Button::pressed, this, &GameMaster::pauseTheGame);
-
+    qDebug() << "Here5";
     this->popup = new PopUp(nullptr, "gameover");
     scene->addItem(popup);
     popup->setPos(scene->width()/2 - popup->rect().width()/2, scene->height()/2 - popup->rect().height()/2);
@@ -162,14 +173,14 @@ bool GameMaster::mainEvent(){
     connect(popup3->restartButton, &Button::pressed, this, &GameMaster::restartGame);
     connect(popup3->mainMenuButton, &Button::pressed, this, &GameMaster::headtoMainMenu);
     connect(popup3->exitButton, &Button::pressed, this, &GameMaster::exitGame);
-
+    qDebug() << "Here6";
     for (std::pair<int, int> obstacle : ObstacleData) {
         Obstacle *brick = new Obstacle();
         obstacles.push_back(brick);
         scene->addItem(brick);
         brick->setPos(obstacle.first, obstacle.second + 100);
     }
-
+    qDebug() << "Here7";
     for (std::vector<int> enemak : EnemyData) {
         Enemy *enemy = new Enemy(nullptr, user, enemak[2], enemak[3], enemak[5], enemak[4]);
         enemies.push_back(enemy);
@@ -177,13 +188,15 @@ bool GameMaster::mainEvent(){
         enemy->setPos(enemak[0], enemak[1] + 100);
         QTimer::singleShot(3000, enemy, &Enemy::startAutonomousMovement);
     }
-
+    qDebug() << "Here8";
     this->view = new QGraphicsView(scene);
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setFixedSize(1200, 800);
     user->setFocus();
+    qDebug() << "Here9";
     view->show();
+    qDebug() << "Here10";
     return true;
 }
 
@@ -212,24 +225,16 @@ void GameMaster::exitGame() {
 }
 
 void GameMaster::headtoMainMenu() {
-    cleanUp();
-    //this->view->close();
+    this->view->close();
     run();
 }
 
 void GameMaster::restartGame() {
-    qDebug() << "Restarting game";
-    cleanUp();
-    qDebug() << "Cleaned up";
-    //this->view->close();
-    startGame();
+    this->view->close();
+    mainEvent();
 }
 
 void GameMaster::cleanUp() {
-
-    delete view; view = nullptr;
-    qDebug() << "Deleted view";
-
     for (auto &enemy : enemies) {
         delete enemy;
         qDebug() << "Deleted enemy";
@@ -242,6 +247,7 @@ void GameMaster::cleanUp() {
         delete obstacle;
     }
     obstacles.clear();
+    //UserData.clear(); //SEGFAULTING
     qDebug() << "Deleted all obstacles";
 
     delete popup3; popup3 = nullptr;
@@ -262,9 +268,7 @@ void GameMaster::cleanUp() {
     delete user; user = nullptr;
     qDebug() << "Deleted user";
 
-    delete scene; scene = nullptr;
-    qDebug() << "Deleted scene";
-
-
     qDebug() << "Cleaned up all game elements";
+
+    //TODO? delete sccene and view?
 }
