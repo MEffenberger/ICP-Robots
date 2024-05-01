@@ -21,13 +21,19 @@ namespace Ui {
 class MapWindow;
 }
 
+typedef struct pixmapIcons {
+    QPixmap obstacle;
+    QPixmap robot;
+    QPixmap enemy;
+} pixMapIcons;
+
 class MapWindow : public QWidget {
     Q_OBJECT
 
 public:
     explicit MapWindow(QWidget *parent = nullptr);
     void updateObstacleCounter();
-    void updateControlledRobotCounter();
+    void updateRobotCounter();
     void updateEnemyCounter();
     void updateTimer();
     void disableEditing();
@@ -42,25 +48,30 @@ private:
     /// UI of the Map
     Ui::MapWindow *ui;
     QComboBox *levelComboBox;
-    int obstacleCount;
-    int controlledRobotsCount;
-    int enemyCount;
+    QFont customFont;
+
+    int obstaclesPlaced;
+    int robotsPlaced;
+    int enemiesPlaced;
+
     bool placingObstacle;
     bool placingRobot;
     bool placingEnemy;
     int timeLimit;
     bool printTime;
+    pixMapIcons icons;
 
 private slots:
     void handleCellClicked(int row, int column);
     void toggleObstaclePlacement();
     void toggleRobotPlacement();
     void toggleEnemyPlacement();
-    void updateCounts();
+    void clearMap();
     void saveFile();
     void setTimer();
     void startGame();
     void loadMap();
+    void loadFont();
 };
 
 #endif // MAPWINDOW_H

@@ -15,8 +15,11 @@ RobotParamDialog::RobotParamDialog(QWidget *parent, bool robotExists) : QDialog(
     }
     orientationBox->setRange(0, 360);
     distanceBox->setRange(1, 5);
+    this->distanceBox->setValue(3);
     rotationAngleBox->setRange(-360, 360);
+    this->rotationAngleBox->setValue(45);
     velocityBox->setRange(1, 10);
+    this->velocityBox->setValue(5);
     createLayout();
 }
 

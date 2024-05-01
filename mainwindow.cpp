@@ -36,15 +36,14 @@ void MainWindow::createNewWindow()
 }
 
 void MainWindow::applyGraphics(){
-    this->setWindowTitle("Game main Menu");
+    this->setWindowTitle("Main menu");
     this->setFixedSize(QSize(350, 430));
     int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
     if (fontId == -1) {
         QApplication::quit();
     }
-    QStringList familyNames = QFontDatabase::applicationFontFamilies(fontId);
-    QString fontFamily = familyNames.at(0);
-    QString styleSheet = QString("font-family: %1; color: rgb(255, 255, 255); background-image: url(../images/bar.png);").arg(fontFamily);
+    QString fontFamily = QFontDatabase::applicationFontFamilies(fontId).at(0);
+    QString styleSheet = QString("font-family: %1; color: rgb(0, 255, 0); background-image: url(../images/bar.png);").arg(fontFamily);
     ui->createMapButton->setStyleSheet(styleSheet);
     ui->loadMapButton->setStyleSheet(styleSheet);
     ui->exitButton->setStyleSheet(styleSheet);

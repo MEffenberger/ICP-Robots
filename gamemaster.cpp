@@ -22,7 +22,7 @@ void GameMaster::createNewMapWindow() {
     this->mainWindow = nullptr;
     mapWindow->disableEditing();
     mapWindow->updateObstacleCounter();
-    mapWindow->updateControlledRobotCounter();
+    mapWindow->updateRobotCounter();
     mapWindow->updateEnemyCounter();
     mapWindow->updateTimer();
     mapWindow->show();
@@ -75,9 +75,12 @@ bool GameMaster::loadFile() {
     for (const QJsonValueRef &cellValue : *mapData) {
         QJsonObject cellObject = cellValue.toObject();
         QString type = cellObject["type"].toString();
-        QJsonObject attributesObject = cellObject["position"].toObject();
-        int x = attributesObject["x"].toInt();
-        int y = attributesObject["y"].toInt();
+        int x, y;
+        if(type != "TimeLimit"){
+            QJsonObject attributesObject = cellObject["position"].toObject();
+            x = attributesObject["x"].toInt();
+            y = attributesObject["y"].toInt();
+        }
         if (type == "Robot") {
             userFound = true;
             UserData.push_back(x);
@@ -194,6 +197,7 @@ bool GameMaster::mainEvent(){
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setFixedSize(1200, 800);
     user->setFocus();
+    user->setFlag(QGraphicsItem::ItemIsFocusable);
     qDebug() << "Here9";
     view->show();
     qDebug() << "Here10";

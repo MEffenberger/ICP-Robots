@@ -10,71 +10,63 @@ MapWindow::MapWindow(QWidget *parent) :
     ui(new Ui::MapWindow)
 {
     ui->setupUi(this);
+    //Set window name
     this->setWindowTitle("Robot Map Creator");
-    
+    //Load custom font to be used in the application
+    loadFont();
+    //Add icons to the structure
+    icons.obstacle = QPixmap("../images/obstacle.png");
+    icons.robot = QPixmap("../images/user3.png");
+    icons.enemy = QPixmap("../images/enemy2.png");
 
-    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
-    if (fontId == -1) {
-        exit(EXIT_FAILURE);
-    }
-    QStringList familyNames = QFontDatabase::applicationFontFamilies(fontId);
-    QString fontFamily = familyNames.at(0);
-    QFont customFont(fontFamily);
-    
-    
+    //connect the signals to the slots
     connect(ui->tableWidget, &QTableWidget::cellClicked, this, &MapWindow::handleCellClicked);
+    connect(ui->pushButton, &QPushButton::clicked, this, &MapWindow::toggleObstaclePlacement);
+    connect(ui->levelComboBox, &QComboBox::currentTextChanged, this, &MapWindow::clearMap);
+    connect(ui->pushButton_robot, &QPushButton::clicked, this, &MapWindow::toggleRobotPlacement);
+    connect(ui->pushButton_enemy, &QPushButton::clicked, this, &MapWindow::toggleEnemyPlacement);
+    connect(ui->pushButtonSave, &QPushButton::clicked, this, &MapWindow::saveFile);
+    connect(ui->pushButtonTimer, &QPushButton::clicked, this, &MapWindow::setTimer);
+    connect(ui->pushButtonStart, &QPushButton::clicked, this, &MapWindow::startGame);
+    connect(ui->pushButtonMap, &QPushButton::clicked, this, &MapWindow::loadMap);
+
+    //Set the widget table properties
+    setFixedSize(QSize(1200, 720));
     ui->tableWidget->verticalHeader()->setVisible(false); // Hides the row numbers
     ui->tableWidget->horizontalHeader()->setVisible(false); // Hides the column letters/numbers
     QString styleSheet = "QTableWidget { background-image: url(../images/bg.png); }";
     ui->tableWidget->setStyleSheet(styleSheet);
-    setFixedSize(QSize(1200, 720));
-
-    //setStyleSheet("background-color: #000000;"); // Replace #f0f0f0 with the desired background color
-
-    QIcon myIcon("../images/obstacle.png");
-    ui->pushButton->setIcon(myIcon);
-    ui->pushButton->setIconSize(QSize(40, 40));
     
-    //ui->pushButton->setCheckable(true);
-    connect(ui->pushButton, &QPushButton::clicked, this, &MapWindow::toggleObstaclePlacement);
-    this->obstacleCount = 0;
+    // Set the initial values of the variables
+    this->obstaclesPlaced = 0;
     this->placingObstacle = false;
     this->placingRobot = false;
     this->placingEnemy = false;
-    this->controlledRobotsCount = 0;
-    this->enemyCount = 0;
+    this->robotsPlaced = 0;
+    this->enemiesPlaced = 0;
     this->timeLimit = 60;
     this->printTime = true;
-    //
+
+    //Add levels to the box
     ui->levelComboBox->addItem("Level 1", QVariant::fromValue(QPair<int, int>(10, 3)));
     ui->levelComboBox->addItem("Level 2", QVariant::fromValue(QPair<int, int>(15, 4)));
     ui->levelComboBox->addItem("Level 3", QVariant::fromValue(QPair<int, int>(20, 5)));
-    connect(ui->levelComboBox, &QComboBox::currentTextChanged, this, &MapWindow::updateCounts);
-    //
-    //
-    QIcon robotIcon("../images/user3.png");
-    ui->pushButton_robot->setIcon(robotIcon);
+    
+    //Apply obstacle icon
+    ui->pushButton->setIcon(this->icons.obstacle);
+    ui->pushButton->setIconSize(QSize(40, 40));
+
+    //Apply robot icon
+    ui->pushButton_robot->setIcon(this->icons.robot);
     ui->pushButton_robot->setIconSize(QSize(40, 40));
     ui->pushButton_robot->setStyleSheet("QPushButton { border-radius: 20px; }");
-    connect(ui->pushButton_robot, &QPushButton::clicked, this, &MapWindow::toggleRobotPlacement);
-    //
-    QIcon enemyIcon("../images/enemy2.png");
-    ui->pushButton_enemy->setIcon(enemyIcon);
+    
+    //Apply enemy robot icon
+    ui->pushButton_enemy->setIcon(this->icons.enemy);
     ui->pushButton_enemy->setIconSize(QSize(40, 40));
     ui->pushButton_enemy->setStyleSheet("QPushButton { border-radius: 20px; }");
-    connect(ui->pushButton_enemy, &QPushButton::clicked, this, &MapWindow::toggleEnemyPlacement);
-    //
-    connect(ui->pushButtonSave, &QPushButton::clicked, this, &MapWindow::saveFile);
-    ui->pushButtonSave->setFont(customFont);
-    connect(ui->pushButtonTimer, &QPushButton::clicked, this, &MapWindow::setTimer);
-    ui->pushButtonTimer->setFont(customFont);
-    connect(ui->pushButtonStart, &QPushButton::clicked, this, &MapWindow::startGame);
-    ui->pushButtonStart->setFont(customFont);
-    connect(ui->pushButtonMap, &QPushButton::clicked, this, &MapWindow::loadMap);
-    ui->pushButtonMap->setFont(customFont);
-
-    //
-
+    
+    //Set up the top and bottom bars to hold the buttons
     QFrame* barTop = new QFrame(this);
     barTop->setStyleSheet("background-image: url(../images/bar.png);");
     barTop->setGeometry(QRect(0, 0, 1231, 61));
@@ -89,14 +81,13 @@ MapWindow::MapWindow(QWidget *parent) :
     ui->pushButton_enemy->setParent(barTop);
     ui->pushButton->setParent(barTop);
 
-    ui->pushButtonTimer->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    ui->MapLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    ui->ObstacleLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    ui->DurationLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    ui->EnemyLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    ui->RobotLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(fontFamily));
-    //ui->levelComboBox->setStyleSheet(QString("font-family: %1; color: rgb(0, 0, 255);").arg(fontFamily));
-    ui->levelComboBox->setStyleSheet(QString("font-family: %1; color: rgb(0, 0, 255); background-color: transparent;").arg(fontFamily));
+    ui->pushButtonTimer->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(customFont.family()));
+    ui->MapLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(customFont.family()));
+    ui->ObstacleLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(customFont.family()));
+    ui->DurationLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(customFont.family()));
+    ui->EnemyLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(customFont.family()));
+    ui->RobotLabel->setStyleSheet(QString("font-family: %1; color: rgb(0, 255, 0);").arg(customFont.family()));
+    ui->levelComboBox->setStyleSheet(QString("font-family: %1; color: rgb(0, 0, 255); background-color: transparent;").arg(customFont.family()));
 
     
     QFrame* barBottom = new QFrame(this);
@@ -108,21 +99,28 @@ MapWindow::MapWindow(QWidget *parent) :
     ui->pushButtonMap->setParent(barBottom);
     // Set the geometry of the buttons to position them on the bar
     ui->pushButtonSave->setGeometry(QRect(1000, 10, 191, 41));
-    ui->pushButtonSave->setStyleSheet(QString("font-family: %1; color: rgb(255, 255, 0);").arg(fontFamily));
+    ui->pushButtonSave->setStyleSheet(QString("font-family: %1; color: rgb(255, 255, 0);").arg(customFont.family()));
     ui->pushButtonStart->setGeometry(QRect(455, 10, 231, 41));
-    ui->pushButtonStart->setStyleSheet(QString("font-family: %1; color: rgb(255, 0, 0);").arg(fontFamily));
+    ui->pushButtonStart->setStyleSheet(QString("font-family: %1; color: rgb(255, 0, 0);").arg(customFont.family()));
     ui->pushButtonMap->setGeometry(QRect(10, 10, 131, 41));
-    ui->pushButtonMap->setStyleSheet(QString("font-family: %1; color: rgb(255, 255, 0);").arg(fontFamily));
+    ui->pushButtonMap->setStyleSheet(QString("font-family: %1; color: rgb(255, 255, 0);").arg(customFont.family()));
 }
 
-void MapWindow::updateCounts(){
+void MapWindow::clearMap(){
+    //Clear the map
     ui->tableWidget->clear();
-    obstacleCount = 0;
-    controlledRobotsCount = 0;
-    enemyCount = 0;
+
+    //Set used variables to 0
+    obstaclesPlaced = 0;
+    robotsPlaced = 0;
+    enemiesPlaced = 0;
+
+    //Default time limit
     timeLimit = 60;
+
+    //Update counters
     updateObstacleCounter();
-    updateControlledRobotCounter();
+    updateRobotCounter();
     updateEnemyCounter();
     updateTimer();
 }
@@ -198,10 +196,21 @@ void MapWindow::startGame(){
     emit startSession();
 }
 
+void MapWindow::loadFont(){
+    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    if (fontId == -1) {
+        exit(EXIT_FAILURE);
+    }
+    QStringList familyNames = QFontDatabase::applicationFontFamilies(fontId);
+    QString fontFamily = QFontDatabase::applicationFontFamilies(fontId).at(0);
+    QFont font(fontFamily);
+    this->customFont = font;
+}
+
 void MapWindow::loadMap(){
-    updateCounts();
+    clearMap();
     QString filename = QFileDialog::getOpenFileName(this, "Load Map", "", "JSON Files (*.json)");
-    if (filename.isEmpty()) return; // Nothing to do
+    if (filename.isEmpty()) return;
 
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -239,7 +248,7 @@ void MapWindow::loadMap(){
                                                          Qt::IgnoreAspectRatio,
                                                          Qt::SmoothTransformation)));
             ui->tableWidget->setItem(row, col, robotItem);
-            controlledRobotsCount++;
+            robotsPlaced++;
             //qDebug() << orientation << rotationAngle << velocity;
             //qDebug() << "X:" << x << "Y:" << y;
         } else if (type == "Obstacle") {
@@ -250,7 +259,7 @@ void MapWindow::loadMap(){
                                                         Qt::IgnoreAspectRatio,
                                                         Qt::SmoothTransformation)));
             ui->tableWidget->setItem(row, col, obstacleItem);
-            obstacleCount++;
+            obstaclesPlaced++;
             // qDebug() << "OBSTACLE\n";
             // qDebug() << "X:" << x << "Y:" << y;
         } else if (type == "Enemy") {
@@ -274,7 +283,7 @@ void MapWindow::loadMap(){
                                                          Qt::IgnoreAspectRatio,
                                                          Qt::SmoothTransformation)));
             ui->tableWidget->setItem(row, col, enemyItem);
-            enemyCount++;
+            enemiesPlaced++;
             // qDebug() << orientation << distance << rotationAngle << velocity;
             // qDebug() << "X:" << x << "Y:" << y;
         } else if(type == "TimeLimit"){
@@ -285,7 +294,7 @@ void MapWindow::loadMap(){
         }
     }
     updateObstacleCounter();
-    updateControlledRobotCounter();
+    updateRobotCounter();
     updateEnemyCounter();
     updateTimer();
 }
@@ -296,7 +305,7 @@ void MapWindow::saveFile() {
         return;
     }
 
-    // Enforce .json extension (since there's no default suggestion anymore)
+    //Add .json ending
     if (!filename.endsWith(".json", Qt::CaseInsensitive)) {
         filename += ".json"; 
     }
@@ -320,7 +329,7 @@ void MapWindow::saveFile() {
 void MapWindow::setTimer(){
         bool pass;
         int time = QInputDialog::getInt(this, "Set time limit for level",
-                                        "Enter time limit (seconds):", 0, 1, 99, 1, &pass);
+                                        "Enter time limit (seconds):", 60, 1, 180, 1, &pass);
         if (pass && time > 0) {
             this->timeLimit = time;
         } else {
@@ -336,18 +345,18 @@ void MapWindow::updateTimer(){
 
 void MapWindow::updateObstacleCounter() {
     QVariant currentData = ui->levelComboBox->currentData();
-    int obstaclesLeft = currentData.value<QPair<int, int>>().first - obstacleCount; // Calculate how many obstacles are left
+    int obstaclesLeft = currentData.value<QPair<int, int>>().first - obstaclesPlaced; // Calculate how many obstacles are left
     ui->ObstacleLabel->setText(QString("Obstacles left: %1").arg(obstaclesLeft));
 }
 
-void MapWindow::updateControlledRobotCounter() {
-    int robotsLeft = 1 - controlledRobotsCount;
+void MapWindow::updateRobotCounter() {
+    int robotsLeft = 1 - robotsPlaced;
     ui->RobotLabel->setText(QString("Robots left: %1").arg(robotsLeft));
 }
 
 void MapWindow::updateEnemyCounter() {
     QVariant currentData = ui->levelComboBox->currentData();
-    int enemyLeft = currentData.value<QPair<int, int>>().second - enemyCount; 
+    int enemyLeft = currentData.value<QPair<int, int>>().second - enemiesPlaced; 
     ui->EnemyLabel->setText(QString("Enemies left: %1").arg(enemyLeft));
 }
 
@@ -380,7 +389,7 @@ void MapWindow::toggleObstaclePlacement() {
     if (placingObstacle) {
         // Apply a style to highlight the button when obstacle placement is active
         ui->pushButton->setIconSize(QSize(38, 38));
-        ui->pushButton->setStyleSheet("QPushButton { background-color: yellow; border: 2px solid red; }");
+        ui->pushButton->setStyleSheet("QPushButton {border: 2px solid red; }");
     } else {
         // Reset the style when obstacle placement is not active
         ui->pushButton->setStyleSheet("");
@@ -400,7 +409,7 @@ void MapWindow::toggleRobotPlacement() {
     if (placingRobot) {
         // Apply a style to highlight the button when robot placement is active
         ui->pushButton_robot->setIconSize(QSize(38, 38));
-        ui->pushButton_robot->setStyleSheet("QPushButton { background-color: yellow; border: 2px solid red; }");
+        ui->pushButton_robot->setStyleSheet("QPushButton {border: 2px solid red; }");
     } else {
         // Reset the style when robot placement is not active
         ui->pushButton_robot->setStyleSheet("");
@@ -420,7 +429,7 @@ void MapWindow::toggleEnemyPlacement() {
     if (placingEnemy) {
         // Apply a style to highlight the button when robot placement is active
         ui->pushButton_enemy->setIconSize(QSize(38, 38));
-        ui->pushButton_enemy->setStyleSheet("QPushButton { background-color: yellow; border: 2px solid red; }");
+        ui->pushButton_enemy->setStyleSheet("QPushButton {border: 2px solid red; }");
     } else {
         // Reset the style when robot placement is not active
         ui->pushButton_enemy->setStyleSheet("");
@@ -440,73 +449,65 @@ void MapWindow::handleCellClicked(int row, int column) {
         ObstacleItem *obstacleItem = dynamic_cast<ObstacleItem*>(item);
         if (obstacleItem) {
             obstacleItem->setBackground(QBrush()); // Unset the background
-            obstacleCount--; // Decrement the robot count
+            obstaclesPlaced--; // Decrement the robot count
             QTableWidgetItem *defaultItem = new QTableWidgetItem();
             defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
             ui->tableWidget->setItem(row, column, defaultItem);
-
-            updateObstacleCounter();
         } else {
             if (dynamic_cast<EnemyItem*>(item) || dynamic_cast<RobotItem*>(item)) {
                 return;
             }
 
-            if (obstacleCount < obstacles) {
+            if (obstaclesPlaced < obstacles) {
                 ObstacleItem *obstacleItem = new ObstacleItem();
-                QPixmap pixmap("../images/obstacle.png");
+                QPixmap pixmap = this->icons.obstacle;
                 obstacleItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
-                                                            ui->tableWidget->rowHeight(row),
-                                                            Qt::IgnoreAspectRatio,
-                                                            Qt::SmoothTransformation)));
+                                                            ui->tableWidget->rowHeight(row))));
 
                 obstacleItem->setFlags(obstacleItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-                obstacleCount++; // Increment the obstacle count
+                obstaclesPlaced++; // Increment the obstacle count
                 ui->tableWidget->setItem(row, column, obstacleItem);
             }
-            updateObstacleCounter(); // Update the display to show how many obstacles are left
         }
+        updateObstacleCounter();
     } else if (placingRobot) {
         RobotItem *robotItem = dynamic_cast<RobotItem*>(item);
         if (robotItem) {
             robotItem->setBackground(QBrush()); // Unset the background
-            controlledRobotsCount--; // Decrement the robot count
+            robotsPlaced--; // Decrement the robot count
             QTableWidgetItem *defaultItem = new QTableWidgetItem();
             defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
             ui->tableWidget->setItem(row, column, defaultItem);
-
-            updateControlledRobotCounter();
         } else {
             if (dynamic_cast<EnemyItem*>(item) || dynamic_cast<ObstacleItem*>(item)) {
                 return; 
             }
 
-            if (controlledRobotsCount < 1) {
+            if (robotsPlaced < 1) {
                 RobotItem *robotItem = new RobotItem();
-                CustomDialog dialog(this, true);
+                RobotParamDialog dialog(this, true);
                 if (dialog.exec() == QDialog::Accepted) {
                     int orientation = dialog.getOrientation();
-                    int velocity = dialog.getVelocity();
 
                     robotItem->setOrientation(orientation);
-                    robotItem->setVelocity(velocity);
+                    robotItem->setVelocity(dialog.getVelocity());
 
-                    QPixmap pixmap("../images/user3.png");
+                    QPixmap pixmap = this->icons.robot;
                     QTransform transform;
-                    transform.rotate(orientation);
-                    pixmap = pixmap.transformed(transform);
+                    pixmap = pixmap.transformed(transform.rotate(orientation));
                     robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
                     robotItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
-                                                                    ui->tableWidget->rowHeight(row),
-                                                                    Qt::IgnoreAspectRatio,
-                                                                    Qt::SmoothTransformation)));
+                                                                    ui->tableWidget->rowHeight(row))));
                     
-                    controlledRobotsCount++; // Increment the robot count
+                    robotsPlaced++; // Increment the robot count
+                } else {
+                    return;
                 }
                 robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
                 ui->tableWidget->setItem(row, column, robotItem);
             }
-            updateControlledRobotCounter();
         }
+        updateRobotCounter();
     } else if(placingEnemy){
         QVariant currentData = ui->levelComboBox->currentData();
         int enemies = currentData.value<QPair<int, int>>().second;
@@ -514,46 +515,41 @@ void MapWindow::handleCellClicked(int row, int column) {
 
         if (enemyItem) {
                 enemyItem->setBackground(QBrush()); // Unset the background
-                enemyCount--; // Decrement the robot count
+                enemiesPlaced--; // Decrement the robot count
                 QTableWidgetItem *defaultItem = new QTableWidgetItem();
                 defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
                 ui->tableWidget->setItem(row, column, defaultItem);
-                updateEnemyCounter();
         } else {
             if (dynamic_cast<RobotItem*>(item) || dynamic_cast<ObstacleItem*>(item)) {
                 return; 
             }
 
-            if (enemyCount < enemies) {
+            if (enemiesPlaced < enemies) {
                 EnemyItem *enemyItem = new EnemyItem();
-                CustomDialog dialog(this);
+                RobotParamDialog dialog(this);
                 if (dialog.exec() == QDialog::Accepted) {
                     int orientation = dialog.getOrientation();
-                    int distance = dialog.getDistance();
-                    int rotationAngle = dialog.getRotationAngle();
-                    int velocity = dialog.getVelocity();
 
                     enemyItem->setOrientation(orientation);
-                    enemyItem->setDistance(distance);
-                    enemyItem->setRotationAngle(rotationAngle);
-                    enemyItem->setVelocity(velocity);
+                    enemyItem->setDistance(dialog.getDistance());
+                    enemyItem->setRotationAngle(dialog.getRotationAngle());
+                    enemyItem->setVelocity(dialog.getVelocity());
 
-                    QPixmap pixmap("../images/enemy2.png");
+                    QPixmap pixmap = this->icons.enemy;
                     QTransform transform;
-                    transform.rotate(orientation);
-                    pixmap = pixmap.transformed(transform);
+                    pixmap = pixmap.transformed(transform.rotate(orientation));
                     enemyItem->setFlags(enemyItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
                     enemyItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
-                                                                    ui->tableWidget->rowHeight(row),
-                                                                    Qt::IgnoreAspectRatio,
-                                                                    Qt::SmoothTransformation)));
+                                                                  ui->tableWidget->rowHeight(row))));
                     
-                    enemyCount++; // Increment the robot count
+                    enemiesPlaced++; // Increment the robot count
+                } else {
+                    return;
                 }
                 enemyItem->setFlags(enemyItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
                 ui->tableWidget->setItem(row, column, enemyItem);
             }
-            updateEnemyCounter();
         }
+        updateEnemyCounter();
     }
 }
