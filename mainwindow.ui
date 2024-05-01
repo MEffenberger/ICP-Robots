@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="createMapButton">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -27,7 +27,7 @@
      <string>CREATE NEW MAP</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="loadMapButton">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -40,7 +40,7 @@
      <string>LOAD MAP</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
       <x>0</x>

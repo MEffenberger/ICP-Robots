@@ -7,21 +7,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setWindowTitle("EBS Main Menu");
-    this->setFixedSize(QSize(350, 430));
-    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
-    if (fontId == -1) {
-        exit(EXIT_FAILURE);
-    }
-    QStringList familyNames = QFontDatabase::applicationFontFamilies(fontId);
-    QString fontFamily = familyNames.at(0);
-    QString styleSheet = QString("font-family: %1; color: rgb(255, 255, 255); background-image: url(../images/bar.png);").arg(fontFamily);
-    ui->pushButton->setStyleSheet(styleSheet);
-    ui->pushButton_2->setStyleSheet(styleSheet);
-    ui->pushButton_3->setStyleSheet(styleSheet);
-    connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::createNewWindow);
-    connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::loadFile);
-    connect(ui->pushButton_3, &QPushButton::clicked, this, &MainWindow::quitApp);
+    this->applyGraphics();
+    connect(ui->createMapButton, &QPushButton::clicked, this, &MainWindow::createNewWindow);
+    connect(ui->loadMapButton, &QPushButton::clicked, this, &MainWindow::loadFile);
+    connect(ui->exitButton, &QPushButton::clicked, this, &MainWindow::quitApp);
 
 }
 
@@ -44,5 +33,20 @@ void MainWindow::loadGame()
 void MainWindow::createNewWindow()
 {
     emit createNewMapWindow();
+}
+
+void MainWindow::applyGraphics(){
+    this->setWindowTitle("Game main Menu");
+    this->setFixedSize(QSize(350, 430));
+    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    if (fontId == -1) {
+        QApplication::quit();
+    }
+    QStringList familyNames = QFontDatabase::applicationFontFamilies(fontId);
+    QString fontFamily = familyNames.at(0);
+    QString styleSheet = QString("font-family: %1; color: rgb(255, 255, 255); background-image: url(../images/bar.png);").arg(fontFamily);
+    ui->createMapButton->setStyleSheet(styleSheet);
+    ui->loadMapButton->setStyleSheet(styleSheet);
+    ui->exitButton->setStyleSheet(styleSheet);
 }
 

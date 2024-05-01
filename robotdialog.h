@@ -7,22 +7,55 @@
 #include <QPushButton>
 #include <QLabel>
 
-class CustomDialog : public QDialog {
+/**
+ * @brief The RobotParamDialog class
+ * 
+ * This class is used to create a dialog where the user can input the parameters of the robot
+ */
+class RobotParamDialog : public QDialog {
     Q_OBJECT
 
 public:
-    explicit CustomDialog(QWidget *parent = nullptr, bool robotExists = false);
+    explicit RobotParamDialog(QWidget *parent = nullptr, bool robotExists = false);
 
-    int getOrientation() const;
-    int getDistance() const;
-    int getRotationAngle() const;
-    int getVelocity() const;
+    /**
+     * @brief Gets the orientation of the controlled or enemy robot
+     * 
+     * @return int orientation
+     */
+    int getOrientation();
+
+    /**
+     * @brief Gets the distance of the controlled or enemy robot
+     * 
+     * @return int distance
+     */
+    int getDistance();
+
+    /**
+     * @brief Gets the rotation angle of the controlled or enemy robot
+     * 
+     * @return int angle
+     */
+    int getRotationAngle();
+
+    /**
+     * @brief Gets the velocity of the controlled or enemy robot
+     * 
+     * @return int velocity
+     */
+    int getVelocity();
+
+    /**
+     * @brief Creates the layout of the dialog 
+     */
+    void createLayout();
 
 private:
-    QSpinBox *orientationSpinBox;
-    QSpinBox *distanceSpinBox;
-    QSpinBox *rotationAngleSpinBox;
-    QSpinBox *velocitySpinBox;
+    QSpinBox *orientationBox;
+    QSpinBox *distanceBox;
+    QSpinBox *rotationAngleBox;
+    QSpinBox *velocityBox;
 };
 
 #endif // ROBOTDIALOG_H
