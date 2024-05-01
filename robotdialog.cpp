@@ -1,11 +1,13 @@
 #include "robotdialog.h"
 
 RobotParamDialog::RobotParamDialog(QWidget *parent, bool robotExists) : QDialog(parent) {
+    //Create spin boxes
     orientationBox = new QSpinBox(this);
     distanceBox = new QSpinBox(this);
     rotationAngleBox = new QSpinBox(this);
     velocityBox = new QSpinBox(this);
 
+    //If robot exists, grey out the distance and rotation angle boxes
     if(robotExists) {
         distanceBox->setEnabled(false);
         rotationAngleBox->setEnabled(false);
@@ -13,6 +15,8 @@ RobotParamDialog::RobotParamDialog(QWidget *parent, bool robotExists) : QDialog(
         distanceBox->setEnabled(true);
         rotationAngleBox->setEnabled(true);
     }
+
+    //Set range and default values
     orientationBox->setRange(0, 360);
     distanceBox->setRange(1, 5);
     this->distanceBox->setValue(3);
@@ -20,6 +24,8 @@ RobotParamDialog::RobotParamDialog(QWidget *parent, bool robotExists) : QDialog(
     this->rotationAngleBox->setValue(45);
     velocityBox->setRange(1, 10);
     this->velocityBox->setValue(5);
+
+    //Create layout with the spin boxes
     createLayout();
 }
 
@@ -48,15 +54,20 @@ void RobotParamDialog::createLayout(){
     layout->addRow(new QLabel("Robot speed (10 max, 1 min):"), velocityBox);
 
     QHBoxLayout* buttonLayout = new QHBoxLayout;
+    
+    //Create buttons
     QPushButton *cancelButton = new QPushButton("Cancel", this);
     QPushButton *confirmButton = new QPushButton("Confirm", this);
     
+    //Add buttons to layout
     buttonLayout->addWidget(cancelButton); 
     buttonLayout->addWidget(confirmButton); 
     buttonLayout->setAlignment(Qt::AlignRight);
 
+    //Add button layout to main layout
     layout->addRow(buttonLayout);
 
+    //Connect buttons to slots
     connect(cancelButton, &QPushButton::clicked, this, &QDialog::reject);
     connect(confirmButton, &QPushButton::clicked, this, &QDialog::accept);
 }

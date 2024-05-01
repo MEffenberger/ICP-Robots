@@ -7,7 +7,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    //Apply font and background to the main window
     this->applyGraphics();
+
+    //Connect signals and slots
     connect(ui->createMapButton, &QPushButton::clicked, this, &MainWindow::createNewWindow);
     connect(ui->loadMapButton, &QPushButton::clicked, this, &MainWindow::loadFile);
     connect(ui->exitButton, &QPushButton::clicked, this, &MainWindow::quitApp);
@@ -36,8 +40,13 @@ void MainWindow::createNewWindow()
 }
 
 void MainWindow::applyGraphics(){
+    //Set the title of the main window
     this->setWindowTitle("Main menu");
+
+    //Set the size of the main window
     this->setFixedSize(QSize(350, 430));
+
+    //Load font and set the style sheet for all buttons
     int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
     if (fontId == -1) {
         QApplication::quit();

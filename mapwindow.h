@@ -37,6 +37,8 @@ public:
     void updateEnemyCounter();
     void updateTimer();
     void disableEditing();
+    void setBarTop();
+    void setBarBottom();
 
     QJsonArray* fillFile(bool* robotFound);
     QJsonArray *mapData;
@@ -49,6 +51,8 @@ private:
     Ui::MapWindow *ui;
     QComboBox *levelComboBox;
     QFont customFont;
+    QFrame *barTop;
+    QFrame *barBottom;
 
     int obstaclesPlaced;
     int robotsPlaced;
@@ -63,9 +67,7 @@ private:
 
 private slots:
     void handleCellClicked(int row, int column);
-    void toggleObstaclePlacement();
-    void toggleRobotPlacement();
-    void toggleEnemyPlacement();
+    void togglePlacement();
     void clearMap();
     void saveFile();
     void setTimer();
