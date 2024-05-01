@@ -48,7 +48,6 @@ MapWindow::MapWindow(QWidget *parent) :
     this->robotsPlaced = 0;
     this->enemiesPlaced = 0;
     this->timeLimit = 60;
-    this->printTime = true;
 
     //Add levels to the box
     ui->levelComboBox->addItem("Level 1", QVariant::fromValue(QPair<int, int>(10, 3)));
@@ -473,6 +472,43 @@ void MapWindow::togglePlacement() {
     }
 }
 
+void MapWindow::clearTableCell(QTableWidgetItem *item, int row, int column){
+    //Replace cell with clear one
+    QTableWidgetItem *defaultItem = new QTableWidgetItem(); 
+    defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
+    ui->tableWidget->setItem(row, column, defaultItem);
+}
+
+void MapWindow::setTableCell(QTableWidgetItem *item, int row, int column, int orientationAngle){
+
+    QPixmap pixmap;
+    QTransform transform;
+    //Based on cell type, set pixmap and increment the counter
+    if(dynamic_cast<ObstacleItem*>(item)){
+        obstaclesPlaced++;
+        pixmap = this->icons.obstacle;
+    } else if(dynamic_cast<RobotItem*>(item)){
+        robotsPlaced++;
+        pixmap = this->icons.robot;
+        //Rotate the robot based on the orientation
+        pixmap = pixmap.transformed(transform.rotate(orientationAngle));
+    } else if(dynamic_cast<EnemyItem*>(item)){
+        enemiesPlaced++;
+        pixmap = this->icons.enemy;
+        //Rotate the enemy robot based on the orientation
+        pixmap = pixmap.transformed(transform.rotate(orientationAngle));
+    }
+    //Set background
+    item->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
+                                             ui->tableWidget->rowHeight(row))));
+
+    //Apply not editable flag 
+    item->setFlags(item->flags() & ~Qt::ItemIsEditable);
+
+    //Set item to the table
+    ui->tableWidget->setItem(row, column, item);
+}
+
 void MapWindow::handleCellClicked(int row, int column) {
 
     //If no placement is active, return
@@ -481,49 +517,56 @@ void MapWindow::handleCellClicked(int row, int column) {
     //Obtain cell item from the table
     QTableWidgetItem *item = ui->tableWidget->item(row, column);
 
+    //Obstale placement
     if(placingObstacle){
+
+        //Obtain maximum number of obstacles for the level
         QVariant currentData = ui->levelComboBox->currentData();
         int obstacles = currentData.value<QPair<int, int>>().first;
 
+        //Cast the item to ObstacleItem
         ObstacleItem *obstacleItem = dynamic_cast<ObstacleItem*>(item);
+
+        //If obstacle is present, remove it
         if (obstacleItem) {
-            obstacleItem->setBackground(QBrush()); // Unset the background
-            obstaclesPlaced--; // Decrement the robot count
-            QTableWidgetItem *defaultItem = new QTableWidgetItem();
-            defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
-            ui->tableWidget->setItem(row, column, defaultItem);
+            obstaclesPlaced--;
+            clearTableCell(item, row, column);
         } else {
+            //If other items are present, return, obstacle cant be placed there
             if (dynamic_cast<EnemyItem*>(item) || dynamic_cast<RobotItem*>(item)) {
                 return;
             }
 
+            //If level limit is not reached, place the obstacle
             if (obstaclesPlaced < obstacles) {
                 ObstacleItem *obstacleItem = new ObstacleItem();
-                QPixmap pixmap = this->icons.obstacle;
-                obstacleItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
-                                                                 ui->tableWidget->rowHeight(row))));
-
-                obstacleItem->setFlags(obstacleItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-                obstaclesPlaced++; // Increment the obstacle count
-                ui->tableWidget->setItem(row, column, obstacleItem);
+                setTableCell(obstacleItem, row, column, 0);
             }
         }
+        //Update the obstacle counter
         updateObstacleCounter();
+
+    //Robot placement
     } else if (placingRobot) {
+
+        //Cast the item to RobotItem
         RobotItem *robotItem = dynamic_cast<RobotItem*>(item);
+
+        //If robot is present, remove it
         if (robotItem) {
-            robotItem->setBackground(QBrush()); // Unset the background
-            robotsPlaced--; // Decrement the robot count
-            QTableWidgetItem *defaultItem = new QTableWidgetItem();
-            defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
-            ui->tableWidget->setItem(row, column, defaultItem);
+            robotsPlaced--;
+            clearTableCell(item, row, column);
         } else {
+            //If other items are present, return, robot cant be placed there
             if (dynamic_cast<EnemyItem*>(item) || dynamic_cast<ObstacleItem*>(item)) {
                 return; 
             }
 
+            //There can be only one robot for the level
             if (robotsPlaced < 1) {
                 RobotItem *robotItem = new RobotItem();
+
+                //Open dialog to set the robot parameters
                 RobotParamDialog dialog(this, true);
                 if (dialog.exec() == QDialog::Accepted) {
                     int orientation = dialog.getOrientation();
@@ -531,40 +574,40 @@ void MapWindow::handleCellClicked(int row, int column) {
                     robotItem->setOrientation(orientation);
                     robotItem->setVelocity(dialog.getVelocity());
 
-                    QPixmap pixmap = this->icons.robot;
-                    QTransform transform;
-                    pixmap = pixmap.transformed(transform.rotate(orientation));
-                    robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-                    robotItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
-                                                                  ui->tableWidget->rowHeight(row))));
-                    
-                    robotsPlaced++; // Increment the robot count
+                    setTableCell(robotItem, row, column, orientation);
+
                 } else {
+                    //Dialog was closed unsuccesfully, return
                     return;
                 }
-                robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-                ui->tableWidget->setItem(row, column, robotItem);
             }
         }
         updateRobotCounter();
+
+    //Enemy placement
     } else if(placingEnemy){
+        //Obtain maximum number of enemies for the level
         QVariant currentData = ui->levelComboBox->currentData();
         int enemies = currentData.value<QPair<int, int>>().second;
+
+        //Cast the item to EnemyItem
         EnemyItem *enemyItem = dynamic_cast<EnemyItem*>(item);
 
+        //If enemy is present, remove it
         if (enemyItem) {
-                enemyItem->setBackground(QBrush()); // Unset the background
-                enemiesPlaced--; // Decrement the robot count
-                QTableWidgetItem *defaultItem = new QTableWidgetItem();
-                defaultItem->setFlags(defaultItem->flags() & ~Qt::ItemIsEditable);
-                ui->tableWidget->setItem(row, column, defaultItem);
+            enemiesPlaced--;
+            clearTableCell(item, row, column);
         } else {
+            //If other items are present, return, enemy cant be placed there
             if (dynamic_cast<RobotItem*>(item) || dynamic_cast<ObstacleItem*>(item)) {
                 return; 
             }
 
+            //If level limit is not reached, place the enemy
             if (enemiesPlaced < enemies) {
                 EnemyItem *enemyItem = new EnemyItem();
+
+                //Open dialog to set the enemy parameters
                 RobotParamDialog dialog(this);
                 if (dialog.exec() == QDialog::Accepted) {
                     int orientation = dialog.getOrientation();
@@ -574,19 +617,11 @@ void MapWindow::handleCellClicked(int row, int column) {
                     enemyItem->setRotationAngle(dialog.getRotationAngle());
                     enemyItem->setVelocity(dialog.getVelocity());
 
-                    QPixmap pixmap = this->icons.enemy;
-                    QTransform transform;
-                    pixmap = pixmap.transformed(transform.rotate(orientation));
-                    enemyItem->setFlags(enemyItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-                    enemyItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(column),
-                                                                  ui->tableWidget->rowHeight(row))));
-                    
-                    enemiesPlaced++; // Increment the robot count
+                    setTableCell(enemyItem, row, column, orientation);
                 } else {
+                    //Dialog was closed unsuccesfully, return
                     return;
                 }
-                enemyItem->setFlags(enemyItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-                ui->tableWidget->setItem(row, column, enemyItem);
             }
         }
         updateEnemyCounter();
