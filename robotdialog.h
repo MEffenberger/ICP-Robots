@@ -17,6 +17,7 @@ class RobotParamDialog : public QDialog {
 
 public:
     explicit RobotParamDialog(QWidget *parent = nullptr, bool robotExists = false);
+    ~RobotParamDialog() = default;
 
     /**
      * @brief Gets the orientation of the controlled or enemy robot
@@ -48,14 +49,33 @@ public:
 
     /**
      * @brief Creates the layout of the dialog 
+     * @bool robotExists if robot exists direction button is disabled
      */
-    void createLayout();
+    void createLayout(bool robotExists);
 
 private:
     QSpinBox *orientationBox;
     QSpinBox *distanceBox;
     QSpinBox *rotationAngleBox;
     QSpinBox *velocityBox;
+    QFormLayout *layout;
+    QFormLayout *LRLayout;
+    QPushButton *directionButton;
+
+private slots:
+
+    /**
+     * @brief Changes button (L/R) text upon pressing
+     * 
+     */
+    void changeTurningDirection();
+
+
+    /**
+     * @brief Confirms the dialog and sets rotation angle based on the button
+     * 
+     */
+    void confirmDialog();
 };
 
 #endif // ROBOTDIALOG_H
