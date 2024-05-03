@@ -18,6 +18,8 @@
 #include <QToolBar>
 #include <QTableWidgetItem>
 
+#define SQUARE_SIZE 75
+
 namespace Ui {
 class MapWindow;
 }

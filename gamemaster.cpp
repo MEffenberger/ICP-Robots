@@ -38,31 +38,41 @@ void GameMaster::startGame() {
 
 void GameMaster::showJSONpopup() {
     qDebug() << "File opened";
-    QString filename = QFileDialog::getOpenFileName(this->mainWindow, "Load Map", "", "JSON Files (*.json)");
-    if (filename.isEmpty()) return; // Nothing to do
+    //Load the file
+    QString filename = QFileDialog::getOpenFileName(this->mainWindow, "Load game map", "", "JSON Files (*.json)");
+    //Filename is empty, return
+    if (filename.isEmpty()){
+        return;
+    }
 
+    //Open file wiwht given filename
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         return;
     }
-    QByteArray jsonData = file.readAll();
-    QJsonDocument doc = QJsonDocument::fromJson(jsonData);
-
-    //QJsonArray mapData = doc.array();
+    QByteArray fileData = file.readAll();
+    QJsonDocument doc = QJsonDocument::fromJson(fileData);
+    //Create new QJsonArray from the document and assign it to mapData
     this->mapData = new QJsonArray(doc.array());
     mainEvent();
 }
 
 bool GameMaster::loadFile() {
+    //MainWindow is closed, mapWindow is open, close the mapwWindow
     if(mainWindow == nullptr){
         this->mapData = mapWindow->mapData;
         emit mapWindow->close();
     } else {
+        //Main window is open, close the mainWindow
         emit mainWindow->close();
     }
+
+    //Playable robot must be found
     bool userFound = false;
+
     QJsonArray*  mapData = this->mapData;
 
+    //If there are any elements stored in vectors, clear them
     if(this->UserData.size() > 0){
         UserData.clear();
     }
@@ -72,47 +82,55 @@ bool GameMaster::loadFile() {
     if(this->EnemyData.size() > 0){
         EnemyData.clear();
     }
-    for (const QJsonValueRef &cellValue : *mapData) {
-        QJsonObject cellObject = cellValue.toObject();
-        QString type = cellObject["type"].toString();
-        int x, y;
-        if(type != "TimeLimit"){
-            QJsonObject attributesObject = cellObject["position"].toObject();
-            x = attributesObject["x"].toInt();
-            y = attributesObject["y"].toInt();
+
+    //Iterate through the mapData array
+    for (const QJsonValueRef &mapValue : *mapData) {
+
+        //Obtain the object from the array
+        QJsonObject mapObject = mapValue.toObject();
+
+        //Obtain time limit data
+        if(mapObject.contains("timeLimit")){
+            timeLimitData = mapObject["timeLimit"].toInt();
         }
+
+        QString type = mapObject["cellType"].toString();
+        //Variables for x and y position
+        int x, y;
+
+        //Obtain x and y position if exist
+        if(mapObject.contains("mapPosition")){
+            QJsonObject posObject = mapObject["mapPosition"].toObject();
+            x = posObject["x pos"].toInt();
+            y = posObject["y pos"].toInt();
+        }
+        //Store robot data
         if (type == "Robot") {
             userFound = true;
             UserData.push_back(x);
             UserData.push_back(y);
-            qDebug() << "ROBOT\n";
-            QJsonObject attributesObject = cellObject["attributes"].toObject();
-            UserData.push_back(attributesObject["orientation"].toInt());
-            UserData.push_back(attributesObject["velocity"].toInt());
-            qDebug() << "X:" << x << "Y:" << y;
+            QJsonObject paramObject = mapObject["parameters"].toObject();
+            UserData.push_back(paramObject["orientation"].toInt());
+            UserData.push_back(paramObject["velocity"].toInt());
+        //Store obstacle data
         } else if (type == "Obstacle") {
             ObstacleData.push_back(std::make_pair(x, y));
-            qDebug() << "OBSTACLE\n";
-            qDebug() << "X:" << x << "Y:" << y;
+        //Store enemy data
         } else if (type == "Enemy") {
-            qDebug() << "ENEMY\n";
             EnemyData.push_back(std::vector<int>());
             EnemyData.back().push_back(x);
             EnemyData.back().push_back(y);
-            QJsonObject attributesObject = cellObject["attributes"].toObject();
-            EnemyData.back().push_back(attributesObject["distance"].toInt());
-            EnemyData.back().push_back(attributesObject["orientation"].toInt());
-            EnemyData.back().push_back(attributesObject["rotationAngle"].toInt());
-            EnemyData.back().push_back(attributesObject["velocity"].toInt());
-            qDebug() << "X:" << x << "Y:" << y;
-        } else if(type == "TimeLimit"){
-            qDebug() << "TIME\n";
-            QJsonObject attributesObject = cellObject["time"].toObject();
-            timeLimitData = attributesObject["seconds"].toInt();
-            qDebug() << timeLimitData;
+            QJsonObject paramObject = mapObject["parameters"].toObject();
+            EnemyData.back().push_back(paramObject["distance"].toInt());
+            EnemyData.back().push_back(paramObject["orientation"].toInt());
+            EnemyData.back().push_back(paramObject["rotationAngle"].toInt());
+            EnemyData.back().push_back(paramObject["velocity"].toInt());
+        } else {
+            continue;
         }
     }
 
+    //If playable robot was not found, show error message and return false
     if(!userFound){
         QMessageBox::critical(this->mainWindow, "Error", "No user controlled robot found in the map");
         return false;

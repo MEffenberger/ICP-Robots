@@ -149,50 +149,56 @@ MapWindow::~MapWindow() {
 }
 
 QJsonArray* MapWindow::fillFile(bool* robotFound){
+
+    //Create a JSON array to store the map data
     QJsonArray* mapData = new QJsonArray();
+
+    //Append time limit
     QJsonObject timeLimitObject;
-    timeLimitObject["type"] = "TimeLimit";
-    timeLimitObject["time"] = QJsonObject({
-        {"seconds", this->timeLimit}
-    });
+    timeLimitObject["timeLimit"] = this->timeLimit;
     mapData->append(timeLimitObject);
+    
+    //Robot must be found in the map
     *robotFound = false;
-    for (int row = 0; row < ui->tableWidget->rowCount(); ++row) {
-        for (int col = 0; col < ui->tableWidget->columnCount(); ++col) {
-            QTableWidgetItem *item = ui->tableWidget->item(row, col);
-            if (!item) continue; // Skip empty cells
 
-            QJsonObject cellObject;
+    //Iterate over whole grid and fill the map data
+    for (int rows = 0; rows < ui->tableWidget->rowCount(); rows++) {
+        for (int cols = 0; cols < ui->tableWidget->columnCount(); cols++) {
+            QTableWidgetItem *item = ui->tableWidget->item(rows, cols);
+            QJsonObject mapObject;
 
-            // Get coordinates relative to the QTableWidget
+            // Get coordinates according to the QTableWidget
             QPoint cellPosition = ui->tableWidget->visualItemRect(item).topLeft();
 
+            //Set robot data
             if (RobotItem *robot = dynamic_cast<RobotItem*>(item)) {
                 *robotFound = true;
-                cellObject["type"] = "Robot";
-                cellObject["position"] = QJsonObject({
-                    {"x", cellPosition.x()},
-                    {"y", cellPosition.y()}
+                mapObject["cellType"] = "Robot";
+                mapObject["mapPosition"] = QJsonObject({
+                    {"x pos", cellPosition.x()},
+                    {"y pos", cellPosition.y()}
                 });
-                cellObject["attributes"] = QJsonObject({
+                mapObject["parameters"] = QJsonObject({
                     {"orientation", robot->getOrientation()},
                     {"velocity", robot->getVelocity()}
                 });
 
+            //Set obstacle data
             } else if (ObstacleItem *obstacle = dynamic_cast<ObstacleItem*>(item)) {
-                cellObject["type"] = "Obstacle";
-                cellObject["position"] = QJsonObject({
-                    {"x", cellPosition.x()},
-                    {"y", cellPosition.y()}
+                mapObject["cellType"] = "Obstacle";
+                mapObject["mapPosition"] = QJsonObject({
+                    {"x pos", cellPosition.x()},
+                    {"y pos", cellPosition.y()}
                 });
 
+            //Set enemy data
             } else if (EnemyItem *enemy = dynamic_cast<EnemyItem*>(item)) {
-                cellObject["type"] = "Enemy";
-                cellObject["position"] = QJsonObject({
-                    {"x", cellPosition.x()},
-                    {"y", cellPosition.y()}
+                mapObject["cellType"] = "Enemy";
+                mapObject["mapPosition"] = QJsonObject({
+                    {"x pos", cellPosition.x()},
+                    {"y pos", cellPosition.y()}
                 });
-                cellObject["attributes"] = QJsonObject({
+                mapObject["parameters"] = QJsonObject({
                     {"orientation", enemy->getOrientation()},
                     {"distance", enemy->getDistance()},
                     {"rotationAngle", enemy->getRotationAngle()},
@@ -201,7 +207,8 @@ QJsonArray* MapWindow::fillFile(bool* robotFound){
             } else {
                 continue;
             }
-            mapData->append(cellObject);
+            //Append the cell object to the map data
+            mapData->append(mapObject);
         }
     }
     return mapData;
@@ -229,95 +236,81 @@ void MapWindow::loadFont(){
 }
 
 void MapWindow::loadMap(){
+    //Clear current map
     clearMap();
-    QString filename = QFileDialog::getOpenFileName(this, "Load Map", "", "JSON Files (*.json)");
-    if (filename.isEmpty()) return;
+
+    //Open file dialog to load the file
+    QString filename = QFileDialog::getOpenFileName(this, "Load editor map", "", "JSON Files (*.json)");
+    if (filename.isEmpty()){
+        return;
+    }
 
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         return;
     }
-
-    QByteArray jsonData = file.readAll();
-    QJsonDocument doc = QJsonDocument::fromJson(jsonData);
-
+    //Read the file and parse the data
+    QByteArray fileData = file.readAll();
+    QJsonDocument doc = QJsonDocument::fromJson(fileData);
     QJsonArray mapData = doc.array();
+    
+    //Variables to store the position of the cell
+    int row, col;
+
+    //Iterate over the loaded data and cell items based on it
     for (const QJsonValueRef &cellValue : mapData) {
-        QJsonObject cellObject = cellValue.toObject();
-        QString type = cellObject["type"].toString();
-        QJsonObject attributesObject = cellObject["position"].toObject();
-        int col = attributesObject["x"].toInt() / 75;
-        int row = attributesObject["y"].toInt() / 75;
+        //Get the object from the array
+        QJsonObject mapObject = cellValue.toObject();
+
+        //Set time from first field
+        if(mapObject.contains("timeLimit")){
+            this->timeLimit = mapObject["timeLimit"].toInt();
+            updateTimer();
+            continue;
+        }
+
+        QString type = mapObject["cellType"].toString();
+        
+        if(mapObject.contains("mapPosition")){
+            QJsonObject paramObject = mapObject["mapPosition"].toObject();
+            col = paramObject["x pos"].toInt() / SQUARE_SIZE;
+            row = paramObject["y pos"].toInt() / SQUARE_SIZE;
+        }
 
         if (type == "Robot") {
-            qDebug() << "ROBOT\n";
-            QJsonObject attributesObject = cellObject["attributes"].toObject();
+            //Load robot data and set cell in the map
+            QJsonObject paramObject = mapObject["parameters"].toObject();
 
             RobotItem* robotItem = new RobotItem;
-            int orientation = attributesObject["orientation"].toInt();
+            int orientation = paramObject["orientation"].toInt();
             robotItem->setOrientation(orientation);
-            robotItem->setVelocity(attributesObject["velocity"].toInt());
-            qDebug() << orientation << attributesObject["velocity"].toInt();
-
-            QPixmap pixmap("../images/user3.png");
-            QTransform transform;
-            transform.rotate(orientation);
-            pixmap = pixmap.transformed(transform);
-            robotItem->setFlags(robotItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-            robotItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(col),
-                                                         ui->tableWidget->rowHeight(row),
-                                                         Qt::IgnoreAspectRatio,
-                                                         Qt::SmoothTransformation)));
-            ui->tableWidget->setItem(row, col, robotItem);
-            robotsPlaced++;
-            //qDebug() << orientation << rotationAngle << velocity;
-            //qDebug() << "X:" << x << "Y:" << y;
+            robotItem->setVelocity(paramObject["velocity"].toInt());
+            setTableCell(robotItem, row, col, orientation);
         } else if (type == "Obstacle") {
+
+            //Load obstacle data and set cell in the map
             ObstacleItem* obstacleItem = new ObstacleItem;
-            QPixmap pixmap("../images/obstacle.png");
-            obstacleItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(col),
-                                                        ui->tableWidget->rowHeight(row),
-                                                        Qt::IgnoreAspectRatio,
-                                                        Qt::SmoothTransformation)));
-            ui->tableWidget->setItem(row, col, obstacleItem);
-            obstaclesPlaced++;
-            // qDebug() << "OBSTACLE\n";
-            // qDebug() << "X:" << x << "Y:" << y;
+            setTableCell(obstacleItem, row, col, 0);
         } else if (type == "Enemy") {
-            qDebug() << "ENEMY\n";
-            QJsonObject attributesObject = cellObject["attributes"].toObject();
+            //Load enemy data and set cell in the map
+            QJsonObject paramObject = mapObject["parameters"].toObject();
 
             EnemyItem* enemyItem = new EnemyItem;
-            int orientation = attributesObject["orientation"].toInt();
+            int orientation = paramObject["orientation"].toInt();
             enemyItem->setOrientation(orientation);
-            enemyItem->setDistance(attributesObject["orientation"].toInt());
-            enemyItem->setRotationAngle(attributesObject["rotationAngle"].toInt());
-            enemyItem->setVelocity(attributesObject["velocity"].toInt());
-
-            QPixmap pixmap("../images/enemy2.png");
-            QTransform transform;
-            transform.rotate(orientation);
-            pixmap = pixmap.transformed(transform);
-            enemyItem->setFlags(enemyItem->flags() & ~Qt::ItemIsEditable); // Set the ItemIsEditable flag to false
-            enemyItem->setBackground(QBrush(pixmap.scaled(ui->tableWidget->columnWidth(col),
-                                                         ui->tableWidget->rowHeight(row),
-                                                         Qt::IgnoreAspectRatio,
-                                                         Qt::SmoothTransformation)));
-            ui->tableWidget->setItem(row, col, enemyItem);
-            enemiesPlaced++;
-            // qDebug() << orientation << distance << rotationAngle << velocity;
-            // qDebug() << "X:" << x << "Y:" << y;
-        } else if(type == "TimeLimit"){
-            qDebug() << "TIME\n";
-            QJsonObject attributesObject = cellObject["time"].toObject();
-            this->timeLimit = attributesObject["seconds"].toInt();
-            qDebug() << time;
+            enemyItem->setDistance(paramObject["orientation"].toInt());
+            enemyItem->setRotationAngle(paramObject["rotationAngle"].toInt());
+            enemyItem->setVelocity(paramObject["velocity"].toInt());
+            setTableCell(enemyItem, row, col, orientation);
+        } else {
+            continue;
         }
     }
+
+    //Update counters based on loaded data
     updateObstacleCounter();
     updateRobotCounter();
     updateEnemyCounter();
-    updateTimer();
 }
 
 void MapWindow::saveFile() {
