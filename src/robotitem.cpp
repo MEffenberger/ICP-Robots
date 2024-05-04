@@ -1,3 +1,12 @@
+/**
+ * @file robotitem.cpp
+ * @brief Robot Item Class Implementation file
+ * @version 1.0
+ * @details This class is responsible for holding the contorolled robot cell item data in the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
+
 #include "robotitem.h"
 
 RobotItem::~RobotItem() {}

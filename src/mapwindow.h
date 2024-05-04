@@ -1,3 +1,11 @@
+/**
+ * @file mapwindow.h
+ * @brief Map Window Class Header file
+ * @version 1.0
+ * @details This class is responsible for creating the map editor window of the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
 
 #ifndef MAPWINDOW_H
 #define MAPWINDOW_H
@@ -29,8 +37,11 @@ class MapWindow;
  * 
  */
 typedef struct pixmapIcons {
+    /** Icon of the obstacle */
     QPixmap obstacle;
+    /** Icon of the robot */
     QPixmap robot;
+    /** Icon of the enemy */
     QPixmap enemy;
 } pixMapIcons;
 
@@ -114,7 +125,7 @@ public:
      */
     QJsonArray* fillFile(bool* robotFound);
 
-    ///Json array to store the map data
+    /** Json array for storing mapa of the map */
     QJsonArray *mapData;
     ~MapWindow();
 signals:
@@ -126,33 +137,35 @@ signals:
     void startSession();
 
 private:
-    /// UI of the Map
+    /** UI of the Map */
     Ui::MapWindow *ui;
 
-    //Level selector
+    /** Level selector */
     QComboBox *levelComboBox;
 
-    //Font to be used in the map editor
+    /** Custom font used for the map */
     QFont customFont;
 
-    //Top bar of the map editor
+    /** Top bar of the map editor */
     QFrame *barTop;
 
-    //Bottom bar of the map editor
+    /** Bottom bar of the map editor */
     QFrame *barBottom;
 
-    //Variables to store the number of obstacles, robots and enemies placed
+    /** Variables that stores information about placed objects */
     int obstaclesPlaced;
     int robotsPlaced;
     int enemiesPlaced;
+
+    /** Time limit for the game */
     int timeLimit;
 
-    //Boolean variables to check if the user is placing obstacles, robots or enemies
+    /** Boolean variables to check if the user is placing obstacles, robots or enemies */
     bool placingObstacle;
     bool placingRobot;
     bool placingEnemy;
 
-    //Struct to store the icons for the pixmap
+    /** Struct to store object icons */
     pixMapIcons icons;
 
 private slots:

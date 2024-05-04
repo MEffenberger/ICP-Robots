@@ -1,3 +1,12 @@
+/**
+ * @file robotdialog.cpp
+ * @brief Robot Dialog Class Implementation file
+ * @version 1.0
+ * @details This class is responsible for creating a dialog where user can input the parameters of the robot/enemy
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
+
 #include "robotdialog.h"
 
 RobotParamDialog::RobotParamDialog(QWidget *parent, bool robotExists) : QDialog(parent) {
@@ -51,11 +60,11 @@ void RobotParamDialog::createLayout(bool robotExists){
 
     //Create layout for dialog
     this->layout = new QFormLayout(this);
-    layout->addRow(new QLabel("Robot map orientation (degrees):"), orientationBox);
-    layout->addRow(new QLabel("Distance of detecting obstacles (5 max, 1 min):"), distanceBox);
+    layout->addRow("Robot map orientation (degrees):", orientationBox);
+    layout->addRow("Distance of detecting obstacles (5 max, 1 min):", distanceBox);
     
     //Create sublayout for left/right button
-    this->LRLayout = new QFormLayout;
+    this->LRLayout = new QFormLayout();
 
     //Default direction is right
     this->directionButton = new QPushButton("Right", this);
@@ -71,10 +80,10 @@ void RobotParamDialog::createLayout(bool robotExists){
     LRLayout->addRow(directionButton);
     LRLayout->setAlignment(Qt::AlignRight);
 
-    
-    layout->addRow(new QLabel("Rotation after detecting obstacle direction:"), LRLayout);
-    layout->addRow(new QLabel("Rotation after detection obstacle (degrees):"), rotationAngleBox);
-    layout->addRow(new QLabel("Robot speed (10 max, 1 min):"), velocityBox);
+    //Add rest of the spin boxes to the layout
+    layout->addRow("Rotation after detecting obstacle direction:", LRLayout);
+    layout->addRow("Rotation after detection obstacle (degrees):", rotationAngleBox);
+    layout->addRow("Robot speed (10 max, 1 min):", velocityBox);
 
     //Create new sublayout for buttons
     QHBoxLayout* buttonLayout = new QHBoxLayout;
