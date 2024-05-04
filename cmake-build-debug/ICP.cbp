@@ -150,115 +150,115 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/button.cpp">
-			<Option target="ICP"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/button.h">
-			<Option target="ICP"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/ICP_autogen/mocs_compilation.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/button.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemy.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/button.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemyitem.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/enemy.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/enemyitem.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/enemy.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/enemyitem.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/enemyitem.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/gamemaster.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/gameinfo.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/gamemaster.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/gameinfo.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/heart.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/gamemaster.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/heart.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/gamemaster.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/heart.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/heart.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/main.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/horizontalbar.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/horizontalbar.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/main.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.ui">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/mainwindow.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/mainwindow.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/mainwindow.ui">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.ui">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/mapwindow.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/mapwindow.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/mapwindow.ui">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/obstacleitem.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/obstacle.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/popup.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/obstacle.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/popup.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/obstacleitem.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/robotdialog.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/popup.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/robotdialog.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/popup.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/robotitem.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/robotdialog.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/robotitem.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/robotdialog.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/star.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/robotitem.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/star.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/robotitem.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/timer.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/star.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/timer.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/star.h">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/user.cpp">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/timer.cpp">
 			<Option target="ICP"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/user.h">
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/timer.h">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/user.cpp">
+			<Option target="ICP"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/src/user.h">
 			<Option target="ICP"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/marek/CLionProjects/ICP/CMakeLists.txt">

@@ -1,6 +1,7 @@
 
+U	cpp:S4962)"Use the "nullptr" literal.(ÀìÇÆJ$aaae9aac-3627-4bec-98c4-1845fe575fa6
 q	cpp:S5414 "*Don't mix public and private data members.(Ê´ş·øÿÿÿÿ8÷¤ó¬ò1J$e5249381-2bbb-4242-9811-a6e8e9c8788c
 Ï	cpp:S1242P"ŒRename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(ˆ›—8– ¸—ô1J$5bd09023-0d19-4d55-b516-047387c38455
 Ï	cpp:S1242U"ŒRename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(ş”¶Û8— ¸—ô1J$0b224ff4-4b56-470d-b8ff-8d8f4f4c0e83
-U	cpp:S4962)"Use the "nullptr" literal.(ÀìÇÆJ$aaae9aac-3627-4bec-98c4-1845fe575fa6
+6	cpp:S4962)"Use the "nullptr" literal.(ÀìÇÆ8–Â»¤ô1
 t	cpp:S3471."2Annotate this function with "override" or "final".(‹ï……8í¡¾Òò1J$bfe5493d-4fb7-4dc7-b374-3838cec2a3e3

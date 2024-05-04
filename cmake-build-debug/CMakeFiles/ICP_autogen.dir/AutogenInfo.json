@@ -8,89 +8,89 @@
 	"HEADERS" : 
 	[
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/button.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/button.h",
 			"MU",
-			"EWIEGA46WW/moc_button.cpp"
+			"UVLADIE3JM/moc_button.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/enemy.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/enemy.h",
 			"MU",
-			"EWIEGA46WW/moc_enemy.cpp"
+			"UVLADIE3JM/moc_enemy.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/enemyitem.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/enemyitem.h",
 			"MU",
-			"EWIEGA46WW/moc_enemyitem.cpp"
+			"UVLADIE3JM/moc_enemyitem.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/gameinfo.h",
 			"MU",
-			"EWIEGA46WW/moc_gameinfo.cpp"
+			"UVLADIE3JM/moc_gameinfo.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/gamemaster.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/gamemaster.h",
 			"MU",
-			"EWIEGA46WW/moc_gamemaster.cpp"
+			"UVLADIE3JM/moc_gamemaster.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/heart.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/heart.h",
 			"MU",
-			"EWIEGA46WW/moc_heart.cpp"
+			"UVLADIE3JM/moc_heart.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/horizontalbar.h",
 			"MU",
-			"EWIEGA46WW/moc_horizontalbar.cpp"
+			"UVLADIE3JM/moc_horizontalbar.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/mainwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp"
+			"UVLADIE3JM/moc_mainwindow.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/mapwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_mapwindow.cpp"
+			"UVLADIE3JM/moc_mapwindow.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/obstacle.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/obstacle.h",
 			"MU",
-			"EWIEGA46WW/moc_obstacle.cpp"
+			"UVLADIE3JM/moc_obstacle.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/obstacleitem.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/obstacleitem.h",
 			"MU",
-			"EWIEGA46WW/moc_obstacleitem.cpp"
+			"UVLADIE3JM/moc_obstacleitem.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/popup.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/popup.h",
 			"MU",
-			"EWIEGA46WW/moc_popup.cpp"
+			"UVLADIE3JM/moc_popup.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/robotdialog.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/robotdialog.h",
 			"MU",
-			"EWIEGA46WW/moc_robotdialog.cpp"
+			"UVLADIE3JM/moc_robotdialog.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/robotitem.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/robotitem.h",
 			"MU",
-			"EWIEGA46WW/moc_robotitem.cpp"
+			"UVLADIE3JM/moc_robotitem.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/star.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/star.h",
 			"MU",
-			"EWIEGA46WW/moc_star.cpp"
+			"UVLADIE3JM/moc_star.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/timer.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/timer.h",
 			"MU",
-			"EWIEGA46WW/moc_timer.cpp"
+			"UVLADIE3JM/moc_timer.cpp"
 		],
 		[
-			"/mnt/c/Users/marek/CLionProjects/ICP/user.h",
+			"/mnt/c/Users/marek/CLionProjects/ICP/src/user.h",
 			"MU",
-			"EWIEGA46WW/moc_user.cpp"
+			"UVLADIE3JM/moc_user.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -142,23 +142,23 @@
 	"SETTINGS_FILE" : "/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/button.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/enemy.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/enemyitem.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/gameinfo.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/gamemaster.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/heart.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/horizontalbar.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/main.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/mainwindow.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/mapwindow.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/obstacle.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/popup.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/robotdialog.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/robotitem.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/star.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/timer.cpp", "MU" ],
-		[ "/mnt/c/Users/marek/CLionProjects/ICP/user.cpp", "MU" ]
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/button.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/enemy.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/enemyitem.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/gameinfo.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/gamemaster.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/heart.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/horizontalbar.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/main.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/mainwindow.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/mapwindow.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/obstacle.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/popup.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/robotdialog.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/robotitem.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/star.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/timer.cpp", "MU" ],
+		[ "/mnt/c/Users/marek/CLionProjects/ICP/src/user.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

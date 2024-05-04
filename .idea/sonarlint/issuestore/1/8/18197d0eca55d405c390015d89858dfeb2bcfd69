@@ -1,6 +1,6 @@
 
-l	cpp:S5414"*Don't mix public and private data members.(êÙ‡¦8³î˜ô1J$d0c30704-7ee0-41bc-8240-58e719102b42
 a	cpp:S4962*"Use the "nullptr" literal.(—×¸¹ÿÿÿÿÿ8¾õì»ñ1J$a2effd1b-4d4d-4105-8a09-2243243ea973
+l	cpp:S5414"*Don't mix public and private data members.(êÙ‡¦8³î˜ô1J$d0c30704-7ee0-41bc-8240-58e719102b42
+;	cpp:S4962*"Use the "nullptr" literal.(—×¸¹ÿÿÿÿÿ8×‡…™ô1
 s	cpp:S3471/"2Annotate this function with "override" or "final".(–¦Ì_8×”íÑò1J$41bd411b-2fa2-483e-a65e-1476fba1eee3
 t	cpp:S34715"2Annotate this function with "override" or "final".(È¿’8›Éï—ô1J$77ed6edd-89df-40d9-919f-580a7f04816f
-;	cpp:S4962*"Use the "nullptr" literal.(—×¸¹ÿÿÿÿÿ8×‡…™ô1
