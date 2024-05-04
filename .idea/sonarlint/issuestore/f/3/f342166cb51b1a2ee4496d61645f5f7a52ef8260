@@ -1,41 +1,62 @@
 
-	cpp:S3806"cnon-portable path to file '"ObstacleItem.h"'; specified path differs in case from file name on disk(•ğºÇ8¼Áúšò1
-`	cpp:S1117»"$declaration shadows a local variable(’ÉÀÙJ$a3cf5002-1ccf-4b18-8288-54b96d5d3310
-e	cpp:S1117Ø"$declaration shadows a local variable(€ŒÄ­ÿÿÿÿÿJ$57d5bc9e-7460-4908-8a56-39142ffc15ec
-`	cpp:S1117†"$declaration shadows a local variable(ßÉ­ÅJ$4c65c414-1067-4fb0-962b-297fe1d2f7ba
+L	cpp:S1117š"*declaration shadows a field of 'MapWindow'(·Ëãùûÿÿÿÿ8¶ß‹’ô1
+G	cpp:S1117ÿ"*declaration shadows a field of 'MapWindow'(úŸøÚ8¸ß‹’ô1
+G	cpp:S1117Ó"*declaration shadows a field of 'MapWindow'(óŒ³¼8¸ß‹’ô1
+`	cpp:S1117—"$declaration shadows a local variable(’ÉÀÙJ$a3cf5002-1ccf-4b18-8288-54b96d5d3310
+e	cpp:S1117°"$declaration shadows a local variable(€ŒÄ­ÿÿÿÿÿJ$57d5bc9e-7460-4908-8a56-39142ffc15ec
+`	cpp:S1117Ù"$declaration shadows a local variable(ßÉ­ÅJ$4c65c414-1067-4fb0-962b-297fe1d2f7ba
+‡	cpp:S3230,"kDo not assign data members in a constructor. Initialize member "obstaclesPlaced" in an initialization list.(óûÚš8ğà‹’ô1
+Œ	cpp:S3230-"kDo not assign data members in a constructor. Initialize member "placingObstacle" in an initialization list.(ìóƒ¤ıÿÿÿÿ8ñà‹’ô1
+„	cpp:S3230."hDo not assign data members in a constructor. Initialize member "placingRobot" in an initialization list.(ç€·¯8òà‹’ô1
+„	cpp:S3230/"hDo not assign data members in a constructor. Initialize member "placingEnemy" in an initialization list.(§×¹µ8óà‹’ô1
+„	cpp:S32300"hDo not assign data members in a constructor. Initialize member "robotsPlaced" in an initialization list.(éÊ‡8ôà‹’ô1
+Š	cpp:S32301"iDo not assign data members in a constructor. Initialize member "enemiesPlaced" in an initialization list.(¸İ¥Ñûÿÿÿÿ8ôà‹’ô1
+	cpp:S32302"eDo not assign data members in a constructor. Initialize member "timeLimit" in an initialization list.(›©Ğş8õà‹’ô1
 Œ	cpp:S5025
 "QReplace the use of "new" with an operation that automatically manages the memory.(ª³®J$166cddac-1be0-4293-9cd5-49e2af0be3a1
-u	cpp:S5025h":Rewrite the code so that you no longer need this "delete".(Áğ¯J$0a43dc32-2e78-4238-bc8c-b9c65e13532c
-h	cpp:S5827"'Replace the redundant type with "auto".(ˆáÖÙùÿÿÿÿJ$e3f2ef6b-4dc8-4d3a-a22d-301eb365ed5f
-c	cpp:S5827š"'Replace the redundant type with "auto".(µí•ıJ$3e31012b-a5a9-4286-99ee-4d374155dae8
-¯	cpp:S5350š"lMake the type of this variable a pointer-to-const. The current type of "obstacle" is "class ObstacleItem *".(µí•ı8Ó¬´‚ò1J$6b7406bc-47fc-4ebe-ae08-9d7aede77cfd
-h	cpp:S5827¡"'Replace the redundant type with "auto".(Ã„ÂŒıÿÿÿÿJ$defa4e40-38b3-4f06-9e70-7b162f21679b
-	cpp:S5025ğ"QReplace the use of "new" with an operation that automatically manages the memory.(±ÒªšJ$af58a3c2-103f-4a7d-acbe-af44e2dcb5d7
-‹	cpp:S6004Ú"CUse the init-statement to declare "dialog" inside the if statement.(¯ŞØ¯şÿÿÿÿ8 ­´‚ò1J$4254961d-08dd-42b9-ab2a-6a3fdc6b617e
-‹	cpp:S6004ˆ"CUse the init-statement to declare "dialog" inside the if statement.(¯ŞØ¯şÿÿÿÿ8¡­´‚ò1J$0175c8cf-2c91-4e6b-9766-f0720ce790eb
-	cpp:S3776£"TRefactor this function to reduce its Cognitive Complexity from 43 to the 25 allowed.(Ò›§J$b19f69d7-9b1d-4ecb-adac-9066c7822325
-cpp:S134Ú"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(¯ŞØ¯şÿÿÿÿJ$77c3401b-e856-4fb4-b636-559d8261de18
-cpp:S134ˆ"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(¯ŞØ¯şÿÿÿÿJ$4a4f9a22-30cb-41ef-810d-60145e3e683c
-b	cpp:S5827¬"'Replace the redundant type with "auto".(™ŸŸ'J$3b59435e-85a3-4777-abb2-2cf5de876b7b
-h	cpp:S5827°"'Replace the redundant type with "auto".(‹Ö¦‡şÿÿÿÿJ$4dd0ec79-de25-4b38-bb6e-3e7cef12402e
-’	cpp:S5025°"QReplace the use of "new" with an operation that automatically manages the memory.(‹Ö¦‡şÿÿÿÿJ$24dc36e4-e711-4a0d-a0bd-1e255d9c5b10
-c	cpp:S5827»"'Replace the redundant type with "auto".(’ÉÀÙJ$f1033ab8-9c65-49dd-b900-1b68a2a2b919
-	cpp:S5025»"QReplace the use of "new" with an operation that automatically manages the memory.(’ÉÀÙJ$1c41e0eb-56a1-482a-82a0-c104fcd4cc29
-h	cpp:S5827É"'Replace the redundant type with "auto".(Û…ŞèüÿÿÿÿJ$2736ffb3-69fc-47d8-b73f-5e02b4271ff5
-h	cpp:S5827Í"'Replace the redundant type with "auto".(‹Ö¦‡şÿÿÿÿJ$b3c3d41c-ea57-452e-b0ea-2d72aee078db
-’	cpp:S5025Í"QReplace the use of "new" with an operation that automatically manages the memory.(‹Ö¦‡şÿÿÿÿJ$bfb4099e-5b94-4158-8e84-9bc407f71b5f
-h	cpp:S5827Ø"'Replace the redundant type with "auto".(€ŒÄ­ÿÿÿÿÿJ$1f52710c-14f6-4cb3-aa4a-c62dd3701882
-’	cpp:S5025Ø"QReplace the use of "new" with an operation that automatically manages the memory.(€ŒÄ­ÿÿÿÿÿJ$7307f4b1-f1c5-491c-81f7-f8c761b2228f
-c	cpp:S5827÷"'Replace the redundant type with "auto".(èä““J$547cdea9-ad78-47e2-9a51-1c513d5a17e3
-h	cpp:S5827ü"'Replace the redundant type with "auto".(‹Ö¦‡şÿÿÿÿJ$0667b0c4-07a1-4f08-9003-a7c3f0446de8
-’	cpp:S5025ü"QReplace the use of "new" with an operation that automatically manages the memory.(‹Ö¦‡şÿÿÿÿJ$264acce7-0fc4-41e1-89de-a252b3635b8f
-c	cpp:S5827†"'Replace the redundant type with "auto".(ßÉ­ÅJ$e8991438-749d-4dc5-ba8c-31e9ce689d0c
-”	cpp:S5025†"QReplace the use of "new" with an operation that automatically manages the memory.(ßÉ­Å8ß­´‚ò1J$4dd179ad-a693-4e87-8f01-21459f2476c6
+r	cpp:S5025H"QReplace the use of "new" with an operation that automatically manages the memory.(€ïóÍùÿÿÿÿ8á‹’ô1
+r	cpp:S5025K"QReplace the use of "new" with an operation that automatically manages the memory.(Õ—ğÕüÿÿÿÿ8á‹’ô1
+v	cpp:S5025”":Rewrite the code so that you no longer need this "delete".(Áğ¯J$0a43dc32-2e78-4238-bc8c-b9c65e13532c
+h	cpp:S5827š"'Replace the redundant type with "auto".(·ËãùûÿÿÿÿJ$3e31012b-a5a9-4286-99ee-4d374155dae8
+s	cpp:S5025š"QReplace the use of "new" with an operation that automatically manages the memory.(·Ëãùûÿÿÿÿ8ßá‹’ô1
+h	cpp:S5827®"'Replace the redundant type with "auto".(ˆáÖÙùÿÿÿÿJ$e3f2ef6b-4dc8-4d3a-a22d-301eb365ed5f
+D	cpp:S5827»"'Replace the redundant type with "auto".(µí•ı8ùá‹’ô1
+¯	cpp:S5350»"lMake the type of this variable a pointer-to-const. The current type of "obstacle" is "class ObstacleItem *".(µí•ı8Ó¬´‚ò1J$6b7406bc-47fc-4ebe-ae08-9d7aede77cfd
+h	cpp:S5827Ã"'Replace the redundant type with "auto".(Ã„ÂŒıÿÿÿÿJ$defa4e40-38b3-4f06-9e70-7b162f21679b
+M	cpp:S1659‚"0Define each identifier in a dedicated statement.(ãÜòœ8¿â‹’ô1
+I	cpp:S5827œ"'Replace the redundant type with "auto".(ô£¦üÿÿÿÿ8Õâ‹’ô1
+s	cpp:S5025œ"QReplace the use of "new" with an operation that automatically manages the memory.(ô£¦üÿÿÿÿ8Ùâ‹’ô1
+I	cpp:S5827¤"'Replace the redundant type with "auto".(ÇÍˆğıÿÿÿÿ8àâ‹’ô1
+s	cpp:S5025¤"QReplace the use of "new" with an operation that automatically manages the memory.(ÇÍˆğıÿÿÿÿ8ãâ‹’ô1
+I	cpp:S5827ª"'Replace the redundant type with "auto".(¹ş¬¥şÿÿÿÿ8äâ‹’ô1
+s	cpp:S5025ª"QReplace the use of "new" with an operation that automatically manages the memory.(¹ş¬¥şÿÿÿÿ8èâ‹’ô1
+†	cpp:S5350Ó"iMake the type of this variable a pointer-to-const. The current type of "mapData" is "class QJsonArray *".(óŒ³¼8øâ‹’ô1
+c	cpp:S6004é"AUse the init-statement to declare "time" inside the if statement.(õ°ú£ÿÿÿÿÿ8ã‹’ô1
+	cpp:S5025™"QReplace the use of "new" with an operation that automatically manages the memory.(±ÒªšJ$af58a3c2-103f-4a7d-acbe-af44e2dcb5d7
+x	cpp:S1172Ô"VRemove the unused parameter "item", make it unnamed, or declare it "[[maybe_unused]]".(ÑŸ‡·ÿÿÿÿÿ8Üã‹’ô1
+cpp:S995Ô"mMake the type of this parameter a pointer-to-const. The current type of "item" is "class QTableWidgetItem *".(ÑŸ‡·ÿÿÿÿÿ8ßã‹’ô1
+h	cpp:S5827Ö"'Replace the redundant type with "auto".(‹Ö¦‡şÿÿÿÿJ$4dd0ec79-de25-4b38-bb6e-3e7cef12402e
+’	cpp:S5025Ö"QReplace the use of "new" with an operation that automatically manages the memory.(‹Ö¦‡şÿÿÿÿJ$24dc36e4-e711-4a0d-a0bd-1e255d9c5b10
+f	cpp:S6004Œ"IUse the init-statement to declare "obstacleItem" inside the if statement.(ÍÔ´İ8ôã‹’ô1
+b	cpp:S6004¥"FUse the init-statement to declare "robotItem" inside the if statement.(«Î’8õã‹’ô1
+h	cpp:S6004Î"FUse the init-statement to declare "enemyItem" inside the if statement.(¤±±Ôıÿÿÿÿ8öã‹’ô1
+	cpp:S3776ù"TRefactor this function to reduce its Cognitive Complexity from 45 to the 25 allowed.(Ò›§J$b19f69d7-9b1d-4ecb-adac-9066c7822325
+cpp:S134´"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(¯ŞØ¯şÿÿÿÿJ$77c3401b-e856-4fb4-b636-559d8261de18
+cpp:S134İ"MRefactor this code to not nest more than 3 if|for|do|while|switch statements.(¯ŞØ¯şÿÿÿÿJ$4a4f9a22-30cb-41ef-810d-60145e3e683c
+b	cpp:S5827‰"'Replace the redundant type with "auto".(™ŸŸ'J$3b59435e-85a3-4777-abb2-2cf5de876b7b
+Œ	cpp:S5350‰"pMake the type of this variable a pointer-to-const. The current type of "obstacleItem" is "class ObstacleItem *".(™ŸŸ'8şã‹’ô1
+c	cpp:S5827—"'Replace the redundant type with "auto".(’ÉÀÙJ$f1033ab8-9c65-49dd-b900-1b68a2a2b919
+	cpp:S5025—"QReplace the use of "new" with an operation that automatically manages the memory.(’ÉÀÙJ$1c41e0eb-56a1-482a-82a0-c104fcd4cc29
+h	cpp:S5827¢"'Replace the redundant type with "auto".(Û…ŞèüÿÿÿÿJ$2736ffb3-69fc-47d8-b73f-5e02b4271ff5
+Œ	cpp:S5350¢"jMake the type of this variable a pointer-to-const. The current type of "robotItem" is "class RobotItem *".(Û…Şèüÿÿÿÿ8†ä‹’ô1
+h	cpp:S5827°"'Replace the redundant type with "auto".(€ŒÄ­ÿÿÿÿÿJ$1f52710c-14f6-4cb3-aa4a-c62dd3701882
+’	cpp:S5025°"QReplace the use of "new" with an operation that automatically manages the memory.(€ŒÄ­ÿÿÿÿÿJ$7307f4b1-f1c5-491c-81f7-f8c761b2228f
+c	cpp:S5827Ë"'Replace the redundant type with "auto".(èä““J$547cdea9-ad78-47e2-9a51-1c513d5a17e3
+‡	cpp:S5350Ë"jMake the type of this variable a pointer-to-const. The current type of "enemyItem" is "class EnemyItem *".(èä““8ä‹’ô1
+c	cpp:S5827Ù"'Replace the redundant type with "auto".(ßÉ­ÅJ$e8991438-749d-4dc5-ba8c-31e9ce689d0c
+”	cpp:S5025Ù"QReplace the use of "new" with an operation that automatically manages the memory.(ßÉ­Å8ß­´‚ò1J$4dd179ad-a693-4e87-8f01-21459f2476c6
 «	cpp:S3230
 "iDo not use the constructor's initializer list for data member "ui". Use the in-class initializer instead.(ª³®8ï­´‚ò1J$3549fe21-68de-4ea1-8a60-70f577d40815
-]cpp:S125!"Remove the commented out code.(à‡°“ıÿÿÿÿJ$dc8c670a-5440-4f9e-9f4c-247b1e0d4ada
-Xcpp:S125'"Remove the commented out code.(ú²ŸìJ$0cc31786-01b1-4a17-874d-177f2bfe17ea
-Xcpp:S125S"Remove the commented out code.(¢ÓËJ$84969974-171b-4538-b0ed-641a8fd15751
-:cpp:S125Í"Remove the commented out code.(Ü¹Şè8éöğƒò1
-^cpp:S125İ"Remove the commented out code.(‘ÂÀ¥ÿÿÿÿÿJ$2cc3dac2-fc7c-4f6a-8fc5-1fcb3b1224eb
-^cpp:S125ä"Remove the commented out code.(‘ÂÀ¥ÿÿÿÿÿJ$eb862cc2-733f-4371-b21b-8bbdedb7aad0
+C	cpp:S2259ï"!Called C++ object pointer is null(®±ëıÿÿÿÿ8‹·Œ’ô1
+O	cpp:S3584¾"2Potential leak of memory pointed to by 'robotItem'(ûÁİ…8·Œ’ô1
+O	cpp:S3584è"2Potential leak of memory pointed to by 'enemyItem'(ûÁİ…8·Œ’ô1

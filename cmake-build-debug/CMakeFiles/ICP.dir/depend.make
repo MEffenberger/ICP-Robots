@@ -67,6 +67,7 @@ CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
@@ -185,10 +186,13 @@ CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
+CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
+CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
@@ -220,6 +224,8 @@ CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
 CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -734,6 +740,7 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qg
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
@@ -849,9 +856,11 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
+CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
@@ -883,6 +892,8 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
 CMakeFiles/ICP.dir/gamemaster.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -1180,6 +1191,7 @@ CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobals
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
@@ -1295,9 +1307,11 @@ CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QInpu
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
+CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
@@ -1329,6 +1343,8 @@ CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslid
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
 CMakeFiles/ICP.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -1375,6 +1391,7 @@ CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qg
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
@@ -1475,10 +1492,13 @@ CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
+CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
+CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
@@ -1509,6 +1529,8 @@ CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
 CMakeFiles/ICP.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -1662,6 +1684,7 @@ CMakeFiles/ICP.dir/mapwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/
 CMakeFiles/ICP.dir/mapwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 CMakeFiles/ICP.dir/mapwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
 CMakeFiles/ICP.dir/mapwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget
+CMakeFiles/ICP.dir/mapwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
 CMakeFiles/ICP.dir/mapwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
 CMakeFiles/ICP.dir/mapwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 CMakeFiles/ICP.dir/mapwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h

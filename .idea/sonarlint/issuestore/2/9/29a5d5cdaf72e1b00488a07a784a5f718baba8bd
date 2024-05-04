@@ -26,13 +26,12 @@
 o	cpp:S5827Å"'Replace the redundant type with "auto".(Äô­”ÿÿÿÿÿ8†¾²ò1J$b3ffe274-9a65-4fc4-8d2e-381942fc39ab
 ™	cpp:S5025Å"QReplace the use of "new" with an operation that automatically manages the memory.(Äô­”ÿÿÿÿÿ8‡¾²ò1J$74bd4800-f788-4124-aecc-be616416bbc9
 }	cpp:S5025Ü":Rewrite the code so that you no longer need this "delete".(İóî8•¾²ò1J$fb679b0c-43f0-47fa-b692-656611fc2909
->	cpp:S3432™"Remove this destructor call.(œ½»¥üÿÿÿÿ8â’×Óò1
-Z	cpp:S1199™"8Extract this nested code block into a separate function.(œ½»¥üÿÿÿÿ8ã’×Óò1
-V	cpp:S5025›":Rewrite the code so that you no longer need this "delete".(½×™U8ä’×Óò1
-\	cpp:S5025Ÿ":Rewrite the code so that you no longer need this "delete".(ŒÍ­ÿÿÿÿÿ8æ’×Óò1
-\	cpp:S5025£":Rewrite the code so that you no longer need this "delete".(¼ôÏûÿÿÿÿ8æ’×Óò1
-\	cpp:S5025§":Rewrite the code so that you no longer need this "delete".(¼ÒêÜûÿÿÿÿ8æ’×Óò1
-\	cpp:S5025«":Rewrite the code so that you no longer need this "delete".(òˆ“®ûÿÿÿÿ8æ’×Óò1
-Z	cpp:S1155®"=Use "empty()" to check whether the container is empty or not.(ºŠ¸ñ8ç’×Óò1
-W	cpp:S5025±":Rewrite the code so that you no longer need this "delete".(×—şå8ç’×Óò1
-\	cpp:S5025·":Rewrite the code so that you no longer need this "delete".(…Íˆ÷úÿÿÿÿ8ç’×Óò1
+K	cpp:S5817÷")This function should be declared "const".(«Ÿ‚Ñüÿÿÿÿ8·µüîò1
+V	cpp:S5025š":Rewrite the code so that you no longer need this "delete".(½×™U8ä’×Óò1
+\	cpp:S5025":Rewrite the code so that you no longer need this "delete".(ŒÍ­ÿÿÿÿÿ8æ’×Óò1
+\	cpp:S5025¢":Rewrite the code so that you no longer need this "delete".(¼ôÏûÿÿÿÿ8æ’×Óò1
+\	cpp:S5025¦":Rewrite the code so that you no longer need this "delete".(¼ÒêÜûÿÿÿÿ8æ’×Óò1
+\	cpp:S5025ª":Rewrite the code so that you no longer need this "delete".(òˆ“®ûÿÿÿÿ8æ’×Óò1
+Z	cpp:S1155­"=Use "empty()" to check whether the container is empty or not.(ºŠ¸ñ8ç’×Óò1
+W	cpp:S5025°":Rewrite the code so that you no longer need this "delete".(×—şå8ç’×Óò1
+\	cpp:S5025¶":Rewrite the code so that you no longer need this "delete".(…Íˆ÷úÿÿÿÿ8ç’×Óò1

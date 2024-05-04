@@ -68,6 +68,7 @@ CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
@@ -186,10 +187,13 @@ CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
@@ -221,6 +225,8 @@ CMakeFiles/ICP.dir/ICP_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -735,6 +741,7 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
@@ -850,9 +857,11 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
@@ -884,6 +893,8 @@ CMakeFiles/ICP.dir/gamemaster.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -1181,6 +1192,7 @@ CMakeFiles/ICP.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
@@ -1296,9 +1308,11 @@ CMakeFiles/ICP.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
@@ -1330,6 +1344,8 @@ CMakeFiles/ICP.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -1376,6 +1392,7 @@ CMakeFiles/ICP.dir/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
@@ -1476,10 +1493,13 @@ CMakeFiles/ICP.dir/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
@@ -1510,6 +1530,8 @@ CMakeFiles/ICP.dir/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
@@ -1663,6 +1685,7 @@ CMakeFiles/ICP.dir/mapwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h

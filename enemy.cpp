@@ -1,6 +1,12 @@
-//
-// Created by marek on 24.04.2024.
-//
+/**
+ * @file enemy.cpp
+ * @brief Enemy class implementation file
+ * @version 1.0
+ * @details This class is responsible for creating autonomous robots
+ * (in our implementation - the enemies) in the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Marek Effenberger
+ */
 
 #include "enemy.h"
 
@@ -21,13 +27,12 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
     pen.setColor(Qt::black); // Set the color of the pen to black
     setPen(pen);
 
-    // Create the vision point
-    visionPoint = new QGraphicsEllipseItem(rect().width() / 2, rect().height() - rect().height() / 5, 7, 7,
-                                           this); // Positioned above the center of the User
+    // Create the vision point, positioned above the center of the Enemy
+    visionPoint = new QGraphicsEllipseItem(rect().width() / 2, rect().height() - rect().height() / 5, 7, 7, this);
     visionPoint->setBrush(Qt::red); // Set the color to red
     visionPoint->setZValue(-12); // Set the z value to 1 so it's drawn on top of the vision field
 
-    // Create the vision rectangle
+    // Create the vision rectangle (the vision field) as of the values 1-5 these are the most suitable
     visionLength = distance;
     QVector<QPointF> points;
     points << QPointF(rect().width() / 2 - rect().width() / 5, rect().height() - rect().height() / 5)
@@ -35,12 +40,11 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
            << QPointF(rect().width(), rect().height() + visionLength * 13)
            << QPointF(rect().width() / 2 + rect().width() / 5, rect().height() - rect().height() / 5);
 
-    // Create the vision trapezoid
     visionField = new QGraphicsPolygonItem(QPolygonF(points), this);
-    QColor semiTransparentBlue(Qt::yellow); // RGBA color: semi-transparent
+    QColor semiTransparentYellow(255,250,205,205);
     visionField->setPen(QPen(Qt::transparent));
-    visionField->setBrush(semiTransparentBlue);
-    visionField->setZValue(-1); // Below the Enemy:
+    visionField->setBrush(semiTransparentYellow);
+    visionField->setZValue(-1); // Below the Enemy children objects
 
     // Initialize movement parameters
     turningAngle = rotationAngle;
@@ -49,28 +53,33 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
     } else {
         clockwise = true;
     }
+    // As of the tick time, the velocity counted as such was found the most suitable
     speed = 2 + velocity*0.5;
     rotationSpeed = 3.0;
-    //movementTimer = new QTimer(this);
-    //QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
-    //movementTimer->start(30);
-    setTransformOriginPoint(rect().width()/2, rect().width()/2);
 
+    // Set the origin point of the transformation - the center of the Enemy
+    setTransformOriginPoint(rect().width()/2, rect().width()/2);
+    // Set the user pointer
     this->user = user;
     connect(this, &Enemy::hit, user, &User::decreaseLives);
 
+    // Initial last position equals the current position
     lastPos = pos();
+    // The enemy shall check whether stucked every 3s
     stuckTimer = new QTimer(this);
     connect(stuckTimer, &QTimer::timeout, this, &Enemy::checkStuck);
     stuckTimer->start(3000);
-
+    // Initialize the chase timer
     chaseTimer = new QTimer(this);
     connect(chaseTimer, &QTimer::timeout, this, &Enemy::stopChasing);
+    // Initialize the collision flag
     collision = false;
+    // Rotate the enemy so it points upwards (plus the user-given value)
     setRotation(orientation + 180);
-
+    // movementTimer set tu nullptr as it is started after the 3s initial wait
     movementTimer = nullptr;
 }
+
 
 void Enemy::startAutonomousMovement() {
     // Create a timer
@@ -79,15 +88,11 @@ void Enemy::startAutonomousMovement() {
 
     // Connect the timer's timeout() signal to the enemy's autonomousMovement() slot
     QObject::connect(movementTimer, &QTimer::timeout, this, &Enemy::autonomousMovement);
-
-//    // Start the timer with a delay of 3 seconds (3000 milliseconds)
-//    timer->start(3000);
 }
 
+
 void Enemy::autonomousMovement(){
-
-
-    // set the color of the vision field back to yellow
+    // Set the color of the vision field back to yellow
     QColor yellow(255,250,205,205); // RGBA color: semi-transparent
     visionField->setBrush(yellow);
 
@@ -119,26 +124,34 @@ void Enemy::autonomousMovement(){
         }
         collision = true;
     }
+
+    // Restart mechanism for the stuckTimer
     QPointF newPos = QPointF(newX, newY);
-    if (QPointF::dotProduct(newPos - lastPos, newPos - lastPos) > 800) { // If moved more than sqrt(500) units
+    if (QPointF::dotProduct(newPos - lastPos, newPos - lastPos) > 800) { // If moved more than sqrt(800) units
         lastPos = newPos;
         stuckTimer->start(3000); // Restart stuckTimer
     }
 
+    // The enemy shall not move if the rotation angle is 0 and is colliding
     if (turningAngle == 0 && collision) {
         return;
     }
     collision = false;
 
+    // Finally set the new position
     setPos(newX, newY);
-
 }
+
 
 void Enemy::checkCollisions(){
 
+    // Get the colliding items
     QList<QGraphicsItem *> collidingItems = this->collidingItems();
+    // Add the colliding items of the vision field
     collidingItems.append(visionField->collidingItems());
 
+    // Go through all of the colliding items, try to cast them to the appropriate type and handle the collision if the
+    // cast was successful
     for (QGraphicsItem *item : collidingItems){
         if (Obstacle *obstacle = dynamic_cast<Obstacle *>(item)){
             collision = true;
@@ -156,6 +169,7 @@ void Enemy::checkCollisions(){
     }
 }
 
+
 void Enemy::obstacleCollision(Obstacle *obstacle){
     // Handle collision with obstacle
     if (visionField->collidesWithItem(obstacle)){
@@ -169,17 +183,8 @@ void Enemy::obstacleCollision(Obstacle *obstacle){
             setRotation(rotation() + turningAngle);
         }
     }
-//    if (armor->collidesWithItem(obstacle)){
-//        // Turn around
-//        if (clockwise){
-//            setRotation(rotation() - turningAngle);
-//        }
-//        else {
-//            setRotation(rotation() + turningAngle);
-//        }
-//        collision = true;
-//    }
 }
+
 
 void Enemy::enemyCollision(Enemy *enemy) {
     // Handle collision with enemy
@@ -197,37 +202,35 @@ void Enemy::enemyCollision(Enemy *enemy) {
     }
 }
 
+
 void Enemy::userCollision(User *user){
     // Handle collision with user
     if (visionField->collidesWithItem(user) && !(armor->collidesWithItem(user))){
-        // change color of visionField to red
+        // Change color of visionField to red
         QColor red(255, 0, 0, 100); // RGBA color: semi-transparent red
         visionField->setBrush(red);
         // Start chasing the user
 
         qDebug() << "I see you!";
 
-        //TODO implement the chase
         QPointF direction = user->pos() - this->pos();
-        qreal angleToUser = atan2(direction.y(), direction.x()) * 180 / M_PI - 90; // Adjust as necessary
+        qreal angleToUser = atan2(direction.y(), direction.x()) * 180 / M_PI - 90;
         qreal currentAngle = rotation();
 
         qreal angleDifference = angleToUser - currentAngle;
         // Normalize the angle difference within [-180, 180]
         while (angleDifference < -180) angleDifference += 360;
         while (angleDifference > 180) angleDifference -= 360;
-
+        // Rotate in the user's direction slowly
         setRotation(currentAngle + (angleDifference * 0.1));
-//
+
         if(!chaseTimer->isActive()) chaseTimer->start(5000); // Chase the user for 3 seconds
 
-
         return;
-
     }
+
     if (armor->collidesWithItem(user)) {
-        // the user is dead, game over
-        // debug as of now
+        // The user is dead, game over
         qDebug() << "Hit";
         if (clockwise){
             setRotation(rotation() - turningAngle);
@@ -235,52 +238,30 @@ void Enemy::userCollision(User *user){
         else {
             setRotation(rotation() + turningAngle);
         }
-        //user->setRotation(user->rotation() + 180);
-        emitHit();
+
+        // Emit the hit signal
+        emit hit();
         return;
     }
-}
-
-void Enemy::emitHit() {
-    // Emit the hit signal
-    emit hit();
 }
 
 
 void Enemy::checkStuck() {
     qDebug() << "Checking if I'm stuck";
     qDebug() << QPointF::dotProduct(pos() - lastPos, pos() - lastPos);
-    if (QPointF::dotProduct(pos() - lastPos, pos() - lastPos) < 800) { // If moved less than 10 units
+    if (QPointF::dotProduct(pos() - lastPos, pos() - lastPos) < 800) {
         getUnstuck();
     }
     lastPos = pos(); // Update lastPosition
 }
 
+
 void Enemy::getUnstuck() {
     qDebug() << "STEPBRO I NEED YOUR HELP!";
 
-    //TODO: unstuck possible better
-//    // Get the colliding items
-//    QList<QGraphicsItem *> collidingItems = this->collidingItems();
-//
-//    for (QGraphicsItem *item : collidingItems) {
-//        qDebug() << "Colliding with something!";
-//        // Calculate the direction from the enemy to the colliding item
-//        QPointF direction = item->pos() - this->pos();
-//
-//        // Normalize the direction
-//        qreal len = sqrt(direction.x() * direction.x() + direction.y() * direction.y());
-//        direction /= len;
-//
-//        // Move the enemy away from the colliding item
-//        qreal distance = 10; // You can adjust this value as needed
-//        QPointF newPos = this->pos() - direction * distance;
-//        this->setPos(newPos);
-//        return;
-//    }
-
+    // Rotate the enemy
     setRotation(rotation() + turningAngle);
-    // if the enemy is out the scene, move it back
+    // If the enemy is out the scene, move it back
     qreal newX = x();
     qreal newY = y();
     if (newX < 20) newX = 20;
@@ -290,6 +271,7 @@ void Enemy::getUnstuck() {
     setPos(newX, newY);
 }
 
+
 void Enemy::stopChasing() {
     // Stop chasing the user
     qDebug() << "I lost you!";
@@ -298,6 +280,7 @@ void Enemy::stopChasing() {
     // Rotate away from the user
     setRotation(rotation() + 180);
 }
+
 
 void Enemy::stopAllTimers() {
     // Stop all timers
@@ -310,6 +293,7 @@ void Enemy::stopAllTimers() {
     chaseTimer->stop();
 }
 
+
 void Enemy::resumeAllTimers() {
     // Resume all timers
     if (movementTimer) {
@@ -318,6 +302,7 @@ void Enemy::resumeAllTimers() {
     stuckTimer->start(remainingStuckTime);
     chaseTimer->start(remainingChaseTime);
 }
+
 
 Enemy::~Enemy() {
     if (movementTimer != nullptr) {

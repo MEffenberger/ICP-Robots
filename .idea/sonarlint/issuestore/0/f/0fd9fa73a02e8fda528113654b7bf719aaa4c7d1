@@ -1,6 +1,6 @@
 
-|	cpp:S3230"gDo not assign data members in a constructor. Initialize member "orientation" in an initialization list.(ØöÁú
-y	cpp:S3230"dDo not assign data members in a constructor. Initialize member "distance" in an initialization list.(Ğ³œ
-~	cpp:S3230"iDo not assign data members in a constructor. Initialize member "rotationAngle" in an initialization list.(Ëà©«
-~	cpp:S3230"dDo not assign data members in a constructor. Initialize member "velocity" in an initialization list.(›ßøÿÿÿÿ
-L	cpp:S3471"2Annotate this function with "override" or "final".(À‡·÷üÿÿÿÿ
+|	cpp:S3230"gDo not assign data members in a constructor. Initialize member "orientation" in an initialization list.(ØöÁú
+y	cpp:S3230"dDo not assign data members in a constructor. Initialize member "distance" in an initialization list.(Ğ³œ
+~	cpp:S3230"iDo not assign data members in a constructor. Initialize member "rotationAngle" in an initialization list.(Ëà©«
+~	cpp:S3230"dDo not assign data members in a constructor. Initialize member "velocity" in an initialization list.(›ßøÿÿÿÿ
+L	cpp:S3471"2Annotate this function with "override" or "final".(À‡·÷üÿÿÿÿ
