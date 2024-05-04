@@ -15,16 +15,16 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
     width = 1200;
     height = 100;
     setRect(0, 0, width, height);
-    QPixmap pixmap("../images/bar.png");
+    QPixmap pixmap("images/bar.png");
     pixmap = pixmap.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     setBrush(pixmap);
     setPos(0, 700);
     userPtr = user;
 
     // Initialize the buttons with their respective images
-    ForwardButton = new Button(QPixmap("../images/forward.png"), "Forward",this, 75, 75);
-    ClockwiseButton = new Button(QPixmap("../images/clockwise.png"),"Clockwise", this, 75, 75);
-    CounterClockwiseButton = new Button(QPixmap("../images/anticlockwise.png"),"CounterClockwise", this, 75, 75);
+    ForwardButton = new Button(QPixmap("images/forward.png"), "Forward",this, 75, 75);
+    ClockwiseButton = new Button(QPixmap("images/clockwise.png"),"Clockwise", this, 75, 75);
+    CounterClockwiseButton = new Button(QPixmap("images/anticlockwise.png"),"CounterClockwise", this, 75, 75);
 
     // Position the buttons
     qreal offset = 12.5;
@@ -42,12 +42,12 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
     connect(ClockwiseButton, &Button::released, user, &User::stopRotating);
     connect(CounterClockwiseButton, &Button::released, user, &User::stopRotating);
 
-    KeyboardButton = new Button(QPixmap("../images/keyboard.png"), "Keyboard", this, 75, 75);
+    KeyboardButton = new Button(QPixmap("images/keyboard.png"), "Keyboard", this, 75, 75);
     KeyboardButton->setPos(850, 12.5);
     connect(KeyboardButton, &Button::pressed, user, &User::switchControl);
 
 
-    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    int fontId = QFontDatabase::addApplicationFont("Orbitron/static/Orbitron-ExtraBold.ttf");
     QString family = QFontDatabase::applicationFontFamilies(fontId).at(0);
 
 
@@ -121,7 +121,7 @@ HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
     width = 1200;
     height = 100;
     setRect(0, 0, width, height);
-    QPixmap pixmap("../images/bar.png");
+    QPixmap pixmap("images/bar.png");
     pixmap = pixmap.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     setBrush(pixmap);
     setPos(0, 0);
@@ -155,7 +155,7 @@ HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
     timer->setPos(950, 17);
 
     // Create the pause button
-    QPixmap pixmap2("../images/pause.png");
+    QPixmap pixmap2("images/pause.png");
     pixmap2 = pixmap2.scaled(75, 75, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     pauseButton = new Button(pixmap2, "Pause", this, 75, 75);
     pauseButton->setPos(562.5, 12.5);

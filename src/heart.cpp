@@ -12,7 +12,7 @@
 
 Heart::Heart(QGraphicsItem *parent) : QGraphicsRectItem(parent) {
     setRect(0, 0, 75, 75);
-    QPixmap pixmap("../images/green_heart.png");
+    QPixmap pixmap("/images/green_heart.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     QBrush brush(pixmap);
     setBrush(brush);
@@ -21,7 +21,7 @@ Heart::Heart(QGraphicsItem *parent) : QGraphicsRectItem(parent) {
 
 
 void Heart::setDead() {
-    QPixmap pixmap("../images/gray_heart.png");
+    QPixmap pixmap("/images/gray_heart.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     QBrush brush(pixmap);
     setBrush(brush);

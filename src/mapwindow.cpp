@@ -27,9 +27,9 @@ MapWindow::MapWindow(QWidget *parent) :
     loadFont();
 
     //Add icons to the structure
-    icons.obstacle = QPixmap("../images/obstacle4.png");
-    icons.robot = QPixmap("../images/user3.png");
-    icons.enemy = QPixmap("../images/enemy3.png");
+    icons.obstacle = QPixmap("images/obstacle4.png");
+    icons.robot = QPixmap("images/user3.png");
+    icons.enemy = QPixmap("images/enemy3.png");
 
     //connect the signals to the slots
     connect(ui->tableWidget, &QTableWidget::cellClicked, this, &MapWindow::handleCellClicked);
@@ -46,7 +46,7 @@ MapWindow::MapWindow(QWidget *parent) :
     setFixedSize(QSize(1200, 720));
     ui->tableWidget->verticalHeader()->setVisible(false);
     ui->tableWidget->horizontalHeader()->setVisible(false);
-    QString styleSheet = "QTableWidget { background-image: url(../images/bg.png); }";
+    QString styleSheet = "QTableWidget { background-image: url(images/bg.png); }";
     ui->tableWidget->setStyleSheet(styleSheet);
 
     //Create table cells
@@ -96,7 +96,7 @@ MapWindow::MapWindow(QWidget *parent) :
 }
 
 void MapWindow::setBarTop(){
-    barTop->setStyleSheet("background-image: url(../images/bar.png);");
+    barTop->setStyleSheet("background-image: url(images/bar.png);");
 
     //Set the position and resolution of the bar
     barTop->setGeometry(QRect(0, 0, 1231, 61));
@@ -124,7 +124,7 @@ void MapWindow::setBarTop(){
 }
 
 void MapWindow::setBarBottom(){
-    barBottom->setStyleSheet("background-image: url(../images/bar.png);");
+    barBottom->setStyleSheet("background-image: url(images/bar.png);");
     
     //Set the position and resolution of the bar
     barBottom->setGeometry(QRect(0, 660, 1231, 61));
@@ -236,7 +236,7 @@ void MapWindow::startGame(){
 void MapWindow::loadFont(){
 
     //Load custom font to be used in the application
-    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    int fontId = QFontDatabase::addApplicationFont("Orbitron/static/Orbitron-ExtraBold.ttf");
     if (fontId == -1) {
         exit(EXIT_FAILURE);
     }

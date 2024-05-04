@@ -17,7 +17,7 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
 
     // The armor is needed so the vision field is not visible where it intersects with the Enemy
     armor = new QGraphicsEllipseItem(0, 0, 50, 50, this); // Set the size of the ellipse
-    QPixmap pixmap("../images/enemy3.png");
+    QPixmap pixmap("images/enemy3.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     armor->setBrush(pixmap);
     armor->setZValue(1); // Set the z value to 1 so it's drawn on top of the vision field
@@ -142,7 +142,7 @@ void Enemy::autonomousMovement(){
     setPos(newX, newY);
 }
 
-// Inspired by https://www.youtube.com/watch?v=8A9OGJX-SQg&ab_channel=Abdullah
+
 void Enemy::checkCollisions(){
 
     // Get the colliding items

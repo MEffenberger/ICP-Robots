@@ -55,13 +55,13 @@ void MainWindow::applyGraphics(){
     this->setFixedSize(QSize(350, 430));
 
     //Load font
-    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    int fontId = QFontDatabase::addApplicationFont("Orbitron/static/Orbitron-ExtraBold.ttf");
     if (fontId == -1) {
         QApplication::quit();
     }
     QString fontFamily = QFontDatabase::applicationFontFamilies(fontId).at(0);
     //Design style sheet
-    QString styleSheet = QString("font-family: %1; color: rgb(0, 255, 0); background-image: url(../images/bar.png);").arg(fontFamily);
+    QString styleSheet = QString("font-family: %1; color: rgb(0, 255, 0); background-image: url(images/bar.png);").arg(fontFamily);
     //Apply style sheet to the main window buttons
     ui->createMapButton->setStyleSheet(styleSheet);
     ui->loadMapButton->setStyleSheet(styleSheet);

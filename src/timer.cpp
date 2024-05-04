@@ -15,7 +15,7 @@ Timer::Timer(QGraphicsItem *parent, int timeL) : QGraphicsTextItem(parent)
 {
 
     // Load font and set it
-    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    int fontId = QFontDatabase::addApplicationFont("Orbitron/static/Orbitron-ExtraBold.ttf");
     QString family = QFontDatabase::applicationFontFamilies(fontId).at(0);
     QFont font;
     font.setFamily(family);

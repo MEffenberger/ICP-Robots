@@ -17,7 +17,7 @@
 GameInfo::GameInfo(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
     // Load the font
-    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    int fontId = QFontDatabase::addApplicationFont("Orbitron/static/Orbitron-ExtraBold.ttf");
     QString family = QFontDatabase::applicationFontFamilies(fontId).at(0);
 
     QFont font;

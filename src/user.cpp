@@ -15,7 +15,7 @@
 User::User(QGraphicsItem *parent,  int orientation, int velocity) : QObject(), QGraphicsEllipseItem(parent)
 {
     setRect(0, 0, 50, 50);
-    QPixmap pixmap("../images/user3.png");
+    QPixmap pixmap("images/user3.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     QBrush brush(pixmap);
     setBrush(brush);
@@ -26,7 +26,7 @@ User::User(QGraphicsItem *parent,  int orientation, int velocity) : QObject(), Q
 
     // Create the vision point
     visionPoint = new QGraphicsEllipseItem(rect().width()/2, rect().height() - 0.9*(rect().height()), 10, 10, this);
-    QPixmap eye("../images/eye5.png");
+    QPixmap eye("images/eye5.png");
     eye = eye.scaled(visionPoint->rect().width(), visionPoint->rect().height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     QBrush eyeBrush(eye);
     visionPoint->setBrush(eyeBrush);
@@ -174,8 +174,6 @@ void User::keyPressEvent(QKeyEvent *event) {
     }
 }
 
-
-// Inspired by https://www.youtube.com/watch?v=8A9OGJX-SQg&ab_channel=Abdullah
 void User::CheckCollisions() {
     // Check for collisions with obstacles, using dynamic_cast to check if the item is of type desired
     QList<QGraphicsItem *> colliding_items = collidingItems();
@@ -189,7 +187,7 @@ void User::CheckCollisions() {
             // Stun the user
             Stunned = true;
             StunnedTimer->start(5000); // Stun for 5 seconds
-            QPixmap pixmap("../images/user3broken.png");
+            QPixmap pixmap("images/user3broken.png");
             pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
             QBrush brush(pixmap);
             setBrush(brush);
@@ -205,7 +203,6 @@ void User::CheckCollisions() {
         }
     }
 }
-
 
 void User::spawnStars() {
     // Create stars, 5 of them
@@ -227,11 +224,10 @@ void User::spawnStars() {
     }
 }
 
-
 void User::StunTimerExpired() {
     Stunned = false;
     StunnedTimer->stop();
-    QPixmap pixmap("../images/user3.png");
+    QPixmap pixmap("images/user3.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     QBrush brush(pixmap);
     setBrush(brush);

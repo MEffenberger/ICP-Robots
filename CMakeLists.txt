@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets )
 
+# Rest of your CMakeLists.txt file
 set(PROJECT_SOURCES
         src/main.cpp
         src/mainwindow.cpp
@@ -55,21 +56,6 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(ICP
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        user.h user.cpp
-        obstacle.h obstacle.cpp
-        enemy.h enemy.cpp
-        button.h button.cpp
-        horizontalbar.h horizontalbar.cpp
-        star.h star.cpp
-        heart.h heart.cpp
-        gameinfo.h gameinfo.cpp
-        timer.cpp timer.h
-        popup.cpp popup.h
-        enemyitem.cpp enemyitem.h
-        mapwindow.cpp mapwindow.h
-        robotdialog.cpp robotdialog.h
-        robotitem.cpp robotitem.h
-        gamemaster.cpp gamemaster.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ICP APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

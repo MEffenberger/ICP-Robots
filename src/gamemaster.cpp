@@ -156,7 +156,7 @@ bool GameMaster::mainEvent(){
     this->scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, 1200, 800);
     // Set the background image
-    QPixmap background("../images/bg.png");
+    QPixmap background("images/bg.png");
     background = background.scaled(scene->width(), scene->height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     scene->setBackgroundBrush(background);
 
@@ -228,7 +228,7 @@ bool GameMaster::mainEvent(){
 
     // Create the countDown for the first 3 seconds of the game, use the Orbitron font
     this->countDown = new QGraphicsTextItem();
-    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    int fontId = QFontDatabase::addApplicationFont("Orbitron/static/Orbitron-ExtraBold.ttf");
     QString family = QFontDatabase::applicationFontFamilies(fontId).at(0);
     QFont font;
     font.setFamily(family);

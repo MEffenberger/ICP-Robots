@@ -12,7 +12,7 @@
 Star::Star(QGraphicsItem *parent) : QGraphicsEllipseItem(parent)
 {
     setRect(0, 0, 20, 20);
-    QPixmap pixmap("../images/star.png");
+    QPixmap pixmap("images/star.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     QBrush brush(pixmap);
     setBrush(brush);

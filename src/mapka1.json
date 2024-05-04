@@ -1,0 +1,75 @@
+[
+    {
+        "timeLimit": 60
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 375,
+        "mapPosition ycord": 0
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 225,
+        "mapPosition ycord": 75
+    },
+    {
+        "cellType": "Robot",
+        "mapPosition xcord": 525,
+        "mapPosition ycord": 75,
+        "parameters": {
+            "orientation": 9,
+            "velocity": 5
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 675,
+        "mapPosition ycord": 75
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 450,
+        "mapPosition ycord": 150
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 150,
+        "mapPosition ycord": 225
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 975,
+        "mapPosition ycord": 225
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 225,
+        "mapPosition ycord": 375
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 450,
+        "mapPosition ycord": 375
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 750,
+        "mapPosition ycord": 375
+    },
+    {
+        "cellType": "Enemy",
+        "mapPosition xcord": 900,
+        "mapPosition ycord": 375,
+        "parameters": {
+            "distance": 3,
+            "orientation": 21,
+            "rotationAngle": 45,
+            "velocity": 5
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition xcord": 675,
+        "mapPosition ycord": 450
+    }
+]
