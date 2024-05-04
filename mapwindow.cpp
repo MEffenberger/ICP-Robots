@@ -1,3 +1,12 @@
+/**
+ * @file mapwindow.cpp
+ * @brief Map Window Class Implementation file
+ * @version 1.0
+ * @details This class is responsible for creating the map editor window of the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
+
 #include "mapwindow.h"
 #include "robotdialog.h"
 #include "robotitem.h"
@@ -39,6 +48,16 @@ MapWindow::MapWindow(QWidget *parent) :
     ui->tableWidget->horizontalHeader()->setVisible(false);
     QString styleSheet = "QTableWidget { background-image: url(../images/bg.png); }";
     ui->tableWidget->setStyleSheet(styleSheet);
+
+    //Create table cells
+    for (int rows = 0; rows < ui->tableWidget->rowCount(); rows++) {
+        for (int cols = 0; cols < ui->tableWidget->columnCount(); cols++) {
+            QTableWidgetItem *item = new QTableWidgetItem();
+            if(item == nullptr){
+                ui->tableWidget->setItem(rows, cols, item);
+            }
+        }
+    }
     
     // Set the initial values of the variables
     this->obstaclesPlaced = 0;
@@ -174,36 +193,28 @@ QJsonArray* MapWindow::fillFile(bool* robotFound){
             if (RobotItem *robot = dynamic_cast<RobotItem*>(item)) {
                 *robotFound = true;
                 mapObject["cellType"] = "Robot";
-                mapObject["mapPosition"] = QJsonObject({
-                    {"x pos", cellPosition.x()},
-                    {"y pos", cellPosition.y()}
-                });
+                mapObject["mapPosition xcord"] = cellPosition.x();
+                mapObject["mapPosition ycord"] = cellPosition.y();
                 mapObject["parameters"] = QJsonObject({
                     {"orientation", robot->getOrientation()},
-                    {"velocity", robot->getVelocity()}
-                });
+                    {"velocity", robot->getVelocity()}});
 
             //Set obstacle data
             } else if (ObstacleItem *obstacle = dynamic_cast<ObstacleItem*>(item)) {
                 mapObject["cellType"] = "Obstacle";
-                mapObject["mapPosition"] = QJsonObject({
-                    {"x pos", cellPosition.x()},
-                    {"y pos", cellPosition.y()}
-                });
+                mapObject["mapPosition xcord"] = cellPosition.x();
+                mapObject["mapPosition ycord"] = cellPosition.y();
 
             //Set enemy data
             } else if (EnemyItem *enemy = dynamic_cast<EnemyItem*>(item)) {
                 mapObject["cellType"] = "Enemy";
-                mapObject["mapPosition"] = QJsonObject({
-                    {"x pos", cellPosition.x()},
-                    {"y pos", cellPosition.y()}
-                });
+                mapObject["mapPosition xcord"] = cellPosition.x();
+                mapObject["mapPosition ycord"] = cellPosition.y();
                 mapObject["parameters"] = QJsonObject({
                     {"orientation", enemy->getOrientation()},
                     {"distance", enemy->getDistance()},
                     {"rotationAngle", enemy->getRotationAngle()},
-                    {"velocity", enemy->getVelocity()}
-                });
+                    {"velocity", enemy->getVelocity()}});
             } else {
                 continue;
             }
@@ -269,13 +280,13 @@ void MapWindow::loadMap(){
             continue;
         }
 
-        QString type = mapObject["cellType"].toString();
-        
-        if(mapObject.contains("mapPosition")){
-            QJsonObject paramObject = mapObject["mapPosition"].toObject();
-            col = paramObject["x pos"].toInt() / SQUARE_SIZE;
-            row = paramObject["y pos"].toInt() / SQUARE_SIZE;
+        //Get position of the cell
+        if(mapObject.contains("mapPosition xcord") && mapObject.contains("mapPosition ycord")){
+            col = mapObject["mapPosition xcord"].toInt() / SQUARE_SIZE;
+            row = mapObject["mapPosition ycord"].toInt() / SQUARE_SIZE;
         }
+
+        QString type = mapObject["cellType"].toString();
 
         if (type == "Robot") {
             //Load robot data and set cell in the map
@@ -287,7 +298,6 @@ void MapWindow::loadMap(){
             robotItem->setVelocity(paramObject["velocity"].toInt());
             setTableCell(robotItem, row, col, orientation);
         } else if (type == "Obstacle") {
-
             //Load obstacle data and set cell in the map
             ObstacleItem* obstacleItem = new ObstacleItem;
             setTableCell(obstacleItem, row, col, 0);
@@ -405,11 +415,10 @@ void MapWindow::disableEditing() {
     for (int rows = 0; rows < ui->tableWidget->rowCount(); rows++) {
         for (int cols = 0; cols < ui->tableWidget->columnCount(); cols++) {
             QTableWidgetItem *item = ui->tableWidget->item(rows, cols);
-            if (!item) {
-                item = new QTableWidgetItem();
-                ui->tableWidget->setItem(rows, cols, item);
+            if(item){
+                item->setFlags(item->flags() & ~Qt::ItemIsEditable);  
             }
-            item->setFlags(item->flags() & ~Qt::ItemIsEditable);
+             
         }
     }
 }

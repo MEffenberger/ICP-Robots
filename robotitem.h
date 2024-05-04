@@ -1,3 +1,12 @@
+/**
+ * @file robotitem.h
+ * @brief Robot Item Class header file
+ * @version 1.0
+ * @details This class is responsible for holding the contorolled robot cell item data in the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
+
 #ifndef ROBOTITEM_H
 #define ROBOTITEM_H
 
@@ -10,7 +19,9 @@
  */
 class RobotItem : public QTableWidgetItem {
 private:
+    /** Orientation of the robot*/
     int orientation;
+    /** Velocity of the robot*/
     int velocity;
 
 public:

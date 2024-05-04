@@ -1,3 +1,12 @@
+/**
+ * @file mainwindow.h
+ * @brief Main Window Class Header file
+ * @version 1.0
+ * @details This class is responsible for creating the main window of the robot game
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -52,6 +61,7 @@ private slots:
     void createNewWindow();
 
 private:
+    /** Ui object */
     Ui::MainWindow *ui;
 
 signals:

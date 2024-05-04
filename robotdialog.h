@@ -1,3 +1,12 @@
+/**
+ * @file robotdialog.h
+ * @brief Robot Dialog Class Header file
+ * @version 1.0
+ * @details This class is responsible for creating a dialog where user can input the parameters of the robot/enemy
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
+
 #ifndef ROBOTDIALOG_H
 #define ROBOTDIALOG_H
 
@@ -54,12 +63,19 @@ public:
     void createLayout(bool robotExists);
 
 private:
+    /** pointer to the spinBox for orientation*/
     QSpinBox *orientationBox;
+    /** pointer to the spinBox for distance*/
     QSpinBox *distanceBox;
+    /** pointer to the spinBox for rotation angle*/
     QSpinBox *rotationAngleBox;
+    /** pointer to the spinBox for velocity*/
     QSpinBox *velocityBox;
+    /** pointer to the layout of the dialog*/
     QFormLayout *layout;
+    /** pointer to the layout for left/right button*/
     QFormLayout *LRLayout;
+    /** pointer to the button for changing direction*/
     QPushButton *directionButton;
 
 private slots:

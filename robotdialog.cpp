@@ -1,3 +1,12 @@
+/**
+ * @file robotdialog.cpp
+ * @brief Robot Dialog Class Implementation file
+ * @version 1.0
+ * @details This class is responsible for creating a dialog where user can input the parameters of the robot/enemy
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
+
 #include "robotdialog.h"
 
 RobotParamDialog::RobotParamDialog(QWidget *parent, bool robotExists) : QDialog(parent) {
@@ -71,7 +80,7 @@ void RobotParamDialog::createLayout(bool robotExists){
     LRLayout->addRow(directionButton);
     LRLayout->setAlignment(Qt::AlignRight);
 
-    
+    //Add rest of the spin boxes to the layout
     layout->addRow(new QLabel("Rotation after detecting obstacle direction:"), LRLayout);
     layout->addRow(new QLabel("Rotation after detection obstacle (degrees):"), rotationAngleBox);
     layout->addRow(new QLabel("Robot speed (10 max, 1 min):"), velocityBox);

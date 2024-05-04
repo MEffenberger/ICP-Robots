@@ -1,3 +1,12 @@
+/**
+ * @file enemyitem.h
+ * @brief Enemy Item Class header file
+ * @version 1.0
+ * @details This class is responsible for holding the enemy cell item data in the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Samuel Hejnicek
+ */
+
 #ifndef ENEMYITEM_H
 #define ENEMYITEM_H
 
@@ -9,9 +18,13 @@
  */
 class EnemyItem : public QTableWidgetItem {
 private:
+    /** Orientation of the enemy robot*/
     int orientation;
+    /** Distance of the enemy robot*/
     int distance;
+    /** Rotation angle of the enemy robot*/
     int rotationAngle;
+    /** Velocity of the enemy robot*/
     int velocity;
 
 public:
