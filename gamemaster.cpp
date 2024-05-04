@@ -107,10 +107,9 @@ bool GameMaster::loadFile() {
         int x, y;
 
         //Obtain x and y position if exist
-        if(mapObject.contains("mapPosition")){
-            QJsonObject posObject = mapObject["mapPosition"].toObject();
-            x = posObject["x pos"].toInt();
-            y = posObject["y pos"].toInt();
+        if(mapObject.contains("mapPosition xcord") && mapObject.contains("mapPosition ycord")){
+            x = mapObject["mapPosition xcord"].toInt();
+            y = mapObject["mapPosition ycord"].toInt();
         }
         //Store robot data
         if (type == "Robot") {

@@ -60,11 +60,11 @@ void RobotParamDialog::createLayout(bool robotExists){
 
     //Create layout for dialog
     this->layout = new QFormLayout(this);
-    layout->addRow(new QLabel("Robot map orientation (degrees):"), orientationBox);
-    layout->addRow(new QLabel("Distance of detecting obstacles (5 max, 1 min):"), distanceBox);
+    layout->addRow("Robot map orientation (degrees):", orientationBox);
+    layout->addRow("Distance of detecting obstacles (5 max, 1 min):", distanceBox);
     
     //Create sublayout for left/right button
-    this->LRLayout = new QFormLayout;
+    this->LRLayout = new QFormLayout();
 
     //Default direction is right
     this->directionButton = new QPushButton("Right", this);
@@ -81,9 +81,9 @@ void RobotParamDialog::createLayout(bool robotExists){
     LRLayout->setAlignment(Qt::AlignRight);
 
     //Add rest of the spin boxes to the layout
-    layout->addRow(new QLabel("Rotation after detecting obstacle direction:"), LRLayout);
-    layout->addRow(new QLabel("Rotation after detection obstacle (degrees):"), rotationAngleBox);
-    layout->addRow(new QLabel("Robot speed (10 max, 1 min):"), velocityBox);
+    layout->addRow("Rotation after detecting obstacle direction:", LRLayout);
+    layout->addRow("Rotation after detection obstacle (degrees):", rotationAngleBox);
+    layout->addRow("Robot speed (10 max, 1 min):", velocityBox);
 
     //Create new sublayout for buttons
     QHBoxLayout* buttonLayout = new QHBoxLayout;
