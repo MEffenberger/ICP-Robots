@@ -1,13 +1,19 @@
 
-<	cpp:S5827"'Replace the redundant type with "auto".(´óÁ›
-C	cpp:S5827"'Replace the redundant type with "auto".(ß··õ8Ìç»Ñò1
-H	cpp:S5827"'Replace the redundant type with "auto".(´§§Úüÿÿÿÿ8Ìç»Ñò1
-C	cpp:S5827"'Replace the redundant type with "auto".(Á§ôÙ8Íç»Ñò1
-f	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(èèõ…
-f	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ã·÷Ë
-e	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(³Ð­8
-k	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(­—ò™øÿÿÿÿ
-f	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(´óÁ›
-m	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ß··õ8Òç»Ñò1
-r	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(´§§Úüÿÿÿÿ8Òç»Ñò1
-m	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Á§ôÙ8Óç»Ñò1
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.( ’©§J$b04e8276-6349-4b4a-b752-37439c131e1f
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Ú—ÍùøÿÿÿÿJ$160644c8-6e93-4c23-8f20-8d63c32a1edd
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(‘Âû•ýÿÿÿÿJ$4f9da05a-9e29-4094-8270-39b32572a951
+“	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(òö¨„8¢¤¹—ô1J$9ad8c080-37d8-4f07-b0f5-1f5c41b6e3fa
+k	cpp:S5817 ")This function should be declared "const".(ºƒï‚8£¤¹—ô1J$b9ff6472-6509-409c-9c06-01aa07aa44fd
+k	cpp:S5817$")This function should be declared "const".(¿Îˆð8£¤¹—ô1J$d18c934d-78d7-4a87-b008-bd52a40d83a4
+k	cpp:S5817(")This function should be declared "const".(Û×©ÿ8¤¤¹—ô1J$3f3fdd30-9f86-4dcc-bb20-28b34b0e0e1a
+p	cpp:S5817,")This function should be declared "const".(Ü’¯îüÿÿÿÿ8¤¤¹—ô1J$67700e01-5cb8-4fa9-a17b-dc03ea4a772f
+i	cpp:S5827P"'Replace the redundant type with "auto".(ë¯Ý»8¨¤¹—ô1J$c656b76a-858a-4d6b-829e-ed8e0ca784aa
+n	cpp:S5827S"'Replace the redundant type with "auto".(´§§Úüÿÿÿÿ8Ìç»Ñò1J$12650fe9-cacb-4a38-98e3-9adc3ed10bc7
+i	cpp:S5827T"'Replace the redundant type with "auto".(Á§ôÙ8Íç»Ñò1J$6ed46460-e716-4392-ac41-367c2e9bc853
+˜	cpp:S50255"QReplace the use of "new" with an operation that automatically manages the memory.(Žö›‰ÿÿÿÿÿ8ª¤¹—ô1J$62b8788c-811f-4e66-a672-7231d7910276
+˜	cpp:S5025:"QReplace the use of "new" with an operation that automatically manages the memory.(éðÌ£ÿÿÿÿÿ8«¤¹—ô1J$dcd8e8dd-362f-4a8e-9002-aeda271438d2
+“	cpp:S5025="QReplace the use of "new" with an operation that automatically manages the memory.(â›‚¾8«¤¹—ô1J$6820c65a-5c3b-4d98-b8b8-c28c1f9e6081
+“	cpp:S5025P"QReplace the use of "new" with an operation that automatically manages the memory.(ë¯Ý»8­¤¹—ô1J$f7d466b7-2af7-43fc-9b85-da70dcf091be
+˜	cpp:S5025S"QReplace the use of "new" with an operation that automatically manages the memory.(´§§Úüÿÿÿÿ8Òç»Ñò1J$bbe1e19e-8995-44c8-9137-6582bce9964c
+“	cpp:S5025T"QReplace the use of "new" with an operation that automatically manages the memory.(Á§ôÙ8Óç»Ñò1J$e9ebab3e-4a43-4416-8988-1778a5c4b141
+s	cpp:S1066s"1Merge this "if" statement with the enclosing one.(¦Þˆê8¼¤¹—ô1J$e5dc598f-4580-45ae-b438-6439c8c90431

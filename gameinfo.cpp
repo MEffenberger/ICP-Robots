@@ -1,12 +1,22 @@
-//
-// Created by marek on 26.04.2024.
-//
+/**
+ * @file gameinfo.cpp
+ * @brief GameInfo class implementation file
+ * @version 1.0
+ * @details This class is responsible for creating a little text box in the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Marek Effenberger
+ */
+
 
 #include "gameinfo.h"
 
-
+/**
+ * @brief GameInfo constructor
+ * @param parent Parent QGraphicsItem
+ */
 GameInfo::GameInfo(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
+    // Load the font
     int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
     QString family = QFontDatabase::applicationFontFamilies(fontId).at(0);
 

@@ -1,0 +1,118 @@
+[
+    {
+        "timeLimit": 60
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 225,
+            "y pos": 150
+        }
+    },
+    {
+        "cellType": "Enemy",
+        "mapPosition": {
+            "x pos": 900,
+            "y pos": 150
+        },
+        "parameters": {
+            "distance": 3,
+            "orientation": 0,
+            "rotationAngle": 45,
+            "velocity": 5
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 975,
+            "y pos": 150
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 1050,
+            "y pos": 150
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 225,
+            "y pos": 225
+        }
+    },
+    {
+        "cellType": "Robot",
+        "mapPosition": {
+            "x pos": 675,
+            "y pos": 225
+        },
+        "parameters": {
+            "orientation": 0,
+            "velocity": 5
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 975,
+            "y pos": 225
+        }
+    },
+    {
+        "cellType": "Enemy",
+        "mapPosition": {
+            "x pos": 150,
+            "y pos": 375
+        },
+        "parameters": {
+            "distance": 3,
+            "orientation": 0,
+            "rotationAngle": 45,
+            "velocity": 5
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 450,
+            "y pos": 375
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 375,
+            "y pos": 450
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 450,
+            "y pos": 450
+        }
+    },
+    {
+        "cellType": "Enemy",
+        "mapPosition": {
+            "x pos": 825,
+            "y pos": 450
+        },
+        "parameters": {
+            "distance": 3,
+            "orientation": 0,
+            "rotationAngle": 45,
+            "velocity": 5
+        }
+    },
+    {
+        "cellType": "Obstacle",
+        "mapPosition": {
+            "x pos": 975,
+            "y pos": 450
+        }
+    }
+]

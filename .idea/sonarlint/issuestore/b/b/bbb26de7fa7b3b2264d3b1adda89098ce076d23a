@@ -1,5 +1,5 @@
 
-S	cpp:S5028"8Replace this macro by "const", "constexpr" or an "enum".(ñ¬Þ8òÕŠ’ô1
-\	cpp:S5416";"using" should be preferred to "typedef" for type aliasing.(¥Ãè„üÿÿÿÿ8ïÚŠ’ô1
-K	cpp:S5414)"*Don't mix public and private data members.(î€½íüÿÿÿÿ8ñÚŠ’ô1
-r	cpp:S3471w"2Annotate this function with "override" or "final".(ÒÞÔ¥úÿÿÿÿJ$9f587bd1-5f02-498c-8bcc-e7cdc2946818
+y	cpp:S5028"8Replace this macro by "const", "constexpr" or an "enum".(ñ¬Þ8òÕŠ’ô1J$10a32927-6537-4ef8-97e5-e6ac39bfb99e
+‚	cpp:S5416";"using" should be preferred to "typedef" for type aliasing.(¥Ãè„üÿÿÿÿ8ïÚŠ’ô1J$e6e8168b-202b-4bb0-8135-fee69609b09c
+q	cpp:S5414)"*Don't mix public and private data members.(î€½íüÿÿÿÿ8ñÚŠ’ô1J$8614a01e-359e-4d18-9b4f-48b1765a3795
+r	cpp:S3471w"2Annotate this function with "override" or "final".(ÒÞÔ¥úÿÿÿÿJ$8c35dd3c-7faf-4e2d-a6fa-0b798eedb435

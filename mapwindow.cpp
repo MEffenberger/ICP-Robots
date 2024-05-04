@@ -18,9 +18,9 @@ MapWindow::MapWindow(QWidget *parent) :
     loadFont();
 
     //Add icons to the structure
-    icons.obstacle = QPixmap("../images/obstacle.png");
+    icons.obstacle = QPixmap("../images/obstacle4.png");
     icons.robot = QPixmap("../images/user3.png");
-    icons.enemy = QPixmap("../images/enemy2.png");
+    icons.enemy = QPixmap("../images/enemy3.png");
 
     //connect the signals to the slots
     connect(ui->tableWidget, &QTableWidget::cellClicked, this, &MapWindow::handleCellClicked);

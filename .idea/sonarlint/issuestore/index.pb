@@ -85,3 +85,7 @@ Q.idea/sonarlint/securityhotspotstore/d/1/d122e5217730f0193bdb70d7308661579248e3
 :
 
 gameinfo.h,b\7\b7572b6b9117d5736984f93781815c554a91a988
+>
+maps/kkkk.json,f\e\fe794215c1f9e55ff89847ea7807a2f6c4be6a3d
+>
+obstacleitem.h,9\b\9b50026e6af673e418dbbb53693bd77bfe5374f7

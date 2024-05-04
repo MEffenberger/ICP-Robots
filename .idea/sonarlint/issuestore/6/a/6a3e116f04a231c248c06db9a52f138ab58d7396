@@ -1,10 +1,10 @@
 
-e	cpp:S1117"*declaration shadows a field of 'EnemyItem'(Øäš¯J$400ccd9d-ca67-4328-9218-74ea72a88e3f
-j	cpp:S1117"*declaration shadows a field of 'EnemyItem'(õôøÿûÿÿÿÿJ$88b7d831-ac2a-4715-9205-44f7be822d33
-j	cpp:S1117"*declaration shadows a field of 'EnemyItem'(öêûöüÿÿÿÿJ$911163fb-34aa-4048-96b0-b6b124cc5c14
-j	cpp:S1117!"*declaration shadows a field of 'EnemyItem'(Ø»¤«ùÿÿÿÿJ$42992004-0af6-4bd5-8ad4-7bf28d2415b7
-–	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(à¼Ü¼úÿÿÿÿJ$cec8f318-0830-4dd6-9744-b2ade5ced3b3
-i	cpp:S5817")This function should be declared "const".(›…Ä˜øÿÿÿÿJ$cde6d97e-e5f1-4c25-864a-73ab4929986b
-i	cpp:S5817	")This function should be declared "const".(„€àäüÿÿÿÿJ$eb7e9b58-6df5-44e5-b0f4-2aa47332c4cc
-d	cpp:S5817")This function should be declared "const".(˜Ô¤çJ$0792af02-508b-45df-a5fe-e0a99c99d1f5
-d	cpp:S5817")This function should be declared "const".(¹Â¤ÅJ$b8d6475e-01c4-4c8d-862d-81d2ba6608bb
+e	cpp:S1117"*declaration shadows a field of 'EnemyItem'(Øäš¯J$5987c2f6-e978-4e70-b46b-92be6632da1a
+j	cpp:S1117"*declaration shadows a field of 'EnemyItem'(õôøÿûÿÿÿÿJ$9ef0f307-89a7-4869-ab2f-65f7669b02d8
+j	cpp:S1117"*declaration shadows a field of 'EnemyItem'(öêûöüÿÿÿÿJ$f3081c33-d800-4f7e-ad0c-bd99c1d42934
+j	cpp:S1117!"*declaration shadows a field of 'EnemyItem'(Ø»¤«ùÿÿÿÿJ$4d580d4e-27ce-4aac-a7b1-a99fdffd3f70
+–	cpp:S3490"VUse "=default" instead of the default implementation of this special member functions.(à¼Ü¼úÿÿÿÿJ$0cf5d536-796d-4725-9d32-7ff9b5b64276
+i	cpp:S5817")This function should be declared "const".(›…Ä˜øÿÿÿÿJ$8c49a6ea-4c5e-477f-9c67-0c978db0b46a
+i	cpp:S5817	")This function should be declared "const".(„€àäüÿÿÿÿJ$468fe5a3-bdf3-457e-a0e0-a766bac5155e
+d	cpp:S5817")This function should be declared "const".(˜Ô¤çJ$3abc8b17-31a2-4486-856a-53c01282571f
+d	cpp:S5817")This function should be declared "const".(¹Â¤ÅJ$16b96ba3-9268-4497-b05e-ab1b12395261

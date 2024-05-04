@@ -1,6 +1,14 @@
-//
-// Created by marek on 27.04.2024.
-//
+/**
+ * @file gamemaster.cpp
+ * @brief GameMaster class implementation file
+ * @version 1.0
+ * @details This class is responsible for correct switching between the game windows
+ *          pausing the game, setting up the main menu and the game itself based on the parsed JSON file
+ * @source The scene creation and setting up the main game was inspired by
+ *         https://www.youtube.com/watch?v=8ntEQpg7gck&list=PLyb40eoxkelOa5xCB9fvGrkoBf8JzEwtV&ab_channel=Abdullah
+ * @project ICP Project - Epic Robot Survival
+ * @authors Marek Effenberger, Samuel Hejníček
+ */
 
 #include "gamemaster.h"
 
@@ -139,23 +147,28 @@ bool GameMaster::loadFile() {
 }
 
 bool GameMaster::mainEvent(){
+
+    // If the file was not loaded, return false
     if(!loadFile()){
         return false;
     }
-    qDebug() << "Here1";
+
+    // Create a fixed size scene
     this->scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, 1200, 800);
-    qDebug() << "Here2";
+    // Set the background image
     QPixmap background("../images/bg.png");
     background = background.scaled(scene->width(), scene->height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     scene->setBackgroundBrush(background);
-    qDebug() << "Here3";
+
+    // Create the user object
     this->user = new User(nullptr, UserData[2], UserData[3]);
     scene->addItem(user);
-    user->setFlag(QGraphicsItem::ItemIsFocusable); // construktor?
+    user->setFlag(QGraphicsItem::ItemIsFocusable);
     user->setFocus();
     user->setPos(UserData[0], UserData[1] + 100); // Has to be accounted because of the Horizontal Upper Bar
-    qDebug() << "Here4";
+
+    // Create the upper and lower bars and set their positions, connect the pause button to the pause function
     this->lowerBar = new HorizontalLowerBar(user);
     scene->addItem(lowerBar);
     lowerBar->setPos(0, 700);
@@ -166,7 +179,8 @@ bool GameMaster::mainEvent(){
     upperBar->setPos(0, 0);
     upperBar->setZValue(5);
     connect(upperBar->pauseButton, &Button::pressed, this, &GameMaster::pauseTheGame);
-    qDebug() << "Here5";
+
+    // Create the popups for game over, win and pause
     this->popup = new PopUp(nullptr, "gameover");
     scene->addItem(popup);
     popup->setPos(scene->width()/2 - popup->rect().width()/2, scene->height()/2 - popup->rect().height()/2);
@@ -194,14 +208,16 @@ bool GameMaster::mainEvent(){
     connect(popup3->restartButton, &Button::pressed, this, &GameMaster::restartGame);
     connect(popup3->mainMenuButton, &Button::pressed, this, &GameMaster::headtoMainMenu);
     connect(popup3->exitButton, &Button::pressed, this, &GameMaster::exitGame);
-    qDebug() << "Here6";
+
+    // Create the obstacles, set their positions and add them to the scene
     for (std::pair<int, int> obstacle : ObstacleData) {
         Obstacle *brick = new Obstacle();
         obstacles.push_back(brick);
         scene->addItem(brick);
         brick->setPos(obstacle.first, obstacle.second + 100);
     }
-    qDebug() << "Here7";
+
+    // Create the enemies, set their positions and add them to the scene
     for (std::vector<int> enemak : EnemyData) {
         Enemy *enemy = new Enemy(nullptr, user, enemak[2], enemak[3], enemak[5], enemak[4]);
         enemies.push_back(enemy);
@@ -209,21 +225,43 @@ bool GameMaster::mainEvent(){
         enemy->setPos(enemak[0], enemak[1] + 100);
         QTimer::singleShot(3000, enemy, &Enemy::startAutonomousMovement);
     }
-    qDebug() << "Here8";
+
+
+    // Create the countDown for the first 3 seconds of the game, use the Orbitron font
+    this->countDown = new QGraphicsTextItem();
+    int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
+    QString family = QFontDatabase::applicationFontFamilies(fontId).at(0);
+    QFont font;
+    font.setFamily(family);
+    font.setPointSize(100);
+    this->countDown->setFont(font);
+    this->countDown->setPos(this->scene->width()/2, this->scene->height()/2);
+    QColor color(0,255,0);
+    this->countDown->setDefaultTextColor(color);
+    this->countDown->setZValue(10);
+    this->countDown->setVisible(true);
+    scene->addItem(countDown);
+
+    // Every 0.6 seconds, update the countDown
+    countDownTimer = new QTimer(this);
+    connect(countDownTimer, &QTimer::timeout, this, &GameMaster::updateCountDown);
+    countDownTimer->start(600);
+
+    // Set the scene to the view and show the view
     this->view = new QGraphicsView(scene);
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setFixedSize(1200, 800);
     user->setFocus();
     user->setFlag(QGraphicsItem::ItemIsFocusable);
-    qDebug() << "Here9";
     view->show();
-    qDebug() << "Here10";
     return true;
 }
 
 
 void GameMaster::pauseTheGame() {
+    // Pause all timers
+    this->countDownTimer->stop();
     this->user->stopAllTimers();
     upperBar->timer->stopTimer();
     for (Enemy *enemy : enemies) {
@@ -234,6 +272,8 @@ void GameMaster::pauseTheGame() {
 }
 
 void GameMaster::resumeTheGame() {
+    // Resume all timers
+    this->countDownTimer->start(600);
     this->user->resumeAllTimers();
     upperBar->timer->continueTimer();
     for (Enemy *enemy : enemies) {
@@ -257,6 +297,11 @@ void GameMaster::restartGame() {
 }
 
 void GameMaster::cleanUp() {
+
+    delete countDownTimer; countDownTimer = nullptr;
+
+    delete countDown; countDown = nullptr;
+
     for (auto &enemy : enemies) {
         delete enemy;
         qDebug() << "Deleted enemy";
@@ -269,7 +314,7 @@ void GameMaster::cleanUp() {
         delete obstacle;
     }
     obstacles.clear();
-    //UserData.clear(); //SEGFAULTING
+    //UserData.clear();
     qDebug() << "Deleted all obstacles";
 
     delete popup3; popup3 = nullptr;
@@ -293,4 +338,25 @@ void GameMaster::cleanUp() {
     qDebug() << "Cleaned up all game elements";
 
     //TODO? delete sccene and view?
+}
+
+void GameMaster::updateCountDown() {
+    // Count down from 3 to 0, then start is shown in the middle of the screen, user can move freely but enemies cannot
+    static int count = 3;
+    if (count > 0) {
+        qDebug() << count;
+        this->countDown->setPlainText(QString::number(count));
+        count--;
+    } else if (count == 0) {
+        // Set color to red and start
+        qDebug() << "START!";
+        this->countDown->setDefaultTextColor(QColor(255, 0, 0));
+        this->countDown->setPlainText("START!");
+        this->user->switchControl();
+        count--;
+    } else {
+        this->countDown->setVisible(false);
+    }
+    this->countDown->setPos(scene->width()/2 - this->countDown->boundingRect().width()/2,
+                            scene->height()/2 - this->countDown->boundingRect().height()/2);
 }

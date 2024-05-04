@@ -3,7 +3,7 @@
  * @brief Enemy class implementation file
  * @version 1.0
  * @details This class is responsible for creating autonomous robots
- * (in our implementation - the enemies) in the game
+ *          (in our implementation - the enemies) in the game
  * @project ICP Project - Epic Robot Survival
  * @author Marek Effenberger
  */
@@ -17,7 +17,7 @@ Enemy::Enemy(QGraphicsItem *parent, User *user, int distance, int orientation, i
 
     // The armor is needed so the vision field is not visible where it intersects with the Enemy
     armor = new QGraphicsEllipseItem(0, 0, 50, 50, this); // Set the size of the ellipse
-    QPixmap pixmap("../images/enemy2.png");
+    QPixmap pixmap("../images/enemy3.png");
     pixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     armor->setBrush(pixmap);
     armor->setZValue(1); // Set the z value to 1 so it's drawn on top of the vision field

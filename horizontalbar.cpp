@@ -1,6 +1,11 @@
-//
-// Created by marek on 25.04.2024.
-//
+/**
+ * @file horizontalbar.cpp
+ * @brief HorizontalBar classes (upper, lower) implementation file
+ * @version 1.0
+ * @details This class is responsible for creating the horizontal bars in the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Marek Effenberger
+ */
 
 #include "horizontalbar.h"
 
@@ -45,7 +50,9 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
     int fontId = QFontDatabase::addApplicationFont("../Orbitron/static/Orbitron-ExtraBold.ttf");
     QString family = QFontDatabase::applicationFontFamilies(fontId).at(0);
 
-    QGraphicsTextItem *text = new QGraphicsTextItem("Epic Robot Survivor", this);
+
+    // Add text, simply design purposes
+    QGraphicsTextItem *text = new QGraphicsTextItem("Epic Robot Survival", this);
     QFont font;
     font.setFamily(family);
     font.setPointSize(37);
@@ -54,6 +61,7 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
     text->setDefaultTextColor(color);
     text->setPos(20, 12.5);
 
+    // Add the autopilot button -> the real "implementation" of the autopilot is in the Button class
     Autopilot = new QGraphicsRectItem(0, 0, 75, 40, this);
     Autopilot->setPos(width - ForwardButton->boundingRect().width() - offset - 10, -40);
     QPixmap pixmap2 = pixmap.scaled(Autopilot->rect().width(), Autopilot->rect().height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
@@ -61,12 +69,13 @@ HorizontalLowerBar::HorizontalLowerBar(User *user) {
     Autopilot->setOpacity(0.7);
     Autopilot->setPen(QPen(Qt::NoPen));
     Autopilot->setZValue(15);
+
+    // Add text to the autopilot button
     QGraphicsTextItem *text1 = new QGraphicsTextItem("Release For", Autopilot);
     font.setPointSize(7);
     text1->setFont(font);
     text1->setDefaultTextColor(QColor(0, 255, 0));
     text1->setPos(5, 0);
-
     QGraphicsTextItem *text2 = new QGraphicsTextItem("Autopilot", Autopilot);
     text2->setFont(font);
     text2->setDefaultTextColor(QColor(0, 0, 255));
@@ -108,6 +117,7 @@ void HorizontalLowerBar::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
 
 
 HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
+    // Set the width and height of the bar
     width = 1200;
     height = 100;
     setRect(0, 0, width, height);
@@ -116,15 +126,17 @@ HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
     setBrush(pixmap);
     setPos(0, 0);
 
-
+    // Create the hearts
     Heart1 = new Heart(this);
     Heart2 = new Heart(this);
     Heart3 = new Heart(this);
 
+    // Position the hearts
     Heart1->setPos(22.5, 12.5);
     Heart2->setPos(102.5, 12.5);
     Heart3->setPos(177.5, 12.5);
 
+    // Connect the hearts to the User actions
     connect(user, &User::deleteLife1, Heart1, &Heart::setDead);
     connect(user, &User::deleteLife2, Heart2, &Heart::setDead);
     connect(user, &User::deleteLife3, Heart3, &Heart::setDead);
@@ -132,14 +144,17 @@ HorizontalUpperBar::HorizontalUpperBar(User *user, int timeLimit) {
     gameInfo = new GameInfo(this);
     gameInfo->setPos(730, 12.5);
 
+    // Connect the GameInfo to the User actions
     connect(user, &User::stunned, gameInfo, &GameInfo::ouch);
     connect(user, &User::deleteLife1, gameInfo, &GameInfo::damage);
     connect(user, &User::deleteLife2, gameInfo, &GameInfo::damage);
     connect(user, &User::deleteLife3, gameInfo, &GameInfo::damage);
 
+    // Create the timer for the game
     timer = new Timer(this, timeLimit);
     timer->setPos(950, 17);
 
+    // Create the pause button
     QPixmap pixmap2("../images/pause.png");
     pixmap2 = pixmap2.scaled(75, 75, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     pauseButton = new Button(pixmap2, "Pause", this, 75, 75);

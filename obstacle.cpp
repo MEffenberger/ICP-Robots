@@ -1,6 +1,11 @@
-//
-// Created by marek on 24.04.2024.
-//
+/**
+ * @file obstacle.cpp
+ * @brief Obstacle class implementation file
+ * @version 1.0
+ * @details This class is responsible for creating the obstacles in the game
+ * @project ICP Project - Epic Robot Survival
+ * @author Marek Effenberger
+ */
 
 #include "obstacle.h"
 
