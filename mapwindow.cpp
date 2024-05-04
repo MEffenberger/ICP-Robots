@@ -195,9 +195,8 @@ QJsonArray* MapWindow::fillFile(bool* robotFound){
                 mapObject["cellType"] = "Robot";
                 mapObject["mapPosition xcord"] = cellPosition.x();
                 mapObject["mapPosition ycord"] = cellPosition.y();
-                mapObject["parameters"] = QJsonObject({
-                    {"orientation", robot->getOrientation()},
-                    {"velocity", robot->getVelocity()}});
+                mapObject["parameters"] = QJsonObject ({{"orientation", robot->getOrientation()},
+                                                        {"velocity", robot->getVelocity()}});
 
             //Set obstacle data
             } else if (ObstacleItem *obstacle = dynamic_cast<ObstacleItem*>(item)) {
@@ -210,12 +209,12 @@ QJsonArray* MapWindow::fillFile(bool* robotFound){
                 mapObject["cellType"] = "Enemy";
                 mapObject["mapPosition xcord"] = cellPosition.x();
                 mapObject["mapPosition ycord"] = cellPosition.y();
-                mapObject["parameters"] = QJsonObject({
-                    {"orientation", enemy->getOrientation()},
-                    {"distance", enemy->getDistance()},
-                    {"rotationAngle", enemy->getRotationAngle()},
-                    {"velocity", enemy->getVelocity()}});
+                mapObject["parameters"] = QJsonObject ({{"orientation", enemy->getOrientation()},
+                                                        {"distance", enemy->getDistance()},
+                                                        {"rotationAngle", enemy->getRotationAngle()},
+                                                        {"velocity", enemy->getVelocity()}});
             } else {
+                //No recognizable item, continue
                 continue;
             }
             //Append the cell object to the map data
@@ -243,6 +242,7 @@ void MapWindow::loadFont(){
     }
     QString fontFamily = QFontDatabase::applicationFontFamilies(fontId).at(0);
     QFont font(fontFamily);
+    //Save font for later use
     this->customFont = font;
 }
 
@@ -255,7 +255,7 @@ void MapWindow::loadMap(){
     if (filename.isEmpty()){
         return;
     }
-
+    //Open the file
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         return;
@@ -362,6 +362,7 @@ void MapWindow::saveFile() {
 }
 
 void MapWindow::setTimer(){
+    //Variable to store the result of the dialog
     bool pass;
 
     //Pops up dialog to set the time limit in given range
@@ -416,6 +417,7 @@ void MapWindow::disableEditing() {
         for (int cols = 0; cols < ui->tableWidget->columnCount(); cols++) {
             QTableWidgetItem *item = ui->tableWidget->item(rows, cols);
             if(item){
+                //Set not editable flag
                 item->setFlags(item->flags() & ~Qt::ItemIsEditable);  
             }
              
