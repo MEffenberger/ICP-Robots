@@ -1,0 +1,5 @@
+<map id="RobotParamDialog::getRotationAngle" name="RobotParamDialog::getRotationAngle">
+<area shape="rect" id="node1" title="Gets the rotation angle of the controlled or enemy robot." alt="" coords="516,5,743,47"/>
+<area shape="rect" id="node2" href="$class_map_window.html#a99e5996889bd10defae7aa8e2611d223" title="Handles the cell clicked event." alt="" coords="243,13,468,39"/>
+<area shape="rect" id="node3" href="$class_map_window.html#ab4544a5a3e551bff0efbb1b609c75418" title=" " alt="" coords="5,13,195,39"/>
+</map>

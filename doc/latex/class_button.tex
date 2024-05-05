@@ -1,0 +1,272 @@
+\hypertarget{class_button}{}\doxysection{Button Class Reference}
+\label{class_button}\index{Button@{Button}}
+
+
+\mbox{\hyperlink{class_button}{Button}} class, inherits from Q\+Object and Q\+Graphics\+Rect\+Item.  
+
+
+
+
+{\ttfamily \#include $<$button.\+h$>$}
+
+
+
+Inheritance diagram for Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_button__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_button_a27ba2115bb02221496e40780b62695c0}{set\+Border\+Width}} (int width)
+\begin{DoxyCompactList}\small\item\em Set the border width of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_button_ae28deca131650b40d19cb9a38ed07caa}{pressed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_aac0b100f007d5d87b92d865edc42de05}{released}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the button is released. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_a5f972043b72946eb40f80dd3b7042e52}{auto\+Pilot}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the button is released and the autopilot rectangle contains the mouse position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button_aa57ed0138935879fa481eac333bf746a}{Button}} (const Q\+Pixmap \&pixmap, std\+::string \mbox{\hyperlink{class_button_a3cab5b803fa9790afbd27ff6b7294050}{name}}, Q\+Graphics\+Item $\ast$parent=0, qreal x=0, qreal y=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_button}{Button}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_button_ae377287a536a7f86f69ba5ad81aabb05}{$\sim$\+Button}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_button}{Button}} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_button_ae1f0efa6300488997798eba96fd36d6b}{mouse\+Press\+Event}} (Q\+Graphics\+Scene\+Mouse\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Mouse press event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_a3aea60ed64ce59bba747737f3b402aab}{mouse\+Release\+Event}} (Q\+Graphics\+Scene\+Mouse\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Mouse release event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_button_a3cab5b803fa9790afbd27ff6b7294050}{name}}
+\item 
+Q\+RectF \mbox{\hyperlink{class_button_a47054a4177069b2a983c99bf3367605a}{auto\+Pilot\+Position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_button}{Button}} class, inherits from Q\+Object and Q\+Graphics\+Rect\+Item. 
+
+Definition at line 29 of file button.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_button_aa57ed0138935879fa481eac333bf746a}\label{class_button_aa57ed0138935879fa481eac333bf746a}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{const Q\+Pixmap \&}]{pixmap,  }\item[{std\+::string}]{name,  }\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily 0},  }\item[{qreal}]{x = {\ttfamily 0},  }\item[{qreal}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_button}{Button}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixmap} & Q\+Pixmap object \\
+\hline
+{\em name} & Name of the button \\
+\hline
+{\em parent} & Parent Q\+Graphics\+Item \\
+\hline
+{\em x} & X coordinate \\
+\hline
+{\em y} & Y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file button.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_button_aa57ed0138935879fa481eac333bf746a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_button_ae377287a536a7f86f69ba5ad81aabb05}\label{class_button_ae377287a536a7f86f69ba5ad81aabb05}} 
+\index{Button@{Button}!````~Button@{$\sim$Button}}
+\index{````~Button@{$\sim$Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{$\sim$Button()}{~Button()}}
+{\footnotesize\ttfamily Button\+::$\sim$\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{class_button}{Button}} destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_button_a5f972043b72946eb40f80dd3b7042e52}\label{class_button_a5f972043b72946eb40f80dd3b7042e52}} 
+\index{Button@{Button}!autoPilot@{autoPilot}}
+\index{autoPilot@{autoPilot}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{autoPilot}{autoPilot}}
+{\footnotesize\ttfamily void Button\+::auto\+Pilot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the button is released and the autopilot rectangle contains the mouse position. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_a5f972043b72946eb40f80dd3b7042e52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_button_ae1f0efa6300488997798eba96fd36d6b}\label{class_button_ae1f0efa6300488997798eba96fd36d6b}} 
+\index{Button@{Button}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Button\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Scene\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Mouse press event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Q\+Graphics\+Scene\+Mouse\+Event object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file button.\+cpp.
+
+\mbox{\Hypertarget{class_button_a3aea60ed64ce59bba747737f3b402aab}\label{class_button_a3aea60ed64ce59bba747737f3b402aab}} 
+\index{Button@{Button}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{mouseReleaseEvent()}{mouseReleaseEvent()}}
+{\footnotesize\ttfamily void Button\+::mouse\+Release\+Event (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Scene\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Mouse release event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Q\+Graphics\+Scene\+Mouse\+Event object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file button.\+cpp.
+
+\mbox{\Hypertarget{class_button_ae28deca131650b40d19cb9a38ed07caa}\label{class_button_ae28deca131650b40d19cb9a38ed07caa}} 
+\index{Button@{Button}!pressed@{pressed}}
+\index{pressed@{pressed}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{pressed}{pressed}}
+{\footnotesize\ttfamily void Button\+::pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the button is pressed. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_ae28deca131650b40d19cb9a38ed07caa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_button_aac0b100f007d5d87b92d865edc42de05}\label{class_button_aac0b100f007d5d87b92d865edc42de05}} 
+\index{Button@{Button}!released@{released}}
+\index{released@{released}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{released}{released}}
+{\footnotesize\ttfamily void Button\+::released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the button is released. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_aac0b100f007d5d87b92d865edc42de05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_button_a27ba2115bb02221496e40780b62695c0}\label{class_button_a27ba2115bb02221496e40780b62695c0}} 
+\index{Button@{Button}!setBorderWidth@{setBorderWidth}}
+\index{setBorderWidth@{setBorderWidth}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{setBorderWidth}{setBorderWidth}}
+{\footnotesize\ttfamily void Button\+::set\+Border\+Width (\begin{DoxyParamCaption}\item[{int}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set the border width of the button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the border \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file button.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_button_a27ba2115bb02221496e40780b62695c0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_button_a47054a4177069b2a983c99bf3367605a}\label{class_button_a47054a4177069b2a983c99bf3367605a}} 
+\index{Button@{Button}!autoPilotPosition@{autoPilotPosition}}
+\index{autoPilotPosition@{autoPilotPosition}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{autoPilotPosition}{autoPilotPosition}}
+{\footnotesize\ttfamily Q\+RectF Button\+::auto\+Pilot\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+Rectangle for the autopilot button (a bit above the forward button) 
+
+Definition at line 87 of file button.\+h.
+
+\mbox{\Hypertarget{class_button_a3cab5b803fa9790afbd27ff6b7294050}\label{class_button_a3cab5b803fa9790afbd27ff6b7294050}} 
+\index{Button@{Button}!name@{name}}
+\index{name@{name}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Button\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+Name of the button (used for debugging and various signals) 
+
+Definition at line 84 of file button.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{button_8h}{button.\+h}}\item 
+\mbox{\hyperlink{button_8cpp}{button.\+cpp}}\end{DoxyCompactItemize}

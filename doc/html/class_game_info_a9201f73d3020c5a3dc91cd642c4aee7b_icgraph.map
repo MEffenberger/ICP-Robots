@@ -1,0 +1,4 @@
+<map id="GameInfo::resetMessage" name="GameInfo::resetMessage">
+<area shape="rect" id="node1" title="Reset the message to the default text." alt="" coords="212,5,397,32"/>
+<area shape="rect" id="node2" href="$class_game_info.html#a14941077c836a3e6e14f6d7a1756d91b" title="GameInfo constructor." alt="" coords="5,5,164,32"/>
+</map>

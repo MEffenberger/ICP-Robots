@@ -1,0 +1,6 @@
+<map id="Enemy::checkCollisions" name="Enemy::checkCollisions">
+<area shape="rect" id="node1" title="Check if the enemy is colliding with anything." alt="" coords="5,56,180,83"/>
+<area shape="rect" id="node2" href="$class_enemy.html#afb52ac0d6741aa38a46e2f051e723506" title="Mechanism for collision with another enemy." alt="" coords="233,5,408,32"/>
+<area shape="rect" id="node3" href="$class_enemy.html#a4ba3d6e4b16c7577705c95d7a1e38612" title="Mechanism for collision with an obstacle." alt="" coords="228,56,413,83"/>
+<area shape="rect" id="node4" href="$class_enemy.html#a7749969f74b8f3f027a6e238d3bf1ce3" title="Mechanism for collision with the user." alt="" coords="241,107,400,133"/>
+</map>

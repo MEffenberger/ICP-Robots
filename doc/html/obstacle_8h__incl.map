@@ -1,0 +1,8 @@
+<map id="obstacle.h" name="obstacle.h">
+<area shape="rect" id="node1" title="Obstacle class header file." alt="" coords="311,5,400,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,153,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="177,80,296,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="321,80,390,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="414,80,470,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="495,80,600,107"/>
+</map>

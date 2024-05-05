@@ -1,8 +1,11 @@
-Stručná dokumentace k projektu ICP Epic Robot Simulator.
+Stručná dokumentace k projektu ICP Epic Robot Survival.
 Autoři: Marek Effenberger a Samuel Hejníček
 
 Stručný popis programu:
-Epic Robot Simulator je mini 2D hra, ve které je hráčem ovládán právě 1 robot, se kterým je možné se libovolně pohybovat po mapě a vyhýbat se překážkám. Cílem hry je zůstat naživu do vypršení časovače. Hráč má 3 životy, které mu mohou být sebrány nepřátelskými roboty, kteří se autonomně pohybují po mapě, vyhýbají se překážkám a otáčejí o určitý úhel. Mapu lze uložit a načíst ve formátu JSON a lze ji editovat v podobě přidání překážek a dalších autonomních robotů, stejně tak lze měnit časový limit.
+Epic Robot Survival je mini 2D hra, ve které je hráčem ovládán právě 1 robot, se kterým je možné se libovolně pohybovat po mapě a vyhýbat se překážkám.
+Cílem hry je zůstat naživu do vypršení časovače. Hráč má 3 životy, které mu mohou být sebrány nepřátelskými roboty, kteří se autonomně pohybují po mapě, vyhýbají se překážkám a otáčejí o určitý úhel.
+Mapu lze uložit a načíst ve formátu JSON a lze ji editovat v podobě přidání překážek a dalších autonomních robotů, stejně tak lze měnit časový limit.
+Většina vývoje probíhala podle informací dostupných ze série videí na youtube: https://www.youtube.com/watch?v=8ntEQpg7gck&list=PLyb40eoxkelOa5xCB9fvGrkoBf8JzEwtV .
 
 Požadavky na spuštění:
 Ubuntu Linux 64bit s nainstalovanými knihovnami Qt verze alespoň 5.5.

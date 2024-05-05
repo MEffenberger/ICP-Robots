@@ -1,0 +1,11 @@
+<map id="button.h" name="button.h">
+<area shape="rect" id="node1" title="Button class header file." alt="" coords="142,5,218,32"/>
+<area shape="rect" id="node2" href="$button_8cpp.html" title="Button class implementation file." alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node3" href="$horizontalbar_8h.html" title="HorizontalBar classes (upper, lower) header file." alt="" coords="121,80,239,107"/>
+<area shape="rect" id="node8" href="$popup_8h.html" title="Popup class header file." alt="" coords="263,80,337,107"/>
+<area shape="rect" id="node4" href="$gamemaster_8h.html" title="GameMaster class header file." alt="" coords="182,155,298,181"/>
+<area shape="rect" id="node7" href="$horizontalbar_8cpp.html" title="HorizontalBar classes (upper, lower) implementation file." alt="" coords="23,155,158,181"/>
+<area shape="rect" id="node5" href="$gamemaster_8cpp.html" title="GameMaster class implementation file." alt="" coords="109,229,240,256"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="Main file of the project." alt="" coords="264,229,347,256"/>
+<area shape="rect" id="node9" href="$popup_8cpp.html" title="Popup class implementation file." alt="" coords="322,155,411,181"/>
+</map>

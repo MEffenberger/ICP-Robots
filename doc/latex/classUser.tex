@@ -1,0 +1,275 @@
+\hypertarget{classUser}{}\doxysection{User Class Reference}
+\label{classUser}\index{User@{User}}
+
+
+\mbox{\hyperlink{classUser}{User}} class, inherits from \mbox{\hyperlink{classQObject}{Q\+Object}} and \mbox{\hyperlink{classQGraphicsEllipseItem}{Q\+Graphics\+Ellipse\+Item}}.  
+
+
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+
+
+Inheritance diagram for User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classUser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUser_ad08d588a3202e8d321f91b4e29e15e3c}{start\+Rotating\+Clockwise}} ()
+\begin{DoxyCompactList}\small\item\em Start the clockwise rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a8e75766d37df0cd76a1bf4bc4da55172}{start\+Rotating\+Counter\+Clockwise}} ()
+\begin{DoxyCompactList}\small\item\em Start the counter clockwise rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_ae314074ee4c30c817d0c25afed65da5e}{stop\+Rotating}} ()
+\begin{DoxyCompactList}\small\item\em Stop the rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a84b929de6b6b3bfa7f366276db385524}{stop\+Moving}} ()
+\begin{DoxyCompactList}\small\item\em Stop the movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a05b0001845ee9a5f6a52809f81295780}{start\+Moving\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em Start the movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_ab5c91c6a93187623fa34cd98ceab0ffc}{decrease\+Lives}} ()
+\begin{DoxyCompactList}\small\item\em Decrease the number of lives (3 default) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a2b4c71c0a5744a27f4bd0182f72a6a75}{switch\+Control}} ()
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{classUser}{User}} as focusable (keyboard control) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_aa7a6d02d66117a6943206a45ee0dbcd5}{stop\+All\+Timers}} ()
+\begin{DoxyCompactList}\small\item\em Stop all timers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a6d588239e0bc8dc6a52b8e5f67438e12}{resume\+All\+Timers}} ()
+\begin{DoxyCompactList}\small\item\em Resume all timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUser_a9b1621b147921de722b95adb937faf5b}{stunned}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the \mbox{\hyperlink{classUser}{User}} is stunned. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a0d76f5a9b6a57ed68fa79b4452b4817c}{delete\+Life3}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the \mbox{\hyperlink{classUser}{User}} is hit mapped to life3. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_ac898fb079d96312a9152810eaa4d27b0}{delete\+Life2}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the \mbox{\hyperlink{classUser}{User}} is hit mapped to life2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a466f38a5c479079299fc80d54fd68770}{delete\+Life1}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the \mbox{\hyperlink{classUser}{User}} is hit mapped to life1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUser_a4f2da3e76ea8c3199c8a7ca811ce06fd}{User}} (Q\+Graphics\+Item $\ast$parent=0, int orientation=0, int velocity=5)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUser}{User}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}{$\sim$\+User}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUser}{User}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_ae6a2b81d2092e0484444ede7b81e7b03}{key\+Press\+Event}} (Q\+Key\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Move the user using keyboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQGraphicsEllipseItem}{Q\+Graphics\+Ellipse\+Item}} $\ast$ \mbox{\hyperlink{classUser_ace97d2952d98b73caf25f90fb2791c14}{vision\+Point}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classUser}{User}} class, inherits from \mbox{\hyperlink{classQObject}{Q\+Object}} and \mbox{\hyperlink{classQGraphicsEllipseItem}{Q\+Graphics\+Ellipse\+Item}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUser_a4f2da3e76ea8c3199c8a7ca811ce06fd}\label{classUser_a4f2da3e76ea8c3199c8a7ca811ce06fd}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily 0},  }\item[{int}]{orientation = {\ttfamily 0},  }\item[{int}]{velocity = {\ttfamily 5} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUser}{User}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent Q\+Graphics\+Item \\
+\hline
+{\em orientation} & Orientation of the user \\
+\hline
+{\em velocity} & Velocity of the user \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}\label{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}} 
+\index{User@{User}!````~User@{$\sim$User}}
+\index{````~User@{$\sim$User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{$\sim$User()}{~User()}}
+{\footnotesize\ttfamily User\+::$\sim$\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUser}{User}} destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUser_ab5c91c6a93187623fa34cd98ceab0ffc}\label{classUser_ab5c91c6a93187623fa34cd98ceab0ffc}} 
+\index{User@{User}!decreaseLives@{decreaseLives}}
+\index{decreaseLives@{decreaseLives}!User@{User}}
+\doxysubsubsection{\texorpdfstring{decreaseLives}{decreaseLives}}
+{\footnotesize\ttfamily void User\+::decrease\+Lives (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Decrease the number of lives (3 default) 
+
+\mbox{\Hypertarget{classUser_a466f38a5c479079299fc80d54fd68770}\label{classUser_a466f38a5c479079299fc80d54fd68770}} 
+\index{User@{User}!deleteLife1@{deleteLife1}}
+\index{deleteLife1@{deleteLife1}!User@{User}}
+\doxysubsubsection{\texorpdfstring{deleteLife1}{deleteLife1}}
+{\footnotesize\ttfamily void User\+::delete\+Life1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the \mbox{\hyperlink{classUser}{User}} is hit mapped to life1. 
+
+\mbox{\Hypertarget{classUser_ac898fb079d96312a9152810eaa4d27b0}\label{classUser_ac898fb079d96312a9152810eaa4d27b0}} 
+\index{User@{User}!deleteLife2@{deleteLife2}}
+\index{deleteLife2@{deleteLife2}!User@{User}}
+\doxysubsubsection{\texorpdfstring{deleteLife2}{deleteLife2}}
+{\footnotesize\ttfamily void User\+::delete\+Life2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the \mbox{\hyperlink{classUser}{User}} is hit mapped to life2. 
+
+\mbox{\Hypertarget{classUser_a0d76f5a9b6a57ed68fa79b4452b4817c}\label{classUser_a0d76f5a9b6a57ed68fa79b4452b4817c}} 
+\index{User@{User}!deleteLife3@{deleteLife3}}
+\index{deleteLife3@{deleteLife3}!User@{User}}
+\doxysubsubsection{\texorpdfstring{deleteLife3}{deleteLife3}}
+{\footnotesize\ttfamily void User\+::delete\+Life3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the \mbox{\hyperlink{classUser}{User}} is hit mapped to life3. 
+
+\mbox{\Hypertarget{classUser_ae6a2b81d2092e0484444ede7b81e7b03}\label{classUser_ae6a2b81d2092e0484444ede7b81e7b03}} 
+\index{User@{User}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!User@{User}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void User\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Key\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Move the user using keyboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUser_a6d588239e0bc8dc6a52b8e5f67438e12}\label{classUser_a6d588239e0bc8dc6a52b8e5f67438e12}} 
+\index{User@{User}!resumeAllTimers@{resumeAllTimers}}
+\index{resumeAllTimers@{resumeAllTimers}!User@{User}}
+\doxysubsubsection{\texorpdfstring{resumeAllTimers}{resumeAllTimers}}
+{\footnotesize\ttfamily void User\+::resume\+All\+Timers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Resume all timers. 
+
+\mbox{\Hypertarget{classUser_a05b0001845ee9a5f6a52809f81295780}\label{classUser_a05b0001845ee9a5f6a52809f81295780}} 
+\index{User@{User}!startMovingForward@{startMovingForward}}
+\index{startMovingForward@{startMovingForward}!User@{User}}
+\doxysubsubsection{\texorpdfstring{startMovingForward}{startMovingForward}}
+{\footnotesize\ttfamily void User\+::start\+Moving\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Start the movement. 
+
+\mbox{\Hypertarget{classUser_ad08d588a3202e8d321f91b4e29e15e3c}\label{classUser_ad08d588a3202e8d321f91b4e29e15e3c}} 
+\index{User@{User}!startRotatingClockwise@{startRotatingClockwise}}
+\index{startRotatingClockwise@{startRotatingClockwise}!User@{User}}
+\doxysubsubsection{\texorpdfstring{startRotatingClockwise}{startRotatingClockwise}}
+{\footnotesize\ttfamily void User\+::start\+Rotating\+Clockwise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Start the clockwise rotation. 
+
+\mbox{\Hypertarget{classUser_a8e75766d37df0cd76a1bf4bc4da55172}\label{classUser_a8e75766d37df0cd76a1bf4bc4da55172}} 
+\index{User@{User}!startRotatingCounterClockwise@{startRotatingCounterClockwise}}
+\index{startRotatingCounterClockwise@{startRotatingCounterClockwise}!User@{User}}
+\doxysubsubsection{\texorpdfstring{startRotatingCounterClockwise}{startRotatingCounterClockwise}}
+{\footnotesize\ttfamily void User\+::start\+Rotating\+Counter\+Clockwise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Start the counter clockwise rotation. 
+
+\mbox{\Hypertarget{classUser_aa7a6d02d66117a6943206a45ee0dbcd5}\label{classUser_aa7a6d02d66117a6943206a45ee0dbcd5}} 
+\index{User@{User}!stopAllTimers@{stopAllTimers}}
+\index{stopAllTimers@{stopAllTimers}!User@{User}}
+\doxysubsubsection{\texorpdfstring{stopAllTimers}{stopAllTimers}}
+{\footnotesize\ttfamily void User\+::stop\+All\+Timers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Stop all timers. 
+
+\mbox{\Hypertarget{classUser_a84b929de6b6b3bfa7f366276db385524}\label{classUser_a84b929de6b6b3bfa7f366276db385524}} 
+\index{User@{User}!stopMoving@{stopMoving}}
+\index{stopMoving@{stopMoving}!User@{User}}
+\doxysubsubsection{\texorpdfstring{stopMoving}{stopMoving}}
+{\footnotesize\ttfamily void User\+::stop\+Moving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Stop the movement. 
+
+\mbox{\Hypertarget{classUser_ae314074ee4c30c817d0c25afed65da5e}\label{classUser_ae314074ee4c30c817d0c25afed65da5e}} 
+\index{User@{User}!stopRotating@{stopRotating}}
+\index{stopRotating@{stopRotating}!User@{User}}
+\doxysubsubsection{\texorpdfstring{stopRotating}{stopRotating}}
+{\footnotesize\ttfamily void User\+::stop\+Rotating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Stop the rotation. 
+
+\mbox{\Hypertarget{classUser_a9b1621b147921de722b95adb937faf5b}\label{classUser_a9b1621b147921de722b95adb937faf5b}} 
+\index{User@{User}!stunned@{stunned}}
+\index{stunned@{stunned}!User@{User}}
+\doxysubsubsection{\texorpdfstring{stunned}{stunned}}
+{\footnotesize\ttfamily void User\+::stunned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the \mbox{\hyperlink{classUser}{User}} is stunned. 
+
+\mbox{\Hypertarget{classUser_a2b4c71c0a5744a27f4bd0182f72a6a75}\label{classUser_a2b4c71c0a5744a27f4bd0182f72a6a75}} 
+\index{User@{User}!switchControl@{switchControl}}
+\index{switchControl@{switchControl}!User@{User}}
+\doxysubsubsection{\texorpdfstring{switchControl}{switchControl}}
+{\footnotesize\ttfamily void User\+::switch\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Set the \mbox{\hyperlink{classUser}{User}} as focusable (keyboard control) 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUser_ace97d2952d98b73caf25f90fb2791c14}\label{classUser_ace97d2952d98b73caf25f90fb2791c14}} 
+\index{User@{User}!visionPoint@{visionPoint}}
+\index{visionPoint@{visionPoint}!User@{User}}
+\doxysubsubsection{\texorpdfstring{visionPoint}{visionPoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classQGraphicsEllipseItem}{Q\+Graphics\+Ellipse\+Item}}$\ast$ User\+::vision\+Point}
+
+A little dot representing the vision point 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{user_8h}{user.\+h}}\item 
+\mbox{\hyperlink{user_8cpp}{user.\+cpp}}\end{DoxyCompactItemize}

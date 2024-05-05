@@ -1,0 +1,5 @@
+<map id="User::keyPressEvent" name="User::keyPressEvent">
+<area shape="rect" id="node1" title="Move the user using keyboard." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$class_user.html#aebb12cbaaefb56d80cf78a57d5c2d64d" title="Check for the collisions using the collidingItems() method." alt="" coords="208,5,371,32"/>
+<area shape="rect" id="node3" href="$class_user.html#ab07576ea63c64cbae7f96b4c7b96de41" title="Function to spawn the Star objects." alt="" coords="419,5,553,32"/>
+</map>

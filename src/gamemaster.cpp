@@ -4,8 +4,8 @@
  * @version 1.0
  * @details This class is responsible for correct switching between the game windows
  *          pausing the game, setting up the main menu and the game itself based on the parsed JSON file
- * @source The scene creation and setting up the main game was inspired by
- *         https://www.youtube.com/watch?v=8ntEQpg7gck&list=PLyb40eoxkelOa5xCB9fvGrkoBf8JzEwtV&ab_channel=Abdullah
+ * The scene creation and setting up the main game was inspired by
+ * https://www.youtube.com/watch?v=8ntEQpg7gck&list=PLyb40eoxkelOa5xCB9fvGrkoBf8JzEwtV&ab_channel=Abdullah
  * @project ICP Project - Epic Robot Survival
  * @authors Marek Effenberger, Samuel Hejníček
  */

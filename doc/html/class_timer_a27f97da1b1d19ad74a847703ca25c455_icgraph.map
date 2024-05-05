@@ -1,0 +1,12 @@
+<map id="Timer::stopTimer" name="Timer::stopTimer">
+<area shape="rect" id="node1" title="Stop the timer." alt="" coords="1487,56,1621,83"/>
+<area shape="rect" id="node2" href="$class_game_master.html#aa52ec6cda9254d58b122f96000ae186b" title="Pause the game." alt="" coords="1223,56,1439,83"/>
+<area shape="rect" id="node3" href="$class_game_master.html#a065589ea9b65a0218b06a5cc9feb2e2b" title="Create the game based on the parsed JSON file." alt="" coords="991,56,1175,83"/>
+<area shape="rect" id="node4" href="$class_game_master.html#ab5153341060268f1cb7fd7cae11f794a" title="Restart the game." alt="" coords="735,5,931,32"/>
+<area shape="rect" id="node5" href="$class_game_master.html#ae13f5d97a64dee1760ca019513e54097" title="Show the JSON popup." alt="" coords="723,107,943,133"/>
+<area shape="rect" id="node9" href="$class_game_master.html#ade49559ccba6d1dcb1ee2f8e54f89543" title="Start the game &#45; Open the main window." alt="" coords="287,183,470,209"/>
+<area shape="rect" id="node6" href="$class_game_master.html#ac24934f7f53ef8e48726e16190974320" title="Run the game &#45; initialize the main window." alt="" coords="540,107,675,133"/>
+<area shape="rect" id="node7" href="$class_game_master.html#adcdcc077b4670a53237527bd7c657a32" title="Head to the main menu." alt="" coords="265,31,492,57"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="351,81,406,108"/>
+<area shape="rect" id="node10" href="$class_game_master.html#a030474427cea69d144effe531050b9aa" title="Create a new map window." alt="" coords="5,150,217,191"/>
+</map>

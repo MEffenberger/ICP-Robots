@@ -22,5 +22,8 @@ run: all
 pack:
 	zip xeffenn00_xhejni00.zip -r src/ examples/ images/ Orbitron/ CMakeLists.txt Makefile
 
+doxygen:
+	cd src && doxygen Doxyfile
+
 clean:
 	rm -rf $(BUILD_DIR) && rm $(PROJ_NAME)

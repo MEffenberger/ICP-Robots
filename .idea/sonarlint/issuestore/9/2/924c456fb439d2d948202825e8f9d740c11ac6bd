@@ -1,0 +1,41 @@
+
+o	cpp:S1135Ó"4Complete the task associated to this "TODO" comment.(‹×ßKJ$a3f87aca-7ab6-4028-89dc-51b368f90e39
+k	cpp:S1117Q"+declaration shadows a field of 'GameMaster'(¤Å–ÙüÿÿÿÿJ$23a206f1-3994-4d4e-98d7-53024b1245d1
+™	cpp:S5276 "]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³ÅJ$7de7d860-2874-4fb0-8af5-0cfe650f3c11
+™	cpp:S5276 "]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(–ò³ÅJ$22aa0a43-8fc4-41cc-99cb-8e56953d0de8
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÅîíûÿÿÿÿJ$08f4c80e-79ac-4f9d-8e28-8d48929e8bfa
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ª†Ã¡J$2469bd09-ece1-4fd2-9632-77d3cf4336d6
+‘	cpp:S5025@"QReplace the use of "new" with an operation that automatically manages the memory.(îéìåøÿÿÿÿJ$5a5d7806-c470-4349-a893-955e3120d0bb
+©	cpp:S5350Q"iMake the type of this variable a pointer-to-const. The current type of "mapData" is "class QJsonArray *".(¤Å–ÙüÿÿÿÿJ$78888a4b-6b12-4cba-92c6-2658d2a85f01
+}	cpp:S1155T"=Use "empty()" to check whether the container is empty or not.(Ë¨ûûÿÿÿÿJ$ace776e1-5e50-48c6-9331-b03fb1738b16
+}	cpp:S1155W"=Use "empty()" to check whether the container is empty or not.(ïª€ÆûÿÿÿÿJ$06ddbe38-46be-44a1-adeb-7c201c63f651
+}	cpp:S1155Z"=Use "empty()" to check whether the container is empty or not.(ÒŸ›üÿÿÿÿJ$d0eee18d-0540-4e30-9aff-9a536dab40e2
+p	cpp:S1659k"0Define each identifier in a dedicated statement.(¡Ê²‘şÿÿÿÿJ$118e09bd-fa26-470b-99ab-bf87894c426f
+t	cpp:S6003"4Replace this use of "push_back" with "emplace_back".(“ı­‘şÿÿÿÿJ$1c22a102-821d-4d32-9ae6-667a17ec61ba
+	cpp:S5025œ"QReplace the use of "new" with an operation that automatically manages the memory.(¼‡¥ÿJ$80dc914a-c867-4de2-9ea3-841a0053f5e4
+Œ	cpp:S5025¤"QReplace the use of "new" with an operation that automatically manages the memory.(Õ‰ÜJ$a9baa7f6-f9b3-4f48-84c1-12ad43cc46e1
+Œ	cpp:S5025«"QReplace the use of "new" with an operation that automatically manages the memory.(ãÁ›J$9f0d8917-2ca8-4f45-a6e5-44d009ff733d
+	cpp:S5025°"QReplace the use of "new" with an operation that automatically manages the memory.(öĞ—òJ$626c5fac-9282-42bc-8e57-17be61ab64cd
+	cpp:S5025·"QReplace the use of "new" with an operation that automatically manages the memory.(Ç°àÅJ$a0896c52-bb71-4a43-ac16-1bd489316ac1
+’	cpp:S5025À"QReplace the use of "new" with an operation that automatically manages the memory.(¿¡ï®øÿÿÿÿJ$c22dae90-a550-4674-9ddc-a5e94bc8d3d5
+	cpp:S5025É"QReplace the use of "new" with an operation that automatically manages the memory.(»î÷ôJ$daf05b10-642f-4483-8100-ea54e9aa6e6a
+~	cpp:S6005Ô"=Replace this declaration by a structured binding declaration.(½İğıÿÿÿÿJ$8e915e2c-a35c-4a34-a728-18966aac33fb
+c	cpp:S5827Õ"'Replace the redundant type with "auto".(ññöºJ$ba028f47-7f71-4075-9fc4-904f0f24cf27
+	cpp:S5025Õ"QReplace the use of "new" with an operation that automatically manages the memory.(ññöºJ$473d1a97-715c-40b4-8384-7ce12039a697
+c	cpp:S5827İ"'Replace the redundant type with "auto".(šø¹ÌJ$6ece8095-7711-4c54-8d78-0aa10582aeec
+	cpp:S5025İ"QReplace the use of "new" with an operation that automatically manages the memory.(šø¹ÌJ$55c94980-8d6a-4aa1-a7ef-918754a96126
+	cpp:S5025æ"QReplace the use of "new" with an operation that automatically manages the memory.(’ÆÓ¿J$eee94483-b83c-4763-b218-9e2bce262de1
+	cpp:S5025õ"QReplace the use of "new" with an operation that automatically manages the memory.(šª¢°J$371ec18a-66dd-48e8-876e-88dad1a6bad5
+’	cpp:S5025ú"QReplace the use of "new" with an operation that automatically manages the memory.(„Ï¤şÿÿÿÿJ$4715a091-5de8-467d-ad03-4e48cf58e3a0
+{	cpp:S5025¬":Rewrite the code so that you no longer need this "delete".(­Â©¬ûÿÿÿÿJ$99c1361c-7c4d-414a-a9ff-4d743dcf77cc
+v	cpp:S5025®":Rewrite the code so that you no longer need this "delete".(®©®ÁJ$61b6a641-90e3-439c-ab3e-449227032f7c
+{	cpp:S5025¿":Rewrite the code so that you no longer need this "delete".(òø°¬ùÿÿÿÿJ$af0a6e7b-d55a-4312-9485-99302649fddb
+{	cpp:S5025Â":Rewrite the code so that you no longer need this "delete".(û‰ÜçÿÿÿÿÿJ$2cddb797-6752-4113-9c11-18a141a9a942
+v	cpp:S5025Å":Rewrite the code so that you no longer need this "delete".(¨­ı³J$30d9d179-120e-4ad8-88f9-dbc154d82c94
+v	cpp:S5025È":Rewrite the code so that you no longer need this "delete".(ŸÓ±§J$18ca240a-cad1-45d5-b895-b0b1948b8924
+v	cpp:S5025Ë":Rewrite the code so that you no longer need this "delete".(¶ï™J$e46d5ab1-6efb-4b32-b610-0e4e54e50549
+{	cpp:S5025Î":Rewrite the code so that you no longer need this "delete".(½Û£·ûÿÿÿÿJ$eda2f871-1ad3-4943-9156-fa2fcf2fe0fa
+{	cpp:S5025±":Rewrite the code so that you no longer need this "delete".(ã®æÂıÿÿÿÿJ$a33108ae-d4af-4a86-9587-0275acad95f0
+v	cpp:S5025¹":Rewrite the code so that you no longer need this "delete".(¿àæJ$d471a0c7-39f4-4466-acc9-3f4f92701924
+ƒ	cpp:S6004Ù"BUse the init-statement to declare "count" inside the if statement.(ˆ›¸øıÿÿÿÿJ$d2d78c5b-024d-4c63-82b0-4ccc6cc735d0
+^cpp:S125¼"Remove the commented out code.(Ê‹¿ÛùÿÿÿÿJ$984d2dba-f6d2-4166-89fa-d993a3893a9f

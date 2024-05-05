@@ -1,0 +1,8 @@
+<map id="HorizontalLowerBar" name="HorizontalLowerBar">
+<area shape="rect" id="node1" title="HorizontalLowerBar class, inherits from QObject and QGraphicsRectItem." alt="" coords="279,785,465,921"/>
+<area shape="rect" id="node2" title=" " alt="" coords="244,5,319,83"/>
+<area shape="rect" id="node4" href="$class_user.html" title="User class, inherits from QObject and QGraphicsEllipseItem." alt="" coords="157,132,406,679"/>
+<area shape="rect" id="node6" href="$class_button.html" title="Button class, inherits from QObject and QGraphicsRectItem." alt="" coords="430,330,610,481"/>
+<area shape="rect" id="node3" title=" " alt="" coords="534,5,682,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,168,83"/>
+</map>

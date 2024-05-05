@@ -1,0 +1,4 @@
+<map id="GameInfo::ouch" name="GameInfo::ouch">
+<area shape="rect" id="node1" title="Display the &quot;OUCH!&quot; message." alt="" coords="212,13,337,39"/>
+<area shape="rect" id="node2" href="$class_horizontal_upper_bar.html#add139d91a21b8781b7eb76266ed8f4ae" title="HorizontalUpperBar constructor." alt="" coords="5,5,164,47"/>
+</map>

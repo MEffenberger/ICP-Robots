@@ -1,0 +1,15 @@
+<map id="MapWindow::loadMap" name="MapWindow::loadMap">
+<area shape="rect" id="node1" title="Loads the map from a JSON file." alt="" coords="5,288,171,314"/>
+<area shape="rect" id="node2" href="$class_map_window.html#a49e47b948ad5fd653c8c8a288d010a41" title="Clears the QTableWidget map and set default values." alt="" coords="243,110,412,137"/>
+<area shape="rect" id="node3" href="$class_map_window.html#a24e0b207cc7453bf59b09d5f464bf312" title="Updates the number of enemy robots to be placed." alt="" coords="484,12,735,38"/>
+<area shape="rect" id="node4" href="$class_map_window.html#aab4cee0641b21cd422e5573e903ce35e" title="Updates the number of obstacles to be placed." alt="" coords="504,66,715,107"/>
+<area shape="rect" id="node5" href="$class_map_window.html#a1ae238e52a7048a364c0907e32f4b332" title="Updates the number of robots to be placed." alt="" coords="488,136,731,162"/>
+<area shape="rect" id="node6" href="$class_map_window.html#a522114f0b45e465c1722cf5e138dba3f" title="Updates the time limit for the game." alt="" coords="513,194,705,221"/>
+<area shape="rect" id="node7" href="$class_enemy_item.html#a0565c435819c02c04fb727be0e0543cc" title="Sets the distance of the enemy robot." alt="" coords="236,262,419,289"/>
+<area shape="rect" id="node8" href="$class_robot_item.html#abb8727b08897cfbe3c0bcfe205cbaa4a" title="Sets the orientation of the robot." alt="" coords="232,313,423,340"/>
+<area shape="rect" id="node9" href="$class_enemy_item.html#a0db15871b68cb9d155e1e65fcd77d645" title="Sets the orientation of the enemy robot." alt="" coords="228,364,427,390"/>
+<area shape="rect" id="node10" href="$class_enemy_item.html#ad772ef92b643bebe6056d3855ba0d089" title="Sets the rotation angle of the enemy robot." alt="" coords="219,414,436,441"/>
+<area shape="rect" id="node11" href="$class_map_window.html#a4bdc8d5fb37f49d8dacbe529a49b4e57" title="Sets the table cell." alt="" coords="233,465,421,492"/>
+<area shape="rect" id="node12" href="$class_robot_item.html#a66bace1763840429551ec3d762eb46a7" title="Sets the velocity of the robot." alt="" coords="242,516,413,542"/>
+<area shape="rect" id="node13" href="$class_enemy_item.html#a997cfe22cc92e4e8f8bbe63576c241e5" title="Sets the velocity of the enemy robot." alt="" coords="239,566,416,593"/>
+</map>

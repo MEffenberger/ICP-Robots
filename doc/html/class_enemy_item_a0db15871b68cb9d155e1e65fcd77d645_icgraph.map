@@ -1,0 +1,6 @@
+<map id="EnemyItem::setOrientation" name="EnemyItem::setOrientation">
+<area shape="rect" id="node1" title="Sets the orientation of the enemy robot." alt="" coords="516,31,715,57"/>
+<area shape="rect" id="node2" href="$class_map_window.html#a99e5996889bd10defae7aa8e2611d223" title="Handles the cell clicked event." alt="" coords="243,5,468,32"/>
+<area shape="rect" id="node4" href="$class_map_window.html#ae4c7c7c27888c1bd9ccc5aae3d715b9a" title="Loads the map from a JSON file." alt="" coords="273,56,438,83"/>
+<area shape="rect" id="node3" href="$class_map_window.html#ab4544a5a3e551bff0efbb1b609c75418" title=" " alt="" coords="5,31,195,57"/>
+</map>

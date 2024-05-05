@@ -1,0 +1,27 @@
+
+w	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
+w	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
+<	cpp:S1117 "&declaration shadows a field of 'Enemy'(ôÆæ
+;	cpp:S1117Î"&declaration shadows a field of 'Enemy'(¦ÇŠ.
+}	cpp:S3230$"hDo not assign data members in a constructor. Initialize member "visionLength" in an initialization list.(®¶¹µ
+‚	cpp:S32302"hDo not assign data members in a constructor. Initialize member "turningAngle" in an initialization list.(›¡ââıÿÿÿÿ
+f	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Á±¹É
+k	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÛşÙôüÿÿÿÿ
+e	cpp:S5025+"QReplace the use of "new" with an operation that automatically manages the memory.(ğÜ¢H
+k	cpp:S5025E"QReplace the use of "new" with an operation that automatically manages the memory.(·Ÿ™´ıÿÿÿÿ
+k	cpp:S5025I"QReplace the use of "new" with an operation that automatically manages the memory.(¤ªŞÜıÿÿÿÿ
+f	cpp:S5025V"QReplace the use of "new" with an operation that automatically manages the memory.(Œ¦Ş
+Y	cpp:S6004‚"CUse the init-statement to declare "newPos" inside the if statement.(Ó©ù
+B	cpp:S5827"'Replace the redundant type with "auto".(¹éêÔüÿÿÿÿ
+B	cpp:S5827œ"'Replace the redundant type with "auto".(³Á¦Äøÿÿÿÿ
+=	cpp:S5827 "'Replace the redundant type with "auto".(ôÆæ
+B	cpp:S5827¤"'Replace the redundant type with "auto".(Ó—¬şÿÿÿÿ
+ƒcpp:S995­"iMake the type of this parameter a pointer-to-const. The current type of "obstacle" is "class Obstacle *".(¥Óí»şÿÿÿÿ
+xcpp:S995½"cMake the type of this parameter a pointer-to-const. The current type of "enemy" is "class Enemy *".(ÊÎ·¨
+ucpp:S995Î"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(¦ÇŠ.
+P	cpp:S5025µ":Rewrite the code so that you no longer need this "delete".(‡ô¼Õ
+P	cpp:S5025¹":Rewrite the code so that you no longer need this "delete".(·Èíæ
+P	cpp:S5025½":Rewrite the code so that you no longer need this "delete".(Ñ‰¿¥
+U	cpp:S5025Á":Rewrite the code so that you no longer need this "delete".(È·üûÿÿÿÿÿ
+U	cpp:S5025Å":Rewrite the code so that you no longer need this "delete".(…Íˆ÷úÿÿÿÿ
+P	cpp:S5025É":Rewrite the code so that you no longer need this "delete".(ŞîœÇ

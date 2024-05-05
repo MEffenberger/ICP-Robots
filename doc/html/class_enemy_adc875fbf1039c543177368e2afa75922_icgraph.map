@@ -1,0 +1,4 @@
+<map id="Enemy::stopChasing" name="Enemy::stopChasing">
+<area shape="rect" id="node1" title="Stop chasing the user." alt="" coords="172,5,327,32"/>
+<area shape="rect" id="node2" href="$class_enemy.html#a8c382a5dff4fe10d91d55627a4007c77" title="Enemy constructor." alt="" coords="5,5,124,32"/>
+</map>

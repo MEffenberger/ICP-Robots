@@ -1,0 +1,7 @@
+<map id="MapWindow::clearMap" name="MapWindow::clearMap">
+<area shape="rect" id="node1" title="Clears the QTableWidget map and set default values." alt="" coords="5,93,175,120"/>
+<area shape="rect" id="node2" href="$class_map_window.html#a24e0b207cc7453bf59b09d5f464bf312" title="Updates the number of enemy robots to be placed." alt="" coords="223,5,473,32"/>
+<area shape="rect" id="node3" href="$class_map_window.html#aab4cee0641b21cd422e5573e903ce35e" title="Updates the number of obstacles to be placed." alt="" coords="243,57,453,98"/>
+<area shape="rect" id="node4" href="$class_map_window.html#a1ae238e52a7048a364c0907e32f4b332" title="Updates the number of robots to be placed." alt="" coords="227,123,469,149"/>
+<area shape="rect" id="node5" href="$class_map_window.html#a522114f0b45e465c1722cf5e138dba3f" title="Updates the time limit for the game." alt="" coords="252,173,444,200"/>
+</map>

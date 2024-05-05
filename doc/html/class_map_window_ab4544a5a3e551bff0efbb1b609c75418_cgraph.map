@@ -1,0 +1,30 @@
+<map id="MapWindow::MapWindow" name="MapWindow::MapWindow">
+<area shape="rect" id="node1" title=" " alt="" coords="5,680,195,707"/>
+<area shape="rect" id="node2" href="$class_map_window.html#a49e47b948ad5fd653c8c8a288d010a41" title="Clears the QTableWidget map and set default values." alt="" coords="554,123,723,150"/>
+<area shape="rect" id="node7" href="$class_map_window.html#a99e5996889bd10defae7aa8e2611d223" title="Handles the cell clicked event." alt="" coords="243,604,468,631"/>
+<area shape="rect" id="node20" href="$class_map_window.html#a083d13d3dc36abe7f3a024a70b6aa8ae" title="Loads the font for the map editor." alt="" coords="273,655,438,682"/>
+<area shape="rect" id="node21" href="$class_map_window.html#ae4c7c7c27888c1bd9ccc5aae3d715b9a" title="Loads the map from a JSON file." alt="" coords="273,326,438,352"/>
+<area shape="rect" id="node22" href="$class_map_window.html#a94355f82ee5d2d0ac12d4a9c901f1843" title="Saves the map data to a JSON file." alt="" coords="274,706,437,732"/>
+<area shape="rect" id="node24" href="$class_map_window.html#aa0cce4afaf80a8c6b26f776d2af47390" title="Sets up bottom bar of the map editor." alt="" coords="256,807,455,834"/>
+<area shape="rect" id="node25" href="$class_map_window.html#aca7d8039040b0493c7609bb932e04b23" title="Sets up top bar of the map editor." alt="" coords="269,858,442,884"/>
+<area shape="rect" id="node26" href="$class_map_window.html#a242cad9e84c19cb47e3497a35dabdd37" title="Sets the time limit for the game." alt="" coords="272,60,439,87"/>
+<area shape="rect" id="node27" href="$class_map_window.html#a69b6f14a33cdb652a0a1df93fbf932fc" title="Starts the game." alt="" coords="266,756,445,783"/>
+<area shape="rect" id="node28" href="$class_map_window.html#a4b9a540c6390a42ebd787d336668b08c" title="Toggles the placement of obstacles, robots and enemies." alt="" coords="246,908,465,935"/>
+<area shape="rect" id="node3" href="$class_map_window.html#a24e0b207cc7453bf59b09d5f464bf312" title="Updates the number of enemy robots to be placed." alt="" coords="809,115,1060,142"/>
+<area shape="rect" id="node4" href="$class_map_window.html#aab4cee0641b21cd422e5573e903ce35e" title="Updates the number of obstacles to be placed." alt="" coords="829,166,1040,208"/>
+<area shape="rect" id="node5" href="$class_map_window.html#a1ae238e52a7048a364c0907e32f4b332" title="Updates the number of robots to be placed." alt="" coords="813,232,1056,259"/>
+<area shape="rect" id="node6" href="$class_map_window.html#a522114f0b45e465c1722cf5e138dba3f" title="Updates the time limit for the game." alt="" coords="839,22,1031,48"/>
+<area shape="rect" id="node8" href="$class_map_window.html#ab079617846a35bc390f00a7c733cb0ca" title="Clears the table cell." alt="" coords="539,950,739,976"/>
+<area shape="rect" id="node9" href="$class_robot_param_dialog.html#a5820bd0fe768cd66d470b0add9e6040f" title="Gets the distance of the controlled or enemy robot." alt="" coords="524,731,753,758"/>
+<area shape="rect" id="node10" href="$class_robot_param_dialog.html#ae4f1165ecb45bf294eaec829a50ec617" title="Gets the orientation of the controlled or enemy robot." alt="" coords="516,782,761,808"/>
+<area shape="rect" id="node11" href="$class_robot_param_dialog.html#ada959566fb59f4c5584023a87a6fef5b" title="Gets the rotation angle of the controlled or enemy robot." alt="" coords="525,833,752,874"/>
+<area shape="rect" id="node12" href="$class_robot_param_dialog.html#a12cd9d3594f24dacbc4ddfef1ee63fb2" title="Gets the velocity of the controlled or enemy robot." alt="" coords="527,899,751,926"/>
+<area shape="rect" id="node13" href="$class_enemy_item.html#a0565c435819c02c04fb727be0e0543cc" title="Sets the distance of the enemy robot." alt="" coords="547,427,730,454"/>
+<area shape="rect" id="node14" href="$class_robot_item.html#abb8727b08897cfbe3c0bcfe205cbaa4a" title="Sets the orientation of the robot." alt="" coords="543,478,734,504"/>
+<area shape="rect" id="node15" href="$class_enemy_item.html#a0db15871b68cb9d155e1e65fcd77d645" title="Sets the orientation of the enemy robot." alt="" coords="539,528,738,555"/>
+<area shape="rect" id="node16" href="$class_enemy_item.html#ad772ef92b643bebe6056d3855ba0d089" title="Sets the rotation angle of the enemy robot." alt="" coords="530,579,747,606"/>
+<area shape="rect" id="node17" href="$class_map_window.html#a4bdc8d5fb37f49d8dacbe529a49b4e57" title="Sets the table cell." alt="" coords="545,275,733,302"/>
+<area shape="rect" id="node18" href="$class_robot_item.html#a66bace1763840429551ec3d762eb46a7" title="Sets the velocity of the robot." alt="" coords="553,326,724,352"/>
+<area shape="rect" id="node19" href="$class_enemy_item.html#a997cfe22cc92e4e8f8bbe63576c241e5" title="Sets the velocity of the enemy robot." alt="" coords="550,376,727,403"/>
+<area shape="rect" id="node23" href="$class_map_window.html#a54edaa332329b35962cf78601aec94fb" title="Fills the JSON array with the map data." alt="" coords="565,1051,713,1078"/>
+</map>

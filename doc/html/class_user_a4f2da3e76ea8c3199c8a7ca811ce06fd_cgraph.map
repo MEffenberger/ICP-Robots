@@ -1,0 +1,10 @@
+<map id="User::User" name="User::User">
+<area shape="rect" id="node1" title="User constructor." alt="" coords="5,107,96,133"/>
+<area shape="rect" id="node2" href="$class_user.html#a4215e854f5fc56f2f06e2b153f66352c" title="Function to end the cooldown." alt="" coords="177,5,327,32"/>
+<area shape="rect" id="node3" href="$class_user.html#aa8fedb05b9698ee9b68882f820fb1110" title="Function to move the User forward." alt="" coords="177,56,327,83"/>
+<area shape="rect" id="node6" href="$class_user.html#ae2833072a81136f7f73aa5542b46af7d" title="Function to rotate the User clockwise." alt="" coords="169,107,335,133"/>
+<area shape="rect" id="node7" href="$class_user.html#a3d862c0f5417d00006c500fc7a29cba5" title="Function to rotate the User counter clockwise." alt="" coords="144,157,360,184"/>
+<area shape="rect" id="node8" href="$class_user.html#a01cb103cfca4c7f3984301f9c0fc5bea" title="Stun timer expired." alt="" coords="164,208,340,235"/>
+<area shape="rect" id="node4" href="$class_user.html#aebb12cbaaefb56d80cf78a57d5c2d64d" title="Check for the collisions using the collidingItems() method." alt="" coords="408,56,571,83"/>
+<area shape="rect" id="node5" href="$class_user.html#ab07576ea63c64cbae7f96b4c7b96de41" title="Function to spawn the Star objects." alt="" coords="619,56,753,83"/>
+</map>

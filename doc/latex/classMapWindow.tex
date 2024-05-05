@@ -1,0 +1,244 @@
+\hypertarget{classMapWindow}{}\doxysection{Map\+Window Class Reference}
+\label{classMapWindow}\index{MapWindow@{MapWindow}}
+
+
+Class for the Map Window.  
+
+
+
+
+{\ttfamily \#include $<$mapwindow.\+h$>$}
+
+
+
+Inheritance diagram for Map\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classMapWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Map\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classMapWindow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMapWindow_a44294dc32fdfe010b533e70b928383cd}{start\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Signal to start the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMapWindow_ab4544a5a3e551bff0efbb1b609c75418}{Map\+Window}} (\mbox{\hyperlink{classQWidget}{Q\+Widget}} $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{classMapWindow_aab4cee0641b21cd422e5573e903ce35e}{update\+Obstacle\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Updates the number of obstacles to be placed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMapWindow_a1ae238e52a7048a364c0907e32f4b332}{update\+Robot\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Updates the number of robots to be placed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMapWindow_a24e0b207cc7453bf59b09d5f464bf312}{update\+Enemy\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Updates the number of enemy robots to be placed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMapWindow_a522114f0b45e465c1722cf5e138dba3f}{update\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Updates the time limit for the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMapWindow_aebe4e76cd347ba9624d5982e20dd62f6}{disable\+Editing}} ()
+\begin{DoxyCompactList}\small\item\em Disables editing of the map cells. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMapWindow_aca7d8039040b0493c7609bb932e04b23}{set\+Bar\+Top}} ()
+\begin{DoxyCompactList}\small\item\em Sets up top bar of the map editor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMapWindow_aa0cce4afaf80a8c6b26f776d2af47390}{set\+Bar\+Bottom}} ()
+\begin{DoxyCompactList}\small\item\em Sets up bottom bar of the map editor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMapWindow_ab079617846a35bc390f00a7c733cb0ca}{clear\+Table\+Cell}} (\mbox{\hyperlink{classQTableWidgetItem}{Q\+Table\+Widget\+Item}} $\ast$item, int row, int column)
+\begin{DoxyCompactList}\small\item\em Clears the table cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMapWindow_a4bdc8d5fb37f49d8dacbe529a49b4e57}{set\+Table\+Cell}} (\mbox{\hyperlink{classQTableWidgetItem}{Q\+Table\+Widget\+Item}} $\ast$item, int row, int column, int orientation\+Angle)
+\begin{DoxyCompactList}\small\item\em Sets the table cell. \end{DoxyCompactList}\item 
+Q\+Json\+Array $\ast$ \mbox{\hyperlink{classMapWindow_a54edaa332329b35962cf78601aec94fb}{fill\+File}} (bool $\ast$robot\+Found)
+\begin{DoxyCompactList}\small\item\em Fills the J\+S\+ON array with the map data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMapWindow_a12edf2fb9ac7a6ebf501c0da8aa327dc}{$\sim$\+Map\+Window}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Json\+Array $\ast$ \mbox{\hyperlink{classMapWindow_a3725b09ee4d5f9ecb9e1f0d9775a909a}{map\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the Map Window. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMapWindow_ab4544a5a3e551bff0efbb1b609c75418}\label{classMapWindow_ab4544a5a3e551bff0efbb1b609c75418}} 
+\index{MapWindow@{MapWindow}!MapWindow@{MapWindow}}
+\index{MapWindow@{MapWindow}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{MapWindow()}{MapWindow()}}
+{\footnotesize\ttfamily Map\+Window\+::\+Map\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQWidget}{Q\+Widget}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classMapWindow_a12edf2fb9ac7a6ebf501c0da8aa327dc}\label{classMapWindow_a12edf2fb9ac7a6ebf501c0da8aa327dc}} 
+\index{MapWindow@{MapWindow}!````~MapWindow@{$\sim$MapWindow}}
+\index{````~MapWindow@{$\sim$MapWindow}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$MapWindow()}{~MapWindow()}}
+{\footnotesize\ttfamily Map\+Window\+::$\sim$\+Map\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMapWindow_ab079617846a35bc390f00a7c733cb0ca}\label{classMapWindow_ab079617846a35bc390f00a7c733cb0ca}} 
+\index{MapWindow@{MapWindow}!clearTableCell@{clearTableCell}}
+\index{clearTableCell@{clearTableCell}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{clearTableCell()}{clearTableCell()}}
+{\footnotesize\ttfamily void Map\+Window\+::clear\+Table\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQTableWidgetItem}{Q\+Table\+Widget\+Item}} $\ast$}]{item,  }\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Clears the table cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & pointer to the \mbox{\hyperlink{classQTableWidgetItem}{Q\+Table\+Widget\+Item}} to be cleared \\
+\hline
+{\em row} & number of the row \\
+\hline
+{\em column} & number of the column \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMapWindow_aebe4e76cd347ba9624d5982e20dd62f6}\label{classMapWindow_aebe4e76cd347ba9624d5982e20dd62f6}} 
+\index{MapWindow@{MapWindow}!disableEditing@{disableEditing}}
+\index{disableEditing@{disableEditing}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{disableEditing()}{disableEditing()}}
+{\footnotesize\ttfamily void Map\+Window\+::disable\+Editing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables editing of the map cells. 
+
+\mbox{\Hypertarget{classMapWindow_a54edaa332329b35962cf78601aec94fb}\label{classMapWindow_a54edaa332329b35962cf78601aec94fb}} 
+\index{MapWindow@{MapWindow}!fillFile@{fillFile}}
+\index{fillFile@{fillFile}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{fillFile()}{fillFile()}}
+{\footnotesize\ttfamily Q\+Json\+Array $\ast$ Map\+Window\+::fill\+File (\begin{DoxyParamCaption}\item[{bool $\ast$}]{robot\+Found }\end{DoxyParamCaption})}
+
+
+
+Fills the J\+S\+ON array with the map data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot\+Found} & pointer to the boolean variable to check if robot is found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Json\+Array$\ast$ pointer to the array with map data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMapWindow_aa0cce4afaf80a8c6b26f776d2af47390}\label{classMapWindow_aa0cce4afaf80a8c6b26f776d2af47390}} 
+\index{MapWindow@{MapWindow}!setBarBottom@{setBarBottom}}
+\index{setBarBottom@{setBarBottom}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{setBarBottom()}{setBarBottom()}}
+{\footnotesize\ttfamily void Map\+Window\+::set\+Bar\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets up bottom bar of the map editor. 
+
+\mbox{\Hypertarget{classMapWindow_aca7d8039040b0493c7609bb932e04b23}\label{classMapWindow_aca7d8039040b0493c7609bb932e04b23}} 
+\index{MapWindow@{MapWindow}!setBarTop@{setBarTop}}
+\index{setBarTop@{setBarTop}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{setBarTop()}{setBarTop()}}
+{\footnotesize\ttfamily void Map\+Window\+::set\+Bar\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets up top bar of the map editor. 
+
+\mbox{\Hypertarget{classMapWindow_a4bdc8d5fb37f49d8dacbe529a49b4e57}\label{classMapWindow_a4bdc8d5fb37f49d8dacbe529a49b4e57}} 
+\index{MapWindow@{MapWindow}!setTableCell@{setTableCell}}
+\index{setTableCell@{setTableCell}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{setTableCell()}{setTableCell()}}
+{\footnotesize\ttfamily void Map\+Window\+::set\+Table\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQTableWidgetItem}{Q\+Table\+Widget\+Item}} $\ast$}]{item,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{int}]{orientation\+Angle }\end{DoxyParamCaption})}
+
+
+
+Sets the table cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & pointer to the \mbox{\hyperlink{classQTableWidgetItem}{Q\+Table\+Widget\+Item}} to be set \\
+\hline
+{\em row} & number of the row \\
+\hline
+{\em column} & number of the column \\
+\hline
+{\em orientation\+Angle} & angle of orientation in case of robots \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMapWindow_a44294dc32fdfe010b533e70b928383cd}\label{classMapWindow_a44294dc32fdfe010b533e70b928383cd}} 
+\index{MapWindow@{MapWindow}!startSession@{startSession}}
+\index{startSession@{startSession}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{startSession}{startSession}}
+{\footnotesize\ttfamily void Map\+Window\+::start\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal to start the game. 
+
+\mbox{\Hypertarget{classMapWindow_a24e0b207cc7453bf59b09d5f464bf312}\label{classMapWindow_a24e0b207cc7453bf59b09d5f464bf312}} 
+\index{MapWindow@{MapWindow}!updateEnemyCounter@{updateEnemyCounter}}
+\index{updateEnemyCounter@{updateEnemyCounter}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{updateEnemyCounter()}{updateEnemyCounter()}}
+{\footnotesize\ttfamily void Map\+Window\+::update\+Enemy\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the number of enemy robots to be placed. 
+
+\mbox{\Hypertarget{classMapWindow_aab4cee0641b21cd422e5573e903ce35e}\label{classMapWindow_aab4cee0641b21cd422e5573e903ce35e}} 
+\index{MapWindow@{MapWindow}!updateObstacleCounter@{updateObstacleCounter}}
+\index{updateObstacleCounter@{updateObstacleCounter}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{updateObstacleCounter()}{updateObstacleCounter()}}
+{\footnotesize\ttfamily void Map\+Window\+::update\+Obstacle\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the number of obstacles to be placed. 
+
+\mbox{\Hypertarget{classMapWindow_a1ae238e52a7048a364c0907e32f4b332}\label{classMapWindow_a1ae238e52a7048a364c0907e32f4b332}} 
+\index{MapWindow@{MapWindow}!updateRobotCounter@{updateRobotCounter}}
+\index{updateRobotCounter@{updateRobotCounter}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{updateRobotCounter()}{updateRobotCounter()}}
+{\footnotesize\ttfamily void Map\+Window\+::update\+Robot\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the number of robots to be placed. 
+
+\mbox{\Hypertarget{classMapWindow_a522114f0b45e465c1722cf5e138dba3f}\label{classMapWindow_a522114f0b45e465c1722cf5e138dba3f}} 
+\index{MapWindow@{MapWindow}!updateTimer@{updateTimer}}
+\index{updateTimer@{updateTimer}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{updateTimer()}{updateTimer()}}
+{\footnotesize\ttfamily void Map\+Window\+::update\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the time limit for the game. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMapWindow_a3725b09ee4d5f9ecb9e1f0d9775a909a}\label{classMapWindow_a3725b09ee4d5f9ecb9e1f0d9775a909a}} 
+\index{MapWindow@{MapWindow}!mapData@{mapData}}
+\index{mapData@{mapData}!MapWindow@{MapWindow}}
+\doxysubsubsection{\texorpdfstring{mapData}{mapData}}
+{\footnotesize\ttfamily Q\+Json\+Array$\ast$ Map\+Window\+::map\+Data}
+
+Json array for storing mapa of the map 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mapwindow_8h}{mapwindow.\+h}}\item 
+\mbox{\hyperlink{mapwindow_8cpp}{mapwindow.\+cpp}}\end{DoxyCompactItemize}

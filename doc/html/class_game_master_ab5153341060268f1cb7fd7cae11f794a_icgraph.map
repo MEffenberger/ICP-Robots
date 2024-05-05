@@ -1,0 +1,10 @@
+<map id="GameMaster::restartGame" name="GameMaster::restartGame">
+<area shape="rect" id="node1" title="Restart the game." alt="" coords="1193,100,1389,127"/>
+<area shape="rect" id="node2" href="$class_game_master.html#a065589ea9b65a0218b06a5cc9feb2e2b" title="Create the game based on the parsed JSON file." alt="" coords="961,100,1145,127"/>
+<area shape="rect" id="node3" href="$class_game_master.html#ae13f5d97a64dee1760ca019513e54097" title="Show the JSON popup." alt="" coords="463,5,683,32"/>
+<area shape="rect" id="node7" href="$class_game_master.html#ade49559ccba6d1dcb1ee2f8e54f89543" title="Start the game &#45; Open the main window." alt="" coords="731,100,913,127"/>
+<area shape="rect" id="node4" href="$class_game_master.html#ac24934f7f53ef8e48726e16190974320" title="Run the game &#45; initialize the main window." alt="" coords="280,85,415,112"/>
+<area shape="rect" id="node5" href="$class_game_master.html#adcdcc077b4670a53237527bd7c657a32" title="Head to the main menu." alt="" coords="5,140,232,167"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="91,85,146,112"/>
+<area shape="rect" id="node8" href="$class_game_master.html#a030474427cea69d144effe531050b9aa" title="Create a new map window." alt="" coords="467,107,679,149"/>
+</map>

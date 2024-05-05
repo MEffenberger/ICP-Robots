@@ -1,34 +1,0 @@
-
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8âÙ±˜ô1J$a7de07bf-43f4-4052-809b-c8b001248b6b
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8ãÙ±˜ô1J$4de6c710-0cda-49bc-b462-6afda4f1134d
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(£İ¶ßıÿÿÿÿ8ãÙ±˜ô1J$cb2e6b9a-50d5-4529-a7d7-7e4064a748e2
-¤	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(£İ¶ßıÿÿÿÿ8ãÙ±˜ô1J$4b28cab2-ee9d-4c1f-b10a-fbc3947c6550
-¥	cpp:S5276Á"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8Øú»˜ô1J$eac8eed4-c793-4f39-9344-95535a84570c
-¥	cpp:S5276Á"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8Øú»˜ô1J$2ea38faf-11b5-456f-b110-f53c7f5ff929
-¥	cpp:S5276ë"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8Ùú»˜ô1J$e712ea2d-f908-416a-8019-cddc55b202f8
-¥	cpp:S5276ë"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ8Ùú»˜ô1J$822d9cd1-ac81-45ba-af82-6ad3142da432
-£	cpp:S3230&"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(«å”œ8±Ú±˜ô1J$f7979535-68f4-45ad-9096-d837cea82bfc
-«	cpp:S3230'"iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åš8²Ú±˜ô1J$6327c198-4252-42e0-8f23-5718bed23a5a
-¥	cpp:S3230<"cDo not assign data members in a constructor. Initialize member "Stunned" in an initialization list.(êúÎÍ8²Ú±˜ô1J$341bcaf4-a9d1-4ebb-8afe-8615b0bd5cc9
-«	cpp:S3230="iDo not assign data members in a constructor. Initialize member "numberOfLives" in an initialization list.(É–8²Ú±˜ô1J$6c3d05d6-ffaa-450b-b88b-964da2d8a290
-«	cpp:S3230B"iDo not assign data members in a constructor. Initialize member "isCoolingDown" in an initialization list.(å³¼ó8²Ú±˜ô1J$dc0b8874-a6ff-417d-b5a8-a34019461c25
-¡	cpp:S3230F"_Do not assign data members in a constructor. Initialize member "hit" in an initialization list.(¼´Ú¶8û»˜ô1J$85e4d89e-5de3-4b7a-8d8f-9d9983abf565
-˜	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Ş¾¾¥şÿÿÿÿ8¹Ú±˜ô1J$9cd572ac-8dce-4816-bf49-e8a34627e4f9
-“	cpp:S5025*"QReplace the use of "new" with an operation that automatically manages the memory.(Áæùà8Ä¯®ò1J$50324d93-d2ba-48d7-9124-64bc39116d6a
-’	cpp:S5025-"QReplace the use of "new" with an operation that automatically manages the memory.(õ€8½Ú±˜ô1J$7e4c2ea7-4daf-4492-aae2-dba12bf4836e
-˜	cpp:S50251"QReplace the use of "new" with an operation that automatically manages the memory.(­â¯„şÿÿÿÿ8½Ú±˜ô1J$f07be444-ee5c-4443-aa08-6932ad003304
-“	cpp:S50255"QReplace the use of "new" with an operation that automatically manages the memory.(´ÊĞı8¾Ú±˜ô1J$d683d386-9ad4-4e43-8d3f-35e7c0c8a88f
-“	cpp:S5025@"QReplace the use of "new" with an operation that automatically manages the memory.(ÊÕÇÁ8¿Ú±˜ô1J$9aff00e2-4bba-453d-b660-d840a1b020fc
-ƒ	cpp:S6004^"AUse the init-statement to declare "newY" inside the if statement.(ÒÀÒı8œû»˜ô1J$5394f08f-c768-44ee-88a9-eaab548fdc28
-‰	cpp:S6004¤"AUse the init-statement to declare "newY" inside the if statement.(‚¸Ÿùÿÿÿÿ8¨û»˜ô1J$3d3f3b2d-401e-4b05-86d7-c96cc24110ea
-o	cpp:S5827Û"'Replace the redundant type with "auto".(‘¸Ñ•şÿÿÿÿ8Âû»˜ô1J$55020123-2993-4191-ac59-09c02596328d
-™	cpp:S5025Û"QReplace the use of "new" with an operation that automatically manages the memory.(‘¸Ñ•şÿÿÿÿ8Ãû»˜ô1J$d2db5151-928f-4f5b-9064-542d79d37ad8
-}	cpp:S5025ğ":Rewrite the code so that you no longer need this "delete".(×—şå8Ìû»˜ô1J$e9cbfb63-16ca-4d8e-94ed-195617723816
-|	cpp:S5025§":Rewrite the code so that you no longer need this "delete".(½×™U8Õû»˜ô1J$41d9856f-78bd-4dd8-a3e9-8483267b5a94
-‚	cpp:S5025«":Rewrite the code so that you no longer need this "delete".(ŒÍ­ÿÿÿÿÿ8Õû»˜ô1J$8793ec83-6176-4503-b808-dd21ea8406e8
-‚	cpp:S5025¯":Rewrite the code so that you no longer need this "delete".(¼ôÏûÿÿÿÿ8Õû»˜ô1J$2e725a8e-b25f-4053-824f-10b8386949dc
-‚	cpp:S5025³":Rewrite the code so that you no longer need this "delete".(¼ÒêÜûÿÿÿÿ8Õû»˜ô1J$1f50a354-32eb-4649-b57b-8f41b84a87bc
-\	cpp:S5025·":Rewrite the code so that you no longer need this "delete".(òˆ“®ûÿÿÿÿ8Ç’á§ô1
-€	cpp:S1155º"=Use "empty()" to check whether the container is empty or not.(ºŠ¸ñ8×û»˜ô1J$874b1d56-f130-480e-8eda-745364282f63
-}	cpp:S5025½":Rewrite the code so that you no longer need this "delete".(×—şå8Øû»˜ô1J$5fc4be91-c233-4b14-9089-9636e14fbd04
-‚	cpp:S5025Ã":Rewrite the code so that you no longer need this "delete".(…Íˆ÷úÿÿÿÿ8Øû»˜ô1J$c60f3144-c0e5-4750-8ab4-5448ac55a5e0

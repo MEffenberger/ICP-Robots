@@ -1,0 +1,6 @@
+<map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,203,83"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a0a155c0cc89c8d49861e8963bb79d13c" title="Applies background and font to the main window." alt="" coords="265,5,471,32"/>
+<area shape="rect" id="node3" href="$class_main_window.html#ad087c7bdbbaa5034f987fd86e986b443" title="Emits signal to create a new map window." alt="" coords="251,56,485,83"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a683ed5e58e5caa4503dfc53142321746" title="Quits the app when the exit button is pressed." alt="" coords="287,107,449,133"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="User::switchControl" name="User::switchControl">
+<area shape="rect" id="node1" title="Set the User as focusable (keyboard control)" alt="" coords="1505,78,1655,105"/>
+<area shape="rect" id="node2" href="$class_horizontal_lower_bar.html#a74f45c393f971a6204010f53873ff9da" title="HorizontalLowerBar constructor." alt="" coords="1261,5,1419,47"/>
+<area shape="rect" id="node3" href="$class_horizontal_lower_bar.html#a2d77905a35a516fafb438f388d55f07d" title="Mouse release event." alt="" coords="1259,71,1421,112"/>
+<area shape="rect" id="node4" href="$class_game_master.html#ae624dfb17853967977d43c4ef8124ae2" title="Update the CountDownTimer every 0.6s." alt="" coords="1223,137,1457,163"/>
+<area shape="rect" id="node5" href="$class_game_master.html#a065589ea9b65a0218b06a5cc9feb2e2b" title="Create the game based on the parsed JSON file." alt="" coords="991,137,1175,163"/>
+<area shape="rect" id="node6" href="$class_game_master.html#ab5153341060268f1cb7fd7cae11f794a" title="Restart the game." alt="" coords="735,86,931,113"/>
+<area shape="rect" id="node7" href="$class_game_master.html#ae13f5d97a64dee1760ca019513e54097" title="Show the JSON popup." alt="" coords="723,187,943,214"/>
+<area shape="rect" id="node11" href="$class_game_master.html#ade49559ccba6d1dcb1ee2f8e54f89543" title="Start the game &#45; Open the main window." alt="" coords="287,275,470,302"/>
+<area shape="rect" id="node8" href="$class_game_master.html#ac24934f7f53ef8e48726e16190974320" title="Run the game &#45; initialize the main window." alt="" coords="540,187,675,214"/>
+<area shape="rect" id="node9" href="$class_game_master.html#adcdcc077b4670a53237527bd7c657a32" title="Head to the main menu." alt="" coords="265,123,492,150"/>
+<area shape="rect" id="node10" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="351,174,406,201"/>
+<area shape="rect" id="node12" href="$class_game_master.html#a030474427cea69d144effe531050b9aa" title="Create a new map window." alt="" coords="5,243,217,284"/>
+</map>

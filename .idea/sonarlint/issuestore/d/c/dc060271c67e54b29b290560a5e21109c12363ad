@@ -1,0 +1,34 @@
+
+w	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
+w	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
+w	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(£İ¶ßıÿÿÿÿ
+w	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(£İ¶ßıÿÿÿÿ
+x	cpp:S5276¿"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
+x	cpp:S5276¿"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
+x	cpp:S5276ç"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
+x	cpp:S5276ç"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
+v	cpp:S3230&"aDo not assign data members in a constructor. Initialize member "speed" in an initialization list.(«å”œ
+~	cpp:S3230'"iDo not assign data members in a constructor. Initialize member "rotationSpeed" in an initialization list.( åš
+x	cpp:S3230<"cDo not assign data members in a constructor. Initialize member "Stunned" in an initialization list.(êúÎÍ
+~	cpp:S3230="iDo not assign data members in a constructor. Initialize member "numberOfLives" in an initialization list.(É–
+~	cpp:S3230B"iDo not assign data members in a constructor. Initialize member "isCoolingDown" in an initialization list.(å³¼ó
+t	cpp:S3230F"_Do not assign data members in a constructor. Initialize member "hit" in an initialization list.(¼´Ú¶
+k	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Ş¾¾¥şÿÿÿÿ
+f	cpp:S5025*"QReplace the use of "new" with an operation that automatically manages the memory.(Áæùà
+e	cpp:S5025-"QReplace the use of "new" with an operation that automatically manages the memory.(õ€
+k	cpp:S50251"QReplace the use of "new" with an operation that automatically manages the memory.(­â¯„şÿÿÿÿ
+f	cpp:S50255"QReplace the use of "new" with an operation that automatically manages the memory.(´ÊĞı
+f	cpp:S5025@"QReplace the use of "new" with an operation that automatically manages the memory.(ÊÕÇÁ
+V	cpp:S6004^"AUse the init-statement to declare "newY" inside the if statement.(ÒÀÒı
+\	cpp:S6004¤"AUse the init-statement to declare "newY" inside the if statement.(‚¸Ÿùÿÿÿÿ
+B	cpp:S5827Ø"'Replace the redundant type with "auto".(‘¸Ñ•şÿÿÿÿ
+l	cpp:S5025Ø"QReplace the use of "new" with an operation that automatically manages the memory.(‘¸Ñ•şÿÿÿÿ
+P	cpp:S5025ì":Rewrite the code so that you no longer need this "delete".(×—şå
+O	cpp:S5025£":Rewrite the code so that you no longer need this "delete".(½×™U
+U	cpp:S5025§":Rewrite the code so that you no longer need this "delete".(ŒÍ­ÿÿÿÿÿ
+U	cpp:S5025«":Rewrite the code so that you no longer need this "delete".(¼ôÏûÿÿÿÿ
+U	cpp:S5025¯":Rewrite the code so that you no longer need this "delete".(¼ÒêÜûÿÿÿÿ
+U	cpp:S5025³":Rewrite the code so that you no longer need this "delete".(òˆ“®ûÿÿÿÿ
+S	cpp:S1155¶"=Use "empty()" to check whether the container is empty or not.(ºŠ¸ñ
+P	cpp:S5025¹":Rewrite the code so that you no longer need this "delete".(×—şå
+U	cpp:S5025¿":Rewrite the code so that you no longer need this "delete".(…Íˆ÷úÿÿÿÿ

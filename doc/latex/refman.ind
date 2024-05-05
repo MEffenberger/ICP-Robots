@@ -1,0 +1,446 @@
+\begin{theindex}
+
+  \item {$\sim$Button}
+    \subitem {Button}, \hyperpage{13}
+  \item {$\sim$Enemy}
+    \subitem {Enemy}, \hyperpage{18}
+  \item {$\sim$EnemyItem}
+    \subitem {EnemyItem}, \hyperpage{22}
+  \item {$\sim$GameInfo}
+    \subitem {GameInfo}, \hyperpage{26}
+  \item {$\sim$Heart}
+    \subitem {Heart}, \hyperpage{31}
+  \item {$\sim$HorizontalLowerBar}
+    \subitem {HorizontalLowerBar}, \hyperpage{33}
+  \item {$\sim$HorizontalUpperBar}
+    \subitem {HorizontalUpperBar}, \hyperpage{36}
+  \item {$\sim$MainWindow}
+    \subitem {MainWindow}, \hyperpage{38}
+  \item {$\sim$MapWindow}
+    \subitem {MapWindow}, \hyperpage{42}
+  \item {$\sim$Obstacle}
+    \subitem {Obstacle}, \hyperpage{47}
+  \item {$\sim$PopUp}
+    \subitem {PopUp}, \hyperpage{52}
+  \item {$\sim$RobotItem}
+    \subitem {RobotItem}, \hyperpage{64}
+  \item {$\sim$RobotParamDialog}
+    \subitem {RobotParamDialog}, \hyperpage{67}
+  \item {$\sim$Star}
+    \subitem {Star}, \hyperpage{70}
+  \item {$\sim$Timer}
+    \subitem {Timer}, \hyperpage{73}
+  \item {$\sim$User}
+    \subitem {User}, \hyperpage{77}
+
+  \indexspace
+
+  \item {applyGraphics}
+    \subitem {MainWindow}, \hyperpage{38}
+  \item {Autopilot}
+    \subitem {HorizontalLowerBar}, \hyperpage{33}
+  \item {autoPilot}
+    \subitem {Button}, \hyperpage{13}
+
+  \indexspace
+
+  \item {Button}, \hyperpage{11}
+    \subitem {$\sim$Button}, \hyperpage{13}
+    \subitem {autoPilot}, \hyperpage{13}
+    \subitem {Button}, \hyperpage{13}
+    \subitem {mousePressEvent}, \hyperpage{13}
+    \subitem {mouseReleaseEvent}, \hyperpage{15}
+    \subitem {pressed}, \hyperpage{15}
+    \subitem {released}, \hyperpage{15}
+    \subitem {setBorderWidth}, \hyperpage{15}
+  \item {button.cpp}, \hyperpage{81}
+  \item {button.h}, \hyperpage{82}
+
+  \indexspace
+
+  \item {checkStuck}
+    \subitem {Enemy}, \hyperpage{18}
+  \item {clearTableCell}
+    \subitem {MapWindow}, \hyperpage{42}
+  \item {continueTimer}
+    \subitem {Timer}, \hyperpage{73}
+  \item {createLayout}
+    \subitem {RobotParamDialog}, \hyperpage{67}
+  \item {createNewMapWindow}
+    \subitem {MainWindow}, \hyperpage{39}
+
+  \indexspace
+
+  \item {damage}
+    \subitem {GameInfo}, \hyperpage{27}
+  \item {decreaseLives}
+    \subitem {User}, \hyperpage{77}
+  \item {deleteLife1}
+    \subitem {User}, \hyperpage{77}
+  \item {deleteLife2}
+    \subitem {User}, \hyperpage{77}
+  \item {deleteLife3}
+    \subitem {User}, \hyperpage{77}
+  \item {disableEditing}
+    \subitem {MapWindow}, \hyperpage{43}
+
+  \indexspace
+
+  \item {Enemy}, \hyperpage{16}
+    \subitem {$\sim$Enemy}, \hyperpage{18}
+    \subitem {checkStuck}, \hyperpage{18}
+    \subitem {Enemy}, \hyperpage{18}
+    \subitem {getUnstuck}, \hyperpage{19}
+    \subitem {hit}, \hyperpage{19}
+    \subitem {resumeAllTimers}, \hyperpage{19}
+    \subitem {startAutonomousMovement}, \hyperpage{19}
+    \subitem {stopAllTimers}, \hyperpage{19}
+    \subitem {stopChasing}, \hyperpage{19}
+  \item {enemy}
+    \subitem {pixmapIcons}, \hyperpage{49}
+  \item {enemy.cpp}, \hyperpage{83}
+  \item {enemy.h}, \hyperpage{84}
+  \item {EnemyItem}, \hyperpage{20}
+    \subitem {$\sim$EnemyItem}, \hyperpage{22}
+    \subitem {EnemyItem}, \hyperpage{22}
+    \subitem {getDistance}, \hyperpage{22}
+    \subitem {getOrientation}, \hyperpage{22}
+    \subitem {getRotationAngle}, \hyperpage{22}
+    \subitem {getVelocity}, \hyperpage{23}
+    \subitem {setDistance}, \hyperpage{23}
+    \subitem {setOrientation}, \hyperpage{23}
+    \subitem {setRotationAngle}, \hyperpage{24}
+    \subitem {setVelocity}, \hyperpage{24}
+  \item {enemyitem.cpp}, \hyperpage{85}
+  \item {enemyitem.h}, \hyperpage{86}
+  \item {exitButton}
+    \subitem {PopUp}, \hyperpage{53}
+
+  \indexspace
+
+  \item {fillFile}
+    \subitem {MapWindow}, \hyperpage{43}
+
+  \indexspace
+
+  \item {GameInfo}, \hyperpage{24}
+    \subitem {$\sim$GameInfo}, \hyperpage{26}
+    \subitem {damage}, \hyperpage{27}
+    \subitem {GameInfo}, \hyperpage{26}
+    \subitem {ouch}, \hyperpage{27}
+    \subitem {resetMessage}, \hyperpage{27}
+    \subitem {updateMessage}, \hyperpage{27}
+  \item {gameinfo.cpp}, \hyperpage{87}
+  \item {gameinfo.h}, \hyperpage{87}
+  \item {GameMaster}, \hyperpage{28}
+    \subitem {run}, \hyperpage{29}
+  \item {gamemaster.cpp}, \hyperpage{88}
+  \item {gamemaster.h}, \hyperpage{89}
+  \item {getDistance}
+    \subitem {EnemyItem}, \hyperpage{22}
+    \subitem {RobotParamDialog}, \hyperpage{67}
+  \item {getOrientation}
+    \subitem {EnemyItem}, \hyperpage{22}
+    \subitem {RobotItem}, \hyperpage{64}
+    \subitem {RobotParamDialog}, \hyperpage{68}
+  \item {getRotationAngle}
+    \subitem {EnemyItem}, \hyperpage{22}
+    \subitem {RobotParamDialog}, \hyperpage{68}
+  \item {getUnstuck}
+    \subitem {Enemy}, \hyperpage{19}
+  \item {getVelocity}
+    \subitem {EnemyItem}, \hyperpage{23}
+    \subitem {RobotItem}, \hyperpage{64}
+    \subitem {RobotParamDialog}, \hyperpage{68}
+
+  \indexspace
+
+  \item {Heart}, \hyperpage{29}
+    \subitem {$\sim$Heart}, \hyperpage{31}
+    \subitem {Heart}, \hyperpage{30}
+    \subitem {setDead}, \hyperpage{31}
+  \item {heart.cpp}, \hyperpage{90}
+  \item {heart.h}, \hyperpage{91}
+  \item {hide}
+    \subitem {PopUp}, \hyperpage{52}
+  \item {hit}
+    \subitem {Enemy}, \hyperpage{19}
+  \item {horizontalbar.cpp}, \hyperpage{92}
+  \item {horizontalbar.h}, \hyperpage{93}
+  \item {HorizontalLowerBar}, \hyperpage{31}
+    \subitem {$\sim$HorizontalLowerBar}, \hyperpage{33}
+    \subitem {Autopilot}, \hyperpage{33}
+    \subitem {HorizontalLowerBar}, \hyperpage{32}
+    \subitem {mouseReleaseEvent}, \hyperpage{33}
+  \item {HorizontalUpperBar}, \hyperpage{34}
+    \subitem {$\sim$HorizontalUpperBar}, \hyperpage{36}
+    \subitem {HorizontalUpperBar}, \hyperpage{35}
+    \subitem {pauseButton}, \hyperpage{36}
+    \subitem {timer}, \hyperpage{36}
+
+  \indexspace
+
+  \item {keyPressEvent}
+    \subitem {User}, \hyperpage{77}
+
+  \indexspace
+
+  \item {loadFile}
+    \subitem {MainWindow}, \hyperpage{39}
+  \item {loadGame}
+    \subitem {MainWindow}, \hyperpage{39}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{95}
+  \item {main.cpp}, \hyperpage{94}
+    \subitem {main}, \hyperpage{95}
+  \item {mainMenuButton}
+    \subitem {PopUp}, \hyperpage{53}
+  \item {MainWindow}, \hyperpage{37}
+    \subitem {$\sim$MainWindow}, \hyperpage{38}
+    \subitem {applyGraphics}, \hyperpage{38}
+    \subitem {createNewMapWindow}, \hyperpage{39}
+    \subitem {loadFile}, \hyperpage{39}
+    \subitem {loadGame}, \hyperpage{39}
+    \subitem {MainWindow}, \hyperpage{38}
+    \subitem {quitApp}, \hyperpage{39}
+  \item {mainwindow.cpp}, \hyperpage{95}
+  \item {mainwindow.h}, \hyperpage{96}
+  \item {mapData}
+    \subitem {MapWindow}, \hyperpage{45}
+  \item {MapWindow}, \hyperpage{40}
+    \subitem {$\sim$MapWindow}, \hyperpage{42}
+    \subitem {clearTableCell}, \hyperpage{42}
+    \subitem {disableEditing}, \hyperpage{43}
+    \subitem {fillFile}, \hyperpage{43}
+    \subitem {mapData}, \hyperpage{45}
+    \subitem {MapWindow}, \hyperpage{42}
+    \subitem {setBarBottom}, \hyperpage{43}
+    \subitem {setBarTop}, \hyperpage{43}
+    \subitem {setTableCell}, \hyperpage{43}
+    \subitem {startSession}, \hyperpage{44}
+    \subitem {updateEnemyCounter}, \hyperpage{44}
+    \subitem {updateObstacleCounter}, \hyperpage{44}
+    \subitem {updateRobotCounter}, \hyperpage{44}
+    \subitem {updateTimer}, \hyperpage{44}
+  \item {mapwindow.cpp}, \hyperpage{97}
+  \item {mapwindow.h}, \hyperpage{98}
+    \subitem {pixMapIcons}, \hyperpage{99}
+    \subitem {SQUARE\_SIZE}, \hyperpage{99}
+  \item {mousePressEvent}
+    \subitem {Button}, \hyperpage{13}
+  \item {mouseReleaseEvent}
+    \subitem {Button}, \hyperpage{15}
+    \subitem {HorizontalLowerBar}, \hyperpage{33}
+  \item {move}
+    \subitem {Star}, \hyperpage{70}
+
+  \indexspace
+
+  \item {Obstacle}, \hyperpage{45}
+    \subitem {$\sim$Obstacle}, \hyperpage{47}
+    \subitem {Obstacle}, \hyperpage{46}
+  \item {obstacle}
+    \subitem {pixmapIcons}, \hyperpage{49}
+  \item {obstacle.cpp}, \hyperpage{100}
+  \item {obstacle.h}, \hyperpage{100}
+  \item {ObstacleItem}, \hyperpage{47}
+    \subitem {ObstacleItem}, \hyperpage{48}
+  \item {obstacleitem.h}, \hyperpage{101}
+  \item {ouch}
+    \subitem {GameInfo}, \hyperpage{27}
+
+  \indexspace
+
+  \item {pauseButton}
+    \subitem {HorizontalUpperBar}, \hyperpage{36}
+  \item {pauseTimers}
+    \subitem {PopUp}, \hyperpage{53}
+  \item {pixMapIcons}
+    \subitem {mapwindow.h}, \hyperpage{99}
+  \item {pixmapIcons}, \hyperpage{49}
+    \subitem {enemy}, \hyperpage{49}
+    \subitem {obstacle}, \hyperpage{49}
+    \subitem {robot}, \hyperpage{50}
+  \item {PopUp}, \hyperpage{50}
+    \subitem {$\sim$PopUp}, \hyperpage{52}
+    \subitem {exitButton}, \hyperpage{53}
+    \subitem {hide}, \hyperpage{52}
+    \subitem {mainMenuButton}, \hyperpage{53}
+    \subitem {pauseTimers}, \hyperpage{53}
+    \subitem {PopUp}, \hyperpage{52}
+    \subitem {restartButton}, \hyperpage{53}
+    \subitem {resumeButton}, \hyperpage{53}
+    \subitem {show}, \hyperpage{53}
+  \item {popup.cpp}, \hyperpage{103}
+  \item {popup.h}, \hyperpage{103}
+  \item {pressed}
+    \subitem {Button}, \hyperpage{15}
+
+  \indexspace
+
+  \item {QDialog}, \hyperpage{54}
+  \item {QGraphicsEllipseItem}, \hyperpage{55}
+  \item {QGraphicsRectItem}, \hyperpage{56}
+  \item {QGraphicsTextItem}, \hyperpage{57}
+  \item {QMainWindow}, \hyperpage{58}
+  \item {QObject}, \hyperpage{59}
+  \item {QTableWidgetItem}, \hyperpage{60}
+  \item {quitApp}
+    \subitem {MainWindow}, \hyperpage{39}
+  \item {QWidget}, \hyperpage{61}
+
+  \indexspace
+
+  \item {released}
+    \subitem {Button}, \hyperpage{15}
+  \item {resetMessage}
+    \subitem {GameInfo}, \hyperpage{27}
+  \item {restartButton}
+    \subitem {PopUp}, \hyperpage{53}
+  \item {resumeAllTimers}
+    \subitem {Enemy}, \hyperpage{19}
+    \subitem {User}, \hyperpage{78}
+  \item {resumeButton}
+    \subitem {PopUp}, \hyperpage{53}
+  \item {robot}
+    \subitem {pixmapIcons}, \hyperpage{50}
+  \item {robotdialog.cpp}, \hyperpage{104}
+  \item {robotdialog.h}, \hyperpage{105}
+  \item {RobotItem}, \hyperpage{62}
+    \subitem {$\sim$RobotItem}, \hyperpage{64}
+    \subitem {getOrientation}, \hyperpage{64}
+    \subitem {getVelocity}, \hyperpage{64}
+    \subitem {RobotItem}, \hyperpage{63}
+    \subitem {setOrientation}, \hyperpage{64}
+    \subitem {setVelocity}, \hyperpage{65}
+  \item {robotitem.cpp}, \hyperpage{106}
+  \item {robotitem.h}, \hyperpage{107}
+  \item {RobotParamDialog}, \hyperpage{65}
+    \subitem {$\sim$RobotParamDialog}, \hyperpage{67}
+    \subitem {createLayout}, \hyperpage{67}
+    \subitem {getDistance}, \hyperpage{67}
+    \subitem {getOrientation}, \hyperpage{68}
+    \subitem {getRotationAngle}, \hyperpage{68}
+    \subitem {getVelocity}, \hyperpage{68}
+    \subitem {RobotParamDialog}, \hyperpage{67}
+  \item {run}
+    \subitem {GameMaster}, \hyperpage{29}
+
+  \indexspace
+
+  \item {setBarBottom}
+    \subitem {MapWindow}, \hyperpage{43}
+  \item {setBarTop}
+    \subitem {MapWindow}, \hyperpage{43}
+  \item {setBorderWidth}
+    \subitem {Button}, \hyperpage{15}
+  \item {setDead}
+    \subitem {Heart}, \hyperpage{31}
+  \item {setDistance}
+    \subitem {EnemyItem}, \hyperpage{23}
+  \item {setOrientation}
+    \subitem {EnemyItem}, \hyperpage{23}
+    \subitem {RobotItem}, \hyperpage{64}
+  \item {setRotationAngle}
+    \subitem {EnemyItem}, \hyperpage{24}
+  \item {setTableCell}
+    \subitem {MapWindow}, \hyperpage{43}
+  \item {setVelocity}
+    \subitem {EnemyItem}, \hyperpage{24}
+    \subitem {RobotItem}, \hyperpage{65}
+  \item {show}
+    \subitem {PopUp}, \hyperpage{53}
+  \item {SQUARE\_SIZE}
+    \subitem {mapwindow.h}, \hyperpage{99}
+  \item {Star}, \hyperpage{69}
+    \subitem {$\sim$Star}, \hyperpage{70}
+    \subitem {move}, \hyperpage{70}
+    \subitem {Star}, \hyperpage{70}
+  \item {star.cpp}, \hyperpage{108}
+  \item {star.h}, \hyperpage{109}
+  \item {startAutonomousMovement}
+    \subitem {Enemy}, \hyperpage{19}
+  \item {startMovingForward}
+    \subitem {User}, \hyperpage{78}
+  \item {startRotatingClockwise}
+    \subitem {User}, \hyperpage{78}
+  \item {startRotatingCounterClockwise}
+    \subitem {User}, \hyperpage{78}
+  \item {startSession}
+    \subitem {MapWindow}, \hyperpage{44}
+  \item {stopAllTimers}
+    \subitem {Enemy}, \hyperpage{19}
+    \subitem {User}, \hyperpage{78}
+  \item {stopChasing}
+    \subitem {Enemy}, \hyperpage{19}
+  \item {stopMoving}
+    \subitem {User}, \hyperpage{78}
+  \item {stopRotating}
+    \subitem {User}, \hyperpage{79}
+  \item {stopTimer}
+    \subitem {Timer}, \hyperpage{73}
+  \item {stunned}
+    \subitem {User}, \hyperpage{79}
+  \item {switchControl}
+    \subitem {User}, \hyperpage{79}
+
+  \indexspace
+
+  \item {timeIsUp}
+    \subitem {Timer}, \hyperpage{73}
+  \item {Timer}, \hyperpage{71}
+    \subitem {$\sim$Timer}, \hyperpage{73}
+    \subitem {continueTimer}, \hyperpage{73}
+    \subitem {stopTimer}, \hyperpage{73}
+    \subitem {timeIsUp}, \hyperpage{73}
+    \subitem {Timer}, \hyperpage{73}
+    \subitem {updateTimer}, \hyperpage{74}
+  \item {timer}
+    \subitem {HorizontalUpperBar}, \hyperpage{36}
+  \item {timer.cpp}, \hyperpage{111}
+  \item {timer.h}, \hyperpage{111}
+
+  \indexspace
+
+  \item {Ui}, \hyperpage{9}
+  \item {updateEnemyCounter}
+    \subitem {MapWindow}, \hyperpage{44}
+  \item {updateMessage}
+    \subitem {GameInfo}, \hyperpage{27}
+  \item {updateObstacleCounter}
+    \subitem {MapWindow}, \hyperpage{44}
+  \item {updateRobotCounter}
+    \subitem {MapWindow}, \hyperpage{44}
+  \item {updateTimer}
+    \subitem {MapWindow}, \hyperpage{44}
+    \subitem {Timer}, \hyperpage{74}
+  \item {User}, \hyperpage{74}
+    \subitem {$\sim$User}, \hyperpage{77}
+    \subitem {decreaseLives}, \hyperpage{77}
+    \subitem {deleteLife1}, \hyperpage{77}
+    \subitem {deleteLife2}, \hyperpage{77}
+    \subitem {deleteLife3}, \hyperpage{77}
+    \subitem {keyPressEvent}, \hyperpage{77}
+    \subitem {resumeAllTimers}, \hyperpage{78}
+    \subitem {startMovingForward}, \hyperpage{78}
+    \subitem {startRotatingClockwise}, \hyperpage{78}
+    \subitem {startRotatingCounterClockwise}, \hyperpage{78}
+    \subitem {stopAllTimers}, \hyperpage{78}
+    \subitem {stopMoving}, \hyperpage{78}
+    \subitem {stopRotating}, \hyperpage{79}
+    \subitem {stunned}, \hyperpage{79}
+    \subitem {switchControl}, \hyperpage{79}
+    \subitem {User}, \hyperpage{76}
+    \subitem {visionPoint}, \hyperpage{79}
+  \item {user.cpp}, \hyperpage{113}
+  \item {user.h}, \hyperpage{113}
+
+  \indexspace
+
+  \item {visionPoint}
+    \subitem {User}, \hyperpage{79}
+
+\end{theindex}

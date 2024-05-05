@@ -1,0 +1,5 @@
+<map id="Button::autoPilot" name="Button::autoPilot">
+<area shape="rect" id="node1" title="Signal emitted when the button is released and the autopilot rectangle contains the mouse position." alt="" coords="260,42,391,69"/>
+<area shape="rect" id="node2" href="$class_horizontal_lower_bar.html#a74f45c393f971a6204010f53873ff9da" title="HorizontalLowerBar constructor." alt="" coords="29,5,188,47"/>
+<area shape="rect" id="node3" href="$class_button.html#a3aea60ed64ce59bba747737f3b402aab" title="Mouse release event." alt="" coords="5,71,212,98"/>
+</map>

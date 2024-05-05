@@ -1,0 +1,687 @@
+\hypertarget{class_game_master}{}\doxysection{Game\+Master Class Reference}
+\label{class_game_master}\index{GameMaster@{GameMaster}}
+
+
+\mbox{\hyperlink{class_game_master}{Game\+Master}} class, inherits from Q\+Object.  
+
+
+
+
+{\ttfamily \#include $<$gamemaster.\+h$>$}
+
+
+
+Inheritance diagram for Game\+Master\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{class_game_master__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Master\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_master_ac24934f7f53ef8e48726e16190974320}{run}} ()
+\begin{DoxyCompactList}\small\item\em Run the game -\/ initialize the main window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_master_ade49559ccba6d1dcb1ee2f8e54f89543}{start\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Start the game -\/ Open the main window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_a030474427cea69d144effe531050b9aa}{create\+New\+Map\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Create a new map window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_master_a26424aea2e3dcfb63291963a3f149e28}{load\+File}} ()
+\begin{DoxyCompactList}\small\item\em Load the J\+S\+ON file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_ae13f5d97a64dee1760ca019513e54097}{show\+J\+S\+O\+Npopup}} ()
+\begin{DoxyCompactList}\small\item\em Show the J\+S\+ON popup. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_master_a065589ea9b65a0218b06a5cc9feb2e2b}{main\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Create the game based on the parsed J\+S\+ON file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_aa52ec6cda9254d58b122f96000ae186b}{pause\+The\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Pause the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_a4bfc102c3bf3a33ce209c411a3b79cb3}{resume\+The\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Resume the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_a23ae23979952b4158d866d27f9fbf46b}{exit\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Exit the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_adcdcc077b4670a53237527bd7c657a32}{headto\+Main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Head to the main menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_ab5153341060268f1cb7fd7cae11f794a}{restart\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Restart the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_ab9e380887215ab51f9abf29a29481c61}{clean\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Clean up the game, call all the destructors of constructed objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_master_ae624dfb17853967977d43c4ef8124ae2}{update\+Count\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Update the Count\+Down\+Timer every 0.\+6s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_game_master_a8cb935e8942cabef89b0ec2213678a1b}{Enemy\+Data}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_game_master_a418689d02524f947388eb82d35a519ee}{User\+Data}}
+\item 
+std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_game_master_a9fdfe2fa7e4a20ef14e326a99c9909ad}{Obstacle\+Data}}
+\item 
+int \mbox{\hyperlink{class_game_master_a7eb32f33a32e1cb0ca08de00603e3e74}{time\+Limit\+Data}}
+\item 
+\mbox{\hyperlink{class_main_window}{Main\+Window}} $\ast$ \mbox{\hyperlink{class_game_master_ae88904a07b2c83e987c36109747a17f2}{main\+Window}}
+\item 
+\mbox{\hyperlink{class_map_window}{Map\+Window}} $\ast$ \mbox{\hyperlink{class_game_master_ad3b19135daff0fb769bc46771bf87f04}{map\+Window}}
+\item 
+Q\+Json\+Array $\ast$ \mbox{\hyperlink{class_game_master_a2e8ad89c7d968741b1a47d7cde2af33b}{map\+Data}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \mbox{\hyperlink{class_game_master_a8da918ee73262babb64aaee2ba8a911f}{enemies}}
+\item 
+\mbox{\hyperlink{class_user}{User}} $\ast$ \mbox{\hyperlink{class_game_master_a829f289f24b5d7235add2bf36397d9b7}{user}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_obstacle}{Obstacle}} $\ast$ $>$ \mbox{\hyperlink{class_game_master_af33f49fd2cf637444bf387c4ee8d564a}{obstacles}}
+\item 
+\mbox{\hyperlink{class_horizontal_upper_bar}{Horizontal\+Upper\+Bar}} $\ast$ \mbox{\hyperlink{class_game_master_af304f73da7ba96c442b728b721648612}{upper\+Bar}}
+\item 
+\mbox{\hyperlink{class_horizontal_lower_bar}{Horizontal\+Lower\+Bar}} $\ast$ \mbox{\hyperlink{class_game_master_a25ee6cc3d88e166ae58d2a94c8288c5e}{lower\+Bar}}
+\item 
+Q\+Graphics\+Scene $\ast$ \mbox{\hyperlink{class_game_master_ada8cb5c68afac6b0710014a1ce68f768}{scene}}
+\item 
+\mbox{\hyperlink{class_pop_up}{Pop\+Up}} $\ast$ \mbox{\hyperlink{class_game_master_af2dc9a90473ef76a41933233f3164fa5}{popup}}
+\item 
+\mbox{\hyperlink{class_pop_up}{Pop\+Up}} $\ast$ \mbox{\hyperlink{class_game_master_acb1c080c32f67fb57ad9ab7be04a8e72}{popup2}}
+\item 
+\mbox{\hyperlink{class_pop_up}{Pop\+Up}} $\ast$ \mbox{\hyperlink{class_game_master_aadf2174bfb4c9e4f29f277212373a70c}{popup3}}
+\item 
+Q\+Graphics\+View $\ast$ \mbox{\hyperlink{class_game_master_a4b32690cbb1e6b8f98d1c9299ae2c177}{view}}
+\item 
+Q\+Graphics\+Text\+Item $\ast$ \mbox{\hyperlink{class_game_master_a25975227a5eebb8f952ab84de39c34aa}{count\+Down}}
+\item 
+Q\+Timer $\ast$ \mbox{\hyperlink{class_game_master_ae9748fa5494c19b0fa1a254f93d595fa}{count\+Down\+Timer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_game_master}{Game\+Master}} class, inherits from Q\+Object. 
+
+Definition at line 38 of file gamemaster.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_master_ab9e380887215ab51f9abf29a29481c61}\label{class_game_master_ab9e380887215ab51f9abf29a29481c61}} 
+\index{GameMaster@{GameMaster}!cleanUp@{cleanUp}}
+\index{cleanUp@{cleanUp}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{cleanUp}{cleanUp}}
+{\footnotesize\ttfamily void Game\+Master\+::clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Clean up the game, call all the destructors of constructed objects. 
+
+
+
+Definition at line 298 of file gamemaster.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ab9e380887215ab51f9abf29a29481c61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a030474427cea69d144effe531050b9aa}\label{class_game_master_a030474427cea69d144effe531050b9aa}} 
+\index{GameMaster@{GameMaster}!createNewMapWindow@{createNewMapWindow}}
+\index{createNewMapWindow@{createNewMapWindow}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{createNewMapWindow}{createNewMapWindow}}
+{\footnotesize\ttfamily void Game\+Master\+::create\+New\+Map\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Create a new map window. 
+
+
+
+Definition at line 27 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a030474427cea69d144effe531050b9aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a030474427cea69d144effe531050b9aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a23ae23979952b4158d866d27f9fbf46b}\label{class_game_master_a23ae23979952b4158d866d27f9fbf46b}} 
+\index{GameMaster@{GameMaster}!exitGame@{exitGame}}
+\index{exitGame@{exitGame}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{exitGame}{exitGame}}
+{\footnotesize\ttfamily void Game\+Master\+::exit\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Exit the game. 
+
+
+
+Definition at line 283 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a23ae23979952b4158d866d27f9fbf46b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a23ae23979952b4158d866d27f9fbf46b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_adcdcc077b4670a53237527bd7c657a32}\label{class_game_master_adcdcc077b4670a53237527bd7c657a32}} 
+\index{GameMaster@{GameMaster}!headtoMainMenu@{headtoMainMenu}}
+\index{headtoMainMenu@{headtoMainMenu}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{headtoMainMenu}{headtoMainMenu}}
+{\footnotesize\ttfamily void Game\+Master\+::headto\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Head to the main menu. 
+
+
+
+Definition at line 288 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_adcdcc077b4670a53237527bd7c657a32_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_adcdcc077b4670a53237527bd7c657a32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a26424aea2e3dcfb63291963a3f149e28}\label{class_game_master_a26424aea2e3dcfb63291963a3f149e28}} 
+\index{GameMaster@{GameMaster}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{loadFile}{loadFile}}
+{\footnotesize\ttfamily bool Game\+Master\+::load\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Load the J\+S\+ON file. 
+
+
+
+Definition at line 68 of file gamemaster.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a26424aea2e3dcfb63291963a3f149e28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a065589ea9b65a0218b06a5cc9feb2e2b}\label{class_game_master_a065589ea9b65a0218b06a5cc9feb2e2b}} 
+\index{GameMaster@{GameMaster}!mainEvent@{mainEvent}}
+\index{mainEvent@{mainEvent}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{mainEvent}{mainEvent}}
+{\footnotesize\ttfamily bool Game\+Master\+::main\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Create the game based on the parsed J\+S\+ON file. 
+
+
+
+Definition at line 148 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a065589ea9b65a0218b06a5cc9feb2e2b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a065589ea9b65a0218b06a5cc9feb2e2b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_aa52ec6cda9254d58b122f96000ae186b}\label{class_game_master_aa52ec6cda9254d58b122f96000ae186b}} 
+\index{GameMaster@{GameMaster}!pauseTheGame@{pauseTheGame}}
+\index{pauseTheGame@{pauseTheGame}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{pauseTheGame}{pauseTheGame}}
+{\footnotesize\ttfamily void Game\+Master\+::pause\+The\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Pause the game. 
+
+
+
+Definition at line 261 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_aa52ec6cda9254d58b122f96000ae186b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_aa52ec6cda9254d58b122f96000ae186b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_ab5153341060268f1cb7fd7cae11f794a}\label{class_game_master_ab5153341060268f1cb7fd7cae11f794a}} 
+\index{GameMaster@{GameMaster}!restartGame@{restartGame}}
+\index{restartGame@{restartGame}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{restartGame}{restartGame}}
+{\footnotesize\ttfamily void Game\+Master\+::restart\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Restart the game. 
+
+
+
+Definition at line 293 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ab5153341060268f1cb7fd7cae11f794a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ab5153341060268f1cb7fd7cae11f794a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_a4bfc102c3bf3a33ce209c411a3b79cb3}\label{class_game_master_a4bfc102c3bf3a33ce209c411a3b79cb3}} 
+\index{GameMaster@{GameMaster}!resumeTheGame@{resumeTheGame}}
+\index{resumeTheGame@{resumeTheGame}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{resumeTheGame}{resumeTheGame}}
+{\footnotesize\ttfamily void Game\+Master\+::resume\+The\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Resume the game. 
+
+
+
+Definition at line 273 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a4bfc102c3bf3a33ce209c411a3b79cb3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_a4bfc102c3bf3a33ce209c411a3b79cb3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_ac24934f7f53ef8e48726e16190974320}\label{class_game_master_ac24934f7f53ef8e48726e16190974320}} 
+\index{GameMaster@{GameMaster}!run@{run}}
+\index{run@{run}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+Master\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run the game -\/ initialize the main window. 
+
+
+
+Definition at line 17 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ac24934f7f53ef8e48726e16190974320_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ac24934f7f53ef8e48726e16190974320_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_ae13f5d97a64dee1760ca019513e54097}\label{class_game_master_ae13f5d97a64dee1760ca019513e54097}} 
+\index{GameMaster@{GameMaster}!showJSONpopup@{showJSONpopup}}
+\index{showJSONpopup@{showJSONpopup}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{showJSONpopup}{showJSONpopup}}
+{\footnotesize\ttfamily void Game\+Master\+::show\+J\+S\+O\+Npopup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Show the J\+S\+ON popup. 
+
+
+
+Definition at line 47 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ae13f5d97a64dee1760ca019513e54097_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ae13f5d97a64dee1760ca019513e54097_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_ade49559ccba6d1dcb1ee2f8e54f89543}\label{class_game_master_ade49559ccba6d1dcb1ee2f8e54f89543}} 
+\index{GameMaster@{GameMaster}!startGame@{startGame}}
+\index{startGame@{startGame}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{startGame}{startGame}}
+{\footnotesize\ttfamily void Game\+Master\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Start the game -\/ Open the main window. 
+
+
+
+Definition at line 41 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ade49559ccba6d1dcb1ee2f8e54f89543_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ade49559ccba6d1dcb1ee2f8e54f89543_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_master_ae624dfb17853967977d43c4ef8124ae2}\label{class_game_master_ae624dfb17853967977d43c4ef8124ae2}} 
+\index{GameMaster@{GameMaster}!updateCountDown@{updateCountDown}}
+\index{updateCountDown@{updateCountDown}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{updateCountDown}{updateCountDown}}
+{\footnotesize\ttfamily void Game\+Master\+::update\+Count\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Update the Count\+Down\+Timer every 0.\+6s. 
+
+
+
+Definition at line 342 of file gamemaster.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ae624dfb17853967977d43c4ef8124ae2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_master_ae624dfb17853967977d43c4ef8124ae2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_master_a25975227a5eebb8f952ab84de39c34aa}\label{class_game_master_a25975227a5eebb8f952ab84de39c34aa}} 
+\index{GameMaster@{GameMaster}!countDown@{countDown}}
+\index{countDown@{countDown}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{countDown}{countDown}}
+{\footnotesize\ttfamily Q\+Graphics\+Text\+Item$\ast$ Game\+Master\+::count\+Down\hspace{0.3cm}{\ttfamily [private]}}
+
+Count\+Down for the first 3 seconds of the game 
+
+Definition at line 95 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_ae9748fa5494c19b0fa1a254f93d595fa}\label{class_game_master_ae9748fa5494c19b0fa1a254f93d595fa}} 
+\index{GameMaster@{GameMaster}!countDownTimer@{countDownTimer}}
+\index{countDownTimer@{countDownTimer}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{countDownTimer}{countDownTimer}}
+{\footnotesize\ttfamily Q\+Timer$\ast$ Game\+Master\+::count\+Down\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{class_timer}{Timer}} for the count\+Down 
+
+Definition at line 98 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a8da918ee73262babb64aaee2ba8a911f}\label{class_game_master_a8da918ee73262babb64aaee2ba8a911f}} 
+\index{GameMaster@{GameMaster}!enemies@{enemies}}
+\index{enemies@{enemies}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{enemies}{enemies}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_enemy}{Enemy}}$\ast$$>$ Game\+Master\+::enemies\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of enemies 
+
+Definition at line 65 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a8cb935e8942cabef89b0ec2213678a1b}\label{class_game_master_a8cb935e8942cabef89b0ec2213678a1b}} 
+\index{GameMaster@{GameMaster}!EnemyData@{EnemyData}}
+\index{EnemyData@{EnemyData}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{EnemyData}{EnemyData}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$int$>$ $>$ Game\+Master\+::\+Enemy\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of Enemy\+Data vectors, representing the parsed data from J\+S\+ON 
+
+Definition at line 43 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a25ee6cc3d88e166ae58d2a94c8288c5e}\label{class_game_master_a25ee6cc3d88e166ae58d2a94c8288c5e}} 
+\index{GameMaster@{GameMaster}!lowerBar@{lowerBar}}
+\index{lowerBar@{lowerBar}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{lowerBar}{lowerBar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_horizontal_lower_bar}{Horizontal\+Lower\+Bar}}$\ast$ Game\+Master\+::lower\+Bar\hspace{0.3cm}{\ttfamily [private]}}
+
+Horizontal lower bar 
+
+Definition at line 77 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_ae88904a07b2c83e987c36109747a17f2}\label{class_game_master_ae88904a07b2c83e987c36109747a17f2}} 
+\index{GameMaster@{GameMaster}!mainWindow@{mainWindow}}
+\index{mainWindow@{mainWindow}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{mainWindow}{mainWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_main_window}{Main\+Window}}$\ast$ Game\+Master\+::main\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+Main Window -\/ the first one which appears when the game is started 
+
+Definition at line 55 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a2e8ad89c7d968741b1a47d7cde2af33b}\label{class_game_master_a2e8ad89c7d968741b1a47d7cde2af33b}} 
+\index{GameMaster@{GameMaster}!mapData@{mapData}}
+\index{mapData@{mapData}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{mapData}{mapData}}
+{\footnotesize\ttfamily Q\+Json\+Array$\ast$ Game\+Master\+::map\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+J\+S\+ON file data 
+
+Definition at line 61 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_ad3b19135daff0fb769bc46771bf87f04}\label{class_game_master_ad3b19135daff0fb769bc46771bf87f04}} 
+\index{GameMaster@{GameMaster}!mapWindow@{mapWindow}}
+\index{mapWindow@{mapWindow}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{mapWindow}{mapWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_map_window}{Map\+Window}}$\ast$ Game\+Master\+::map\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+Map Window -\/ the window where the user can create the J\+S\+ON file 
+
+Definition at line 58 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a9fdfe2fa7e4a20ef14e326a99c9909ad}\label{class_game_master_a9fdfe2fa7e4a20ef14e326a99c9909ad}} 
+\index{GameMaster@{GameMaster}!ObstacleData@{ObstacleData}}
+\index{ObstacleData@{ObstacleData}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{ObstacleData}{ObstacleData}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$int, int$>$ $>$ Game\+Master\+::\+Obstacle\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of Obstacle\+Data pairs representing the parsed data from J\+S\+ON 
+
+Definition at line 49 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_af33f49fd2cf637444bf387c4ee8d564a}\label{class_game_master_af33f49fd2cf637444bf387c4ee8d564a}} 
+\index{GameMaster@{GameMaster}!obstacles@{obstacles}}
+\index{obstacles@{obstacles}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{obstacles}{obstacles}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_obstacle}{Obstacle}}$\ast$$>$ Game\+Master\+::obstacles\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of obstacles 
+
+Definition at line 71 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_af2dc9a90473ef76a41933233f3164fa5}\label{class_game_master_af2dc9a90473ef76a41933233f3164fa5}} 
+\index{GameMaster@{GameMaster}!popup@{popup}}
+\index{popup@{popup}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{popup}{popup}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pop_up}{Pop\+Up}}$\ast$ Game\+Master\+::popup\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{class_pop_up}{Pop\+Up}} window for the game over 
+
+Definition at line 83 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_acb1c080c32f67fb57ad9ab7be04a8e72}\label{class_game_master_acb1c080c32f67fb57ad9ab7be04a8e72}} 
+\index{GameMaster@{GameMaster}!popup2@{popup2}}
+\index{popup2@{popup2}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{popup2}{popup2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pop_up}{Pop\+Up}}$\ast$ Game\+Master\+::popup2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{class_pop_up}{Pop\+Up}} window for the game victory 
+
+Definition at line 86 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_aadf2174bfb4c9e4f29f277212373a70c}\label{class_game_master_aadf2174bfb4c9e4f29f277212373a70c}} 
+\index{GameMaster@{GameMaster}!popup3@{popup3}}
+\index{popup3@{popup3}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{popup3}{popup3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pop_up}{Pop\+Up}}$\ast$ Game\+Master\+::popup3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{class_pop_up}{Pop\+Up}} window for the game paused 
+
+Definition at line 89 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_ada8cb5c68afac6b0710014a1ce68f768}\label{class_game_master_ada8cb5c68afac6b0710014a1ce68f768}} 
+\index{GameMaster@{GameMaster}!scene@{scene}}
+\index{scene@{scene}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily Q\+Graphics\+Scene$\ast$ Game\+Master\+::scene\hspace{0.3cm}{\ttfamily [private]}}
+
+Scene for the game 
+
+Definition at line 80 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a7eb32f33a32e1cb0ca08de00603e3e74}\label{class_game_master_a7eb32f33a32e1cb0ca08de00603e3e74}} 
+\index{GameMaster@{GameMaster}!timeLimitData@{timeLimitData}}
+\index{timeLimitData@{timeLimitData}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{timeLimitData}{timeLimitData}}
+{\footnotesize\ttfamily int Game\+Master\+::time\+Limit\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+Time limit for the game 
+
+Definition at line 52 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_af304f73da7ba96c442b728b721648612}\label{class_game_master_af304f73da7ba96c442b728b721648612}} 
+\index{GameMaster@{GameMaster}!upperBar@{upperBar}}
+\index{upperBar@{upperBar}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{upperBar}{upperBar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_horizontal_upper_bar}{Horizontal\+Upper\+Bar}}$\ast$ Game\+Master\+::upper\+Bar\hspace{0.3cm}{\ttfamily [private]}}
+
+Horizontal upper bar 
+
+Definition at line 74 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a829f289f24b5d7235add2bf36397d9b7}\label{class_game_master_a829f289f24b5d7235add2bf36397d9b7}} 
+\index{GameMaster@{GameMaster}!user@{user}}
+\index{user@{user}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user}{User}}$\ast$ Game\+Master\+::user\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{class_user}{User}} object 
+
+Definition at line 68 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a418689d02524f947388eb82d35a519ee}\label{class_game_master_a418689d02524f947388eb82d35a519ee}} 
+\index{GameMaster@{GameMaster}!UserData@{UserData}}
+\index{UserData@{UserData}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{UserData}{UserData}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Game\+Master\+::\+User\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of User\+Data representing the parsed data from J\+S\+ON 
+
+Definition at line 46 of file gamemaster.\+h.
+
+\mbox{\Hypertarget{class_game_master_a4b32690cbb1e6b8f98d1c9299ae2c177}\label{class_game_master_a4b32690cbb1e6b8f98d1c9299ae2c177}} 
+\index{GameMaster@{GameMaster}!view@{view}}
+\index{view@{view}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily Q\+Graphics\+View$\ast$ Game\+Master\+::view\hspace{0.3cm}{\ttfamily [private]}}
+
+View for the game 
+
+Definition at line 92 of file gamemaster.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gamemaster_8h}{gamemaster.\+h}}\item 
+\mbox{\hyperlink{gamemaster_8cpp}{gamemaster.\+cpp}}\end{DoxyCompactItemize}

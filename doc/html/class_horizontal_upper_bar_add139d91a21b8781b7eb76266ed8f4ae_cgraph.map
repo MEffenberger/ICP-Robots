@@ -1,0 +1,7 @@
+<map id="HorizontalUpperBar::HorizontalUpperBar" name="HorizontalUpperBar::HorizontalUpperBar">
+<area shape="rect" id="node1" title="HorizontalUpperBar constructor." alt="" coords="5,49,164,90"/>
+<area shape="rect" id="node2" href="$class_game_info.html#af396025278e1c3044941d95ea92af83f" title="Display the &quot;SH*T!&quot; message." alt="" coords="212,5,359,32"/>
+<area shape="rect" id="node4" href="$class_game_info.html#ad00aac0c19a9b9feca20d987950128ad" title="Display the &quot;OUCH!&quot; message." alt="" coords="223,56,348,83"/>
+<area shape="rect" id="node5" href="$class_heart.html#a1a9da3707f304b75d6f7aa5ce5bacc10" title="Sets Heart as dead &#45; turns it gray." alt="" coords="225,107,345,133"/>
+<area shape="rect" id="node3" href="$class_game_info.html#a645ac07cf87690b2c8e868821949bbfd" title="Update the message in the text box." alt="" coords="407,31,604,57"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Enemy" name="Enemy">
+<area shape="rect" id="node1" title="Enemy class, inherits from QObject and QGraphicsEllipseItem." alt="" coords="56,741,285,1200"/>
+<area shape="rect" id="node2" title=" " alt="" coords="13,5,88,83"/>
+<area shape="rect" id="node4" href="$class_user.html" title="User class, inherits from QObject and QGraphicsEllipseItem." alt="" coords="46,132,295,679"/>
+<area shape="rect" id="node3" title=" " alt="" coords="203,5,365,83"/>
+</map>

@@ -1,0 +1,6 @@
+
+D	cpp:S5414 "*Don't mix public and private data members.(Ê´ş·øÿÿÿÿ
+¢	cpp:S1242P"ŒRename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(ˆ›—
+¢	cpp:S1242U"ŒRename this member function so that it doesn't hide an inherited non-virtual function, or make it virtual in the base class "QGraphicsItem".(ş”¶Û
+/	cpp:S4962)"Use the "nullptr" literal.(ÀìÇÆ
+G	cpp:S3471."2Annotate this function with "override" or "final".(‹ï……

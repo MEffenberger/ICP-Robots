@@ -1,0 +1,4 @@
+<map id="GameInfo::damage" name="GameInfo::damage">
+<area shape="rect" id="node1" title="Display the &quot;SH*T!&quot; message." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$class_game_info.html#a645ac07cf87690b2c8e868821949bbfd" title="Update the message in the text box." alt="" coords="200,5,397,32"/>
+</map>

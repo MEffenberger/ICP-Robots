@@ -1,0 +1,284 @@
+\hypertarget{class_pop_up}{}\doxysection{Pop\+Up Class Reference}
+\label{class_pop_up}\index{PopUp@{PopUp}}
+
+
+Popup class, inherits from Q\+Object and Q\+Graphics\+Rect\+Item.  
+
+
+
+
+{\ttfamily \#include $<$popup.\+h$>$}
+
+
+
+Inheritance diagram for Pop\+Up\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_pop_up__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Pop\+Up\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_pop_up__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pop_up_a6a3e6a21eadcd06b77b9e38e5c871e6f}{show}} ()
+\begin{DoxyCompactList}\small\item\em Show the popup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pop_up_a8e5897fc2f033712299a85a55c36627c}{hide}} ()
+\begin{DoxyCompactList}\small\item\em Hide the popup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pop_up_a3187f4e0e3eb7820082e19506c399751}{pause\+Timers}} ()
+\begin{DoxyCompactList}\small\item\em Pause the timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pop_up_ace9b76040652f7723ec7d5c6a80d9a7d}{Pop\+Up}} (Q\+Graphics\+Item $\ast$parent=0, std\+::string \mbox{\hyperlink{class_pop_up_a72f57c14a3fe13b221730a01fcb3e29b}{name}}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Popup constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pop_up_ada3d161b16888bf832d4d7f711db8d52}{$\sim$\+Pop\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Popup destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button}{Button}} $\ast$ \mbox{\hyperlink{class_pop_up_ad21268d55094db67fc520032e9be13c5}{exit\+Button}}
+\item 
+\mbox{\hyperlink{class_button}{Button}} $\ast$ \mbox{\hyperlink{class_pop_up_a651bbf811887c769e8fd74b94ccc061c}{restart\+Button}}
+\item 
+\mbox{\hyperlink{class_button}{Button}} $\ast$ \mbox{\hyperlink{class_pop_up_aa16eff1d54eb70eb4716da9beaec9e66}{resume\+Button}}
+\item 
+\mbox{\hyperlink{class_button}{Button}} $\ast$ \mbox{\hyperlink{class_pop_up_a8c6bdbca76ce52040b88bd94faf065ac}{main\+Menu\+Button}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Graphics\+Text\+Item $\ast$ \mbox{\hyperlink{class_pop_up_a4f8cfdb506cead5b1e1502efa337818e}{create\+Text\+Item}} (const Q\+String \&text, const Q\+String \&font\+Family, int font\+Size, const Q\+Color \&color)
+\begin{DoxyCompactList}\small\item\em Creates a text item, used for simplifying the code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_pop_up_a72f57c14a3fe13b221730a01fcb3e29b}{name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Popup class, inherits from Q\+Object and Q\+Graphics\+Rect\+Item. 
+
+Definition at line 32 of file popup.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pop_up_ace9b76040652f7723ec7d5c6a80d9a7d}\label{class_pop_up_ace9b76040652f7723ec7d5c6a80d9a7d}} 
+\index{PopUp@{PopUp}!PopUp@{PopUp}}
+\index{PopUp@{PopUp}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{PopUp()}{PopUp()}}
+{\footnotesize\ttfamily Pop\+Up\+::\+Pop\+Up (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily 0},  }\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Popup constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent Q\+Graphics\+Item \\
+\hline
+{\em name} & Name of the popup \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file popup.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_pop_up_ace9b76040652f7723ec7d5c6a80d9a7d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pop_up_ada3d161b16888bf832d4d7f711db8d52}\label{class_pop_up_ada3d161b16888bf832d4d7f711db8d52}} 
+\index{PopUp@{PopUp}!````~PopUp@{$\sim$PopUp}}
+\index{````~PopUp@{$\sim$PopUp}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{$\sim$PopUp()}{~PopUp()}}
+{\footnotesize\ttfamily Pop\+Up\+::$\sim$\+Pop\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Popup destructor. 
+
+
+
+Definition at line 96 of file popup.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pop_up_a4f8cfdb506cead5b1e1502efa337818e}\label{class_pop_up_a4f8cfdb506cead5b1e1502efa337818e}} 
+\index{PopUp@{PopUp}!createTextItem@{createTextItem}}
+\index{createTextItem@{createTextItem}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{createTextItem()}{createTextItem()}}
+{\footnotesize\ttfamily Q\+Graphics\+Text\+Item $\ast$ Pop\+Up\+::create\+Text\+Item (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{text,  }\item[{const Q\+String \&}]{font\+Family,  }\item[{int}]{font\+Size,  }\item[{const Q\+Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates a text item, used for simplifying the code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text of the item \\
+\hline
+{\em font\+Family} & Font family \\
+\hline
+{\em font\+Size} & Font size \\
+\hline
+{\em color} & Color of the text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Graphics\+Text\+Item 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file popup.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_pop_up_a4f8cfdb506cead5b1e1502efa337818e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pop_up_a8e5897fc2f033712299a85a55c36627c}\label{class_pop_up_a8e5897fc2f033712299a85a55c36627c}} 
+\index{PopUp@{PopUp}!hide@{hide}}
+\index{hide@{hide}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{hide}{hide}}
+{\footnotesize\ttfamily void Pop\+Up\+::hide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Hide the popup. 
+
+
+
+Definition at line 77 of file popup.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pop_up_a8e5897fc2f033712299a85a55c36627c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pop_up_a3187f4e0e3eb7820082e19506c399751}\label{class_pop_up_a3187f4e0e3eb7820082e19506c399751}} 
+\index{PopUp@{PopUp}!pauseTimers@{pauseTimers}}
+\index{pauseTimers@{pauseTimers}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{pauseTimers}{pauseTimers}}
+{\footnotesize\ttfamily void Pop\+Up\+::pause\+Timers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Pause the timers. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pop_up_a3187f4e0e3eb7820082e19506c399751_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pop_up_a6a3e6a21eadcd06b77b9e38e5c871e6f}\label{class_pop_up_a6a3e6a21eadcd06b77b9e38e5c871e6f}} 
+\index{PopUp@{PopUp}!show@{show}}
+\index{show@{show}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{show}{show}}
+{\footnotesize\ttfamily void Pop\+Up\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Show the popup. 
+
+
+
+Definition at line 66 of file popup.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pop_up_a6a3e6a21eadcd06b77b9e38e5c871e6f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pop_up_ad21268d55094db67fc520032e9be13c5}\label{class_pop_up_ad21268d55094db67fc520032e9be13c5}} 
+\index{PopUp@{PopUp}!exitButton@{exitButton}}
+\index{exitButton@{exitButton}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{exitButton}{exitButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button}{Button}}$\ast$ Pop\+Up\+::exit\+Button}
+
+Exit button 
+
+Definition at line 49 of file popup.\+h.
+
+\mbox{\Hypertarget{class_pop_up_a8c6bdbca76ce52040b88bd94faf065ac}\label{class_pop_up_a8c6bdbca76ce52040b88bd94faf065ac}} 
+\index{PopUp@{PopUp}!mainMenuButton@{mainMenuButton}}
+\index{mainMenuButton@{mainMenuButton}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{mainMenuButton}{mainMenuButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button}{Button}}$\ast$ Pop\+Up\+::main\+Menu\+Button}
+
+Main menu button 
+
+Definition at line 58 of file popup.\+h.
+
+\mbox{\Hypertarget{class_pop_up_a72f57c14a3fe13b221730a01fcb3e29b}\label{class_pop_up_a72f57c14a3fe13b221730a01fcb3e29b}} 
+\index{PopUp@{PopUp}!name@{name}}
+\index{name@{name}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Pop\+Up\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+Name of the popup 
+
+Definition at line 63 of file popup.\+h.
+
+\mbox{\Hypertarget{class_pop_up_a651bbf811887c769e8fd74b94ccc061c}\label{class_pop_up_a651bbf811887c769e8fd74b94ccc061c}} 
+\index{PopUp@{PopUp}!restartButton@{restartButton}}
+\index{restartButton@{restartButton}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{restartButton}{restartButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button}{Button}}$\ast$ Pop\+Up\+::restart\+Button}
+
+Restart button 
+
+Definition at line 52 of file popup.\+h.
+
+\mbox{\Hypertarget{class_pop_up_aa16eff1d54eb70eb4716da9beaec9e66}\label{class_pop_up_aa16eff1d54eb70eb4716da9beaec9e66}} 
+\index{PopUp@{PopUp}!resumeButton@{resumeButton}}
+\index{resumeButton@{resumeButton}!PopUp@{PopUp}}
+\doxysubsubsection{\texorpdfstring{resumeButton}{resumeButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_button}{Button}}$\ast$ Pop\+Up\+::resume\+Button}
+
+Resume button (in victory/ gameover screen does nothing) 
+
+Definition at line 55 of file popup.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{popup_8h}{popup.\+h}}\item 
+\mbox{\hyperlink{popup_8cpp}{popup.\+cpp}}\end{DoxyCompactItemize}

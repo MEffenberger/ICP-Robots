@@ -1,0 +1,5 @@
+
+u	cpp:S3230"`Do not assign data members in a constructor. Initialize member "time" in an initialization list.(üîœ
+z	cpp:S3230"eDo not assign data members in a constructor. Initialize member "timeLimit" in an initialization list.(Ó¬‹Ì
+f	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Û†Áï
+T	cpp:S5025@":Rewrite the code so that you no longer need this "delete".(‡š×şÿÿÿÿ

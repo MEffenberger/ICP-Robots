@@ -1,0 +1,5 @@
+<map id="GameMaster::pauseTheGame" name="GameMaster::pauseTheGame">
+<area shape="rect" id="node1" title="Pause the game." alt="" coords="5,31,221,57"/>
+<area shape="rect" id="node2" href="$class_user.html#aa7a6d02d66117a6943206a45ee0dbcd5" title="Stop all timers." alt="" coords="269,5,420,32"/>
+<area shape="rect" id="node3" href="$class_timer.html#a27f97da1b1d19ad74a847703ca25c455" title="Stop the timer." alt="" coords="277,56,412,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Obstacle" name="Obstacle">
+<area shape="rect" id="node1" title="Obstacle class, inherits from QGraphicsRectItem." alt="" coords="22,131,137,223"/>
+<area shape="rect" id="node2" href="$classQGraphicsRectItem.html" title=" " alt="" coords="5,5,153,83"/>
+</map>

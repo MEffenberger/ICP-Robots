@@ -4,5 +4,5 @@
 /mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/list_install_components.dir
 /mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP.dir
-/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/ICP_autogen.dir
+/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/EpicRobotSurvival.dir
+/mnt/c/Users/marek/CLionProjects/ICP/cmake-build-debug/CMakeFiles/EpicRobotSurvival_autogen.dir
