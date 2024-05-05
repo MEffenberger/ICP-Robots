@@ -336,7 +336,6 @@ void GameMaster::cleanUp() {
 
     qDebug() << "Cleaned up all game elements";
 
-    //TODO? delete sccene and view?
 }
 
 void GameMaster::updateCountDown() {
