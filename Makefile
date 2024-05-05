@@ -4,13 +4,13 @@
 BUILD_DIR := build
 PROJ_NAME := EpicRobotSurvival
 
-all: $(BUILD_DIR) $(PROJ_NAME)
+all: $(PROJ_NAME)
 
-# Create the build directory if it doesn't exist
+# Create build folder if not present
 $(BUILD_DIR):
 	mkdir -p $@
 
-# Build the project using CMake
+# Run CMake and make to build the project
 $(PROJ_NAME): $(BUILD_DIR) 
 	cd $(BUILD_DIR) && cmake ..
 	cd $(BUILD_DIR) && make 
