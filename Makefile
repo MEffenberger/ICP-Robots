@@ -1,6 +1,8 @@
 # Author: Samuel Hejnicek
 # Used to build the project using CMake make doxygen doc and clean the project
 
+SRC_DIR := src
+DOC_DIR := doc
 BUILD_DIR := build
 PROJ_NAME := EpicRobotSurvival
 
@@ -12,8 +14,7 @@ $(BUILD_DIR):
 
 # Run CMake and make to build the project
 $(PROJ_NAME): $(BUILD_DIR) 
-	cd $(BUILD_DIR) && cmake ..
-	cd $(BUILD_DIR) && make 
+	cd $(BUILD_DIR) && cmake .. && make
 	cp $(BUILD_DIR)/$(PROJ_NAME) . 
 
 run: all
@@ -22,8 +23,12 @@ run: all
 pack:
 	zip xeffen00_xhejni00.zip -r src/ examples/ images/ Orbitron/ CMakeLists.txt Makefile
 
-doxygen:
-	cd src && doxygen Doxyfile
+doxygen: $(DOC_DIR)
+	cd $(SRC_DIR) && doxygen Doxyfile
+
+# Create doc folder if not present
+$(DOC_DIR):
+	mkdir -p $@
 
 clean:
-	rm -rf $(BUILD_DIR) && rm $(PROJ_NAME)
+	rm -rf $(BUILD_DIR) && rm -f $(PROJ_NAME) && rm -rf $(DOC_DIR)
