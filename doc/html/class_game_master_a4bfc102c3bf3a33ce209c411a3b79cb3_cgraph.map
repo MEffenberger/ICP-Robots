@@ -1,5 +1,0 @@
-<map id="GameMaster::resumeTheGame" name="GameMaster::resumeTheGame">
-<area shape="rect" id="node1" title="Resume the game." alt="" coords="5,31,232,57"/>
-<area shape="rect" id="node2" href="$class_timer.html#adf426cdd79507aa1056a01d51c3ce28c" title="Continue the timer." alt="" coords="284,5,447,32"/>
-<area shape="rect" id="node3" href="$class_user.html#a6d588239e0bc8dc6a52b8e5f67438e12" title="Resume all timers." alt="" coords="280,56,451,83"/>
-</map>

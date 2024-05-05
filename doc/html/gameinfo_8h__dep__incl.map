@@ -1,9 +1,0 @@
-<map id="gameinfo.h" name="gameinfo.h">
-<area shape="rect" id="node1" title="GameInfo class header file." alt="" coords="93,5,189,32"/>
-<area shape="rect" id="node2" href="$gameinfo_8cpp.html" title="GameInfo class implementation file." alt="" coords="17,80,127,107"/>
-<area shape="rect" id="node3" href="$horizontalbar_8h.html" title="HorizontalBar classes (upper, lower) header file." alt="" coords="151,80,270,107"/>
-<area shape="rect" id="node4" href="$gamemaster_8h.html" title="GameMaster class header file." alt="" coords="78,155,194,181"/>
-<area shape="rect" id="node7" href="$horizontalbar_8cpp.html" title="HorizontalBar classes (upper, lower) implementation file." alt="" coords="218,155,353,181"/>
-<area shape="rect" id="node5" href="$gamemaster_8cpp.html" title="GameMaster class implementation file." alt="" coords="5,229,136,256"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title="Main file of the project." alt="" coords="160,229,243,256"/>
-</map>

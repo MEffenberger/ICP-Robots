@@ -1,5 +1,0 @@
-<map id="RobotParamDialog::getVelocity" name="RobotParamDialog::getVelocity">
-<area shape="rect" id="node1" title="Gets the velocity of the controlled or enemy robot." alt="" coords="516,5,740,32"/>
-<area shape="rect" id="node2" href="$class_map_window.html#a99e5996889bd10defae7aa8e2611d223" title="Handles the cell clicked event." alt="" coords="243,5,468,32"/>
-<area shape="rect" id="node3" href="$class_map_window.html#ab4544a5a3e551bff0efbb1b609c75418" title=" " alt="" coords="5,5,195,32"/>
-</map>

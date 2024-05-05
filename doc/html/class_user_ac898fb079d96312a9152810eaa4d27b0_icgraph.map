@@ -1,6 +1,0 @@
-<map id="User::deleteLife2" name="User::deleteLife2">
-<area shape="rect" id="node1" title="Signal emitted when the User is hit mapped to life2." alt="" coords="379,35,512,61"/>
-<area shape="rect" id="node2" href="$class_user.html#ab5c91c6a93187623fa34cd98ceab0ffc" title="Decrease the number of lives (3 default)" alt="" coords="175,5,328,32"/>
-<area shape="rect" id="node4" href="$class_horizontal_upper_bar.html#add139d91a21b8781b7eb76266ed8f4ae" title="HorizontalUpperBar constructor." alt="" coords="172,57,331,98"/>
-<area shape="rect" id="node3" href="$class_enemy.html#a8c382a5dff4fe10d91d55627a4007c77" title="Enemy constructor." alt="" coords="5,5,124,32"/>
-</map>

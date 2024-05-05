@@ -1,4 +1,0 @@
-<map id="User::CheckCollisions" name="User::CheckCollisions">
-<area shape="rect" id="node1" title="Check for the collisions using the collidingItems() method." alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node2" href="$class_user.html#ab07576ea63c64cbae7f96b4c7b96de41" title="Function to spawn the Star objects." alt="" coords="216,5,351,32"/>
-</map>

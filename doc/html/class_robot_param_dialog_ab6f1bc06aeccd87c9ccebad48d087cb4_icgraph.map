@@ -1,5 +1,0 @@
-<map id="RobotParamDialog::confirmDialog" name="RobotParamDialog::confirmDialog">
-<area shape="rect" id="node1" title="Confirms the dialog and sets rotation angle based on the button." alt="" coords="524,5,724,47"/>
-<area shape="rect" id="node2" href="$class_robot_param_dialog.html#a1f528221719f993c7ec08e45fb98f305" title="Creates the layout of the dialog @bool robotExists if robot exists direction button is disabled." alt="" coords="284,5,476,47"/>
-<area shape="rect" id="node3" href="$class_robot_param_dialog.html#aec84781e0c2ea144a91b0d094d9c8c4e" title=" " alt="" coords="5,5,236,47"/>
-</map>

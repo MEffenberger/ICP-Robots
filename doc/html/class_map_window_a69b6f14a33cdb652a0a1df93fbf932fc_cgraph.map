@@ -1,4 +1,0 @@
-<map id="MapWindow::startGame" name="MapWindow::startGame">
-<area shape="rect" id="node1" title="Starts the game." alt="" coords="5,5,184,32"/>
-<area shape="rect" id="node2" href="$class_map_window.html#a54edaa332329b35962cf78601aec94fb" title="Fills the JSON array with the map data." alt="" coords="232,5,380,32"/>
-</map>

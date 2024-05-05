@@ -8,14 +8,17 @@ Mapu lze uložit a načíst ve formátu JSON a lze ji editovat v podobě přidá
 Většina vývoje probíhala podle informací dostupných ze série videí na youtube: https://www.youtube.com/watch?v=8ntEQpg7gck&list=PLyb40eoxkelOa5xCB9fvGrkoBf8JzEwtV .
 
 Komentář k implementaci:
-Implementace je vysvětlena v odstavci výše, tedy jde o simulaci robotů, z nichž jeden je ovladatelný hráčem a ostatní jsou autnomní. Hru lze kdykoliv přerušit a zase se k ní vrátit. Mapu, na které je hra hrána lze rovněž načíst a uložit. Nad rámec zadání je implementována mechanika počtu životů, časový limit na kolo, a tedy mechanika prohry a vítězství v dané hře. Za zmínku stojí také implementace autopilota a zobrazení animace (+ znemožnění pohybu na určitou dobu) při nárazu hráčem ovládaného robota do překážky.
+Implementace je vysvětlena v odstavci výše, tedy jde o simulaci robotů, z nichž jeden je ovladatelný hráčem a ostatní jsou autnomní.
+Hru lze kdykoliv přerušit a zase se k ní vrátit. Mapu, na které je hra hrána lze rovněž načíst a uložit.
+Nad rámec zadání je implementována mechanika počtu životů, časový limit na kolo, a tedy mechanika prohry a vítězství v dané hře.
+Za zmínku stojí také implementace autopilota a zobrazení animace (+ znemožnění pohybu na určitou dobu) při nárazu hráčem ovládaného robota do překážky.
 
 Požadavky na spuštění:
 Ubuntu Linux 64bit s nainstalovanými knihovnami Qt verze alespoň 5.5.
 Microsoft Windows 11 64 Bit s nainstalovaným QT Creatorem, ve kterém probíhá sestavování.
 
 Spuštění programu:
-Po rozbalení adresáře stačí v kořenové složce spustit příkaz make run, který vytvoří spustitelný soubor EpicRobotSimulator a následně jej spustí.
+Po rozbalení adresáře stačí v kořenové složce spustit příkaz make run, který vytvoří spustitelný soubor EpicRobotSurvival a následně jej spustí.
 Přiložený makefile umí ještě zabalit archiv pomocí 'make pack' vygenerovat dokumentaci pomocí 'make doxygen' a vymazat pomocnou sloužku build a spustitelný soubor pomocí 'make clean'.
 
 Ovládání programu:

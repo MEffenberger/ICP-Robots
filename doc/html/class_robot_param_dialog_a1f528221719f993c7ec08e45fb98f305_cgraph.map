@@ -1,5 +1,0 @@
-<map id="RobotParamDialog::createLayout" name="RobotParamDialog::createLayout">
-<area shape="rect" id="node1" title="Creates the layout of the dialog @bool robotExists if robot exists direction button is disabled." alt="" coords="5,39,197,80"/>
-<area shape="rect" id="node2" href="$class_robot_param_dialog.html#ab84f5f1304531b1104ad62dbaf414a4a" title="Changes button (L/R) text upon pressing." alt="" coords="246,5,445,47"/>
-<area shape="rect" id="node3" href="$class_robot_param_dialog.html#ab6f1bc06aeccd87c9ccebad48d087cb4" title="Confirms the dialog and sets rotation angle based on the button." alt="" coords="245,71,445,112"/>
-</map>

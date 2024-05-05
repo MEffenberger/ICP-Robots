@@ -1,9 +1,0 @@
-<map id="HorizontalLowerBar::HorizontalLowerBar" name="HorizontalLowerBar::HorizontalLowerBar">
-<area shape="rect" id="node1" title="HorizontalLowerBar constructor." alt="" coords="5,137,164,178"/>
-<area shape="rect" id="node2" href="$class_user.html#a05b0001845ee9a5f6a52809f81295780" title="Start the movement." alt="" coords="222,5,413,32"/>
-<area shape="rect" id="node3" href="$class_user.html#ad08d588a3202e8d321f91b4e29e15e3c" title="Start the clockwise rotation." alt="" coords="212,56,423,83"/>
-<area shape="rect" id="node4" href="$class_user.html#a8e75766d37df0cd76a1bf4bc4da55172" title="Start the counter clockwise rotation." alt="" coords="219,107,415,149"/>
-<area shape="rect" id="node5" href="$class_user.html#a84b929de6b6b3bfa7f366276db385524" title="Stop the movement." alt="" coords="249,173,385,200"/>
-<area shape="rect" id="node6" href="$class_user.html#ae314074ee4c30c817d0c25afed65da5e" title="Stop the rotation." alt="" coords="246,224,389,251"/>
-<area shape="rect" id="node7" href="$class_user.html#a2b4c71c0a5744a27f4bd0182f72a6a75" title="Set the User as focusable (keyboard control)" alt="" coords="243,275,392,301"/>
-</map>

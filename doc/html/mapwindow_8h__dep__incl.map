@@ -1,8 +1,0 @@
-<map id="mapwindow.h" name="mapwindow.h">
-<area shape="rect" id="node1" title="Map Window Class Header file." alt="" coords="228,5,340,32"/>
-<area shape="rect" id="node2" href="$gamemaster_8h.html" title="GameMaster class header file." alt="" coords="78,80,194,107"/>
-<area shape="rect" id="node5" href="$mainwindow_8cpp.html" title="Main Window Class Implementation file." alt="" coords="219,80,349,107"/>
-<area shape="rect" id="node6" href="$mapwindow_8cpp.html" title="Map Window Class Implementation file." alt="" coords="374,80,501,107"/>
-<area shape="rect" id="node3" href="$gamemaster_8cpp.html" title="GameMaster class implementation file." alt="" coords="5,155,136,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="Main file of the project." alt="" coords="160,155,243,181"/>
-</map>

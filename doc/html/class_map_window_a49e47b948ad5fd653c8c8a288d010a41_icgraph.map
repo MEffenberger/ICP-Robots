@@ -1,5 +1,0 @@
-<map id="MapWindow::clearMap" name="MapWindow::clearMap">
-<area shape="rect" id="node1" title="Clears the QTableWidget map and set default values." alt="" coords="456,31,625,57"/>
-<area shape="rect" id="node2" href="$class_map_window.html#ae4c7c7c27888c1bd9ccc5aae3d715b9a" title="Loads the map from a JSON file." alt="" coords="243,5,408,32"/>
-<area shape="rect" id="node3" href="$class_map_window.html#ab4544a5a3e551bff0efbb1b609c75418" title=" " alt="" coords="5,31,195,57"/>
-</map>

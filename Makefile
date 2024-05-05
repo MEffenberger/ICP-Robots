@@ -21,7 +21,7 @@ run: all
 	./$(PROJ_NAME)
 	
 pack:
-	zip xeffen00_xhejni00.zip -r src/ examples/ images/ Orbitron/ CMakeLists.txt Makefile
+	zip xeffen00_xhejni00.zip -r src/ examples/ images/ Orbitron/ readme_images/ README.txt CMakeLists.txt Makefile technickeinfo.pdf
 
 doxygen: $(DOC_DIR)
 	cd $(SRC_DIR) && doxygen Doxyfile

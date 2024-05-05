@@ -1,9 +1,0 @@
-<map id="heart.h" name="heart.h">
-<area shape="rect" id="node1" title="Heart class header file." alt="" coords="238,5,306,32"/>
-<area shape="rect" id="node2" href="$horizontalbar_8h.html" title="HorizontalBar classes (upper, lower) header file." alt="" coords="151,80,270,107"/>
-<area shape="rect" id="node7" href="$heart_8cpp.html" title="Hnemy class implementation file." alt="" coords="293,80,376,107"/>
-<area shape="rect" id="node3" href="$gamemaster_8h.html" title="GameMaster class header file." alt="" coords="78,155,194,181"/>
-<area shape="rect" id="node6" href="$horizontalbar_8cpp.html" title="HorizontalBar classes (upper, lower) implementation file." alt="" coords="218,155,353,181"/>
-<area shape="rect" id="node4" href="$gamemaster_8cpp.html" title="GameMaster class implementation file." alt="" coords="5,229,136,256"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title="Main file of the project." alt="" coords="160,229,243,256"/>
-</map>

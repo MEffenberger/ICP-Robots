@@ -1,6 +1,0 @@
-<map id="GameInfo::updateMessage" name="GameInfo::updateMessage">
-<area shape="rect" id="node1" title="Update the message in the text box." alt="" coords="407,31,604,57"/>
-<area shape="rect" id="node2" href="$class_game_info.html#af396025278e1c3044941d95ea92af83f" title="Display the &quot;SH*T!&quot; message." alt="" coords="212,5,359,32"/>
-<area shape="rect" id="node4" href="$class_game_info.html#ad00aac0c19a9b9feca20d987950128ad" title="Display the &quot;OUCH!&quot; message." alt="" coords="223,56,348,83"/>
-<area shape="rect" id="node3" href="$class_horizontal_upper_bar.html#add139d91a21b8781b7eb76266ed8f4ae" title="HorizontalUpperBar constructor." alt="" coords="5,23,164,65"/>
-</map>

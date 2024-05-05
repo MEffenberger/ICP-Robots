@@ -1,8 +1,0 @@
-<map id="enemy.h" name="enemy.h">
-<area shape="rect" id="node1" title="Enemy class header file." alt="" coords="141,5,218,32"/>
-<area shape="rect" id="node2" href="$enemy_8cpp.html" title="Enemy class implementation file." alt="" coords="5,80,97,107"/>
-<area shape="rect" id="node3" href="$gamemaster_8h.html" title="GameMaster class header file." alt="" coords="121,80,237,107"/>
-<area shape="rect" id="node6" href="$user_8cpp.html" title="User class implementation file." alt="" coords="261,80,337,107"/>
-<area shape="rect" id="node4" href="$gamemaster_8cpp.html" title="GameMaster class implementation file." alt="" coords="49,155,179,181"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title="Main file of the project." alt="" coords="203,155,286,181"/>
-</map>

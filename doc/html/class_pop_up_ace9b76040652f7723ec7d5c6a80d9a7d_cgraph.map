@@ -1,6 +1,0 @@
-<map id="PopUp::PopUp" name="PopUp::PopUp">
-<area shape="rect" id="node1" title="Popup constructor." alt="" coords="5,56,120,83"/>
-<area shape="rect" id="node2" href="$class_pop_up.html#a4f8cfdb506cead5b1e1502efa337818e" title="Creates a text item, used for simplifying the code." alt="" coords="170,5,341,32"/>
-<area shape="rect" id="node3" href="$class_pop_up.html#a8e5897fc2f033712299a85a55c36627c" title="Hide the popup." alt="" coords="205,56,305,83"/>
-<area shape="rect" id="node4" href="$class_button.html#a27ba2115bb02221496e40780b62695c0" title="Set the border width of the button." alt="" coords="168,107,343,133"/>
-</map>

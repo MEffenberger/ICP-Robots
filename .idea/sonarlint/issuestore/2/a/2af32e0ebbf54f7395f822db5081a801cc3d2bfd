@@ -1,27 +1,27 @@
 
-w	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
-w	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿ
-<	cpp:S1117 "&declaration shadows a field of 'Enemy'(ôÆæ
-;	cpp:S1117Î"&declaration shadows a field of 'Enemy'(¦ÇŠ.
-}	cpp:S3230$"hDo not assign data members in a constructor. Initialize member "visionLength" in an initialization list.(®¶¹µ
-‚	cpp:S32302"hDo not assign data members in a constructor. Initialize member "turningAngle" in an initialization list.(›¡ââıÿÿÿÿ
-f	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Á±¹É
-k	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÛşÙôüÿÿÿÿ
-e	cpp:S5025+"QReplace the use of "new" with an operation that automatically manages the memory.(ğÜ¢H
-k	cpp:S5025E"QReplace the use of "new" with an operation that automatically manages the memory.(·Ÿ™´ıÿÿÿÿ
-k	cpp:S5025I"QReplace the use of "new" with an operation that automatically manages the memory.(¤ªŞÜıÿÿÿÿ
-f	cpp:S5025V"QReplace the use of "new" with an operation that automatically manages the memory.(Œ¦Ş
-Y	cpp:S6004‚"CUse the init-statement to declare "newPos" inside the if statement.(Ó©ù
-B	cpp:S5827"'Replace the redundant type with "auto".(¹éêÔüÿÿÿÿ
-B	cpp:S5827œ"'Replace the redundant type with "auto".(³Á¦Äøÿÿÿÿ
-=	cpp:S5827 "'Replace the redundant type with "auto".(ôÆæ
-B	cpp:S5827¤"'Replace the redundant type with "auto".(Ó—¬şÿÿÿÿ
-ƒcpp:S995­"iMake the type of this parameter a pointer-to-const. The current type of "obstacle" is "class Obstacle *".(¥Óí»şÿÿÿÿ
-xcpp:S995½"cMake the type of this parameter a pointer-to-const. The current type of "enemy" is "class Enemy *".(ÊÎ·¨
-ucpp:S995Î"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(¦ÇŠ.
-P	cpp:S5025µ":Rewrite the code so that you no longer need this "delete".(‡ô¼Õ
-P	cpp:S5025¹":Rewrite the code so that you no longer need this "delete".(·Èíæ
-P	cpp:S5025½":Rewrite the code so that you no longer need this "delete".(Ñ‰¿¥
-U	cpp:S5025Á":Rewrite the code so that you no longer need this "delete".(È·üûÿÿÿÿÿ
-U	cpp:S5025Å":Rewrite the code so that you no longer need this "delete".(…Íˆ÷úÿÿÿÿ
-P	cpp:S5025É":Rewrite the code so that you no longer need this "delete".(ŞîœÇ
+	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿJ$018be399-cc59-4060-8f50-c5d1b14aa1e0
+	cpp:S5276"]implicit conversion turns floating-point number into integer: 'qreal' (aka 'double') to 'int'(¡€‰ÿÿÿÿÿJ$28e87882-7ffc-440a-b959-c0f8810bdf2c
+b	cpp:S1117 "&declaration shadows a field of 'Enemy'(ôÆæJ$f38c5b05-af3d-476c-8bf1-4d6725866ce3
+a	cpp:S1117Î"&declaration shadows a field of 'Enemy'(¦ÇŠ.J$bbc02c19-cb51-4458-aec7-807a95ee574a
+£	cpp:S3230$"hDo not assign data members in a constructor. Initialize member "visionLength" in an initialization list.(®¶¹µJ$dc676f8b-3ac7-4112-884d-5a8c695aa872
+¨	cpp:S32302"hDo not assign data members in a constructor. Initialize member "turningAngle" in an initialization list.(›¡ââıÿÿÿÿJ$bd430a00-c67e-4c3e-bfd4-f5b736346863
+Œ	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(Á±¹ÉJ$f6660616-7380-4a47-b045-c61032d58c7e
+‘	cpp:S5025"QReplace the use of "new" with an operation that automatically manages the memory.(ÛşÙôüÿÿÿÿJ$0cf92b5c-2565-4823-9b44-b7c46b316ab6
+‹	cpp:S5025+"QReplace the use of "new" with an operation that automatically manages the memory.(ğÜ¢HJ$848293c3-bacb-4eca-b906-a756dc49d265
+‘	cpp:S5025E"QReplace the use of "new" with an operation that automatically manages the memory.(·Ÿ™´ıÿÿÿÿJ$c369abd8-a83c-4a15-b232-2f5ce7898059
+‘	cpp:S5025I"QReplace the use of "new" with an operation that automatically manages the memory.(¤ªŞÜıÿÿÿÿJ$6dafa0d9-81d0-44a5-ae5f-dc5bdeb11562
+Œ	cpp:S5025V"QReplace the use of "new" with an operation that automatically manages the memory.(Œ¦ŞJ$86a0c755-33f6-40d3-ae03-6185e7be42a9
+	cpp:S6004‚"CUse the init-statement to declare "newPos" inside the if statement.(Ó©ùJ$4a7b3c0e-8418-4eeb-95f4-7caced8ec456
+h	cpp:S5827"'Replace the redundant type with "auto".(¹éêÔüÿÿÿÿJ$175102f4-ef52-4c08-9d13-63b648a6bc41
+h	cpp:S5827œ"'Replace the redundant type with "auto".(³Á¦ÄøÿÿÿÿJ$623c3c14-ded8-4070-9219-a06900e8ca9f
+c	cpp:S5827 "'Replace the redundant type with "auto".(ôÆæJ$91d0bfc1-21ad-4ce4-83fd-98f2689073ca
+h	cpp:S5827¤"'Replace the redundant type with "auto".(Ó—¬şÿÿÿÿJ$35ffa63b-d851-4f0c-ad31-b117e8cda49c
+©cpp:S995­"iMake the type of this parameter a pointer-to-const. The current type of "obstacle" is "class Obstacle *".(¥Óí»şÿÿÿÿJ$d929dd9e-2e67-4567-b626-f402ab288c49
+cpp:S995½"cMake the type of this parameter a pointer-to-const. The current type of "enemy" is "class Enemy *".(ÊÎ·¨J$2f06388c-cdf2-440b-ad96-21c2eed5818d
+›cpp:S995Î"aMake the type of this parameter a pointer-to-const. The current type of "user" is "class User *".(¦ÇŠ.J$c31cc9bc-21ef-4ed1-8bb2-8fb6eca3e0a0
+v	cpp:S5025µ":Rewrite the code so that you no longer need this "delete".(‡ô¼ÕJ$a2bbce82-dfdc-4ec3-8e73-12da39b34bae
+v	cpp:S5025¹":Rewrite the code so that you no longer need this "delete".(·ÈíæJ$c21b48eb-dcec-422b-88fa-22c6aa814a9b
+v	cpp:S5025½":Rewrite the code so that you no longer need this "delete".(Ñ‰¿¥J$62b0a96e-4459-455e-be95-33cd35c0de2e
+{	cpp:S5025Á":Rewrite the code so that you no longer need this "delete".(È·üûÿÿÿÿÿJ$62cd9bf5-d0ed-4d2b-90c6-06089b89a6bd
+{	cpp:S5025Å":Rewrite the code so that you no longer need this "delete".(…Íˆ÷úÿÿÿÿJ$818b8e32-7842-43ea-968c-e03587550162
+v	cpp:S5025É":Rewrite the code so that you no longer need this "delete".(ŞîœÇJ$1f9a3d71-2974-4daf-a185-9ae8d7b6c26c

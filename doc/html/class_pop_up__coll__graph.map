@@ -1,6 +1,0 @@
-<map id="PopUp" name="PopUp">
-<area shape="rect" id="node1" title="Popup class, inherits from QObject and QGraphicsRectItem." alt="" coords="34,389,172,525"/>
-<area shape="rect" id="node2" title=" " alt="" coords="18,5,92,83"/>
-<area shape="rect" id="node4" href="$class_button.html" title="Button class, inherits from QObject and QGraphicsRectItem." alt="" coords="29,132,209,283"/>
-<area shape="rect" id="node3" title=" " alt="" coords="145,5,293,83"/>
-</map>

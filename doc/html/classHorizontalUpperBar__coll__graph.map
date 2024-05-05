@@ -1,8 +1,0 @@
-<map id="HorizontalUpperBar" name="HorizontalUpperBar">
-<area shape="rect" id="node1" title="HorizontalUpperBar class, inherits from QObject and QGraphicsRectItem." alt="" coords="132,331,319,423"/>
-<area shape="rect" id="node2" href="$classQObject.html" title=" " alt="" coords="5,5,80,83"/>
-<area shape="rect" id="node6" href="$classButton.html" title="Button class, inherits from QObject and QGraphicsRectItem." alt="" coords="66,132,246,268"/>
-<area shape="rect" id="node3" href="$classQGraphicsRectItem.html" title=" " alt="" coords="133,5,281,83"/>
-<area shape="rect" id="node4" href="$classTimer.html" title="Timer class, inherits from QGraphicsTextItem." alt="" coords="321,132,463,268"/>
-<area shape="rect" id="node5" href="$classQGraphicsTextItem.html" title=" " alt="" coords="319,5,465,83"/>
-</map>

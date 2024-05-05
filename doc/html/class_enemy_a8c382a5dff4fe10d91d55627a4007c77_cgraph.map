@@ -1,7 +1,0 @@
-<map id="Enemy::Enemy" name="Enemy::Enemy">
-<area shape="rect" id="node1" title="Enemy constructor." alt="" coords="5,56,124,83"/>
-<area shape="rect" id="node2" href="$class_enemy.html#aabc082855e154a1c59c88d291b20fda1" title="After 5s check whether the last position equals (in a set range) the current position." alt="" coords="175,5,323,32"/>
-<area shape="rect" id="node4" href="$class_user.html#ab5c91c6a93187623fa34cd98ceab0ffc" title="Decrease the number of lives (3 default)" alt="" coords="173,56,326,83"/>
-<area shape="rect" id="node5" href="$class_enemy.html#adc875fbf1039c543177368e2afa75922" title="Stop chasing the user." alt="" coords="172,107,327,133"/>
-<area shape="rect" id="node3" href="$class_enemy.html#a6d7fd3fb16453325e91e79eabfcbbbc7" title="Get the enemy unstuck (rotation and moving out of map boundaries)" alt="" coords="375,5,523,32"/>
-</map>

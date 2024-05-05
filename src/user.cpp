@@ -207,7 +207,7 @@ void User::CheckCollisions() {
 void User::spawnStars() {
     // Create stars, 5 of them
     for (int starCount = 0; starCount < 5; ++starCount) {
-
+        // Debugged using LLM
         // Delay the creation of each star by magical constant which seem to spawn them evenly
         QTimer::singleShot(723 * starCount, this, [this, starCount]() {
             // Values are magical constants, which work with the current size of the User and the star limit

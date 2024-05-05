@@ -1,8 +1,0 @@
-/mnt/c/Users/marek/CLionProjects/ICP/build/CMakeFiles/install/strip.dir
-/mnt/c/Users/marek/CLionProjects/ICP/build/CMakeFiles/install/local.dir
-/mnt/c/Users/marek/CLionProjects/ICP/build/CMakeFiles/install.dir
-/mnt/c/Users/marek/CLionProjects/ICP/build/CMakeFiles/list_install_components.dir
-/mnt/c/Users/marek/CLionProjects/ICP/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/marek/CLionProjects/ICP/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/marek/CLionProjects/ICP/build/CMakeFiles/EpicRobotSurvival.dir
-/mnt/c/Users/marek/CLionProjects/ICP/build/CMakeFiles/EpicRobotSurvival_autogen.dir

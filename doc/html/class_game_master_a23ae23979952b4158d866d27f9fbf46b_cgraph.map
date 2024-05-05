@@ -1,4 +1,0 @@
-<map id="GameMaster::exitGame" name="GameMaster::exitGame">
-<area shape="rect" id="node1" title="Exit the game." alt="" coords="5,5,184,32"/>
-<area shape="rect" id="node2" href="$class_game_master.html#ab9e380887215ab51f9abf29a29481c61" title="Clean up the game, call all the destructors of constructed objects." alt="" coords="232,5,399,32"/>
-</map>

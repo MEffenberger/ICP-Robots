@@ -216,7 +216,7 @@ void Enemy::userCollision(User *user){
         QPointF direction = user->pos() - this->pos();
         qreal angleToUser = atan2(direction.y(), direction.x()) * 180 / M_PI - 90;
         qreal currentAngle = rotation();
-
+        // Debugged using LLM
         qreal angleDifference = angleToUser - currentAngle;
         // Normalize the angle difference within [-180, 180]
         while (angleDifference < -180) angleDifference += 360;

@@ -1,4 +1,0 @@
-<map id="GameMaster::updateCountDown" name="GameMaster::updateCountDown">
-<area shape="rect" id="node1" title="Update the CountDownTimer every 0.6s." alt="" coords="5,5,240,32"/>
-<area shape="rect" id="node2" href="$class_user.html#a2b4c71c0a5744a27f4bd0182f72a6a75" title="Set the User as focusable (keyboard control)" alt="" coords="288,5,437,32"/>
-</map>

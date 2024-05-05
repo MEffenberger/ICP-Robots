@@ -1,4 +1,4 @@
 
-[	cpp:S3539j"ARemove this access specifier; it does not affect any declaration.(±ãÕËşÿÿÿÿ
-4	cpp:S49621"Use the "nullptr" literal.(ùµüšøÿÿÿÿ
-L	cpp:S34716"2Annotate this function with "override" or "final".(…ü«®üÿÿÿÿ
+	cpp:S3539j"ARemove this access specifier; it does not affect any declaration.(±ãÕËşÿÿÿÿJ$531c85af-231e-4204-bdbd-69985df2247a
+Z	cpp:S49621"Use the "nullptr" literal.(ùµüšøÿÿÿÿJ$a5c01211-8678-4c9e-921e-83c80feb73ea
+r	cpp:S34716"2Annotate this function with "override" or "final".(…ü«®üÿÿÿÿJ$9cabaa85-9e21-4a0f-8691-bccb09b5fc99

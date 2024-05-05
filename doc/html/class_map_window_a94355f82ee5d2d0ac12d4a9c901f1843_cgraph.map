@@ -1,4 +1,0 @@
-<map id="MapWindow::saveFile" name="MapWindow::saveFile">
-<area shape="rect" id="node1" title="Saves the map data to a JSON file." alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node2" href="$class_map_window.html#a54edaa332329b35962cf78601aec94fb" title="Fills the JSON array with the map data." alt="" coords="216,5,364,32"/>
-</map>

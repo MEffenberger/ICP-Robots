@@ -1,7 +1,0 @@
-<map id="Enemy::autonomousMovement" name="Enemy::autonomousMovement">
-<area shape="rect" id="node1" title="Move the enemy autonomously, move forward in the direction of the vision point and rotate if needed." alt="" coords="5,56,231,83"/>
-<area shape="rect" id="node2" href="$class_enemy.html#a578529b238b3df3d8da60b5a8fab04d2" title="Check if the enemy is colliding with anything." alt="" coords="279,56,453,83"/>
-<area shape="rect" id="node3" href="$class_enemy.html#afb52ac0d6741aa38a46e2f051e723506" title="Mechanism for collision with another enemy." alt="" coords="507,5,681,32"/>
-<area shape="rect" id="node4" href="$class_enemy.html#a4ba3d6e4b16c7577705c95d7a1e38612" title="Mechanism for collision with an obstacle." alt="" coords="501,56,687,83"/>
-<area shape="rect" id="node5" href="$class_enemy.html#a7749969f74b8f3f027a6e238d3bf1ce3" title="Mechanism for collision with the user." alt="" coords="515,107,673,133"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="QTableWidgetItem" name="QTableWidgetItem">
-<area shape="rect" id="node1" title=" " alt="" coords="186,5,329,83"/>
-<area shape="rect" id="node2" href="$classEnemyItem.html" title="The EnemyItem class." alt="" coords="5,131,165,340"/>
-<area shape="rect" id="node3" href="$classObstacleItem.html" title="The ObstacleItem class." alt="" coords="190,197,325,274"/>
-<area shape="rect" id="node4" href="$classRobotItem.html" title="The RobotItem class." alt="" coords="349,160,491,311"/>
-</map>

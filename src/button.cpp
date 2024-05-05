@@ -12,12 +12,12 @@
 
 
 Button::Button(const QPixmap &pixmap, std::string name, QGraphicsItem *parent, qreal x, qreal y) : QGraphicsRectItem(parent) {
-    // set the size and he texture of the button
+    // Set the size and he texture of the button
     setRect(0, 0, x, y);
     QPixmap scaledPixmap = pixmap.scaled(rect().width(), rect().height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     QBrush brush(scaledPixmap);
     setBrush(brush);
-    // the button is not supposed to have a border, though it can be set
+    // The button is not supposed to have a border, though it can be set
     setBorderWidth(0);
     this->name = std::move(name);
     // make the button focusable and accept hover events
@@ -56,7 +56,7 @@ void Button::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
 
 void Button::setBorderWidth(int width) {
     QPen pen;
-    // border defaults to invisible but can be set
+    // Border defaults to invisible but can be set
     if (width == 0) {
         pen = QPen(Qt::NoPen);
     } else {

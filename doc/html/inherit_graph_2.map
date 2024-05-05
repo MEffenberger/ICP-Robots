@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classQGraphicsTextItem.html" title=" " alt="" coords="5,31,152,57"/>
-<area shape="rect" id="node2" href="$classGameInfo.html" title="GameInfo class, inherits from QObject and QGraphicsTextItem." alt="" coords="200,5,287,32"/>
-<area shape="rect" id="node3" href="$classTimer.html" title="Timer class, inherits from QGraphicsTextItem." alt="" coords="213,56,273,83"/>
-</map>
