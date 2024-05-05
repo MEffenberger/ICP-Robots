@@ -50,5 +50,7 @@ D - Tlačítko, které rotuje robotem doleva
 E - Tlačítko, které rotuje robotem doprava
 F - Tlačítko, které pohybuje robotem dopředu
 G - Po najetí tlačítkem myši na tuto část textu a jeho puštění dojde k aktivaci autopilota, tedy robot se sám pohybuje určitým směrem.
+H - Tlačítko, které 
+I - Ukazatel životů hráče
 
 
