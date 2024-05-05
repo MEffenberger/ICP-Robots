@@ -12,6 +12,7 @@ Implementace je vysvětlena v odstavci výše, tedy jde o simulaci robotů, z ni
 
 Požadavky na spuštění:
 Ubuntu Linux 64bit s nainstalovanými knihovnami Qt verze alespoň 5.5.
+Microsoft Windows 11 64 Bit s nainstalovaným QT Creatorem, ve kterém probíhá sestavování.
 
 Spuštění programu:
 Po rozbalení adresáře stačí v kořenové složce spustit příkaz make run, který vytvoří spustitelný soubor EpicRobotSimulator a následně jej spustí.
