@@ -7,6 +7,9 @@ Cílem hry je zůstat naživu do vypršení časovače. Hráč má 3 životy, kt
 Mapu lze uložit a načíst ve formátu JSON a lze ji editovat v podobě přidání překážek a dalších autonomních robotů, stejně tak lze měnit časový limit.
 Většina vývoje probíhala podle informací dostupných ze série videí na youtube: https://www.youtube.com/watch?v=8ntEQpg7gck&list=PLyb40eoxkelOa5xCB9fvGrkoBf8JzEwtV .
 
+Komentář k implementaci:
+Implementace je vysvětlena v odstavci výše, tedy jde o simulaci robotů, z nichž jeden je ovladatelný hráčem a ostatní jsou autnomní. Hru lze kdykoliv přerušit a zase se k ní vrátit. Mapu, na které je hra hrána lze rovněž načíst a uložit. Nad rámec zadání je implementována mechanika počtu životů, časový limit na kolo, a tedy mechanika prohry a vítězství v dané hře. Za zmínku stojí také implementace autopilota a zobrazení animace (+ znemožnění pohybu na určitou dobu) při nárazu hráčem ovládaného robota do překážky.
+
 Požadavky na spuštění:
 Ubuntu Linux 64bit s nainstalovanými knihovnami Qt verze alespoň 5.5.
 
@@ -38,7 +41,7 @@ G - Tlačítko, které načte uloženou mapu ze souboru a je možno ji editovat.
 H - Tlačítko, které spustí hru s aktuální mapou v editoru.
 I - Tlačítko, které uloží mapu do JSON souboru
 
-*Po kliknutí na mapu se otevře dialogové okénko, kde lze zadat parametry jaok výchozí orientace a  rychlost robota. V případě nepřátelského robota ještě směr a úhel otočení po detekce kolize rovněž jako vzdálenost samotné detekce.
+*Po kliknutí na mapu se otevře dialogové okénko, kde lze zadat parametry jako výchozí orientace a rychlost robota. V případě nepřátelského robota ještě směr a úhel otočení po detekce kolize rovněž jako vzdálenost samotné detekce.
 
 3) Herní okno
 
@@ -50,7 +53,7 @@ D - Tlačítko, které rotuje robotem doleva
 E - Tlačítko, které rotuje robotem doprava
 F - Tlačítko, které pohybuje robotem dopředu
 G - Po najetí tlačítkem myši na tuto část textu a jeho puštění dojde k aktivaci autopilota, tedy robot se sám pohybuje určitým směrem.
-H - Tlačítko, které 
+H - Tlačítko, které vrátí pozornost ovládání na uživatelského robota
 I - Ukazatel životů hráče
 
 
